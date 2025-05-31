@@ -7,6 +7,7 @@ export function useTranslations() {
 
   const t = (key) => {
     if (isLoading) return '';
+    if (!key) return '';
 
     // Handle nested keys (e.g., 'nav.home')
     const keys = key.split('.');
@@ -16,7 +17,10 @@ export function useTranslations() {
       if (value && typeof value === 'object') {
         value = value[k];
       } else {
-        console.warn(`Translation key not found: ${key}`);
+        // Only log warnings in development, not in production
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn(`Translation key not found: ${key}`);
+        }
         return key;
       }
     }

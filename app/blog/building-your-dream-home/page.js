@@ -6,6 +6,7 @@ import { BlogPostWrapper } from '../../components/BlogPostWrapper';
 import { useLanguage } from '../../contexts/LanguageContext';
 import BlogPost from '../../components/BlogPost';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Related blog posts
 const relatedPostsData = {
