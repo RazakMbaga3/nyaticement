@@ -1,0 +1,86 @@
+{
+  "sustainabilityPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "sustainability": "Sustainability"
+      },
+      "title": "Building a",
+      "highlight": "Sustainable",
+      "titleEnd": "Future",
+      "description": "Our commitment to environmental sustainability drives innovation in cement production, focusing on reducing emissions, conserving energy, and promoting eco-friendly practices."
+    },
+    "intro": {
+      "title": "Our Environmental",
+      "highlight": "Vision",
+      "text": "At Nyati Cement, we are determined to make our environment cleaner, greener, and healthier. We have pioneered technologies and processes that reduce emissions, waste, and noise. At the core of all our endeavors is our Sustainability and Environmental Policy."
+    },
+    "policy": {
+      "title": "SUSTAINABILITY & ENVIRONMENTAL POLICY",
+      "cards": [
+        {
+          "number": "01",
+          "title": "Minimizing Environmental Impact",
+          "text": "We are committed to efficient use of natural resources, energy, plant and equipment to reduce our ecological footprint."
+        },
+        {
+          "number": "02",
+          "title": "Promoting A Cleaner Environment",
+          "text": "Our operations focus on reducing emissions, noise, waste, and greenhouse gases to create a clean, green, and healthy environment."
+        }
+      ]
+    },
+    "sustainability": {
+      "title": "Our Sustainability Measures",
+      "text": "We've integrated sustainable practices across our operations to minimize environmental impact and maximize resource efficiency."
+    },
+    "commitment": {
+      "title": "Our Commitment in Action",
+      "quote": "Our commitment to sustainability is more than just words—it's reflected in our daily actions and long-term vision.",
+      "attribution": "— Managing Director, Nyati Cement"
+    },
+    "technologies": {
+      "title": "Pioneering Technology",
+      "items": [
+        {
+          "title": "Vertical Roller Mill",
+          "text": "An energy-efficient alternative to conventional ball mills, used for grinding raw materials, reducing energy consumption significantly."
+        },
+        {
+          "title": "Surface Miners",
+          "text": "Utilized for limestone mining without blasting, minimizing noise and dust pollution for a healthier environment."
+        },
+        {
+          "title": "Fluidised Bed Combustion (FBC) Boiler",
+          "text": "Powers our plant with low emissions of nitric and sulphur oxides, enhancing air quality."
+        }
+      ]
+    },
+    "energy": {
+      "title": "Energy Efficient Solutions",
+      "items": [
+        {
+          "title": "Pyro Section with Grate Cooler",
+          "text": "Features a static first grate for optimal heat energy utilization, improving overall efficiency."
+        },
+        {
+          "title": "Five-Stage Preheater with Pre-calciner",
+          "text": "Enhances fuel combustion and delivers significant energy savings across our operations."
+        }
+      ]
+    },
+    "initiatives": {
+      "title": "Other Initiatives",
+      "items": [
+        {
+          "title": "Lower Emissions",
+          "text": "Equipped with bag filters at all transfer points and selective use of electrostatic precipitators to minimize emissions."
+        },
+        {
+          "title": "Local Sourcing",
+          "text": "Sourcing coal from Songea reduces import costs and keeps our carbon footprint low, supporting local economies."
+        }
+      ]
+    }
+  }
+}

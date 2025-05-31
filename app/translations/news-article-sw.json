@@ -1,0 +1,48 @@
+{
+  "articlePage": {
+    "meta": {
+      "titlePrefix": "Makala: ",
+      "description": "Soma habari na masasisho ya hivi karibuni kutoka Lake Cement."
+    },
+    "notFound": {
+      "title": "Makala Haijapatikana",
+      "description": "Makala unayotafuta haipo au imeondolewa.",
+      "backButton": "Rudi kwenye Habari"
+    },
+    "readingTime": {
+      "read": "kusoma"
+    },
+    "categories": {
+      "company": "Kampuni",
+      "csr": "CSR",
+      "product": "Bidhaa"
+    },
+    "gallery": {
+      "title": "Picha za Makala",
+      "imageAlt": "Picha"
+    },
+    "heroImage": {
+      "alt": "Picha kuu"
+    },
+    "conclusion": {
+      "title": "Mtazamo wa Baadaye"
+    },
+    "social": {
+      "shareTitle": "Shiriki makala hii",
+      "shareOn": "Shiriki kwenye",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook"
+    },
+    "externalLink": {
+      "readOriginal": "Soma Makala Asili"
+    },
+    "relatedArticles": {
+      "title": "Makala Zinazohusiana",
+      "imageAlt": "Picha ya makala inayohusiana"
+    },
+    "navigation": {
+      "backToNews": "Rudi kwenye Habari Zote"
+    }
+  }
+}

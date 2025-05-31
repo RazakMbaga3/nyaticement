@@ -1,0 +1,85 @@
+{
+  "quality": {
+    "hero": {
+      "title": "Uncompromised Quality.",
+      "highlight": "Cement You Can Trust",
+      "description": "Our commitment to quality starts long before the cement reaches your hands. Through automated systems, skilled oversight, and industry-leading standards, we deliver consistency you can count on.",
+      "breadcrumb": {
+        "home": "Home",
+        "quality": "Quality Control"
+      },
+      "stats": {
+        "iso": "ISO",
+        "certified": "Certified",
+        "tbs": "TBS",
+        "approved": "Approved",
+        "quality": "100%",
+        "assured": "Quality Assured"
+      }
+    },
+    "intro": "The quality of our products, is of paramount importance to us. Our stringent standards are governed by our Quality Policy.",
+    "policy": {
+      "title": "QUALITY POLICY",
+      "policies": [
+        {
+          "number": "1",
+          "text": "To provide products conforming to Tanzania Bureau of Standards (TBS) and exceeding customer expectations"
+        },
+        {
+          "number": "2",
+          "text": "To continually improve performance and effectiveness of the Quality Management System"
+        }
+      ]
+    },
+    "technologies": "In order to embed quality across our production process, we have introduced following technologies at our Plant.",
+    "features": [
+      {
+        "text": "A state-of-the-art dry process technology for producing cement. It is monitored by a <strong>round-the-clock automated video surveillance</strong> at the burning zone.",
+        "image": "/images/quality/quality-img1.svg"
+      },
+      {
+        "text": "A fully equipped <strong>world-class laboratory with XRF spectrometer</strong> for hourly sampling and testing to ensure and maintain the quality of the cement.",
+        "image": "/images/quality/quality-img2.svg"
+      },
+      {
+        "text": "<strong>Fully computerised central control room</strong> with intelligent Motor Control Centres (MCCs) and sophisticated instrumentation controls for monitoring the operation of the entire plant.",
+        "image": "/images/quality/quality-img3.svg"
+      },
+      {
+        "text": "<strong>High efficiency classifiers</strong> have been installed at the raw material (roller) and cement mills. They give more accurate separation and thereby reduce over-grinding and enhance the mill's energy efficiency.",
+        "image": "/images/quality/quality-img4.svg"
+      }
+    ],
+    "commitment": {
+      "title": "OUR QUALITY COMMITMENT",
+      "paragraph1": "At Nyati Cement, quality is not just a process—it's our promise. Our dedicated laboratory team conducts rigorous testing at every stage of production, from raw materials to the final product, ensuring consistent excellence.",
+      "paragraph2": "Our cement undergoes over 40 quality checks before reaching customers, with samples tested for compressive strength, setting time, and chemical composition. This meticulous approach enables us to consistently exceed Tanzania Bureau of Standards requirements.",
+      "tags": {
+        "iso": "ISO Certified",
+        "tbs": "TBS Approved",
+        "quality": "100% Quality Assured"
+      }
+    },
+    "process": {
+      "title": "OUR QUALITY ASSURANCE PROCESS",
+      "steps": [
+        {
+          "title": "01. Raw Material Selection",
+          "text": "We carefully source and select the finest limestone, clay, and other raw materials. Each batch undergoes chemical analysis to ensure optimal composition before entering our production process."
+        },
+        {
+          "title": "02. Production Monitoring",
+          "text": "Our advanced control systems continuously monitor kiln temperature, clinker quality, and grinding fineness. This real-time monitoring allows us to maintain precise control over every aspect of cement production."
+        },
+        {
+          "title": "03. Testing",
+          "text": "Every batch of Nyati Cement undergoes comprehensive physical and chemical testing before release. We test for strength development, setting time, and durability to ensure our customers receive only the best."
+        }
+      ]
+    },
+    "banner": {
+      "title": "Our Commitment to Excellence Never Stops",
+      "text": "From raw material selection to final packaging, quality control is embedded in every step of our production process. Nyati Cement continues to invest in advanced technologies and training to ensure we consistently deliver Tanzania's most reliable and high-performing cement products."
+    }
+  }
+}

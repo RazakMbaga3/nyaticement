@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Blog | Nyati Cement",
+    "description": "Read our latest articles on construction, cement technology and industry insights."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Nyati Cement Blog",
+    "subtitle": "Expert insights, construction tips, and industry news"
+  },
+  "categories": {
+    "technicalKnowledge": {
+      "name": "Technical Knowledge",
+      "description": "In-depth technical articles on cement properties and applications"
+    },
+    "constructionBestPractices": {
+      "name": "Construction Best Practices",
+      "description": "Professional techniques and methodologies for optimal construction"
+    },
+    "diyHomeBuilding": {
+      "name": "DIY & Home Building",
+      "description": "Guides for homeowners and small-scale construction projects"
+    },
+    "sustainabilityInnovation": {
+      "name": "Sustainability & Innovation",
+      "description": "Environmental initiatives and forward-thinking approaches"
+    },
+    "industryInsights": {
+      "name": "Industry Insights",
+      "description": "Market trends and developments in the cement and construction sectors"
+    },
+    "applicationGuides": {
+      "name": "Application Guides",
+      "description": "Specific use-cases and applications for different cement types"
+    },
+    "customerSpotlights": {
+      "name": "Customer Spotlights",
+      "description": "Success stories and case studies featuring Nyati Cement products"
+    }
+  },
+  "ui": {
+    "readTime": "Minute Read",
+    "allCategories": "All Categories",
+    "featuredPosts": "Featured Posts",
+    "recentPosts": "Recent Posts",
+    "latestArticles": "Latest Articles",
+    "viewAllPosts": "View All Posts",
+    "readMore": "Read More",
+    "loadMore": "Load More Articles",
+    "share": "Share this article",
+    "shareOn": "Share on",
+    "relatedPosts": "Related Posts",
+    "readNext": "Read Next",
+    "searchPosts": "Search posts",
+    "noResults": "No results found",
+    "backToBlog": "Back to Blog"
+  },
+  "posts": {
+    "buildingYourDreamHome": {
+      "title": "Building Your Dream Home with Nyati Cement: A Step-by-Step Guide",
+      "excerpt": "Learn the complete process of home construction from foundation to finishing with quality Nyati Cement products.",
+      "meta": {
+        "title": "Building Your Dream Home with Nyati Cement | Nyati Cement Blog",
+        "description": "Learn the step-by-step process of building a durable home using Nyati Cement products, from foundation to finishing work."
+      },
+      "lead": "Building your own home is one of life's most rewarding achievements. With quality materials like Nyati Cement and careful planning, you can create a structure that will stand strong for generations. This comprehensive guide walks you through the essential steps of home building, with a focus on proper cement application for superior results."
+    },
+    "understandingCementGrades": {
+      "title": "Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project",
+      "excerpt": "Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide.",
+      "meta": {
+        "title": "Understanding Cement Grades | Nyati Cement Blog",
+        "description": "Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide."
+      }
+    },
+    "waterCementRatio": {
+      "title": "The Role of Water-Cement Ratio in Concrete Durability",
+      "excerpt": "Discover how the water-cement ratio affects concrete strength, durability, and overall performance.",
+      "meta": {
+        "title": "Water-Cement Ratio in Concrete Durability | Nyati Cement Blog",
+        "description": "Discover how the water-cement ratio affects concrete strength, durability, and overall performance in construction projects."
+      }
+    },
+    "concreteCuring": {
+      "title": "Understanding Concrete Curing: Best Practices for Maximum Strength",
+      "excerpt": "Master the art of proper concrete curing to achieve optimal strength and durability in your construction projects.",
+      "meta": {
+        "title": "Concrete Curing Best Practices | Nyati Cement Blog",
+        "description": "Master the art of proper concrete curing to achieve optimal strength and durability in your construction projects."
+      }
+    },
+    "compressiveStrengthTesting": {
+      "title": "Compressive Strength Testing: Ensuring Quality in Every Bag of Nyati Cement",
+      "excerpt": "Learn about our rigorous testing methods that guarantee the strength and consistency of Nyati Cement products.",
+      "meta": {
+        "title": "Compressive Strength Testing | Nyati Cement Blog",
+        "description": "Learn about our rigorous testing methods that guarantee the strength and consistency of Nyati Cement products."
+      }
+    },
+    "tanzaniaInfrastructureBoom": {
+      "title": "Tanzania's Infrastructure Boom: The Role of Quality Cement",
+      "excerpt": "How Nyati Cement is contributing to Tanzania's rapidly expanding infrastructure projects and economic growth.",
+      "meta": {
+        "title": "Tanzania's Infrastructure Boom | Nyati Cement Blog",
+        "description": "How Nyati Cement is contributing to Tanzania's rapidly expanding infrastructure projects and economic growth."
+      }
+    },
+    "monsoonConstruction": {
+      "title": "Monsoon Construction Challenges: Building with Nyati Cement in Wet Conditions",
+      "excerpt": "Expert tips for maintaining construction quality and progress during East Africa's rainy seasons.",
+      "meta": {
+        "title": "Monsoon Construction Challenges | Nyati Cement Blog",
+        "description": "Expert tips for maintaining construction quality and progress during East Africa's rainy seasons using Nyati Cement."
+      }
+    }
+  }
+}

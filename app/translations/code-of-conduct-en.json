@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Code of Conduct | Lake Cement",
+    "description": "Our Code of Conduct guides our actions and decisions, ensuring the highest standards of business ethics and professional integrity."
+  },
+  "hero": {
+    "title": "Our Ethical",
+    "titleSpan": "Foundation",
+    "description": "Our Code of Conduct guides our actions and decisions, ensuring the highest standards of business ethics and professional integrity.",
+    "breadcrumbs": {
+      "home": "Home",
+      "about": "About",
+      "current": "Code of Conduct"
+    },
+    "stats": {
+      "compliance": {
+        "value": "100%",
+        "label": "Compliance"
+      },
+      "corruption": {
+        "value": "0",
+        "label": "Tolerance for Corruption"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Ethical Support"
+      }
+    }
+  },
+  "introduction": {
+    "title": "Our Commitment",
+    "content": "The Code of Conduct for members of the Board of Directors and Senior Management helps maintain the standards of business conduct at Lake Cement and ensures compliance with legal requirements. The purpose of this Code is to promote ethical conduct by setting the tone right at the top and deter any kind of wrongdoing. The matters covered in this Code are of utmost importance to the Company and all its stakeholders."
+  },
+  "coreValues": {
+    "title": "Our Core Values",
+    "values": [
+      {
+        "icon": "balance-scale",
+        "title": "Integrity",
+        "description": "Honest and accurate reporting of performance, both internally and externally, creating an environment conducive to proper business conduct."
+      },
+      {
+        "icon": "hands-helping",
+        "title": "Responsibility",
+        "description": "Protecting our stakeholders' interests is our responsibility, making it the core of all our policies and management decisions."
+      },
+      {
+        "icon": "handshake",
+        "title": "Trust",
+        "description": "We are the trustees of the trust reposed on us by our stakeholders, guiding our actions and decisions at every level."
+      },
+      {
+        "icon": "users",
+        "title": "Cooperative Effort",
+        "description": "We recognize that our society and surrounding communities are important stakeholders, making us responsible to practice good corporate citizenship."
+      }
+    ]
+  },
+  "guidelines": {
+    "title": "Our Guidelines",
+    "items": [
+      {
+        "icon": "random",
+        "title": "Avoiding Conflict of Interest",
+        "content": "The Company expects that its Directors and Senior Management team members should be scrupulous in avoiding any situation of conflict of interest with the Company. This is an area in which it is impossible to provide a comprehensive code but the guiding principle, at Nyati is that any conflict or a potential conflict must be discussed with the top management for guidance and appropriate action."
+      },
+      {
+        "icon": "user-secret",
+        "title": "Maintenance of Confidentiality",
+        "content": "Nyati strongly emphasises that its Directors, Senior Management team members and other employees shall maintain strict confidentiality with respect to its confidential information or that of any customer, supplier or any other business associate of the Company to which the Company has a duty to maintain confidentiality, except when such disclosure is legally mandated or is authorised. Similarly, the use of any confidential information for one's own advantage / profit is strictly prohibited."
+      },
+      {
+        "icon": "laptop",
+        "title": "Usage of Electronic Resources",
+        "content": "Usage of electronic resources is an integral part of our business. The Company expects that electronic resources would be used for business purposes of the Company only and would be used in ethical, effective and lawful manner."
+      },
+      {
+        "icon": "building",
+        "title": "Good Corporate Citizenship",
+        "contentList": {
+          "intro": "In business dealings for the Company's business each member is expected to be a good corporate citizen and embrace the following principles:",
+          "items": [
+            {
+              "title": "Relationship with Stakeholders:",
+              "description": "Ensure that in dealings with suppliers, customers and others, the Company's interests are always treated as paramount and no compromises are made."
+            },
+            {
+              "title": "Legal Compliance:",
+              "description": "Fully comply with all applicable laws and regulations, avoiding practices which are unlawful or may damage the Company's reputation."
+            },
+            {
+              "title": "A Gender Friendly Work Place:",
+              "description": "Committed to a gender friendly workplace with equal opportunities and prevention of harassment."
+            },
+            {
+              "title": "Health and Safety:",
+              "description": "Ensuring a healthy and safe work environment with good physical working conditions and high standards of hygiene."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "file-contract",
+        "title": "Waivers",
+        "content": "Any waiver of the provision/s of this Code for any Director or Senior Management team member must be placed before the Directors of the Company for appropriate guidance."
+      }
+    ]
+  }
+}

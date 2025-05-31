@@ -1,0 +1,170 @@
+{
+  "productsPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "products": "Bidhaa"
+      },
+      "title": "Bidhaa za",
+      "highlight": "Saruji Bora",
+      "description": "Gundua bidhaa zetu za saruji zenye ubora wa hali ya juu zilizotengezwa kwa ajili ya ubora katika kila mradi wa ujenzi."
+    },
+    "intro": {
+      "text": "Bidhaa zetu za saruji bora zimeundwa kukidhi mahitaji mbalimbali ya ujenzi, kuanzia miradi ya kawaida ya ujenzi hadi matumizi maalum ya kihandisi."
+    },
+    "features": {
+      "title": "Kitu Gani Kinatufanya Tuwe Tofauti",
+      "description": "Bidhaa zetu za saruji zinafanya vizuri katika nyanja muhimu zinazohakikisha ubora na utendaji wa hali ya juu kwa miradi yako ya ujenzi."
+    },
+    "applications": {
+      "title": "Matumizi Mbalimbali",
+      "description": "Kuanzia miradi midogo ya makazi hadi miundombinu kubwa, Saruji ya Nyati inatoa matokeo ya kipekee katika matumizi mbalimbali."
+    },
+    "packaging": {
+      "title": "Chaguo za Ufungashaji",
+      "description": "Tunatoa suluhisho za ufungashaji zinazobadilika kulingana na ukubwa wa miradi, kuanzia ujenzi mdogo wa makazi hadi maendeleo makubwa ya kibiashara.",
+      "options": [
+        {
+          "title": "Mifuko ya Kilo 50",
+          "description": "Ufungashaji wa kawaida unaofaa kwa miradi midogo hadi ya kati. Rahisi kushika, kusafirisha, na kuhifadhi katika eneo lolote la ujenzi."
+        },
+        {
+          "title": "Mifuko Mikubwa ya Tani 1.5",
+          "description": "Suluhisho lenye ufanisi kwa miradi ya kati hadi kubwa, kupunguza muda wa kushughulika na taka za ufungashaji wakati wa kuongeza uzalishaji."
+        },
+        {
+          "title": "Magari ya Kusafirisha kwa Wingi",
+          "description": "Inafaa kwa miradi kubwa, ikitoa ufanisi wa hali ya juu na usafirishaji wa moja kwa moja kwa silos, kuondoa kabisa ufungashaji."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Tayari Kujenga na Bora Zaidi?",
+      "description": "Wasiliana nasi leo kujadili jinsi bidhaa za Saruji ya Nyati zinaweza kukidhi mahitaji yako maalum ya ujenzi.",
+      "button": "Wasiliana Nasi"
+    },
+    "products": [
+      {
+        "title": "Saruji ya Portland ya Jiwe la Chokaa ya Daraja 42.5R",
+        "description": "Imeundwa kwa miradi inayohitaji kuongezeka kwa uimara kwa haraka na udumishaji wa muda mrefu. Inafaa kwa kutengeneza matofali, zege lililotengezwa awali, zege lililokaza, na zege la daraja la juu kwa miundo ya nguvu kubwa kama madaraja na mabwawa.",
+        "features": [
+          "Nguvu ya Awali ya Juu",
+          "Nguvu ya Juu ya Mwisho ya Shinikizo",
+          "Uimara wa Juu",
+          "Fineness Bora",
+          "Nguvu ya Juu ya Kiufundi"
+        ],
+        "applications": [
+          "Matofali ya Ubora",
+          "Zege la Daraja la Juu",
+          "Miundo ya Zege Iliyoimarishwa",
+          "Miundo ya maji",
+          "Zege Tayari (RMC)"
+        ]
+      },
+      {
+        "title": "Saruji ya Portland ya Jiwe la Chokaa ya Daraja 42.5N",
+        "description": "Saruji yenye utendaji wa hali ya juu kwa miundo imara na yenye kudumu. Inatoa urahisi wa kufanyiakazi na nguvu ya shinikizo, inaifanya kuwa bora kwa miradi ya kawaida ya ujenzi.",
+        "features": [
+          "Uzalishaji wa Joto la Chini",
+          "Nguvu ya Kawaida ya Awali",
+          "Urahisi wa Kufanyiakazi",
+          "Nguvu ya Juu ya Mwisho ya Shinikizo"
+        ],
+        "applications": [
+          "Zege Imara Yenye Kudumu",
+          "Mchanganyiko Maalum wa Eneo",
+          "Miundo ya maji",
+          "Zege Lenye Nguvu Kubwa",
+          "Zege Tayari (RMC)"
+        ]
+      },
+      {
+        "title": "Saruji ya Kawaida ya Portland",
+        "description": "Saruji bora inayojulikana kwa nguvu isiyolinganishwa, udumishaji, na utendaji wa kipekee. Chaguo bora kwa miundo muhimu na miradi kubwa kama majengo marefu, madaraja, na mabwawa.",
+        "features": [
+          "Nguvu ya Awali ya Juu",
+          "Nguvu ya Juu ya Mwisho ya Shinikizo",
+          "Urahisi wa Kufanyiakazi na Mtiririko"
+        ],
+        "applications": [
+          "Maajabu ya Kutengeneza Awali",
+          "Bora kwa Zege Lililoimarishwa",
+          "Zege la Daraja la Juu",
+          "Ujenzi Maalum",
+          "Miundo ya Tayari-Mix",
+          "Miradi Kubwa"
+        ]
+      },
+      {
+        "title": "Saruji ya Portland ya Daraja 32.5N",
+        "description": "Saruji ya kuaminika, ya matumizi ya kawaida kwa ujenzi wa kila siku. Inafaa kwa misingi, kuweka matofali, ujenzi wa mawe, na uimarishaji wa barabara, inatoa nguvu thabiti, urahisi wa kufanyiakazi, na matokeo ya kudumu.",
+        "features": [
+          "Kuweka kwa Kawaida",
+          "Urahisi wa Kufanyiakazi",
+          "Uimara wa Juu",
+          "Fineness Bora",
+          "Ubora wa Juu wa Kushikamana"
+        ],
+        "applications": [
+          "Uimarishaji wa Barabara",
+          "Mota na Ujenzi wa Mawe",
+          "lipu na sakafu",
+          "Kutengeneza Matofali kwa Gharama Nafuu",
+          "Kazi za jumla za uhandisi wa kiraia"
+        ]
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Utendaji Bora"
+      },
+      {
+        "title": "Urahisi wa Kufanyiakazi"
+      },
+      {
+        "title": "Nguvu ya Juu ya Mwisho ya Shinikizo"
+      },
+      {
+        "title": "Nguvu ya Juu ya Kiufundi"
+      },
+      {
+        "title": "Ubora wa Juu wa Kushikamana"
+      }
+    ],
+    "applicationItems": [
+      {
+        "title": "Matofali ya Ubora wa Juu",
+        "description": "Saruji ya Nyati inawawezesha watengenezaji wa matofali kuunda matofali ya ubora wa juu, mawe ya barabarani, na nguzo za zege zenye nguvu na uimara wa kipekee, zinazofaa kwa miradi ya makazi na ya kibiashara."
+      },
+      {
+        "title": "Mchanganyiko Maalum wa Eneo",
+        "description": "Saruji ya Nyati inaunganishwa na vipanua saruji kama Fly Ash na Silica, kuruhusu mchanganyiko wa zege uliotengenezwa kulingana na mahitaji maalum ya mradi."
+      },
+      {
+        "title": "Zege la Daraja la Juu",
+        "description": "Inatoa uwezo wa kipekee wa kubeba uzito na udumishaji wa muda mrefu kwa miradi kubwa ya ujenzi, kuanzia majengo marefu hadi miundombinu."
+      },
+      {
+        "title": "Zege Tayari",
+        "description": "Saruji ya Nyati inafaa kwa viwanda vya Zege Tayari, ikihakikisha utengenezaji thabiti wa daraja mbalimbali za zege kukidhi mahitaji mbalimbali ya wateja."
+      },
+      {
+        "title": "Miundo ya Maji",
+        "description": "Imetengenezwa kwa miradi inayohitaji udumishaji wa kipekee na usugu dhidi ya maji, kuanzia mabwawa na hifadhi za maji hadi mifereji na viwanda vya kusafisha maji."
+      },
+      {
+        "title": "Miundo ya Zege Iliyoimarishwa",
+        "description": "Inatoa ushikamano bora kati ya zege na chuma cha kuimarisha, kuongeza uwezo wa kubeba uzito na kuhakikisha usalama wa muundo katika majengo na miundombinu."
+      },
+      {
+        "title": "Mota na Ujenzi wa Mawe",
+        "description": "Hujenga viungo imara na za kuaminika katika matumizi ya mota na ujenzi wa mawe kwa muunganisho thabiti na wa kudumu katika miradi ya makazi na ya kibiashara."
+      },
+      {
+        "title": "Ujenzi wa Kawaida",
+        "description": "Suluhisho kamili kwa kuta, sakafu, misingi, na miradi ya kawaida ya ujenzi yenye nguvu, uimara, na urahisi wa kufanyiakazi."
+      }
+    ]
+  }
+}

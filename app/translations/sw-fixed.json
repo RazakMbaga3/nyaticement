@@ -1,0 +1,235 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "about": "Kuhusu Sisi",
+    "products": "Bidhaa",
+    "quality": "Udhibiti Ubora",
+    "distribution": "Usambazaji",
+    "sustainability": "Uendelevu",
+    "news": "Habari",
+    "careers": "Ajira",
+    "contact": "Wasiliana Nasi",
+    "csr": "CSR",
+    "codeOfConduct": "Kanuni za Maadili",
+    "brochure": "Brochure"
+  },
+  "hero": {
+    "title": "Teknolojia ya Kisasa",
+    "subtitle": "Saruji Inayoaminika kwa Ujenzi",
+    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
+    "cta": "Wasiliana Nasi",
+    "badges": {
+      "ownClinker": "Clinker Yetu",
+      "ownPower": "Umeme Wetu",
+      "consistentQuality": "Ubora Endelevu"
+    }
+  },
+  "about": {
+    "title": "Kuhusu Lake Cement",
+    "description": "Lake Cement Ltd ni kiwanda kinachoongoza kwa uzalishaji wa saruji nchini Tanzania, kinajitoa kutoa bidhaa za saruji zenye ubora wa hali ya juu kupitia teknolojia ya kisasa na taratibu endelevu.",
+    "readMore": "Soma Zaidi"
+  },
+  "quality": {
+    "title": "Udhibiti Ubora",
+    "description": "Mifumo yetu ya kisasa ya udhibiti ubora inahakikisha ubora endelevu katika kila mfuko wa saruji.",
+    "learnMore": "Jifunze Zaidi"
+  },
+  "contact": {
+    "title": "Wasiliana Nasi",
+    "description": "Wasiliana nasi kwa maswali yoyote kuhusu bidhaa na huduma zetu.",
+    "form": {
+      "name": "Jina",
+      "email": "Barua pepe",
+      "phone": "Simu",
+      "message": "Ujumbe",
+      "firstName": "Jina la Kwanza",
+      "lastName": "Jina la Ukoo",
+      "contactNumber": "Namba ya Simu",
+      "firmName": "Jina la Kampuni",
+      "address": "Anwani",
+      "query": "Ujumbe Wako",
+      "submit": "Tuma Ujumbe",
+      "reset": "Futa Fomu"
+    },
+    "address": "ATC House, Plot 773/40",
+    "phone": "+255 658 888 999",
+    "email": "info@lakecement.co.tz",
+    "success": "Asante kwa ujumbe wako. Tutawasiliana nawe hivi karibuni!",
+    "error": "Tatizo limetokea. Tafadhali jaribu tena."
+  },
+  "footer": {
+    "followUs": "Tufuate",
+    "quickLinks": "Viungo vya Haraka",
+    "copyright": "© 2025 Lake Cement Ltd. Haki zote zimehifadhiwa.",
+    "companyInfo": "Taarifa za Kampuni",
+    "address": "Anwani",
+    "email": "Barua Pepe",
+    "phone": "Simu",
+    "resources": "Rasilimali",
+    "contactUs": "Wasiliana Nasi",
+    "subscribe": "Jisajili kwa Jarida Letu",
+    "subscribeText": "Pata taarifa mpya kuhusu bidhaa na matukio ya kampuni.",
+    "yourEmail": "Barua pepe yako",
+    "submitEmail": "Tuma",
+    "aboutUs": "Kuhusu Sisi",
+    "products": "Bidhaa",
+    "qualityControl": "Udhibiti Ubora",
+    "distribution": "Usambazaji",
+    "sustainability": "Uendelevu",
+    "careers": "Ajira",
+    "news": "Habari",
+    "csr": "CSR"
+  },
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu imetokea",
+    "readMore": "Soma Zaidi",
+    "viewAll": "Angalia Yote",
+    "language": "Lugha",
+    "english": "Kiingereza",
+    "swahili": "Kiswahili"
+  },
+  "homePage": {
+    "featuresTitle": "Vigezo Vyetu",
+    "featuresSubtitle": "Kwa nini kuchagua Saruji ya Nyati",
+    "blogTitle": "Habari na Makala",
+    "blogSubtitle": "Maelezo kutoka kwa wataalamu wetu",
+    "videoTitle": "Kituo cha Media",
+    "bannerTitle": "Tunahudumia Tanzania Nzima",
+    "bannerDescription": "Ufikikaji rahisi wa bidhaa zetu kupitia vituo vya usambazaji nchini kote"
+  },
+  "videos": {
+    "title": "Video na Matangazo",
+    "watchVideos": "Tazama Video",
+    "listenAudio": "Sikiza Audio",
+    "commercials": "Matangazo"
+  },
+  "blog": {
+    "title": "Habari na Makala",
+    "subtitle": "Tazama maelezo ya hivi karibuni kutoka kwa wataalamu wetu",
+    "readTime": "Dakika za Kusoma",
+    "category": {
+      "technicalKnowledge": "Ujuzi wa Kiufundi",
+      "constructionBestPractices": "Mbinu Bora za Ujenzi",
+      "industryInsights": "Ufahamu wa Sekta"
+    },
+    "featuredPosts": "Makala Maarufu",
+    "recentPosts": "Makala za Hivi Karibuni",
+    "categories": "Makundi",
+    "readingTime": "Muda wa Kusoma",
+    "minutes": "dakika",
+    "sharePost": "Sambaza",
+    "relatedPosts": "Makala Zinazohusiana"
+  },
+  "homeBuilder": {
+    "title": "Kujenga Ndoto na Nyati",
+    "subtitle": "Kutoka Msingi hadi Kumaliza",
+    "description": "Tazama mwongozo wetu, ushauri wa wataalamu, na orodha za kina ili kukusaidia kujenga nyumba yako ya ndoto kwa uhakika ukitumia bidhaa za Saruji ya Nyati.",
+    "forHomeBuilders": "Kwa Wajenzi wa Nyumba",
+    "forInfrastructure": "Kwa Miundombinu",
+    "forCommercial": "Kwa Biashara"
+  },
+  "aboutPage": {
+    "mission": "Dhamira Yetu",
+    "vision": "Maono Yetu",
+    "values": "Maadili Yetu",
+    "history": "Historia Yetu",
+    "team": "Timu Yetu",
+    "leadership": "Uongozi",
+    "plantTitle": "Kiwanda Chetu cha Kisasa",
+    "plantDescription": "Kiwanda chetu kina teknolojia ya hali ya juu inayowezesha uzalishaji bora wa saruji",
+    "aboutTitle": "Kuhusu Lake Cement",
+    "aboutSubtitle": "Kiwanda Kilichozoeleka kwa Saruji ya Ubora",
+    "aboutDescription": "Lake Cement Ltd imeanzishwa kwa dhamira ya kuzalisha saruji bora kabisa ya kupendeza na kuaminika kwa wajenzi na wakuaji Tanzania. Kwa teknolojia ya kisasa na uwekezaji katika viwango vya ubora, tunatoa thamani isiyoshindwa kwa wateja wetu.",
+    "companyOverview": "Maelezo ya Kampuni",
+    "keyMilestones": "Mafanikio Muhimu",
+    "corporateValues": "Maadili ya Shirika",
+    "ourTeam": "Timu Yetu",
+    "leadershipTeam": "Timu ya Uongozi",
+    "manufacturingProcess": "Mchakato wa Uzalishaji",
+    "ourPartners": "Washirika Wetu",
+    "joinOurTeam": "Jiunge na Timu Yetu"
+  },
+  "sustainabilityPage": {
+    "title": "Uendelevu",
+    "description": "Tumejitolea kulinda mazingira na kuendeleza jamii tunazofanya kazi nazo",
+    "environment": "Mazingira",
+    "social": "Jamii",
+    "governance": "Utawala"
+  },
+  "productsPage": {
+    "title": "Bidhaa Zetu",
+    "subtitle": "Suluhisho Bora kwa Mahitaji Yako yote ya Ujenzi",
+    "description": "Tunatoa bidhaa bora za saruji zilizoundwa kukidhi mahitaji mbalimbali ya mradi wako",
+    "keyFeatures": "Sifa Muhimu",
+    "idealFor": "Inafaa kwa",
+    "applications": "Matumizi",
+    "packagingOptions": "Chaguo za Ufungaji",
+    "grade": "Daraja",
+    "viewDetails": "Tazama Maelezo",
+    "learnMore": "Jifunze Zaidi",
+    "howToBuy": "Jinsi ya Kununua",
+    "whereToFind": "Mahali pa Kupata",
+    "qualityCertifications": "Vyeti vya Ubora",
+    "technicalSpecifications": "Vipimo vya Kiufundi"
+  },
+  "productsSection": {
+    "title": "Bidhaa Zetu",
+    "description": "Tunatoa aina mbalimbali za saruji zinazofaa kwa mahitaji yote ya ujenzi.",
+    "viewAll": "Angalia Bidhaa Zote",
+    "categories": {
+      "all": "Zote",
+      "general": "Matumizi ya Kawaida",
+      "concrete": "Konkriti",
+      "speciality": "Matumizi Maalum"
+    },
+    "features": {
+      "strength": "Nguvu",
+      "durability": "Udumishaji",
+      "versatility": "Utofauti",
+      "consistency": "Ulinganifu"
+    },
+    "nyati32": {
+      "name": "Nyati 32.5 N",
+      "description": "Saruji ya kawaida kwa matumizi mbalimbali ya ujenzi",
+      "uses": "Msingi, Kuta, na Mapambo"
+    },
+    "nyati42": {
+      "name": "Nyati 42.5 N",
+      "description": "Saruji yenye nguvu ya kati kwa matumizi ya kiufundi",
+      "uses": "Nguzo, Mihimili, na Miundo"
+    },
+    "nyati42r": {
+      "name": "Nyati 42.5 R",
+      "description": "Saruji inayoimarika haraka kwa miradi inayohitaji muundo wa haraka",
+      "uses": "Miradi ya Haraka na Miundo Muhimu"
+    },
+    "nyati53": {
+      "name": "Nyati 52.5 N",
+      "description": "Saruji yenye nguvu ya juu kwa miundo mahsusi",
+      "uses": "Miundo Mikubwa na Ujenzi wa Madaraja"
+    }
+  },
+  "careersPage": {
+    "title": "Ajira",
+    "description": "Jiunge na timu yetu ya wataalamu wanaojitoa",
+    "currentOpenings": "Nafasi Zilizopo",
+    "joinTeam": "Jiunge na Timu Yetu",
+    "benefits": "Manufaa",
+    "applyNow": "Omba Sasa",
+    "noOpenings": "Hakuna nafasi za kazi kwa sasa, tafadhali angalia tena baadaye"
+  },
+  "distributionPage": {
+    "title": "Usambazaji",
+    "description": "Mtandao wetu wa usambazaji unahakikisha bidhaa zetu zinapatikana kote Tanzania",
+    "regions": "Kanda",
+    "becomeDistributor": "Kuwa Msambazaji",
+    "findDealer": "Tafuta Msambazaji Karibu Nawe"
+  },
+  "news": {
+    "latest": "Habari za Hivi Karibuni",
+    "pressReleases": "Taarifa kwa Vyombo vya Habari",
+    "events": "Matukio",
+    "mediaKit": "Mawsiliano ya Vyombo vya Habari"
+  }
+}

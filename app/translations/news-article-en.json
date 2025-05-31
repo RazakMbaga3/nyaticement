@@ -1,0 +1,48 @@
+{
+  "articlePage": {
+    "meta": {
+      "titlePrefix": "Article: ",
+      "description": "Read the latest news and updates from Lake Cement."
+    },
+    "notFound": {
+      "title": "Article Not Found",
+      "description": "The article you're looking for doesn't exist or has been removed.",
+      "backButton": "Back to News"
+    },
+    "readingTime": {
+      "read": "read"
+    },
+    "categories": {
+      "company": "Company",
+      "csr": "CSR",
+      "product": "Product"
+    },
+    "gallery": {
+      "title": "Image Gallery",
+      "imageAlt": "Image"
+    },
+    "heroImage": {
+      "alt": "Featured image"
+    },
+    "conclusion": {
+      "title": "Looking Forward"
+    },
+    "social": {
+      "shareTitle": "Share this article",
+      "shareOn": "Share on",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook"
+    },
+    "externalLink": {
+      "readOriginal": "Read Original Article"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "imageAlt": "Related article image"
+    },
+    "navigation": {
+      "backToNews": "Back to All News"
+    }
+  }
+}

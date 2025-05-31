@@ -1,0 +1,86 @@
+{
+  "sustainabilityPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "sustainability": "Uendelevu"
+      },
+      "title": "Kujenga",
+      "highlight": "Endelevu",
+      "titleEnd": "Siku Zijazo",
+      "description": "Dhamira yetu ya uendelevu wa mazingira inaendesha uvumbuzi katika uzalishaji wa saruji, ikilenga kupunguza uchafuzi wa mazingira, kuhifadhi nishati, na kukuza mbinu za kirafiki kwa mazingira."
+    },
+    "intro": {
+      "title": "Maono Yetu ya",
+      "highlight": "Mazingira",
+      "text": "Katika Saruji ya Nyati, tumeazimia kufanya mazingira yetu yawe safi zaidi, kijani zaidi, na yenye afya zaidi. Tumevumbua teknolojia na michakato inayopunguza uchafuzi, taka, na kelele. Katika kiini cha juhudi zetu zote ni Sera yetu ya Uendelevu na Mazingira."
+    },
+    "policy": {
+      "title": "SERA YA UENDELEVU NA MAZINGIRA",
+      "cards": [
+        {
+          "number": "01",
+          "title": "Kupunguza Athari za Mazingira",
+          "text": "Tumejitolea kutumia kwa ufanisi rasilimali za asili, nishati, mitambo na vifaa ili kupunguza athari zetu za kiikolojia."
+        },
+        {
+          "number": "02",
+          "title": "Kukuza Mazingira Safi Zaidi",
+          "text": "Shughuli zetu zinalenga kupunguza uchafuzi, kelele, taka, na gesi za greenhouse kuunda mazingira safi, ya kijani, na yenye afya."
+        }
+      ]
+    },
+    "sustainability": {
+      "title": "Hatua Zetu za Uendelevu",
+      "text": "Tumejumuisha desturi endelevu katika shughuli zetu zote ili kupunguza athari za mazingira na kuongeza ufanisi wa rasilimali."
+    },
+    "commitment": {
+      "title": "Dhamira Yetu Katika Vitendo",
+      "quote": "Dhamira yetu ya uendelevu ni zaidi ya maneno tu—inaakisiwa katika vitendo vyetu vya kila siku na maono ya muda mrefu.",
+      "attribution": "— Mkurugenzi Mtendaji, Saruji ya Nyati"
+    },
+    "technologies": {
+      "title": "Teknolojia za Uvumbuzi",
+      "items": [
+        {
+          "title": "Kinu cha Kusaga cha Mzingo wa Wima",
+          "text": "Mbadala wa kuhifadhi nishati kwa vinu vya kawaida vya mipira, hutumika kusaga malighafi, kupunguza matumizi ya nishati kwa kiasi kikubwa."
+        },
+        {
+          "title": "Wachimba Ardhi wa Juu",
+          "text": "Hutumiwa kwa uchimbaji wa jiwe bila kulipua, kupunguza kelele na uchafuzi wa vumbi kwa mazingira yenye afya zaidi."
+        },
+        {
+          "title": "Mtambo wa Kuchoma wa Kitanda-Majimaji (FBC)",
+          "text": "Huendesha kiwanda chetu na uchafuzi mdogo wa oksidi za nitric na salfa, kuboresha ubora wa hewa."
+        }
+      ]
+    },
+    "energy": {
+      "title": "Suluhisho za Nishati Fanisi",
+      "items": [
+        {
+          "title": "Sehemu ya Pyro na Baridi ya Greti",
+          "text": "Ina greti ya kwanza tuli kwa matumizi bora ya nishati ya joto, kuboresha ufanisi wa jumla."
+        },
+        {
+          "title": "Kisahani-joto cha Hatua-Tano na Kabla-kalsineja",
+          "text": "Huimarisha kuchomeka kwa mafuta na hutoa uhifadhi muhimu wa nishati katika shughuli zetu zote."
+        }
+      ]
+    },
+    "initiatives": {
+      "title": "Miradi Mingine",
+      "items": [
+        {
+          "title": "Kupunguza Uchafuzi",
+          "text": "Imeundwa na vichujio vya mifuko katika sehemu zote za uhamisho na matumizi maalum ya precipitators za umeme ili kupunguza uchafuzi."
+        },
+        {
+          "title": "Ununuzi wa Karibu",
+          "text": "Kupata makaa kutoka Songea hupunguza gharama za uagizaji na huweka alama yetu ya kaboni chini, kusaidia uchumi wa karibu."
+        }
+      ]
+    }
+  }
+}

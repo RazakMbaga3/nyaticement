@@ -1,0 +1,104 @@
+{
+  "aboutUsPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "about": "Kuhusu",
+        "aboutUs": "Kuhusu Sisi"
+      },
+      "title": "Tunaongoza",
+      "highlight": "Uvumbuzi",
+      "description": "Gundua safari yetu ya ubora katika utengenezaji wa saruji na dhamira yetu ya ubora na uvumbuzi."
+    },
+    "aboutSection": {
+      "title": "KUHUSU SISI",
+      "paragraphs": [
+        "Lake Cement Ltd ni mtaalamu katika utengenezaji wa saruji na kiwanda cha saruji kilichojumuishwa kikamilifu, pamoja na mtambo wa umeme wa joto wa 10MW. Kiwanda chetu kipo katika wilaya ya Kigamboni ya Dar es Salaam na kina uwezo wa kuzalisha tani 1,000,000 kwa mwaka.",
+        "Tunazalisha saruji ya ubora wa juu ya kuaminika ambayo tumeiboresha kwa kutumia teknolojia bora zaidi na uzoefu mpana wa sekta. Tulianza uzalishaji mnamo 2014 chini ya nembo ya Saruji ya Nyati. Saruji ya Nyati sasa ni chapa inayoongoza ya saruji si tu nchini Tanzania, lakini pia ina umaarufu Rwanda, Burundi na nchi jirani nyingine."
+      ],
+      "brandName": "Saruji ya Nyati"
+    },
+    "missionVision": {
+      "mission": {
+        "title": "DHAMIRA YETU",
+        "description": "Kuwa mtengenezaji wa saruji anayeongoza Tanzania, kwa kutoa saruji ya ubora wa juu kwa wateja wetu na huduma zaidi ya matarajio ya wateja wetu"
+      },
+      "vision": {
+        "title": "MAONO YETU",
+        "description": "Kuwa chachu muhimu katika ukuaji wa Tanzania kwa kuunda thamani kwa wateja wetu, wafanyakazi, washirika wa biashara na wanahisa - kupitia utawala na sera bora"
+      }
+    },
+    "coreValues": {
+      "title": "Maadili Yetu Makuu",
+      "values": [
+        {
+          "icon": "⚖️",
+          "title": "Uadilifu",
+          "description": "Ripoti za uwazi na sahihi za utendaji, ndani na nje, kuunda mazingira yanayofaa kwa biashara kufanyika ipasavyo."
+        },
+        {
+          "icon": "🤝",
+          "title": "Wajibu",
+          "description": "Kulinda maslahi ya wadau wetu ni wajibu wetu, na ni msingi wa sera na maamuzi yetu ya usimamizi."
+        },
+        {
+          "icon": "🔒",
+          "title": "Imani",
+          "description": "Sisi ni wadhamini wa imani iliyowekwa kwetu na wadau wetu, ikituelekeza katika hatua na maamuzi yetu katika kila ngazi."
+        },
+        {
+          "icon": "👥",
+          "title": "Juhudi za Ushirikiano",
+          "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, hii inatufanya tuwe na wajibu wa kuwa raia wema wa kampuni."
+        }
+      ]
+    },
+    "advantage": {
+      "title": "FAIDA YA LAKE CEMENT",
+      "description": "Dhamira yetu ya ubora na ubunifu huunda faida tofauti zinazowanufaisha wateja na washirika wetu.",
+      "advantages": [
+        {
+          "title": "Uzalishaji Jumuishi",
+          "description": "Udhibiti kamili wa mchakato wa uzalishaji huhakikisha ubora na kuaminika kila wakati."
+        },
+        {
+          "title": "Nishati Yetu kwa Uzalishaji Usiokatizwa",
+          "description": "Mtambo wa umeme wa joto wa 10MW unahakikisha shughuli zinazoendelea bila kutegemea matatizo ya gridi."
+        },
+        {
+          "title": "Clinker Yetu",
+          "description": "Uzalishaji wa klinker ndani ya kiwanda hudumisha ubora wa udhibiti kutoka malighafi hadi bidhaa ya mwisho."
+        },
+        {
+          "title": "Ubora wa Kuaminika",
+          "description": "Upimaji mkali katika kila hatua huhakikisha saruji yetu inakidhi viwango vya juu kila wakati."
+        },
+        {
+          "title": "Ufanisi Bora wa Nishati",
+          "description": "Vifaa na michakato ya kisasa hupunguza matumizi ya nishati na kupunguza athari kwa mazingira."
+        },
+        {
+          "title": "Uendelevu Ulioboreshwa",
+          "description": "Ahadi ya mazoea endelevu katika uzalishaji na ushirikishwaji wa jamii."
+        }
+      ]
+    },
+    "infoCards": [
+      {
+        "title": "KIWANDA",
+        "description": "Kitengo chetu cha uzalishaji wa saruji kinachojumuishwa, kilicho sambaa katika eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi katika Afrika Mashariki.",
+        "linkPath": "/about/plant"
+      },
+      {
+        "title": "CSR",
+        "description": "Mbali na kuwa shirika la faida, pia tunajitahidi kuwa raia wa kampuni wenye wajibu. Mipango yetu ya CSR inagusa wadau wengi katika spektra pana.",
+        "linkPath": "/about/csr"
+      },
+      {
+        "title": "KANUNI ZA MAADILI",
+        "description": "Kanuni zetu za Maadili husaidia kudumisha kiwango cha mienendo ya biashara katika Lake Cement na kuhakikisha uzingatiaji wa mahitaji ya kisheria.",
+        "linkPath": "/about/code-of-conduct"
+      }
+    ]
+  }
+}

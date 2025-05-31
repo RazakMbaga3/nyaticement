@@ -1,0 +1,75 @@
+{
+  "careersPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "careers": "Kazi"
+      },
+      "title": "Unda Siku zijazo",
+      "highlight": "Pamoja Nasi",
+      "description": "Jiunge na timu yetu yenye ari na uwe sehemu ya kampuni inayojenga mustakabali wa Tanzania. Gundua fursa za kusisimua na kukua pamoja nasi.",
+      "metrics": {
+        "teamMembers": {
+          "count": "500+",
+          "label": "Wanatimu"
+        },
+        "departments": {
+          "count": "15+",
+          "label": "Idara"
+        },
+        "growthFocus": {
+          "count": "100%",
+          "label": "Kuzingatia Ukuaji"
+        }
+      }
+    },
+    "mission": {
+      "title": "Dhamira Yetu",
+      "description": "Katika Lake Cement, tunalenga kuwa chachu muhimu katika ukuaji wa Tanzania kwa kutoa saruji ya ubora wa hali ya juu mara kwa mara na kwa kuunda thamani kwa wateja, washirika wa kibiashara, wanahisa na wafanyakazi."
+    },
+    "joinTeam": {
+      "title": "Jiunge na Timu Yetu",
+      "values": [
+        {
+          "title": "Ubunifu",
+          "description": "Tunakuza utamaduni wa ubunifu na kuboresha endelevu katika nyanja zote za shughuli zetu."
+        },
+        {
+          "title": "Kazi ya Pamoja",
+          "description": "Tunaamini katika nguvu ya ushirikiano na kufanya kazi pamoja ili kufikia malengo ya pamoja."
+        },
+        {
+          "title": "Ubora",
+          "description": "Tumejitolea kudumisha viwango vya juu zaidi katika kila kitu tunachofanya."
+        }
+      ]
+    },
+    "futureLeaders": {
+      "title": "Kujenga Viongozi wa Baadaye",
+      "description": "Timu yetu ni rasilimali yetu kubwa zaidi"
+    },
+    "whyWorkWithUs": {
+      "title": "Kwa Nini Ufanye Kazi Nasi",
+      "benefits": [
+        {
+          "title": "Malipo ya Ushindani",
+          "description": "Mishahara na manufaa ya kuvutia yanayotambua michango yako."
+        },
+        {
+          "title": "Kazi yenye Maana",
+          "description": "Kuwa sehemu ya safari ya miundombinu na maendeleo ya Tanzania."
+        },
+        {
+          "title": "Mazingira Jumuishi",
+          "description": "Mahali pa kazi penye watu mbalimbali penye kuthamini mitazamo tofauti."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Uko Tayari Kujiunga na Timu Yetu?",
+      "description": "Tuna shauku kuhusu saruji yetu. Ikiwa una nia ya kufanya vizuri na kupaa juu, tuma wasifu wako kwa",
+      "emailLabel": "career@lakecement.co.tz",
+      "buttonText": "Tuma Wasifu Wako"
+    }
+  }
+}

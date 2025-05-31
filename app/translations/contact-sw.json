@@ -1,0 +1,102 @@
+{
+  "contactPage": {
+    "meta": {
+      "title": "Wasiliana Nasi | Lake Cement - Nyati Cement",
+      "description": "Wasiliana na Lake Cement kwa maswali kuhusu bidhaa zetu za saruji, usaidizi wa kiufundi, au fursa za usambazaji. Tuko tayari kukusaidia."
+    },
+    "hero": {
+      "title": "Wasiliana",
+      "titleSpan": "Nasi",
+      "description": "Una swali au unahitaji usaidizi? Timu yetu ipo hapa kukusaidia. Tunalenga kujibu maswali yote ndani ya masaa 24.",
+      "breadcrumbs": {
+        "home": "Nyumbani",
+        "contact": "Wasiliana"
+      },
+      "stats": {
+        "support": {
+          "value": "24/7",
+          "label": "Usaidizi"
+        },
+        "responseTime": {
+          "value": "<1hr",
+          "label": "Muda wa Kujibu"
+        },
+        "customerFocus": {
+          "value": "100%",
+          "label": "Kulenga Wateja"
+        }
+      }
+    },
+    "offices": {
+      "title": "Ofisi Zetu",
+      "locations": {
+        "title": "Maeneo Yetu",
+        "corporate": {
+          "title": "Ofisi Kuu",
+          "name": "IPN Pathak",
+          "position": "Mkuu wa Biashara wa Kimkakati",
+          "address": "Ghorofa ya Kwanza, ATC House, Plot 773/40, Ohio Street,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
+          "phone": "Simu: +255 22 2139610",
+          "email": "indra.pathak@lakecement.co.tz"
+        },
+        "plant": {
+          "title": "Kiwanda",
+          "name": "Biswajeet Mallik",
+          "position": "Afisa Mkuu wa Uendeshaji wa Kiwanda",
+          "address": "Kimbiji, Plot No. 265, Municipal Council - Temeke,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
+          "phone": "Simu: +255 677 047 650",
+          "email": "biswajeet.mallik@lakecement.co.tz"
+        }
+      },
+      "sales": {
+        "title": "Mauzo na Masoko",
+        "regions": [
+          {
+            "region": "Dar Es Salaam | Pwani | Kilimanjaro | Arusha | Tanga - Miradi",
+            "phone": "Simu: +255 713 556 004",
+            "email": "sales@lakecement.co.tz"
+          },
+          {
+            "region": "Morogoro | Dodoma | Singida | Nyanda za Juu Kusini",
+            "phone": "Simu: +255 677 111 083",
+            "email": "ajit.singh@lakecement.co.tz"
+          },
+          {
+            "region": "Tabora | Kigoma | Kahama | Geita | Shinyanga | Mwanza",
+            "phone": "Simu: +255 677 054 539",
+            "email": "nirav.oza@lakecement.co.tz"
+          }
+        ]
+      }
+    },
+    "form": {
+      "title": "Wasiliana Nasi",
+      "writeToUs": {
+        "title": "Tuandikie",
+        "description": "Wasiliana na timu yetu. Tuko hapa kukusaidia na maswali yako, maombi, na mahitaji ya saruji. Timu yetu itawasiliana nawe haraka iwezekanavyo."
+      },
+      "fields": {
+        "firstName": "Jina la Kwanza",
+        "lastName": "Jina la Familia",
+        "contactNumber": "Nambari ya Simu",
+        "email": "Barua Pepe",
+        "firmName": "Jina la Kampuni",
+        "address": "Anwani",
+        "message": "Ujumbe Wako"
+      },
+      "buttons": {
+        "reset": "Anza Upya",
+        "submit": "Tuma Ujumbe"
+      },
+      "status": {
+        "success": "Ujumbe wako umetumwa kwa ufanisi! Tutawasiliana nawe hivi karibuni.",
+        "error": "Kulikuwa na hitilafu katika kutuma ujumbe wako. Tafadhali jaribu tena baadaye."
+      }
+    },
+    "maps": {
+      "title": "Maeneo Yetu",
+      "headOffice": "Ofisi Kuu ya Lake Cement",
+      "factory": "Kiwanda cha Lake Cement"
+    }
+  }
+}

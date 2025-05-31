@@ -1,0 +1,72 @@
+{
+  "csrPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "about": "Kuhusu",
+        "csr": "CSR"
+      },
+      "title": "Uwajibikaji wa",
+      "highlight": "Kijamii wa Kampuni",
+      "description": "Kujenga jamii zenye nguvu zaidi kupitia desturi endelevu na mipango yenye maana."
+    },
+    "approach": {
+      "title": "Mbinu Yetu ya Uwajibikaji wa Kijamii wa Kampuni",
+      "description": "Tunaamini kuwa mafanikio yetu yanahusiana sana na ustawi wa jamii tunazohudumia. Mipango yetu ya CSR imeundwa ili kuunda athari endelevu na zenye maana katika vipimo mbalimbali vya maendeleo ya kijamii na mazingira."
+    },
+    "initiatives": [
+      {
+        "title": "JAMII",
+        "description": "Ili kujenga uhusiano imara na jamii inayotuzunguka, tunatoa:",
+        "bullets": [
+          { "icon": "🎓", "text": "Msaada kwa <strong>elimu</strong>" },
+          { "icon": "🤝", "text": "<strong>Mipango yenye maana</strong> kupitia washirika wa NGO maarufu" },
+          { "icon": "🏥", "text": "<strong>Mipango ya afya</strong> kupitia kambi" }
+        ],
+        "image": "/images/aboutus/csr_1.png",
+        "altText": "Mchoro wa elimu ya shule"
+      },
+      {
+        "title": "MAZINGIRA",
+        "description": "Ili kupunguza athari zetu kwa mazingira na kupunguza uchafuzi na taka, tumechukua hatua zifuatazo:",
+        "bullets": [
+          { "icon": "♻️", "text": "Kufanya kampeni za uhifadhi wa nishati na kupunguza taka" },
+          { "icon": "💡", "text": "Kubadilisha taa na vifaa vinavyotumia nishati nyingi kwa mbadala zinazotumia nishati kwa ufanisi" },
+          { "icon": "🏭", "text": "Kununua makaa ya mawe kwa ajili ya mtambo wa umeme kutoka kwa vyanzo vya ndani ili kudumisha athari ndogo ya kaboni" }
+        ],
+        "image": "/images/aboutus/csr_2.png",
+        "altText": "Mchoro wa uendelevu wa mazingira"
+      },
+      {
+        "title": "WAFANYAKAZI NA WASAMBAZAJI",
+        "description": "Tunashirikiana mara kwa mara na wafanyakazi wetu na wasambazaji ili kuoanisha matarajio yao na malengo yetu. Hapa kuna baadhi ya njia ambazo tunadumisha uhusiano wenye manufaa kwa pande zote na wadau hawa:",
+        "bullets": [
+          { "icon": "🔍", "text": "Kwa kuwa wazi na waaminifu kuhusu bidhaa zetu, faida zao na vikwazo vyao" },
+          { "icon": "📋", "text": "Kwenda zaidi ya mahitaji ya kisheria yanayohitajika wakati wa kushughulikia wafanyakazi na kukuza desturi bora katika maeneo ya kazi" }
+        ],
+        "image": "/images/aboutus/csr_3.png",
+        "altText": "Mchoro wa wafanyakazi na wasambazaji"
+      }
+    ],
+    "impactStories": {
+      "title": "Hadithi Zetu za Hivi Karibuni za Athari",
+      "description": "Gundua jinsi tunavyofanya tofauti kupitia mipango yetu inayoendelea ya uwajibikaji wa kijamii wa kampuni katika elimu, afya, mazingira, na maendeleo ya jamii.",
+      "readMore": "Soma Zaidi",
+      "viewAll": "Tazama Hadithi Zote za Athari"
+    },
+    "getInvolved": {
+      "title": "Shiriki",
+      "description": "Tunaamini katika nguvu ya hatua za pamoja. Jiunge nasi katika dhamira yetu ya kuunda athari endelevu na mabadiliko yenye maana katika jamii tunazohudumia.",
+      "partnership": {
+        "title": "Fursa za Ushirika",
+        "description": "Chunguza njia za kushirikiana nasi katika miradi muhimu ya CSR. Tunakaribisha ushirika unaoendesha maendeleo endelevu na kuunda athari za kudumu za jamii.",
+        "button": "Kuwa Mshirika"
+      },
+      "support": {
+        "title": "Saidia Mipango Yetu",
+        "description": "Endelea kupata taarifa kuhusu miradi yetu ya CSR inayoendelea na gundua jinsi unavyoweza kuchangia dhamira yetu ya kuunda mabadiliko chanya katika elimu, afya, na maendeleo ya jamii.",
+        "button": "Jisajili kwa Taarifa"
+      }
+    }
+  }
+}

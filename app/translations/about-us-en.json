@@ -1,0 +1,104 @@
+{
+  "aboutUsPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "about": "About",
+        "aboutUs": "About Us"
+      },
+      "title": "Leading",
+      "highlight": "Innovation",
+      "description": "Discover our journey of excellence in cement manufacturing and our commitment to quality and innovation."
+    },
+    "aboutSection": {
+      "title": "ABOUT US",
+      "paragraphs": [
+        "Lake Cement Ltd is a specialist in cement manufacturing with a state-of-the-art fully integrated cement plant, with a captive 10MW thermal power plant. Our plant is located in the Kigamboni district of Dar es Salaam and has an installed capacity of 1,000,000 MT per annum.",
+        "We produce consistent high quality cement for which we have leveraged best-in-class technologies and extensive sectoral experience. We started production in 2014 under the Nyati Cement brand. Nyati Cement is now the leading cement brand not only in Tanzania, but also has prominence in Rwanda, Burundi and other neighboring countries."
+      ],
+      "brandName": "Nyati Cement"
+    },
+    "missionVision": {
+      "mission": {
+        "title": "OUR MISSION",
+        "description": "To become the leading cement manufacturer in Tanzania, by delivering consistent high quality cement to our customers with service beyond our customers' expectations"
+      },
+      "vision": {
+        "title": "OUR VISION",
+        "description": "To become a key driver in Tanzania's growth by creating value for our customers, employees, business partners and shareholders - through fundamentally sound governance and policies"
+      }
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "values": [
+        {
+          "icon": "⚖️",
+          "title": "Integrity",
+          "description": "Honest and accurate reporting of performance, both internally and externally, creating an environment conducive to proper business conduct."
+        },
+        {
+          "icon": "🤝",
+          "title": "Responsibility",
+          "description": "Protecting our stakeholders' interests is our responsibility, making it the core of all our policies and management decisions."
+        },
+        {
+          "icon": "🔒",
+          "title": "Trust",
+          "description": "We are the trustees of the trust reposed on us by our stakeholders, guiding our actions and decisions at every level."
+        },
+        {
+          "icon": "👥",
+          "title": "Cooperative Effort",
+          "description": "We recognize that our society and surrounding communities are important stakeholders, making us responsible to practice good corporate citizenship."
+        }
+      ]
+    },
+    "advantage": {
+      "title": "THE LAKE CEMENT ADVANTAGE",
+      "description": "Our commitment to excellence and innovation creates distinct advantages that benefit our customers and partners.",
+      "advantages": [
+        {
+          "title": "Integrated Manufacturing",
+          "description": "Full control over production process ensures consistent quality and reliability."
+        },
+        {
+          "title": "Own Power for Uninterrupted Production",
+          "description": "10MW thermal power plant guarantees continuous operations independent of grid issues."
+        },
+        {
+          "title": "Own Clinker",
+          "description": "In-house clinker production maintains quality control from raw materials to final product."
+        },
+        {
+          "title": "Consistent Quality",
+          "description": "Rigorous testing at every stage ensures our cement meets the highest standards every time."
+        },
+        {
+          "title": "Better Energy-Efficiency",
+          "description": "Modern equipment and processes minimize energy consumption and reduce environmental impact."
+        },
+        {
+          "title": "Enhanced Sustainability",
+          "description": "Commitment to sustainable practices in production and community engagement."
+        }
+      ]
+    },
+    "infoCards": [
+      {
+        "title": "THE PLANT",
+        "description": "Our integrated cement manufacturing unit, spread in an area of over 100 hectares, is the most modern, fully automated and energy-efficient plant of its kind in East Africa.",
+        "linkPath": "/about/plant"
+      },
+      {
+        "title": "CSR",
+        "description": "In addition to being a profitable corporate entity, we also strive to be a responsible corporate citizen. Our CSR initiatives traverse a wide spectrum of stakeholders.",
+        "linkPath": "/about/csr"
+      },
+      {
+        "title": "CODE OF CONDUCT",
+        "description": "Our Code of Conduct helps maintain the standard of business conduct at Lake Cement and ensures compliance with legal requirements.",
+        "linkPath": "/about/code-of-conduct"
+      }
+    ]
+  }
+}

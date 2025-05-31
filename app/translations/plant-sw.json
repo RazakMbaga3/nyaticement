@@ -1,0 +1,72 @@
+{
+  "plantPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "about": "Kuhusu",
+        "plant": "Kiwanda"
+      },
+      "title": "Kisasa na",
+      "highlight": "Teknolojia ya Juu",
+      "stats": [
+        {
+          "value": "Tani 1M",
+          "label": "Uwezo wa Mwaka"
+        },
+        {
+          "value": "Umeme",
+          "label": "Wetu"
+        },
+        {
+          "value": "Klinker",
+          "label": "Yetu"
+        },
+        {
+          "value": "Uzalishaji",
+          "label": "Jumuishi"
+        },
+        {
+          "value": "Endelevu",
+          "label": "Imeboreshwa"
+        },
+        {
+          "value": "ISO",
+          "label": "Imethibitishwa"
+        }
+      ]
+    },
+    "introduction": "Kitengo chetu cha uzalishaji wa saruji kina eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi zaidi Afrika Mashariki. Kiwanda, chenye uwezo wa kuzalisha tani 1,000,000 kwa mwaka, kipo katika kijiji cha Kimbiji katika Wilaya ya Kigamboni; umbali wa kilomita 45 tu kutoka katikati ya biashara ya jiji la Dar es Salaam.",
+    "features": [
+      {
+        "image": "/images/aboutus/the_plant-1.png",
+        "title": "Mtambo wa Umeme wa 10 MW",
+        "description": "Kiwanda cha kwanza cha saruji Tanzania kuwa na mtambo wake wa umeme, kuhakikisha uzalishaji usiokatizwa na ubora thabiti na ufanisi wa vifaa uliboreshwa."
+      },
+      {
+        "image": "/images/aboutus/the_plant-2.png",
+        "title": "Usimamizi wa Wataalamu",
+        "description": "Kinakisimamiwa, kudumishwa na kuendeshwa na timu ya wataalamu wa tasnia ya saruji wenye uzoefu wa zaidi ya miaka 20."
+      },
+      {
+        "image": "/images/aboutus/the_plant-3.png",
+        "title": "Ufungaji wa Otomatiki",
+        "description": "Kina mashine ya kufunga ya kielektroniki inayofanya kazi kiotomatiki ili kudumisha uzito sahihi wa mifuko."
+      },
+      {
+        "image": "/images/aboutus/the_plant-4.png",
+        "title": "Kinu cha Kusaga cha Wima",
+        "description": "Kiwanda cha kwanza cha saruji Tanzania chenye kinu cha kusaga cha wima kwa ufanisi wa juu wa nishati."
+      },
+      {
+        "image": "/images/aboutus/the_plant-5.png",
+        "title": "Hifadhi ya Klinker",
+        "description": "Eneo la kuhifadhi klinker lililofungwa kwa ajili ya kuhifadhi tani 30,000 za klinker."
+      },
+      {
+        "image": "/images/aboutus/the_plant-6.png",
+        "title": "Mtambo wa Kupanga na Kuchukua",
+        "description": "Kina mitambo ya kupanga na kuchukua kwa ajili ya kulisha kinu cha malighafi kwa usawa."
+      }
+    ]
+  }
+}

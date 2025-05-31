@@ -1,0 +1,49 @@
+{
+  "name": "Nyati Cement",
+  "short_name": "Nyati",
+  "description": "Tanzania's leading cement manufacturer, producing stronger, longer-lasting cement.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F7941D",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "categories": ["business", "construction", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Products",
+      "url": "/products",
+      "description": "View our cement products"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "description": "Read our latest articles"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with us"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr"
+}

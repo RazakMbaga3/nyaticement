@@ -1,0 +1,44 @@
+{
+  "newsPage": {
+    "meta": {
+      "title": "News & Updates | Lake Cement - Nyati Cement",
+      "description": "Stay informed about Lake Cement's latest developments, achievements, and community initiatives."
+    },
+    "hero": {
+      "title": "Latest News",
+      "titleSpan": "& Updates",
+      "description": "Stay informed about our latest developments, achievements, and community initiatives.",
+      "breadcrumbs": {
+        "home": "Home",
+        "news": "News"
+      }
+    },
+    "introduction": {
+      "title": "BUILDING STRONGER COMMUNITIES",
+      "description": "Discover how Lake Cement is leading the industry with innovative technology, superior products, and meaningful community initiatives. Our news section showcases our commitment to excellence in everything we do."
+    },
+    "sections": {
+      "featured": "FEATURED NEWS",
+      "allNews": "ALL NEWS"
+    },
+    "categories": {
+      "company": "Company",
+      "csr": "CSR",
+      "product": "Product"
+    },
+    "actions": {
+      "readMore": "Read More"
+    },
+    "filters": {
+      "all": "All News",
+      "company": "Company News",
+      "csr": "CSR Initiatives",
+      "product": "Product Updates",
+      "search": "Search news..."
+    },
+    "noResults": {
+      "title": "No news articles found",
+      "description": "Try adjusting your search or filter criteria"
+    }
+  }
+}

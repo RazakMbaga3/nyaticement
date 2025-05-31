@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Blogu | Saruji ya Nyati",
+    "description": "Soma makala zetu za hivi karibuni juu ya ujenzi, teknolojia ya saruji na maelezo ya tasnia."
+  },
+  "breadcrumbs": {
+    "home": "Nyumbani",
+    "blog": "Blogu"
+  },
+  "hero": {
+    "title": "Blogu ya Saruji ya Nyati",
+    "subtitle": "Maelezo ya wataalamu, vidokezo vya ujenzi, na habari za tasnia"
+  },
+  "categories": {
+    "technicalKnowledge": {
+      "name": "Ujuzi wa Kiufundi",
+      "description": "Makala za kina za kiufundi juu ya sifa za saruji na matumizi"
+    },
+    "constructionBestPractices": {
+      "name": "Mbinu Bora za Ujenzi",
+      "description": "Mbinu za kitaalamu na methodolojia kwa ujenzi bora"
+    },
+    "diyHomeBuilding": {
+      "name": "DIY & Ujenzi wa Nyumba",
+      "description": "Miongozo kwa wamiliki wa nyumba na miradi ya ujenzi mdogo"
+    },
+    "sustainabilityInnovation": {
+      "name": "Uendelevu & Ubunifu",
+      "description": "Mipango ya mazingira na mitazamo ya mawazo ya mbele"
+    },
+    "industryInsights": {
+      "name": "Ufahamu wa Tasnia",
+      "description": "Mienendo ya soko na maendeleo katika sekta ya saruji na ujenzi"
+    },
+    "applicationGuides": {
+      "name": "Miongozo ya Matumizi",
+      "description": "Matumizi maalum na utumiaji wa aina tofauti za saruji"
+    },
+    "customerSpotlights": {
+      "name": "Taarifa za Wateja",
+      "description": "Hadithi za mafanikio na tafiti za kesi zinazojumuisha bidhaa za Saruji ya Nyati"
+    }
+  },
+  "ui": {
+    "readTime": "Dakika za Kusoma",
+    "allCategories": "Makundi Yote",
+    "featuredPosts": "Makala Zilizoangaziwa",
+    "recentPosts": "Makala za Hivi Karibuni",
+    "latestArticles": "Makala za Hivi Punde",
+    "viewAllPosts": "Tazama Makala Zote",
+    "readMore": "Soma Zaidi",
+    "loadMore": "Pakia Makala Zaidi",
+    "share": "Shiriki makala hii",
+    "shareOn": "Shiriki kwenye",
+    "relatedPosts": "Makala Zinazohusiana",
+    "readNext": "Soma Ifuatayo",
+    "searchPosts": "Tafuta makala",
+    "noResults": "Hakuna matokeo yaliyopatikana",
+    "backToBlog": "Rudi kwenye Blogu"
+  },
+  "posts": {
+    "buildingYourDreamHome": {
+      "title": "Kujenga Nyumba Yako ya Ndoto na Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua",
+      "excerpt": "Jifunze mchakato kamili wa ujenzi wa nyumba kutoka msingi hadi kumalizia na bidhaa za ubora za Saruji ya Nyati.",
+      "meta": {
+        "title": "Kujenga Nyumba Yako ya Ndoto na Saruji ya Nyati | Blogu ya Saruji ya Nyati",
+        "description": "Jifunze mchakato wa hatua kwa hatua wa kujenga nyumba ya kudumu kwa kutumia bidhaa za Saruji ya Nyati, kutoka msingi hadi kazi za kumalizia."
+      },
+      "lead": "Kujenga nyumba yako mwenyewe ni moja ya mafanikio yanayolipa zaidi maishani. Kwa vifaa vya ubora kama Saruji ya Nyati na mipango ya makini, unaweza kuunda muundo ambao utasimama imara kwa vizazi. Mwongozo huu wa kina unakupitisha hatua muhimu za ujenzi wa nyumba, kwa kuzingatia matumizi sahihi ya saruji kwa matokeo bora."
+    },
+    "understandingCementGrades": {
+      "title": "Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako",
+      "excerpt": "Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.",
+      "meta": {
+        "title": "Kuelewa Daraja za Saruji | Blogu ya Saruji ya Nyati",
+        "description": "Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina."
+      }
+    },
+    "waterCementRatio": {
+      "title": "Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege",
+      "excerpt": "Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.",
+      "meta": {
+        "title": "Uwiano wa Maji-Saruji katika Udhabiti wa Zege | Blogu ya Saruji ya Nyati",
+        "description": "Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla katika miradi ya ujenzi."
+      }
+    },
+    "concreteCuring": {
+      "title": "Kuelewa Utiaji Dawa Zege: Mbinu Bora kwa Nguvu ya Juu",
+      "excerpt": "Kuwa mtaalamu wa sanaa ya utiaji dawa sahihi wa zege ili kupata nguvu bora na udhabiti katika miradi yako ya ujenzi.",
+      "meta": {
+        "title": "Mbinu Bora za Utiaji Dawa Zege | Blogu ya Saruji ya Nyati",
+        "description": "Kuwa mtaalamu wa sanaa ya utiaji dawa sahihi wa zege ili kupata nguvu bora na udhabiti katika miradi yako ya ujenzi."
+      }
+    },
+    "compressiveStrengthTesting": {
+      "title": "Upimaji wa Nguvu za Kushindilia: Kuhakikisha Ubora katika Kila Mfuko wa Saruji ya Nyati",
+      "excerpt": "Jifunze kuhusu mbinu zetu madhubuti za upimaji ambazo zinahakikisha nguvu na uthabiti wa bidhaa za Saruji ya Nyati.",
+      "meta": {
+        "title": "Upimaji wa Nguvu za Kushindilia | Blogu ya Saruji ya Nyati",
+        "description": "Jifunze kuhusu mbinu zetu madhubuti za upimaji ambazo zinahakikisha nguvu na uthabiti wa bidhaa za Saruji ya Nyati."
+      }
+    },
+    "tanzaniaInfrastructureBoom": {
+      "title": "Msukumo wa Miundombinu ya Tanzania: Jukumu la Saruji Bora",
+      "excerpt": "Jinsi Saruji ya Nyati inavyochangia miradi ya miundombinu inayopanuka kwa kasi ya Tanzania na ukuaji wa kiuchumi.",
+      "meta": {
+        "title": "Msukumo wa Miundombinu ya Tanzania | Blogu ya Saruji ya Nyati",
+        "description": "Jinsi Saruji ya Nyati inavyochangia miradi ya miundombinu inayopanuka kwa kasi ya Tanzania na ukuaji wa kiuchumi."
+      }
+    },
+    "monsoonConstruction": {
+      "title": "Changamoto za Ujenzi wa Mvua: Kujenga na Saruji ya Nyati katika Hali ya Unyevu",
+      "excerpt": "Vidokezo vya wataalamu kwa kudumisha ubora wa ujenzi na maendeleo wakati wa misimu ya mvua ya Afrika Mashariki.",
+      "meta": {
+        "title": "Changamoto za Ujenzi wa Mvua | Blogu ya Saruji ya Nyati",
+        "description": "Vidokezo vya wataalamu kwa kudumisha ubora wa ujenzi na maendeleo wakati wa misimu ya mvua ya Afrika Mashariki kwa kutumia Saruji ya Nyati."
+      }
+    }
+  }
+}

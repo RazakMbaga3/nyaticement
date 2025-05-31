@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Kanuni za Maadili | Lake Cement",
+    "description": "Kanuni zetu za Maadili zinaongoza vitendo na maamuzi yetu, zikihakikisha viwango vya juu zaidi vya maadili ya biashara na uadilifu wa kitaaluma."
+  },
+  "hero": {
+    "title": "Msingi Wetu wa",
+    "titleSpan": "Maadili",
+    "description": "Kanuni zetu za Maadili zinaongoza vitendo na maamuzi yetu, zikihakikisha viwango vya juu zaidi vya maadili ya biashara na uadilifu wa kitaaluma.",
+    "breadcrumbs": {
+      "home": "Nyumbani",
+      "about": "Kuhusu",
+      "current": "Kanuni za Maadili"
+    },
+    "stats": {
+      "compliance": {
+        "value": "100%",
+        "label": "Utiifu"
+      },
+      "corruption": {
+        "value": "0",
+        "label": "Uvumilivu wa Rushwa"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Msaada wa Kimaadili"
+      }
+    }
+  },
+  "introduction": {
+    "title": "Ahadi Yetu",
+    "content": "Kanuni za Maadili kwa wanachama wa Bodi ya Wakurugenzi na Usimamizi wa Juu husaidia kudumisha viwango vya mwenendo wa biashara katika Lake Cement na kuhakikisha kufuata matakwa ya kisheria. Madhumuni ya Kanuni hii ni kukuza mwenendo wa kimaadili kwa kuweka sauti sahihi juu zaidi na kuzuia aina yoyote ya makosa. Mambo yanayoshughulikiwa katika Kanuni hii ni ya umuhimu mkubwa kwa Kampuni na wadau wake wote."
+  },
+  "coreValues": {
+    "title": "Maadili Yetu ya Msingi",
+    "values": [
+      {
+        "icon": "balance-scale",
+        "title": "Uadilifu",
+        "description": "Ripoti za wazi na sahihi za utendaji, ndani na nje, zinaunda mazingira yanayofaa kwa mwenendo mzuri wa biashara."
+      },
+      {
+        "icon": "hands-helping",
+        "title": "Wajibu",
+        "description": "Kulinda maslahi ya wadau wetu ni wajibu wetu, hii ikiwa kiini cha sera zetu zote na maamuzi ya usimamizi."
+      },
+      {
+        "icon": "handshake",
+        "title": "Imani",
+        "description": "Sisi ni wadhamini wa imani iliyowekwa kwetu na wadau wetu, ikiongoza vitendo vyetu na maamuzi katika kila ngazi."
+      },
+      {
+        "icon": "users",
+        "title": "Juhudi za Ushirikiano",
+        "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, kutufanya tuwe na wajibu wa kutekeleza uraia mzuri wa kicorporate."
+      }
+    ]
+  },
+  "guidelines": {
+    "title": "Miongozo Yetu",
+    "items": [
+      {
+        "icon": "random",
+        "title": "Kuepuka Mgongano wa Maslahi",
+        "content": "Kampuni inatarajia kuwa Wakurugenzi wake na wanachama wa timu ya Usimamizi wa Juu wanapaswa kuwa makini katika kuepuka hali yoyote ya mgongano wa maslahi na Kampuni. Hii ni eneo ambalo haiwezekani kutoa kanuni kamili lakini kanuni ya mwongozo, katika Nyati ni kwamba mgongano wowote au mgongano wa uwezekano lazima ujadiliwe na usimamizi wa juu kwa mwongozo na hatua inayofaa."
+      },
+      {
+        "icon": "user-secret",
+        "title": "Kudumisha Usiri",
+        "content": "Nyati inasisitiza sana kuwa Wakurugenzi wake, wanachama wa timu ya Usimamizi wa Juu na wafanyakazi wengine watadumisha usiri mkali kuhusiana na habari zake za siri au za mteja yeyote, mtoaji au mshirika mwingine wa biashara wa Kampuni ambaye Kampuni ina wajibu wa kudumisha usiri, isipokuwa wakati ambapo ufichuaji huo unahitajika kisheria au umeidhinishwa. Vivyo hivyo, matumizi ya taarifa yoyote ya siri kwa faida / faida ya mtu binafsi imepigwa marufuku kabisa."
+      },
+      {
+        "icon": "laptop",
+        "title": "Matumizi ya Rasilimali za Kielektroniki",
+        "content": "Matumizi ya rasilimali za kielektroniki ni sehemu muhimu ya biashara yetu. Kampuni inatarajia kuwa rasilimali za kielektroniki zitatumika kwa madhumuni ya biashara ya Kampuni pekee na zitatumika kwa njia ya kimaadili, yenye ufanisi na halali."
+      },
+      {
+        "icon": "building",
+        "title": "Uraia Mzuri wa Kicorporate",
+        "contentList": {
+          "intro": "Katika shughuli za biashara kwa biashara ya Kampuni kila mwanachama anatarajiwa kuwa raia mzuri wa kicorporate na kukumbatia kanuni zifuatazo:",
+          "items": [
+            {
+              "title": "Uhusiano na Wadau:",
+              "description": "Hakikisha kuwa katika shughuli na watoaji, wateja na wengine, maslahi ya Kampuni yanachukuliwa kama ya muhimu zaidi na hakuna maafikiano yanayofanywa."
+            },
+            {
+              "title": "Kufuata Sheria:",
+              "description": "Fuata kikamilifu sheria na kanuni zote zinazotumika, ukiepuka desturi ambazo ni kinyume cha sheria au zinaweza kuharibu sifa ya Kampuni."
+            },
+            {
+              "title": "Mahali pa Kazi Rafiki kwa Jinsia:",
+              "description": "Tumejitolea kwa mahali pa kazi rafiki kwa jinsia na fursa sawa na kuzuia unyanyasaji."
+            },
+            {
+              "title": "Afya na Usalama:",
+              "description": "Kuhakikisha mazingira ya kazi yenye afya na salama na hali nzuri za kazi na viwango vya juu vya usafi."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "file-contract",
+        "title": "Msamaha",
+        "content": "Msamaha wowote wa masharti ya Kanuni hii kwa Mkurugenzi yeyote au mwanachama wa timu ya Usimamizi wa Juu lazima uwekwe mbele ya Wakurugenzi wa Kampuni kwa mwongozo unaofaa."
+      }
+    ]
+  }
+}

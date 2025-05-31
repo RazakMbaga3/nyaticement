@@ -1,0 +1,72 @@
+{
+  "csrPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "about": "About",
+        "csr": "CSR"
+      },
+      "title": "Corporate Social",
+      "highlight": "Responsibility",
+      "description": "Building stronger communities through sustainable practices and meaningful initiatives."
+    },
+    "approach": {
+      "title": "Our Approach to Corporate Social Responsibility",
+      "description": "We believe that our success is intrinsically linked to the well-being of the communities we serve. Our CSR initiatives are designed to create sustainable, meaningful impact across multiple dimensions of social and environmental development."
+    },
+    "initiatives": [
+      {
+        "title": "SOCIETY",
+        "description": "In order to build a strong relationship with the surrounding community, we provide:",
+        "bullets": [
+          { "icon": "🎓", "text": "Support to <strong>education</strong>" },
+          { "icon": "🤝", "text": "<strong>Meaningful programs</strong> through reputed NGO partners" },
+          { "icon": "🏥", "text": "<strong>Health programs</strong> through camps" }
+        ],
+        "image": "/images/aboutus/csr_1.png",
+        "altText": "School education illustration"
+      },
+      {
+        "title": "ENVIRONMENT",
+        "description": "In order to minimise our impact on the environment and cut pollution and waste, we have undertaken following initiatives:",
+        "bullets": [
+          { "icon": "♻️", "text": "Conducting energy conservation and waste reduction campaigns" },
+          { "icon": "💡", "text": "Substituting power guzzling bulbs and equipment with energy-efficient alternatives" },
+          { "icon": "🏭", "text": "Procuring the coal for the power plant from local sources in order to maintain a smaller carbon footprint" }
+        ],
+        "image": "/images/aboutus/csr_2.png",
+        "altText": "Environmental sustainability illustration"
+      },
+      {
+        "title": "EMPLOYEES & SUPPLIERS",
+        "description": "We continuously engage with our employees and suppliers in order to align their expectations with our ambitions. Here are some ways in which we maintain a mutually enriching relationship with these stakeholders:",
+        "bullets": [
+          { "icon": "🔍", "text": "By being open and honest about our products, their benefit and their limitation" },
+          { "icon": "📋", "text": "Going beyond the minimum legal requirement when dealing with employees and promoting best practice in the workplace" }
+        ],
+        "image": "/images/aboutus/csr_3.png",
+        "altText": "Employees and suppliers illustration"
+      }
+    ],
+    "impactStories": {
+      "title": "Our Recent Impact Stories",
+      "description": "Discover how we're making a difference through our ongoing corporate social responsibility initiatives across education, healthcare, environment, and community development.",
+      "readMore": "Read More",
+      "viewAll": "View All Impact Stories"
+    },
+    "getInvolved": {
+      "title": "Get Involved",
+      "description": "We believe in the power of collective action. Join us in our mission to create sustainable impact and meaningful change in the communities we serve.",
+      "partnership": {
+        "title": "Partnership Opportunities",
+        "description": "Explore ways to collaborate with us on meaningful CSR projects. We welcome partnerships that drive sustainable development and create lasting community impact.",
+        "button": "Become a Partner"
+      },
+      "support": {
+        "title": "Support Our Initiatives",
+        "description": "Stay informed about our ongoing CSR projects and discover how you can contribute to our mission of creating positive change in education, healthcare, and community development.",
+        "button": "Subscribe to Updates"
+      }
+    }
+  }
+}

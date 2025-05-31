@@ -1,0 +1,44 @@
+{
+  "newsPage": {
+    "meta": {
+      "title": "Habari & Masasisho | Lake Cement - Nyati Cement",
+      "description": "Pata habari kuhusu maendeleo ya hivi karibuni ya Lake Cement, mafanikio, na mipango ya jamii."
+    },
+    "hero": {
+      "title": "Habari za",
+      "titleSpan": "Hivi Karibuni",
+      "description": "Endelea kupata taarifa kuhusu maendeleo yetu ya hivi karibuni, mafanikio, na mipango ya jamii.",
+      "breadcrumbs": {
+        "home": "Nyumbani",
+        "news": "Habari"
+      }
+    },
+    "introduction": {
+      "title": "KUJENGA JAMII IMARA ZAIDI",
+      "description": "Gundua jinsi Lake Cement inavyoongoza tasnia na teknolojia ya kisasa, bidhaa bora, na mipango muhimu ya jamii. Sehemu yetu ya habari inaonyesha kujitolea kwetu kwa ubora katika kila tunachofanya."
+    },
+    "sections": {
+      "featured": "HABARI ZILIZOANGAZIWA",
+      "allNews": "HABARI ZOTE"
+    },
+    "categories": {
+      "company": "Kampuni",
+      "csr": "CSR",
+      "product": "Bidhaa"
+    },
+    "actions": {
+      "readMore": "Soma Zaidi"
+    },
+    "filters": {
+      "all": "Habari Zote",
+      "company": "Habari za Kampuni",
+      "csr": "Mipango ya CSR",
+      "product": "Masasisho ya Bidhaa",
+      "search": "Tafuta habari..."
+    },
+    "noResults": {
+      "title": "Hakuna makala za habari zilizopatikana",
+      "description": "Jaribu kurekebisha utafutaji wako au vigezo vya kuchuja"
+    }
+  }
+}

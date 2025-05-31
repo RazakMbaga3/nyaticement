@@ -1,0 +1,50 @@
+{
+  "distributionPage": {
+    "hero": {
+      "title": "Kusambaza Ubora",
+      "highlight": "Kitaifa",
+      "description": "Jiunge na mtandao wetu unaokua wa wasambazaji na uwe sehemu ya dhamira ya Nyati ya kusambaza ubora Tanzania nzima.",
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "distribution": "Usambazaji"
+      },
+      "stats": {
+        "support": "24/7",
+        "supportText": "Msaada"
+      }
+    },
+    "hotline": {
+      "title": "SIMU YA DHARURA",
+      "number": "+255 65 8888999"
+    },
+    "form": {
+      "title": "USAMBAZAJI",
+      "subtitle": "Kama unapenda kuwa sehemu ya hadithi ya ukuaji wa Tanzania kama mfanyabiashara wa Nyati, tafadhali jaza maelezo haya.",
+      "success": "Maombi yako yamewasilishwa kwa mafanikio! Tutawasiliana nawe hivi karibuni.",
+      "error": "Kulikuwa na hitilafu katika kuwasilisha maombi yako. Tafadhali jaribu tena baadaye.",
+      "labels": {
+        "firmName": "Jina la Kampuni",
+        "address": "Anwani",
+        "area": "Eneo",
+        "city": "Jiji",
+        "poBox": "Sanduku la Posta",
+        "contactPerson": "Mtu wa Kuwasiliana Naye",
+        "contactNumber": "Namba ya Simu",
+        "email": "Barua pepe"
+      },
+      "buttons": {
+        "submit": "Wasilisha",
+        "submitting": "Inawasilisha...",
+        "reset": "Futa"
+      }
+    },
+    "service": {
+      "title": "HUDUMA",
+      "points": [
+        "Tunatoa msaada wa kiufundi kwa wateja kwa masuala yanayohusiana na ujenzi wa majengo, miundo na uhandisi wa umma.",
+        "Tunatoa elimu na mafunzo kwa wafanyakazi wetu wa nyanjani na watumishi wa mauzo wa washirika wetu wa biashara kuhusu bidhaa zetu na matumizi yake."
+      ],
+      "seminarCaption": "TUNAFANYA SEMINA ZA KIUFUNDI KWA AJILI YA MAFUNDI WA UJENZI NA WATENGENEZAJI WA MATOFALI"
+    }
+  }
+}

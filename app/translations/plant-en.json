@@ -1,0 +1,72 @@
+{
+  "plantPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "about": "About",
+        "plant": "Plant"
+      },
+      "title": "State-of-the-Art",
+      "highlight": "Manufacturing",
+      "stats": [
+        {
+          "value": "1M Tons",
+          "label": "Annual Capacity"
+        },
+        {
+          "value": "Own",
+          "label": "Power"
+        },
+        {
+          "value": "Own",
+          "label": "Clinker"
+        },
+        {
+          "value": "Integrated",
+          "label": "Manufacturing"
+        },
+        {
+          "value": "Enhanced",
+          "label": "Sustainability"
+        },
+        {
+          "value": "ISO",
+          "label": "Certified"
+        }
+      ]
+    },
+    "introduction": "Our integrated cement manufacturing unit, spread in an area of over 100 hectares, is the most modern, fully automated and energy-efficient plant of its kind in East Africa. The Plant, with a capacity of 1,000,000 Tons per annum, is located at Kimbiji village in Kigamboni District; just 45 km south of Dar es Salaam's central business district.",
+    "features": [
+      {
+        "image": "/images/aboutus/the_plant-1.png",
+        "title": "10 MW Captive Power Plant",
+        "description": "Tanzania's first cement plant to have captive power plant, ensuring uninterrupted production with consistent quality and enhanced equipment efficiency."
+      },
+      {
+        "image": "/images/aboutus/the_plant-2.png",
+        "title": "Expert Management",
+        "description": "Managed, maintained and operated by a team of qualified cement industry professionals with over 20 years of experience."
+      },
+      {
+        "image": "/images/aboutus/the_plant-3.png",
+        "title": "Automated Packing",
+        "description": "Equipped with a fully automated electronic packing machine to maintain a consistently accurate package weight."
+      },
+      {
+        "image": "/images/aboutus/the_plant-4.png",
+        "title": "Vertical Roller Mill",
+        "description": "Tanzania's First cement plant with vertical roller mill for higher energy efficiency."
+      },
+      {
+        "image": "/images/aboutus/the_plant-5.png",
+        "title": "Clinker Storage",
+        "description": "A closed clinker storage yard for storing 30,000 MT clinker."
+      },
+      {
+        "image": "/images/aboutus/the_plant-6.png",
+        "title": "Stacker and Reclaimer",
+        "description": "Equipped with Stacker and Reclaimer for a homogenised feed to the raw mill."
+      }
+    ]
+  }
+}

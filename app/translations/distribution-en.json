@@ -1,0 +1,50 @@
+{
+  "distributionPage": {
+    "hero": {
+      "title": "Delivering Quality",
+      "highlight": "Nationwide",
+      "description": "Join our growing network of distributors and be part of Nyati's commitment to delivering excellence across Tanzania.",
+      "breadcrumb": {
+        "home": "Home",
+        "distribution": "Distribution"
+      },
+      "stats": {
+        "support": "24/7",
+        "supportText": "Support"
+      }
+    },
+    "hotline": {
+      "title": "HOTLINE",
+      "number": "+255 65 8888999"
+    },
+    "form": {
+      "title": "DISTRIBUTION",
+      "subtitle": "If you are interested in being part of Tanzania's growth story as a Nyati dealer, please fill in these details.",
+      "success": "Your application has been submitted successfully! We will contact you soon.",
+      "error": "There was an error submitting your application. Please try again later.",
+      "labels": {
+        "firmName": "Name of the Firm",
+        "address": "Address",
+        "area": "Area",
+        "city": "City",
+        "poBox": "P.O. Box No.",
+        "contactPerson": "Contact Person",
+        "contactNumber": "Contact Number",
+        "email": "E-mail"
+      },
+      "buttons": {
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "reset": "Reset"
+      }
+    },
+    "service": {
+      "title": "SERVICE",
+      "points": [
+        "We provide technical support to customers on issues related to architectural, structural and general civil engineering.",
+        "We educate and train our field staff and the sales force of our business partners regarding our products and their applications."
+      ],
+      "seminarCaption": "WE CONDUCT TECHNICAL SEMINARS FOR MASONS AND BLOCKMAKERS"
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "productsPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "products": "Products"
+      },
+      "title": "Premium",
+      "highlight": "Cement Products",
+      "description": "Discover our range of high-quality cement products engineered for excellence in every construction project."
+    },
+    "intro": {
+      "text": "Our range of premium cement products is designed to meet diverse construction requirements, from everyday building projects to specialized engineering applications."
+    },
+    "features": {
+      "title": "What Sets Us Apart",
+      "description": "Our cement products excel in key areas that ensure the highest quality and performance for your construction projects."
+    },
+    "applications": {
+      "title": "Versatile Applications",
+      "description": "From small residential projects to large-scale infrastructure, Nyati Cement delivers exceptional results in a wide range of applications."
+    },
+    "packaging": {
+      "title": "Packaging Options",
+      "description": "We offer flexible packaging solutions to accommodate projects of all sizes, from small residential builds to large commercial developments.",
+      "options": [
+        {
+          "title": "50 Kg Bags",
+          "description": "Standard packaging ideal for small to medium projects. Easy to handle, transport, and store on any construction site."
+        },
+        {
+          "title": "1.5 Ton Jumbo Bags",
+          "description": "Efficient solution for medium to large projects, reducing handling time and packaging waste while increasing productivity."
+        },
+        {
+          "title": "Bulk Tankers",
+          "description": "Perfect for large-scale projects, providing maximum efficiency with direct delivery to silos, eliminating packaging completely."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Build with the Best?",
+      "description": "Contact us today to discuss how Nyati Cement products can meet your specific construction needs.",
+      "button": "Get in Touch"
+    },
+    "products": [
+      {
+        "title": "42.5R Grade Portland Limestone Cement",
+        "description": "Designed for projects requiring rapid strength gain and long-term durability. Suitable for blocks making, precast, prestressed concrete, and high-grade concrete for high-strength structures like bridges and reservoirs.",
+        "features": [
+          "High Early Strength",
+          "High Final Compressive Strength",
+          "High Soundness",
+          "Optimal Fineness",
+          "High Mechanical Strength"
+        ],
+        "applications": [
+          "Quality Blocks",
+          "High Grade Concrete",
+          "Reinforced Concrete Structures",
+          "Hydraulic structures",
+          "Ready mix Concrete (RMC)"
+        ]
+      },
+      {
+        "title": "42.5N Grade Portland Limestone Cement",
+        "description": "A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.",
+        "features": [
+          "Low Heat Generation",
+          "Normal Initial Strength",
+          "Enhanced Workability",
+          "High Ultimate Compressive Strength"
+        ],
+        "applications": [
+          "High-Strength Durable Concrete",
+          "Custom On-Site Mixes",
+          "Hydraulic structures",
+          "High Strength Concrete",
+          "Ready mix Concrete (RMC)"
+        ]
+      },
+      {
+        "title": "Ordinary Portland Cement",
+        "description": "A premium cement known for unmatched strength, durability and exceptional performance. The go-to choice for critical structures and large-scale projects like skyscrapers, bridges, and reserviors.",
+        "features": [
+          "High Early Strength",
+          "High Final Compressive Strength",
+          "Smooth Workability & Flowability"
+        ],
+        "applications": [
+          "Precast Marvels",
+          "Best for Reinforced Concrete",
+          "High-Grade Concrete",
+          "Specialized Builds",
+          "Ready-Mix Structures",
+          "Large-Scale Projects"
+        ]
+      },
+      {
+        "title": "32.5N Grade Portland Cement",
+        "description": "A reliable, general-purpose cement for everyday construction. Ideal for foundations, bricklaying, masonry, and road stabilization, it offers consistent strength, smooth workability, and durable results.",
+        "features": [
+          "Normal Setting",
+          "Enhanced Workability",
+          "High Soundness",
+          "Optimal Fineness",
+          "Superior Adhesion"
+        ],
+        "applications": [
+          "Road Stabilization",
+          "Mortars and Masonry",
+          "plastering & flooring",
+          "Cost-effective Block Making",
+          "General civil engineering works"
+        ]
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Superior Performance"
+      },
+      {
+        "title": "Enhanced Workability"
+      },
+      {
+        "title": "High Final Compressive Strength"
+      },
+      {
+        "title": "High Mechanical Strength"
+      },
+      {
+        "title": "Superior Adhesion"
+      }
+    ],
+    "applicationItems": [
+      {
+        "title": "High-Quality Blocks",
+        "description": "Nyati Cement empowers block-makers to create superior quality blocks, pavers, and concrete poles with exceptional strength and durability, ideal for both residential and commercial projects."
+      },
+      {
+        "title": "Customized On-Site Mixes",
+        "description": "Nyati Cement combines with cement extenders like Fly Ash and Silica, allowing for customized concrete mixes tailored to specific project requirements."
+      },
+      {
+        "title": "High-Grade Concrete",
+        "description": "Delivers exceptional load-bearing capacity and long-term durability for demanding large-scale construction projects, from high-rise buildings to infrastructure."
+      },
+      {
+        "title": "Ready-Mix Concrete",
+        "description": "Nyati Cement is ideal for Ready-Mix Concrete plants, ensuring consistent manufacturing of various concrete grades to meet the diverse needs of customers."
+      },
+      {
+        "title": "Hydraulic Structures",
+        "description": "Engineered for projects demanding exceptional durability and water resistance, from dams and reservoirs to canals and water treatment facilities."
+      },
+      {
+        "title": "Reinforced Concrete Structures",
+        "description": "Provides excellent adhesion between concrete and steel reinforcement, maximizing load-bearing capacity and ensuring structural integrity in buildings and infrastructure."
+      },
+      {
+        "title": "Mortars & Masonry",
+        "description": "Creates strong and reliable bonds in mortars and masonry applications for solid, lasting connections in residential and commercial construction projects."
+      },
+      {
+        "title": "Standard Construction",
+        "description": "Perfect all-purpose solution for walls, floors, foundations, and general building projects with superior strength, durability, and workability."
+      }
+    ]
+  }
+}

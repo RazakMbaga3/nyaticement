@@ -1,0 +1,102 @@
+{
+  "contactPage": {
+    "meta": {
+      "title": "Contact Us | Lake Cement - Nyati Cement",
+      "description": "Contact Lake Cement for inquiries about our cement products, technical assistance, or distributorship opportunities. We're ready to assist you."
+    },
+    "hero": {
+      "title": "Get in Touch",
+      "titleSpan": "With Us",
+      "description": "Have a question or need assistance? Our team is here to help. We aim to respond to all inquiries within 24 hours.",
+      "breadcrumbs": {
+        "home": "Home",
+        "contact": "Contact"
+      },
+      "stats": {
+        "support": {
+          "value": "24/7",
+          "label": "Support"
+        },
+        "responseTime": {
+          "value": "<1hr",
+          "label": "Response Time"
+        },
+        "customerFocus": {
+          "value": "100%",
+          "label": "Customer Focus"
+        }
+      }
+    },
+    "offices": {
+      "title": "Our Offices",
+      "locations": {
+        "title": "Our Locations",
+        "corporate": {
+          "title": "Corporate Office",
+          "name": "IPN Pathak",
+          "position": "Strategic Business Head",
+          "address": "First Floor, ATC House, Plot 773/40, Ohio Street,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
+          "phone": "Tel: +255 22 2139610",
+          "email": "indra.pathak@lakecement.co.tz"
+        },
+        "plant": {
+          "title": "Plant",
+          "name": "Biswajeet Mallik",
+          "position": "Chief Plant Operations Officer",
+          "address": "Kimbiji, Plot No. 265, Municipal Council - Temeke,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
+          "phone": "Tel: +255 677 047 650",
+          "email": "biswajeet.mallik@lakecement.co.tz"
+        }
+      },
+      "sales": {
+        "title": "Sales and Marketing",
+        "regions": [
+          {
+            "region": "Dar Es Salaam | Pwani | Kilimanjaro | Arusha | Tanga - Projects",
+            "phone": "Tel: +255 713 556 004",
+            "email": "sales@lakecement.co.tz"
+          },
+          {
+            "region": "Morogoro | Dodoma | Singida | Southern Highland",
+            "phone": "Tel: +255 677 111 083",
+            "email": "ajit.singh@lakecement.co.tz"
+          },
+          {
+            "region": "Tabora | Kigoma | Kahama | Geita | Shinyanga | Mwanza",
+            "phone": "Tel: +255 677 054 539",
+            "email": "nirav.oza@lakecement.co.tz"
+          }
+        ]
+      }
+    },
+    "form": {
+      "title": "Get in Touch",
+      "writeToUs": {
+        "title": "Write to Us",
+        "description": "Get in touch with our team. We're here to help with your questions, requests, and cement needs. Our team will get back to you as soon as possible."
+      },
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "contactNumber": "Contact Number",
+        "email": "Email",
+        "firmName": "Firm's Name",
+        "address": "Address",
+        "message": "Your Message" 
+      },
+      "buttons": {
+        "reset": "Reset",
+        "submit": "Submit Message"
+      },
+      "status": {
+        "success": "Your message has been sent successfully! We will get back to you soon.",
+        "error": "There was an error sending your message. Please try again later."
+      }
+    },
+    "maps": {
+      "title": "Our Locations",
+      "headOffice": "Lake Cement Head Office",
+      "factory": "Lake Cement Factory"
+    }
+  }
+}

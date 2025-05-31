@@ -1,0 +1,85 @@
+{
+  "quality": {
+    "hero": {
+      "title": "Ubora Usiokombolewa.",
+      "highlight": "Sementi Unayoweza Kuiamini",
+      "description": "Dhamira yetu ya ubora huanza kabla ya sementi kufika mikononi mwako. Kupitia mifumo ya kiotomatiki, usimamizi wa kitaalamu, na viwango vinavyoongoza tasnia, tunatoa uthabiti unayoweza kutegemea.",
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "quality": "Udhibiti wa Ubora"
+      },
+      "stats": {
+        "iso": "ISO",
+        "certified": "Imeidhinishwa",
+        "tbs": "TBS",
+        "approved": "Imeidhinishwa",
+        "quality": "100%",
+        "assured": "Ubora Uliohakikishwa"
+      }
+    },
+    "intro": "Ubora wa bidhaa zetu ni muhimu sana kwetu. Viwango vyetu vikali vinaongozwa na Sera yetu ya Ubora.",
+    "policy": {
+      "title": "SERA YA UBORA",
+      "policies": [
+        {
+          "number": "1",
+          "text": "Kutoa bidhaa zinazofuata viwango vya Shirika la Viwango Tanzania (TBS) na kuzidi matarajio ya wateja"
+        },
+        {
+          "number": "2",
+          "text": "Kuendelea kuboresha utendaji na ufanisi wa Mfumo wa Usimamizi wa Ubora"
+        }
+      ]
+    },
+    "technologies": "Ili kuhakikisha ubora katika mchakato wetu wa uzalishaji, tumeanzisha teknolojia zifuatazo katika Kiwanda chetu.",
+    "features": [
+      {
+        "text": "Teknolojia ya kisasa ya mchakato mkavu kwa ajili ya kuzalisha sementi. Inasimamiwa na <strong>ufuatiliaji wa video wa kiotomatiki wa masaa 24</strong> katika eneo la kuchomea.",
+        "image": "/images/quality/quality-img1.svg"
+      },
+      {
+        "text": "<strong>Maabara iliyojihidhishiwa vyema na spectrometer ya XRF</strong> kwa ajili ya kuchukua sampuli na kupima kila saa ili kuhakikisha na kudumisha ubora wa sementi.",
+        "image": "/images/quality/quality-img2.svg"
+      },
+      {
+        "text": "<strong>Chumba cha kudhibiti kiliyohakikishwa na kompyuta</strong> kikamilifu na Vituo vya Kudhibiti Motor vya akili (MCCs) na vidhibiti vya vipimo vya kisasa kwa ajili ya kufuatilia uendeshaji wa kiwanda kizima.",
+        "image": "/images/quality/quality-img3.svg"
+      },
+      {
+        "text": "<strong>Ngawanyishi za ufanisi wa juu</strong> zimewekwa kwenye (rola) malighafi na mashine za sementi. Zinatoa mgawanyiko sahihi zaidi na hivyo kupunguza kusaga kupita kiasi na kuongeza ufanisi wa nishati ya mashine.",
+        "image": "/images/quality/quality-img4.svg"
+      }
+    ],
+    "commitment": {
+      "title": "AHADI YETU YA UBORA",
+      "paragraph1": "Katika Nyati Cement, ubora sio tu mchakato—ni ahadi yetu. Timu yetu ya maabara inayojitolea inafanya majaribio makali katika kila hatua ya uzalishaji, kuanzia malighafi hadi bidhaa ya mwisho, kuhakikisha ubora thabiti.",
+      "paragraph2": "Sementi yetu hupitia zaidi ya ukaguzi wa ubora 40 kabla ya kufika kwa wateja, na sampuli hupimwa kwa nguvu ya kushindilia, muda wa kuweka, na muundo wa kemikali. Mtazamo huu makini hutuwezesha kuzidi mara kwa mara mahitaji ya Shirika la Viwango la Tanzania.",
+      "tags": {
+        "iso": "Imeidhinishwa na ISO",
+        "tbs": "Imeidhinishwa na TBS",
+        "quality": "Ubora 100% Uliohakikishwa"
+      }
+    },
+    "process": {
+      "title": "MCHAKATO WETU WA UHAKIKISHO WA UBORA",
+      "steps": [
+        {
+          "title": "01. Uchaguzi wa Malighafi",
+          "text": "Tunachagua kwa makini jiwe la chokaa bora zaidi, udongo wa mfinyanzi, na malighafi zingine. Kila kifurushi kinachopitia uchambuzi wa kikemikali ili kuhakikisha muundo bora kabla ya kuingia katika mchakato wetu wa uzalishaji."
+        },
+        {
+          "title": "02. Ufuatiliaji wa Uzalishaji",
+          "text": "Mifumo yetu ya kisasa ya kudhibiti inafuatilia mara kwa mara joto la tanuu, ubora wa clinker, na usafishaji wa kusaga. Ufuatiliaji huu wa wakati halisi huturuhusu kudumisha udhibiti sahihi juu ya kila kipengele cha uzalishaji wa sementi."
+        },
+        {
+          "title": "03. Kupima",
+          "text": "Kila kifurushi cha Nyati Cement kinapitia upimaji kamili wa kimwili na kikemikali kabla ya kuachiwa. Tunapima maendeleo ya nguvu, muda wa kuweka, na uimara kuhakikisha wateja wetu wanapokea tu bora zaidi."
+        }
+      ]
+    },
+    "banner": {
+      "title": "Ahadi Yetu ya Ubora Haiishi Kamwe",
+      "text": "Kuanzia uchaguzi wa malighafi hadi ufungaji wa mwisho, udhibiti wa ubora unajumuishwa katika kila hatua ya mchakato wetu wa uzalishaji. Nyati Cement inaendelea kuwekeza katika teknolojia za kisasa na mafunzo ili kuhakikisha tunazalisha bidhaa za sementi zinazotegemewa na zenye utendaji mkubwa zaidi nchini Tanzania."
+    }
+  }
+}

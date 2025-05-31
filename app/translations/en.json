@@ -1,0 +1,424 @@
+{  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "quality": "Quality Control",
+    "distribution": "Distribution",
+    "sustainability": "Sustainability",
+    "news": "News",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "csr": "CSR",
+    "codeOfConduct": "Code of Conduct",
+    "brochure": "Brochure"
+  },"hero": {
+    "title": "Innovative Technology",
+    "subtitle": "Trusted Cement for",
+    "description": "Lake Cement produces cement that is stronger and lasts longer. Our Nyati Cement brand is a leading cement brand in Tanzania and neighboring countries.",
+    "cta": "Contact Us",
+    "badges": {
+      "ownClinker": "Own Clinker",
+      "ownPower": "Own Power",
+      "consistentQuality": "Consistent Quality"
+    },
+    "strongDurable": "Strong & Durable",
+    "construction": "Construction",
+    "certifications": "Tests and Statutory Certifications",
+    "productCard": {
+      "title": "Nyati Cement",
+      "description": "Tanzania's #1 choice for strength and durability"
+    }
+  },
+  "about": {
+    "title": "About Lake Cement",
+    "description": "Lake Cement Ltd is a leading cement manufacturer in Tanzania, committed to delivering high-quality cement products through innovative technology and sustainable practices.",
+    "readMore": "Read More"
+  },  "products": {
+    "title": "Our Products",
+    "description": "We offer a comprehensive range of cement products suitable for all construction needs.",
+    "viewAll": "View All Products",
+    "sliderTitle": "Nyati Cement Product Portfolio",
+    "sliderDescription": "Our Cement products are ideal for a wide range of applications ranging from dry-lean mixes and general-purpose ready-mixes to high strength precast and pre-stressed concrete. Explore our wide range of specialized cements to find the perfect fit for every construction job.",
+    "navigation": {
+      "previous": "Previous product",
+      "next": "Next product",
+      "slideNumber": "Go to slide {{number}}"
+    },
+    "items": {
+      "425r": {
+        "name": "Nyati 42.5R",
+        "description": "Higher early strength for fast construction projects",
+        "specs": {
+          "1": "Early strength development",
+          "2": "Ideal for precast concrete",
+          "3": "Excellent workability"
+        }
+      },
+      "425n": {
+        "name": "Nyati 42.5N",
+        "description": "Balanced performance for general construction needs",
+        "specs": {
+          "1": "Regular strength development",
+          "2": "Versatile applications",
+          "3": "Optimum durability"
+        }
+      },
+      "opc": {
+        "name": "Nyati OPC",
+        "description": "CEM I OPC 42.5N for specialized applications",
+        "specs": {
+          "1": "High pure clinker content",
+          "2": "Superior strength",
+          "3": "Specialized construction"
+        }
+      },
+      "325n": {
+        "name": "Nyati 32.5N",
+        "description": "Economic solution for general masonry work",
+        "specs": {
+          "1": "Mortar and plaster works",
+          "2": "Cost-effective",
+          "3": "Good workability"
+        }
+      }
+    }
+  },
+  "quality": {
+    "title": "Quality Control",
+    "description": "Our state-of-the-art quality control processes ensure consistent excellence in every bag of cement.",
+    "learnMore": "Learn More",
+    "hero": {
+      "title": "Uncompromised Quality.",
+      "highlight": "Cement You Can Trust",
+      "description": "Our commitment to quality starts long before the cement reaches your hands. Through automated systems, skilled oversight, and industry-leading standards, we deliver consistency you can count on.",
+      "breadcrumb": {
+        "home": "Home",
+        "quality": "Quality Control"
+      },
+      "stats": {
+        "iso": "ISO",
+        "certified": "Certified",
+        "tbs": "TBS",
+        "approved": "Approved",
+        "quality": "100%",
+        "assured": "Quality Assured"
+      }
+    },
+    "intro": "The quality of our products, is of paramount importance to us. Our stringent standards are governed by our Quality Policy.",
+    "policy": {
+      "title": "QUALITY POLICY",
+      "policies": [
+        {
+          "number": "1",
+          "text": "To provide products conforming to Tanzania Bureau of Standards (TBS) and exceeding customer expectations"
+        },
+        {
+          "number": "2",
+          "text": "To continually improve performance and effectiveness of the Quality Management System"
+        }
+      ]
+    },
+    "technologies": "In order to embed quality across our production process, we have introduced following technologies at our Plant.",
+    "features": [
+      {
+        "text": "A state-of-the-art dry process technology for producing cement. It is monitored by a <strong>round-the-clock automated video surveillance</strong> at the burning zone.",
+        "image": "/images/quality/quality-img1.svg"
+      },
+      {
+        "text": "A fully equipped <strong>world-class laboratory with XRF spectrometer</strong> for hourly sampling and testing to ensure and maintain the quality of the cement.",
+        "image": "/images/quality/quality-img2.svg"
+      },
+      {
+        "text": "<strong>Fully computerised central control room</strong> with intelligent Motor Control Centres (MCCs) and sophisticated instrumentation controls for monitoring the operation of the entire plant.",
+        "image": "/images/quality/quality-img3.svg"
+      },
+      {
+        "text": "<strong>High efficiency classifiers</strong> have been installed at the raw material (roller) and cement mills. They give more accurate separation and thereby reduce over-grinding and enhance the mill's energy efficiency.",
+        "image": "/images/quality/quality-img4.svg"
+      }
+    ],
+    "commitment": {
+      "title": "OUR QUALITY COMMITMENT",
+      "paragraph1": "At Nyati Cement, quality is not just a process—it's our promise. Our dedicated laboratory team conducts rigorous testing at every stage of production, from raw materials to the final product, ensuring consistent excellence.",
+      "paragraph2": "Our cement undergoes over 40 quality checks before reaching customers, with samples tested for compressive strength, setting time, and chemical composition. This meticulous approach enables us to consistently exceed Tanzania Bureau of Standards requirements.",
+      "tags": {
+        "iso": "ISO Certified",
+        "tbs": "TBS Approved",
+        "quality": "100% Quality Assured"
+      }
+    },
+    "process": {
+      "title": "OUR QUALITY ASSURANCE PROCESS",
+      "steps": [
+        {
+          "title": "01. Raw Material Selection",
+          "text": "We carefully source and select the finest limestone, clay, and other raw materials. Each batch undergoes chemical analysis to ensure optimal composition before entering our production process."
+        },
+        {
+          "title": "02. Manufacturing Controls",
+          "text": "Throughout the production process, our automated systems continuously monitor and adjust parameters to maintain consistent quality. Our skilled operators oversee these systems, applying years of expertise."
+        },
+        {
+          "title": "03. Laboratory Testing",
+          "text": "Our state-of-the-art laboratory conducts rigorous testing at every stage. From raw materials to the final product, we verify that each batch meets our exacting standards before it leaves our facility."
+        },
+        {
+          "title": "04. Certification & Compliance",
+          "text": "All our products are certified by the Tanzania Bureau of Standards and comply with international quality benchmarks. We regularly submit samples for independent verification."
+        },
+        {
+          "title": "05. Continuous Improvement",
+          "text": "We constantly evaluate our processes and products, seeking ways to enhance quality and performance. Customer feedback and market research drive our ongoing innovation efforts."
+        }
+      ]
+    },
+    "banner": {
+      "title": "Experience the Nyati Difference",
+      "text": "See why contractors and builders across Tanzania trust Nyati Cement for their most demanding projects.",
+      "cta": "Contact Us Today"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for any questions about our products and services.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "reset": "Reset Form"
+    },
+    "address": "ATC House, Plot 773/40",
+    "phone": "+255 658 888 999",
+    "email": "info@lakecement.co.tz",
+    "success": "Thank you for your message. We'll get back to you soon!",
+    "error": "An error occurred. Please try again."
+  },  "footer": {
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links",
+    "copyright": "© 2025 Lake Cement Ltd. All rights reserved.",
+    "companyInfo": "Company Information",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "resources": "Resources",
+    "contactUs": "Contact Us",
+    "subscribe": "Subscribe to Our Newsletter",
+    "subscribeText": "Get the latest updates on products and company events.",
+    "yourEmail": "Your email",
+    "submitEmail": "Submit",
+    "aboutUs": "About Us",
+    "products": "Products",
+    "qualityControl": "Quality Control",
+    "distribution": "Distribution",
+    "sustainability": "Sustainability",
+    "careers": "Careers",
+    "news": "News",
+    "csr": "CSR",
+    "codeOfConduct": "Code of Conduct",
+    "company": "Company",
+    "additionalInfo": "Additional Info",    "thePlant": "The Plant",
+    "certifications": "Certifications",
+    "distributionAndService": "Distribution & Service",
+    "blog": "Blog",
+    "logoAlt": "Lake Cement Logo",
+    "socialMedia": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "language": "Language",
+    "english": "English",
+    "swahili": "Swahili"
+  },
+  "homePage": {
+    "featuresTitle": "Our Features",
+    "featuresSubtitle": "Why Choose Nyati Cement",
+    "blogTitle": "News & Articles",
+    "blogSubtitle": "Insights from our experts",
+    "videoTitle": "Media Center",
+    "bannerTitle": "Serving All of Tanzania",
+    "bannerDescription": "Easy access to our products through distribution points nationwide"
+  },
+  "videos": {
+    "title": "Videos & Commercials",
+    "watchVideos": "Watch Videos",
+    "listenAudio": "Listen to Audio",
+    "commercials": "Commercials",
+    "description": "Explore our latest advertisements showcasing the strength and durability of Nyati Cement products. See our brand in action through videos and listen to our radio spots.",
+    "watchOnYouTube": "Watch on YouTube",
+    "watchVideo": "Watch Video",
+    "visitYouTubeChannel": "Visit Our YouTube Channel",
+    "listenOnYouTube": "Listen on YouTube",
+    "mainVideo": {
+      "title": "Hakuna kama Nyati",
+      "description": "Experience the strength and reliability of Nyati Cement in our featured advertisement."
+    },
+    "secondaryVideos": {
+      "video1": {
+        "title": "Home Protection"
+      },
+      "video2": {
+        "title": "Strong Bricks"
+      }
+    },
+    "audioSpots": {
+      "spot1": {
+        "title": "Radio Commercial 1"
+      },
+      "spot2": {
+        "title": "Radio Commercial 2"
+      }
+    },
+    "radioCommercials": {
+      "title": "Nyati Cement Radio Commercials",
+      "description": "Listen to our popular radio advertisements that highlight the quality, strength, and reliability of Nyati Cement products. Our commercials emphasize why Nyati Cement is the preferred choice for construction projects across Tanzania and neighboring countries.",
+      "instruction": "Click on any of the radio spots below to listen to our advertisements on YouTube."
+    }
+  },
+  "blog": {
+    "title": "News & Articles",
+    "subtitle": "Check out the latest insights from our experts",
+    "readTime": "Minute Read",
+    "category": {
+      "technicalKnowledge": "Technical Knowledge",
+      "constructionBestPractices": "Construction Best Practices",
+      "industryInsights": "Industry Insights"
+    },
+    "featuredPosts": "Featured Posts",
+    "recentPosts": "Recent Posts",
+    "categories": "Categories",
+    "readingTime": "Reading Time",
+    "minutes": "minutes",
+    "sharePost": "Share",
+    "relatedPosts": "Related Posts"
+  },
+  "homeBuilder": {
+    "title": "Building Dreams with Nyati",
+    "subtitle": "From Foundation to Finish",
+    "description": "Explore our guides, expert advice, and comprehensive checklists to help you build your dream home confidently using Nyati Cement products.",
+    "forHomeBuilders": "For Home Builders",
+    "forInfrastructure": "For Infrastructure",
+    "forCommercial": "For Commercial"
+  },
+  "aboutPage": {
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "history": "Our History",
+    "team": "Our Team",
+    "leadership": "Leadership",
+    "plantTitle": "Our State-of-the-Art Plant",
+    "plantDescription": "Our plant features cutting-edge technology that enables superior cement production",
+    "aboutTitle": "About Lake Cement",
+    "aboutSubtitle": "The Trusted Company for Quality Cement",
+    "aboutDescription": "Lake Cement Ltd was established with a mission to produce the finest quality, appealing and reliable cement for builders and developers in Tanzania. With modern technology and investment in quality standards, we deliver unmatched value to our customers.",
+    "companyOverview": "Company Overview",
+    "keyMilestones": "Key Milestones",
+    "corporateValues": "Corporate Values",
+    "ourTeam": "Our Team",
+    "leadershipTeam": "Leadership Team",
+    "manufacturingProcess": "Manufacturing Process",
+    "ourPartners": "Our Partners",
+    "joinOurTeam": "Join Our Team"
+  },  "sustainabilityPage": {
+    "title": "Sustainability",
+    "description": "We are committed to protecting the environment and developing the communities we operate in",
+    "environment": "Environment",
+    "social": "Social",
+    "governance": "Governance"
+  },
+  "sustainability": {
+    "title": "Sustainability",
+    "description": "We are committed to protecting the environment and developing the communities we operate in"
+  },
+  "distribution": {
+    "title": "Distribution",
+    "description": "Easy access to our products through distribution points nationwide"
+  },
+  "productsPage": {
+    "title": "Our Products",
+    "subtitle": "Superior Solutions for All Your Construction Needs",
+    "description": "We offer superior cement products designed to meet the diverse requirements of your project",
+    "keyFeatures": "Key Features",
+    "idealFor": "Ideal For",
+    "applications": "Applications",
+    "packagingOptions": "Packaging Options",
+    "grade": "Grade",
+    "viewDetails": "View Details",
+    "learnMore": "Learn More",
+    "howToBuy": "How to Buy",
+    "whereToFind": "Where to Find",
+    "qualityCertifications": "Quality Certifications",
+    "technicalSpecifications": "Technical Specifications"
+  },
+  "productsSection": {
+    "title": "Our Products",
+    "description": "We offer a variety of cement types suitable for all construction needs.",
+    "viewAll": "View All Products",
+    "categories": {
+      "title": "Product Categories",
+      "description": "Find the perfect cement for your specific construction needs"
+    },
+    "features": {
+      "strength": "Strength",
+      "durability": "Durability",
+      "setting": "Setting Time",
+      "workability": "Workability",
+      "resistance": "Resistance"
+    },
+    "nyati32": {
+      "title": "Nyati 32.5N",
+      "description": "Ideal for general masonry works, plastering and screeding",
+      "features": "Perfect balance of workability and strength for everyday construction needs"
+    },
+    "nyati42": {
+      "title": "Nyati 42.5N",
+      "description": "Versatile cement for structural concrete applications",
+      "features": "Superior strength development for demanding construction projects"
+    },
+    "nyati42r": {
+      "title": "Nyati 42.5R",
+      "description": "Rapid-hardening cement for fast-track construction",
+      "features": "Excellent early strength development for quick form removal and fast construction"
+    },
+    "nyati53": {
+      "title": "Nyati 53",
+      "description": "High-strength cement for specialized construction",
+      "features": "Ultimate strength for high-performance concrete and specialized applications"
+    }
+  },
+  "careersPage": {
+    "title": "Careers",
+    "description": "Join our team of dedicated professionals",
+    "currentOpenings": "Current Openings",
+    "joinTeam": "Join Our Team",
+    "benefits": "Benefits",
+    "applyNow": "Apply Now",
+    "noOpenings": "There are no open positions at the moment, please check back later"
+  },
+  "distributionPage": {
+    "title": "Distribution",
+    "description": "Our distribution network ensures our products are available throughout Tanzania",
+    "regions": "Regions",
+    "becomeDistributor": "Become a Distributor",
+    "findDealer": "Find a Dealer Near You"
+  },
+  "news": {
+    "latest": "Latest News",
+    "pressReleases": "Press Releases",
+    "events": "Events",
+    "mediaKit": "Media Kit"
+  }
+}

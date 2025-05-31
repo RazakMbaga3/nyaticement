@@ -1,0 +1,21 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const AdvantageItem = ({ title, description, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="bg-white p-5 rounded-sm shadow-sm hover:shadow-md transition-all"
+    >
+      <h3 className="text-nyati-orange font-semibold text-lg mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm">{description}</p>
+    </motion.div>
+  );
+};
+
+export default AdvantageItem;

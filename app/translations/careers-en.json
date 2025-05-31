@@ -1,0 +1,75 @@
+{
+  "careersPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "careers": "Careers"
+      },
+      "title": "Shape the Future",
+      "highlight": "With Us",
+      "description": "Join our dynamic team and be part of a company that's building Tanzania's future. Discover exciting opportunities and grow with us.",
+      "metrics": {
+        "teamMembers": {
+          "count": "500+",
+          "label": "Team Members"
+        },
+        "departments": {
+          "count": "15+",
+          "label": "Departments"
+        },
+        "growthFocus": {
+          "count": "100%",
+          "label": "Growth Focus"
+        }
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "At Lake Cement, we aim to become a key driver in Tanzania's growth by consistently delivering high quality cement and by creating value for customers, business partners, shareholders and employees."
+    },
+    "joinTeam": {
+      "title": "Join Our Team",
+      "values": [
+        {
+          "title": "Innovation",
+          "description": "We foster a culture of innovation and continuous improvement in all aspects of our operations."
+        },
+        {
+          "title": "Teamwork",
+          "description": "We believe in the power of collaboration and working together to achieve common goals."
+        },
+        {
+          "title": "Excellence",
+          "description": "We are committed to maintaining the highest standards in everything we do."
+        }
+      ]
+    },
+    "futureLeaders": {
+      "title": "Building Future Leaders",
+      "description": "Our team is our greatest asset"
+    },
+    "whyWorkWithUs": {
+      "title": "Why Work With Us",
+      "benefits": [
+        {
+          "title": "Competitive Compensation",
+          "description": "Attractive salary packages and benefits that recognize your contributions."
+        },
+        {
+          "title": "Meaningful Work",
+          "description": "Be part of Tanzania's infrastructure and development journey."
+        },
+        {
+          "title": "Inclusive Environment",
+          "description": "A diverse workplace that values different perspectives."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Join Our Team?",
+      "description": "We are passionate about our cement. If you have desire to excel and fly high, then mail us your resume at",
+      "emailLabel": "career@lakecement.co.tz",
+      "buttonText": "Send Your Resume"
+    }
+  }
+}

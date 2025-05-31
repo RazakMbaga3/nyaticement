@@ -1,0 +1,90 @@
+{
+  "certificationsPage": {
+    "hero": {
+      "breadcrumb": {
+        "home": "Nyumbani",
+        "about": "Kuhusu",
+        "certifications": "Vyeti"
+      },
+      "title": "Mitihani na Vyeti",
+      "highlight": "vya Kisheria",
+      "description": "Angalia na pakua vyeti vyetu vya ubora na hati za uzingatiaji ambazo zinaonyesha dhamira yetu kwa ubora na viwango vya tasnia."
+    },
+    "categories": [
+      {
+        "category": "Viwango vya Ubora",
+        "items": [
+          {
+            "image": "/images/certifications/iso-9001-logo.png",
+            "title": "ISO 9001:2008",
+            "downloadLink": "/docs/RENEWED DOCS/Latest ISO certificate- 2024 onwrad.pdf",
+            "alt": "Nembo ya ISO 9001",
+            "subItems": []
+          },
+          {
+            "image": "/images/certifications/tbs_logo.jpg",
+            "title": "Leseni ya TBS",
+            "downloadLink": "/docs/RENEWED DOCS/TBS CERTIFICATE FROM 2024-07-02 TO 2025-07-01.pdf",
+            "alt": "Nembo ya TBS",
+            "subItems": []
+          }
+        ]
+      },
+      {
+        "category": "Matokeo ya Mitihani ya Ndani",
+        "items": [
+          {
+            "title": "Cheti cha mtihani wa ndani 42.5 N",
+            "downloadLink": "/docs/16-W,NO-42.5N-28DAYS.pdf",
+            "subItems": []
+          },
+          {
+            "title": "Cheti cha mtihani wa ndani 42.5 R",
+            "downloadLink": "/docs/16-WNO-42.5R-28DAYS.pdf",
+            "subItems": []
+          },
+          {
+            "title": "Cheti cha mtihani wa ndani 32.5 N",
+            "downloadLink": "/docs/16-W,NO-32.5N-28DAYS.pdf",
+            "subItems": []
+          },
+          {
+            "title": "Cheti cha mtihani wa ndani OPC",
+            "downloadLink": "/docs/16-W,NO-CEM I-42.5N-28DAYS.pdf",
+            "subItems": []
+          }
+        ]
+      },
+      {
+        "category": "Vyeti Vingine",
+        "items": [
+          {
+            "image": "/images/certifications/tra.png",
+            "title": "Cheti cha VAT",
+            "downloadLink": "/docs/VAT CERTIFICATE.jpg",
+            "alt": "NEMBO YA TRA",
+            "subItems": []
+          },
+          {
+            "image": "/images/certifications/tra.png",
+            "title": "Cheti cha TIN",
+            "downloadLink": "/docs/TIN CERTIFICATE.jpg",
+            "alt": "NEMBO YA TRA",
+            "subItems": []
+          },
+          {
+            "title": "Leseni ya Biashara",
+            "downloadLink": "/docs/RENEWED DOCS/Renewed business License - 2025.pdf",
+            "subItems": []
+          },
+          {
+            "title": "Karatasi ya Data ya Usalama wa Vifaa - MSDS",
+            "downloadLink": "/docs/RENEWED DOCS/MSDS-LCL CEMENT.pdf",
+            "subItems": []
+          }
+        ]
+      }
+    ],
+    "downloadButton": "Pakua"
+  }
+}
