@@ -8,6 +8,26 @@ import { BlogPostWrapper } from '../../components/BlogPostWrapper'
 import BlogPost from '../../components/BlogPost'
 import { useLanguage } from '../../contexts/LanguageContext'
 
+// Related posts for this article
+const relatedPosts = [
+  {
+    title: 'Building Your Dream Home: How to Choose the Right Cement',
+    excerpt: 'A comprehensive guide to selecting the best cement for your residential construction project.',
+    category: 'Homeowner Tips',
+    date: 'May 15, 2025',
+    readTime: '6 min read',
+    slug: '/blog/building-your-dream-home'
+  },
+  {
+    title: 'Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project',
+    excerpt: 'Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide.',
+    category: 'Technical Knowledge',
+    date: 'March 28, 2025',
+    readTime: '7 min read',
+    slug: '/blog/understanding-cement-grades'
+  }
+];
+
 export default function TanzaniaInfrastructureBoomPage() {
   return (
     <BlogPost 

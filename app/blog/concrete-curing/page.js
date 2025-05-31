@@ -8,6 +8,34 @@ import { BlogPostWrapper } from '../../components/BlogPostWrapper'
 import BlogPost from '../../components/BlogPost'
 import { useLanguage } from '../../contexts/LanguageContext'
 
+// Define related posts
+const relatedPosts = [
+  {
+    title: 'Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project',
+    excerpt: 'Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide.',
+    date: 'March 28, 2025',
+    category: 'Technical Knowledge',
+    slug: '/blog/understanding-cement-grades',
+    readTime: '3 Minute Read'
+  },
+  {
+    title: 'Water-Cement Ratio: The Key to Durable Concrete',
+    excerpt: 'Discover how the water-cement ratio affects the strength and durability of your concrete structures.',
+    date: 'April 15, 2025',
+    category: 'Technical Knowledge',
+    slug: '/blog/water-cement-ratio',
+    readTime: '5 Minute Read'
+  },
+  {
+    title: 'Building During Monsoon Season: Tips and Best Practices',
+    excerpt: 'Learn how to successfully manage construction projects during Tanzania\'s rainy season with these expert tips.',
+    date: 'February 10, 2025',
+    category: 'Construction Tips',
+    slug: '/blog/monsoon-construction',
+    readTime: '4 Minute Read'
+  }
+];
+
 export default function ConcreteCuringPage() {
   return (
     <BlogPost 

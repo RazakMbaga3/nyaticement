@@ -8,6 +8,34 @@ import { BlogPostWrapper } from '../../components/BlogPostWrapper'
 import BlogPost from '../../components/BlogPost'
 import { useLanguage } from '../../contexts/LanguageContext'
 
+// Related posts for this article
+const relatedPosts = [
+  {
+    title: 'Understanding Concrete Curing: Best Practices for Maximum Strength',
+    excerpt: 'Master the art of proper concrete curing to achieve optimal strength and durability in your construction projects.',
+    category: 'Construction Best Practices',
+    date: 'May 9, 2025',
+    readTime: '10 min read',
+    slug: '/blog/concrete-curing'
+  },
+  {
+    title: 'Water-Cement Ratio: The Key to Durable Concrete',
+    excerpt: 'Discover how the water-cement ratio affects the strength and durability of your concrete structures.',
+    category: 'Technical Knowledge',
+    date: 'April 4, 2025',
+    readTime: '8 min read',
+    slug: '/blog/water-cement-ratio'
+  },
+  {
+    title: 'Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project',
+    excerpt: 'Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide.',
+    category: 'Technical Knowledge',
+    date: 'March 28, 2025',
+    readTime: '7 min read',
+    slug: '/blog/understanding-cement-grades'
+  }
+];
+
 export default function MonsoonConstructionPage() {
   return (
     <BlogPost 
