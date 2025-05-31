@@ -88,11 +88,10 @@ export function optimizeImageUrl(url, { width, height, quality = 75, format = 'w
   const params = new URLSearchParams();
   if (width) params.append('w', width);
   if (height) params.append('h', height);
-  if (quality) params.append('q', quality);
-  if (format) params.append('fm', format);
+  if (quality) params.append('q', quality);  if (format) params.append('fm', format);
 
   // Handle both absolute and relative URLs
-  const baseUrl = url.startsWith('http') ? url : `${process.env.NEXT_PUBLIC_SITE_URL}${url}`;
+  const baseUrl = url.startsWith('http') ? url : `${process.env.NEXT_PUBLIC_SITE_URL || ''}${url}`;
   
   return `${baseUrl}?${params.toString()}`;
 }

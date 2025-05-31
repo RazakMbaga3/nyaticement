@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/private/', '/admin/']
     },
-    sitemap: 'https://nyaticemet.com/sitemap.xml',
+    sitemap: 'https://nyaticement.vercel.app/sitemap.xml',
   };
 }

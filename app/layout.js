@@ -20,7 +20,7 @@ export const metadata = {
   title: 'Nyati Cement | Trusted Cement for Strong and Durable Construction',
   description: 'Lake Cement produces cement that is stronger and lasts longer. Our Nyati Cement brand is a leading cement brand in Tanzania and neighboring countries.',
   keywords: 'Lake Cement, Nyati Cement, Tanzania cement, construction, building materials, cement technology, Dar es Salaam',
-  metadataBase: new URL('https://lakecement.co.tz'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://nyaticement.vercel.app'),
   manifest: '/manifest.json',
   icons: {
     icon: [

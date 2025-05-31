@@ -17,7 +17,8 @@ const newsArticles = [
 ];
 
 export default async function sitemap() {
-  const baseUrl = 'https://nyaticemet.com'
+  // Use environment variable with fallback for the base URL
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nyaticement.vercel.app'
   
   // Generate news URLs
   const newsUrls = newsArticles.map((article) => ({

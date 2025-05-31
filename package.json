@@ -1,5 +1,5 @@
 {
-  "name": "lc",
+  "name": "nyati-cement",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "canvas": "^3.1.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.4.1"
   }

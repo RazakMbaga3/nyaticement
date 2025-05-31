@@ -24,17 +24,15 @@ export async function POST(request) {
         { message: 'Missing required fields' },
         { status: 400 }
       );
-    }
-
-    // Create email transporter
-    // Note: You'll need to replace these credentials with your actual email service details
+    }    // Create email transporter
+    // Using environment variables with fallbacks to prevent build failures
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_SERVER_HOST,
-      port: process.env.EMAIL_SERVER_PORT,
+      host: process.env.EMAIL_SERVER_HOST || 'smtp.example.com',
+      port: parseInt(process.env.EMAIL_SERVER_PORT || '587', 10),
       secure: process.env.EMAIL_SERVER_SECURE === 'true',
       auth: {
-        user: process.env.EMAIL_SERVER_USER,
-        pass: process.env.EMAIL_SERVER_PASSWORD,
+        user: process.env.EMAIL_SERVER_USER || 'default-user',
+        pass: process.env.EMAIL_SERVER_PASSWORD || 'default-password',
       },
     });
 
