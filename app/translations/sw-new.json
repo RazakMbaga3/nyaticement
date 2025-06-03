@@ -15,7 +15,7 @@
   },  "hero": {
     "title": "Teknolojia ya Kisasa",
     "subtitle": "Saruji Inayoaminika kwa",
-    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
+    "description": " na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
     "cta": "Wasiliana Nasi",
     "badges": {
       "ownClinker": "Clinker Yetu",
@@ -23,7 +23,7 @@
       "consistentQuality": "Ubora Endelevu"
     },
     "strongDurable": "Ujenzi Bora",
-    "construction": "& Kudumu",
+    "construction": "na Wakudumu",
     "certifications": "Vipimo na Vyeti vya Kisheria",
     "productCard": {
       "title": "Saruji ya Nyati",
@@ -39,7 +39,7 @@
     "description": "Tunatoa bidhaa bora za saruji zinazofaa kwa mahitaji yote ya ujenzi.",
     "viewAll": "Angalia Bidhaa Zote",
     "sliderTitle": "Bidhaa za Saruji ya Nyati",
-    "sliderDescription": "Bidhaa zetu za Saruji zinafaa kwa matumizi mbalimbali kuanzia miksi kavu ya msingi hadi miksi iliyoandaliwa kwa matumizi ya kawaida hadi konkriti ya nguvu ya juu iliyotengenezwa kabla na iliyokumbwa. Chunguza bidhaa zetu nyingi maalum za saruji ili kupata inayofaa vyema kwa kila kazi ya ujenzi.",
+    "sliderDescription": "Bidhaa zetu za saruji ni bora kwa matumizi mbalimbali kuanzia michanganyiko isiyo na unyevu na michanganyiko iliyo tayari kwa madhumuni ya jumla hadi uimara wa juu na simiti iliyosisitizwa mapema. Gundua bidhaa zetu za sementi maalum ili kupata inayofaa kwa kila kazi ya ujenzi.",
     "navigation": {
       "previous": "Bidhaa iliyotangulia",
       "next": "Bidhaa inayofuata",
@@ -174,7 +174,7 @@
       ]
     },
     "banner": {
-      "title": "Pata Uzoefu wa Tofauti ya Nyati",
+      "title": "Pata Uzoefu wa Tofauti kwa Kutumia Nyati",
       "text": "Tazama kwa nini makandarasi na wajenzi katika Tanzania wanaiamini Saruji ya Nyati kwa miradi yao mahitaji makubwa.",
       "cta": "Wasiliana Nasi Leo"
     }

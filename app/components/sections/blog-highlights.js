@@ -38,7 +38,7 @@ const featuredPosts = [
       readTime: '4 Minute Read'
     },
     sw: {
-      title: 'Mwongozo wa Ujenzi wa Mvua: Kujenga na Saruji Wakati wa Misimu ya Mvua',
+      title: 'Mwongozo wa Ujenzi kwa Saruji Wakati wa Misimu ya Mvua',
       excerpt: 'Vidokezo muhimu vya kuhakikisha ujenzi bora wakati wa misimu ya mvua ya Tanzania.',
       date: 'Aprili 04, 2025',
       category: 'Mbinu Bora za Ujenzi',

@@ -15,16 +15,16 @@
   },"hero": {
     "title": "Teknolojia ya Kisasa",
     "subtitle": "Saruji Inayoaminika kwa",
-    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
+    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement inafanya vizuri Tanzania na nchi jirani.",
     "cta": "Wasiliana Nasi",
     "badges": {
-      "ownClinker": "Clinker Yetu",
+      "ownClinker": "Klinka Yetu",
       "ownPower": "Umeme Wetu",
       "consistentQuality": "Ubora Endelevu"
     },
     "strongDurable": "Ujenzi Bora",
-    "construction": "& Kudumu",
-    "certifications": "Vipimo na Vyeti vya Kisheria",
+    "construction": "na Wakudumu",
+    "certifications": "Vyeti vya Vipimo na Kisheria",
     "productCard": {
       "title": "Saruji ya Nyati",
       "description": "Chaguo namba #1 Tanzania kwa nguvu na kudumu"
@@ -39,7 +39,8 @@
     "description": "Tunatoa bidhaa bora za saruji zinazofaa kwa mahitaji yote ya ujenzi.",
     "viewAll": "Angalia Bidhaa Zote",
     "sliderTitle": "Bidhaa za Saruji ya Nyati",
-    "sliderDescription": "Bidhaa zetu za Saruji zinafaa kwa matumizi mbalimbali kuanzia miksi kavu ya msingi hadi miksi iliyoandaliwa kwa matumizi ya kawaida hadi konkriti ya nguvu ya juu iliyotengenezwa kabla na iliyokumbwa. Chunguza bidhaa zetu nyingi maalum za saruji ili kupata inayofaa vyema kwa kila kazi ya ujenzi.",
+    "sliderDescription": "Bidhaa zetu za saruji ni bora kwa matumizi mbalimbali kuanzia michanganyiko isiyo na unyevu na michanganyiko iliyo tayari kwa madhumuni ya jumla hadi uimara wa juu zege iliyoimarishwa mapema. Gundua bidhaa zetu za saruji maalum ili kupata inayofaa kwa kila kazi ya ujenzi."
+,
     "navigation": {
       "previous": "Bidhaa iliyotangulia",
       "next": "Bidhaa inayofuata",
@@ -48,7 +49,7 @@
     "items": {
       "425r": {
         "name": "Nyati 42.5R",
-        "description": "Nguvu ya haraka katika awamu za mwanzo kwa miradi ya ujenzi wa haraka",
+        "description": "Nguvu ya haraka ya awali kwa miradi ya ujenzi unayohitaji uharaka",
         "specs": {
           "1": "Ukuzaji wa nguvu wa mapema",
           "2": "Inafaa kwa konkriti iliyotengenezwa kabla",
@@ -75,7 +76,7 @@
       },
       "325n": {
         "name": "Nyati 32.5N",
-        "description": "Suluhisho la kiuchumi kwa kazi za uashi wa jumla",
+        "description": "Suluhisho la kiuchumi kwa kazi za ujenzi wa kawaida",
         "specs": {
           "1": "Kazi za mota na plasta",
           "2": "Bei nafuu",
@@ -89,9 +90,9 @@
     "description": "Mifumo yetu ya kisasa ya udhibiti ubora inahakikisha ubora endelevu katika kila mfuko wa saruji.",
     "learnMore": "Jifunze Zaidi",
     "hero": {
-      "title": "Ubora Usiokombolewa.",
-      "highlight": "Sementi Unayoweza Kuiamini",
-      "description": "Dhamira yetu ya ubora huanza kabla ya sementi kufika mikononi mwako. Kupitia mifumo ya kiotomatiki, usimamizi wa kitaalamu, na viwango vinavyoongoza tasnia, tunatoa uthabiti unayoweza kutegemea.",
+      "title": "Ubora Usiopungua",
+      "highlight": "Saruji Unayoweza Kuiamini",
+      "description": "Ahadi yetu ya ubora huanza muda mrefu kabla ya saruji kufikia mkononi mwako. Kupitia mifumo ya kiotomatiki, uangalizi wenye ujuzi, na viwango vinavyoongoza katika tasnia, tunatoa uthabiti unaoweza kuutegemea.",
       "breadcrumb": {
         "home": "Nyumbani",
         "quality": "Udhibiti wa Ubora"
@@ -105,7 +106,7 @@
         "assured": "Ubora Uliohakikishwa"
       }
     },
-    "intro": "Ubora wa bidhaa zetu ni muhimu sana kwetu. Viwango vyetu vikali vinaongozwa na Sera yetu ya Ubora.",
+    "intro": "Ubora wa bidhaa zetu, ni wa muhimu sana kwetu. Viwango vyetu vikali vinasimamiwa na sera yetu ya ubora.",
     "policy": {
       "title": "SERA YA UBORA",
       "policies": [
@@ -139,9 +140,9 @@
       }
     ],
     "commitment": {
-      "title": "AHADI YETU YA UBORA",
-      "paragraph1": "Katika Nyati Cement, ubora sio tu mchakato—ni ahadi yetu. Timu yetu ya maabara inayojitolea inafanya majaribio makali katika kila hatua ya uzalishaji, kuanzia malighafi hadi bidhaa ya mwisho, kuhakikisha ubora thabiti.",
-      "paragraph2": "Sementi yetu hupitia zaidi ya ukaguzi wa ubora 40 kabla ya kufika kwa wateja, na sampuli hupimwa kwa nguvu ya kushindilia, muda wa kuweka, na muundo wa kemikali. Mtazamo huu makini hutuwezesha kuzidi mara kwa mara mahitaji ya Shirika la Viwango la Tanzania.",
+      "title": "DHAMIRA YETU YA UBORA",
+      "paragraph1": "Kwa ubora wa saruji ya nyati sio mchakato tu, ni ahadi yetu. Timu yetu ya maabara iliyojitolea hufanya uchunguzi wa kina katika kila hatua ya uzalishaji, kutoka kwa malighafi hadi bidhaa ya mwisho, ili kuhakikisha ubora thabiti.",
+      "paragraph2": "Saruji yetu hukaguliwa ubora wa zaidi ya 40 kabla ya kuwafikia wateja, huku sampuli zikijaribiwa kwa nguvu ya kubana, muda wa kuweka na muundo wa kemikali. Mtazamo huu makini hutuwezesha kukidhi mara kwa mara mahitaji ya viwango vya shirika la viwango Tanzania.",
       "tags": {
         "iso": "Imeidhinishwa na ISO",
         "tbs": "Imeidhinishwa na TBS",
@@ -174,8 +175,8 @@
       ]
     },
     "banner": {
-      "title": "Pata Uzoefu wa Tofauti ya Nyati",
-      "text": "Tazama kwa nini makandarasi na wajenzi katika Tanzania wanaiamini Saruji ya Nyati kwa miradi yao mahitaji makubwa.",
+      "title": "Pata Uzoefu wa Tofauti Kwa Kutumia Nyati",
+      "text": "Tazama kwa nini makandarasi na wajenzi katika Tanzania wanaiamini Saruji ya Nyati kwa miradi yenye mahitaji makubwa.",
       "cta": "Wasiliana Nasi Leo"
     }
   },
@@ -244,19 +245,19 @@
   },
   "homePage": {
     "featuresTitle": "Vigezo Vyetu",
-    "featuresSubtitle": "Kwa nini kuchagua Saruji ya Nyati",
+    "featuresSubtitle": "Kwa nini uchague Saruji ya Nyati",
     "blogTitle": "Habari na Makala",
     "blogSubtitle": "Maelezo kutoka kwa wataalamu wetu",
     "videoTitle": "Kituo cha Media",
     "bannerTitle": "Tunahudumia Tanzania Nzima",
-    "bannerDescription": "Ufikikaji rahisi wa bidhaa zetu kupitia vituo vya usambazaji nchini kote"
+    "bannerDescription": "Upatikanaji rahisi wa bidhaa zetu kupitia vituo vya usambazaji nchini kote"
   },
   "videos": {
     "title": "Video na Matangazo",
     "watchVideos": "Tazama Video",
-    "listenAudio": "Sikiza Audio",
+    "listenAudio": "Sikiza Sauti",
     "commercials": "Matangazo",
-    "description": "Chunguza matangazo yetu ya hivi karibuni yanayoonyesha nguvu na uimara wa bidhaa za Saruji ya Nyati. Ona chapa yetu ikifanya kazi kupitia video na kusikiliza vipindi vya redio.",
+    "description": "Chunguza matangazo yetu yanayoonyesha nguvu na uimara wa Saruji ya Nyati. Ona chapa yetu ikifanya kazi kupitia video na kusikiliza matangazo ya sauti.",
     "watchOnYouTube": "Tazama kwenye YouTube",
     "watchVideo": "Tazama Video",
     "visitYouTubeChannel": "Tembelea Kituo Chetu cha YouTube",
@@ -289,7 +290,7 @@
   },
   "blog": {
     "title": "Habari na Makala",
-    "subtitle": "Tazama maelezo ya hivi karibuni kutoka kwa wataalamu wetu",
+    "subtitle": "Soma makala kutoka kwa wataalamu wetu",
     "readTime": "Dakika za Kusoma",
     "category": {
       "technicalKnowledge": "Ujuzi wa Kiufundi",
@@ -345,7 +346,7 @@
   },
   "distribution": {
     "title": "Usambazaji",
-    "description": "Ufikikaji rahisi wa bidhaa zetu kupitia vituo vya usambazaji nchini kote"
+    "description": "Upatikanaji rahisi wa bidhaa zetu kupitia vituo vya usambazaji nchini kote"
   },
   "productsPage": {
     "title": "Bidhaa Zetu",
@@ -401,7 +402,7 @@
   },
   "careersPage": {
     "title": "Ajira",
-    "description": "Jiunge na timu yetu ya wataalamu wanaojitoa",
+    "description": "Jiunge na timu yetu ya wataalamu wanaojitoa kukuhudumia",
     "currentOpenings": "Nafasi Zilizopo",
     "joinTeam": "Jiunge na Timu Yetu",
     "benefits": "Manufaa",

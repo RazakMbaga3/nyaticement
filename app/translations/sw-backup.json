@@ -16,10 +16,10 @@
   "hero": {
     "title": "Teknolojia ya Kisasa",
     "subtitle": "Saruji Inayoaminika kwa Ujenzi",
-    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
+    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni inaongoza Tanzania na nchi jirani.",
     "cta": "Wasiliana Nasi",
     "badges": {
-      "ownClinker": "Clinker Yetu",
+      "ownClinker": "Klinka Yetu",
       "ownPower": "Umeme Wetu",
       "consistentQuality": "Ubora Endelevu"
     }
@@ -32,7 +32,7 @@
     "description": "Tunatoa bidhaa bora za saruji zinazofaa kwa mahitaji yote ya ujenzi.",
     "viewAll": "Angalia Bidhaa Zote",
     "sliderTitle": "Bidhaa za Saruji ya Nyati",
-    "sliderDescription": "Bidhaa zetu za Saruji zinafaa kwa matumizi mbalimbali kuanzia miksi kavu ya msingi hadi miksi iliyoandaliwa kwa matumizi ya kawaida hadi konkriti ya nguvu ya juu iliyotengenezwa kabla na iliyokumbwa. Chunguza bidhaa zetu nyingi maalum za saruji ili kupata inayofaa vyema kwa kila kazi ya ujenzi.",
+"sliderDescription": "Bidhaa zetu za saruji ni bora kwa matumizi mbalimbali kuanzia michanganyiko isiyo na unyevu na michanganyiko iliyo tayari kwa madhumuni ya jumla hadi uimara wa juu na simiti iliyosisitizwa mapema. Gundua bidhaa zetu za sementi maalum ili kupata inayofaa kwa kila kazi ya ujenzi.",
     "navigation": {
       "previous": "Bidhaa iliyotangulia",
       "next": "Bidhaa inayofuata",
@@ -68,7 +68,7 @@
       },
       "325n": {
         "name": "Nyati 32.5N",
-        "description": "Suluhisho la kiuchumi kwa kazi za uashi wa jumla",
+        "description": "Suluhisho la kiuchumi kwa kazi za ujenzi wa kawaida",
         "specs": {
           "1": "Kazi za mota na plasta",
           "2": "Bei nafuu",

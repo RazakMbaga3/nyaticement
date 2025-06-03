@@ -251,7 +251,7 @@ const allPostsData = {
     },
     {
       id: 'monsoon-construction',
-      title: 'Mwongozo wa Ujenzi wa Mvua: Kujenga na Saruji Wakati wa Msimu wa Mvua',
+      title: 'Mwongozo wa Ujenzi kipindi cha Mvua: Kujenga na Saruji Wakati wa Msimu wa Mvua',
       excerpt: 'Vidokezo muhimu vya kuhakikisha ujenzi bora wakati wa msimu wa mvua Tanzania.',
       image: '/images/blog/monsoon.webp',
       date: 'Aprili 04, 2025',

@@ -16,10 +16,10 @@
   "hero": {
     "title": "Teknolojia ya Kisasa",
     "subtitle": "Saruji Inayoaminika kwa Ujenzi",
-    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement ni kiongozi katika Tanzania na nchi jirani.",
+    "description": "Lake Cement inatengeneza saruji yenye nguvu na inayodumu kwa muda mrefu. Chapa yetu ya Nyati Cement inafanya vizuri Tanzania na nchi jirani.",
     "cta": "Wasiliana Nasi",
     "badges": {
-      "ownClinker": "Clinker Yetu",
+      "ownClinker": "Klinka Yetu",
       "ownPower": "Umeme Wetu",
       "consistentQuality": "Ubora Endelevu"
     }
