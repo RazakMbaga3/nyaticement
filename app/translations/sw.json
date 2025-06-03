@@ -153,16 +153,16 @@
       "title": "MCHAKATO WETU WA UHAKIKISHO WA UBORA",
       "steps": [
         {
-          "title": "01. Uchaguzi wa Malighafi",
-          "text": "Tunachagua kwa makini jiwe la chokaa bora zaidi, udongo wa mfinyanzi, na malighafi zingine. Kila kifurushi kinachopitia uchambuzi wa kikemikali ili kuhakikisha muundo bora kabla ya kuingia katika mchakato wetu wa uzalishaji."
+          "title": "01. Sehemu wa Malighafi",
+          "text": "Tunatoa kwa uangalifu na kuchagua chokaa bora zaidi, udongo na malighafi nyingine. Kila kundi hufanyiwa uchanganuzi wa kemikali ili kuhakikisha utungaji bora zaidi kabla ya kuingiza mchakato wetu wa uzalishaji."
         },
         {
-          "title": "02. Vidhibiti vya Utengenezaji",
-          "text": "Katika mchakato mzima wa uzalishaji, mifumo yetu ya kiotomatiki hufuatilia na kurekebishwa vigezo ili kudumisha ubora thabiti. Waendeshaji wetu wenye ujuzi husimamia mifumo hii, wakitumia uzoefu wa miaka mingi."
+          "title": "02. Udhibiti vya Utengenezaji",
+          "text": "Kupitia mchakato wa uzalishaji, mifumo yetu ya kiotomatiki inaendelea kufuatilia na kurekebisha vigezo ili kudumisha ubora thabiti. Waendeshaji wetu wenye ujuzi husimamia mifumo hii, kwa kutumia uzoefu wa miaka mingi ya ujuzi."
         },
         {
-          "title": "03. Upimaji wa Maabara",
-          "text": "Maabara yetu ya kisasa inafanya majaribio makali katika kila hatua. Kutoka kwa malighafi hadi kwa bidhaa ya mwisho, tunahakikisha kuwa kila kifurushi kinakidhi viwango vyetu kabla ya kuondoka kwenye kiwanda chetu."
+          "title": "03. Uchunguzi wa Maabara",
+          "text": "Maabara yetu ya hali ya juu hufanya uchunguzi mkali katika kila hatua. Kutoka kwa malighafi hadi bidhaa za mwisho, tunathibitisha kuwa kila kundi linatimiza viwango vyetu halisi kabla ya kuondoka kwenye kituo chetu."
         },
         {
           "title": "04. Uthibitishaji na Utiifu",
@@ -175,8 +175,8 @@
       ]
     },
     "banner": {
-      "title": "Pata Uzoefu wa Tofauti Kwa Kutumia Nyati",
-      "text": "Tazama kwa nini makandarasi na wajenzi katika Tanzania wanaiamini Saruji ya Nyati kwa miradi yenye mahitaji makubwa.",
+      "title": "Pata Uzoefu Tofauti wa Nyati",
+      "text": "Tazama kwa nini makandarasi na wajenzi kote Tanzania wanaiamini Saruji ya Nyati kwa miradi yao yenye uhitaji makubwa.",
       "cta": "Wasiliana Nasi Leo"
     }
   },
@@ -335,14 +335,14 @@
     "joinOurTeam": "Jiunge na Timu Yetu"
   },  "sustainabilityPage": {
     "title": "Uendelevu",
-    "description": "Tumejitolea kulinda mazingira na kuendeleza jamii tunazofanya kazi nazo",
+    "description": "Tumejitolea kulinda mazingira na kuendeleza jamii tunazofanyia kazi",
     "environment": "Mazingira",
     "social": "Jamii",
     "governance": "Utawala"
   },
   "sustainability": {
     "title": "Uendelevu",
-    "description": "Tumejitolea kulinda mazingira na kuendeleza jamii tunazofanya kazi nazo"
+    "description": "Tumejitolea kulinda mazingira na kuendeleza jamii tunazofanyia kazi"
   },
   "distribution": {
     "title": "Usambazaji",

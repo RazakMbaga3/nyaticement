@@ -6,33 +6,33 @@
         "sustainability": "Uendelevu"
       },
       "title": "Kujenga",
-      "highlight": "Endelevu",
-      "titleEnd": "Siku Zijazo",
-      "description": "Dhamira yetu ya uendelevu wa mazingira inaendesha uvumbuzi katika uzalishaji wa saruji, ikilenga kupunguza uchafuzi wa mazingira, kuhifadhi nishati, na kukuza mbinu za kirafiki kwa mazingira."
+      "highlight": "Mustakabali",
+      "titleEnd": "Endelevu",
+      "description": "Kujitolea kwetu kwa uendelevu wa mazingira huchochea uvumbuzi katika uzalishaji wa saruji, unaolenga katika kupunguza utoaji wa hewa chafu, kuhifadhi nishati, na kukuza mazoea rafiki kwa mazingira."
     },
     "intro": {
-      "title": "Maono Yetu ya",
+      "title": "Mtazamo Wetu wa",
       "highlight": "Mazingira",
-      "text": "Katika Saruji ya Nyati, tumeazimia kufanya mazingira yetu yawe safi zaidi, kijani zaidi, na yenye afya zaidi. Tumevumbua teknolojia na michakato inayopunguza uchafuzi, taka, na kelele. Katika kiini cha juhudi zetu zote ni Sera yetu ya Uendelevu na Mazingira."
+      "text": "Kwa saruji ya nyati tumedhamiria kufanya mazingira yetu kuwa safi, kijani kibichi na yenye afya. tumeanzisha teknolojia na michakato inayopunguza uzalishaji taka na kelele. msingi wa juhudi zetu zote ni sera endelevu na mazingira."
     },
     "policy": {
-      "title": "SERA YA UENDELEVU NA MAZINGIRA",
+      "title": "SERA ENDELEVU NA MAZINGIRA",
       "cards": [
         {
           "number": "01",
           "title": "Kupunguza Athari za Mazingira",
-          "text": "Tumejitolea kutumia kwa ufanisi rasilimali za asili, nishati, mitambo na vifaa ili kupunguza athari zetu za kiikolojia."
+          "text": "Tumejitolea kutumia vyema maliasili, nishati, mitambo na vifaa ili kupunguza athari zetu za kiikolojia."
         },
         {
           "number": "02",
           "title": "Kukuza Mazingira Safi Zaidi",
-          "text": "Shughuli zetu zinalenga kupunguza uchafuzi, kelele, taka, na gesi za greenhouse kuunda mazingira safi, ya kijani, na yenye afya."
+          "text": "Shughuli zetu zinalenga katika kupunguza uzalishaji wa kelele, taka, na gesi chafu ili kuunda mazingira safi ya kijani, na yenye afya."
         }
       ]
     },
     "sustainability": {
       "title": "Hatua Zetu za Uendelevu",
-      "text": "Tumejumuisha desturi endelevu katika shughuli zetu zote ili kupunguza athari za mazingira na kuongeza ufanisi wa rasilimali."
+      "text": "Tumejumuisha mazoea endelevu katika shughuli zetu zote ili kupunguza athari za mazingira na kuongeza ufanisi wa rasilimali."
     },
     "commitment": {
       "title": "Dhamira Yetu Katika Vitendo",
@@ -43,42 +43,43 @@
       "title": "Teknolojia za Uvumbuzi",
       "items": [
         {
-          "title": "Kinu cha Kusaga cha Mzingo wa Wima",
-          "text": "Mbadala wa kuhifadhi nishati kwa vinu vya kawaida vya mipira, hutumika kusaga malighafi, kupunguza matumizi ya nishati kwa kiasi kikubwa."
+          
+          "title": "Kinu cha Kusaga cha roller wima",
+          "text": "Mbadala wa ufanisi wa nishati kwa vinu vya kawaida vya mpira, vinavyotumika kusaga malighafi, kupunguza matumizi ya nishati kwa kiasi kikubwa."
         },
         {
-          "title": "Wachimba Ardhi wa Juu",
-          "text": "Hutumiwa kwa uchimbaji wa jiwe bila kulipua, kupunguza kelele na uchafuzi wa vumbi kwa mazingira yenye afya zaidi."
+          "title": "Surface Miners",
+          "text": "Hutumiwa kwa uchimbaji wa mawe bila kulipua, kupunguza kelele na uchafuzi wa vumbi kwa mazingira yenye afya."
         },
         {
           "title": "Mtambo wa Kuchoma wa Kitanda-Majimaji (FBC)",
-          "text": "Huendesha kiwanda chetu na uchafuzi mdogo wa oksidi za nitric na salfa, kuboresha ubora wa hewa."
+          "text": "Huimarisha kiwanda chetu kwa utoaji wa chini wa oksidi za nitriki na salfa, kuimarisha ubora wa hewa."
         }
       ]
     },
     "energy": {
-      "title": "Suluhisho za Nishati Fanisi",
+      "title": "Ufumbuzi wa ufanisi wa nishati",
       "items": [
         {
           "title": "Sehemu ya Pyro na Baridi ya Greti",
-          "text": "Ina greti ya kwanza tuli kwa matumizi bora ya nishati ya joto, kuboresha ufanisi wa jumla."
+          "text": "Ina daraja la kwanza tuli kwa matumizi bora ya nishati ya joto, kuboresha ufanisi wa jumla."
         },
         {
           "title": "Kisahani-joto cha Hatua-Tano na Kabla-kalsineja",
-          "text": "Huimarisha kuchomeka kwa mafuta na hutoa uhifadhi muhimu wa nishati katika shughuli zetu zote."
+          "text": "Huongeza mwako wa mafuta na kutoa uokoaji mkubwa wa nishati katika shughuli zetu zote."
         }
       ]
     },
     "initiatives": {
-      "title": "Miradi Mingine",
+      "title": "Mipango Mingine",
       "items": [
         {
-          "title": "Kupunguza Uchafuzi",
-          "text": "Imeundwa na vichujio vya mifuko katika sehemu zote za uhamisho na matumizi maalum ya precipitators za umeme ili kupunguza uchafuzi."
+          "title": "Uzalishaji wa chini wa gesi chafu",
+          "text": "Imeundwa na vichujio vya mifuko katika sehemu zote za uhamishaji na matumizi mahususi ya vidhibiti vya kielektroniki ili kupunguza uzalishaji"
         },
         {
-          "title": "Ununuzi wa Karibu",
-          "text": "Kupata makaa kutoka Songea hupunguza gharama za uagizaji na huweka alama yetu ya kaboni chini, kusaidia uchumi wa karibu."
+          "title": "Ununuzi kutoka vyanzo vya ndani",
+          "text": "Kupata makaa kutoka Songea hupunguza gharama za uagizaji na huweka alama yetu ya kaboni chini, kusaidia uchumi wa ndani."
         }
       ]
     }
