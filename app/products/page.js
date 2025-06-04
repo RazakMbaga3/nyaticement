@@ -402,11 +402,13 @@ export default function ProductsPage() {
                   transition={{ duration: 0.7, delay: index * 0.1 }}
                 >
                   <ProductCard 
-                    image={products[index]?.image || ''}
-                    title={product.title}
-                    description={product.description}
-                    features={product.features}
-                    applications={product.applications}
+                    product={{
+                      image: products[index]?.image || '',
+                      title: product.title,
+                      description: product.description,
+                      features: product.features,
+                      applications: product.applications
+                    }}
                   />
                 </motion.div>
               ))
@@ -420,11 +422,7 @@ export default function ProductsPage() {
                   transition={{ duration: 0.7, delay: index * 0.1 }}
                 >
                   <ProductCard 
-                    image={product.image}
-                    title={product.title}
-                    description={product.description}
-                    features={product.features}
-                    applications={product.applications}
+                    product={product}
                   />
                 </motion.div>
               ))

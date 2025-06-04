@@ -46,13 +46,13 @@
       },
       {
         "icon": "handshake",
-        "title": "Imani",
+        "title": "Uaminifu",
         "description": "Sisi ni wadhamini wa imani iliyowekwa kwetu na wadau wetu, ikiongoza vitendo vyetu na maamuzi katika kila ngazi."
       },
       {
         "icon": "users",
         "title": "Juhudi za Ushirikiano",
-        "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, kutufanya tuwe na wajibu wa kutekeleza uraia mzuri wa kicorporate."
+        "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, hii inatufanya tuwajibike kuwa raia wema wa kampuni."
       }
     ]
   },
@@ -76,13 +76,13 @@
       },
       {
         "icon": "building",
-        "title": "Uraia Mzuri wa Kicorporate",
+        "title": "Uraia Mwema wa Ushirika",
         "contentList": {
           "intro": "Katika shughuli za biashara kwa biashara ya Kampuni kila mwanachama anatarajiwa kuwa raia mzuri wa kicorporate na kukumbatia kanuni zifuatazo:",
           "items": [
             {
               "title": "Uhusiano na Wadau:",
-              "description": "Hakikisha kuwa katika shughuli na watoaji, wateja na wengine, maslahi ya Kampuni yanachukuliwa kama ya muhimu zaidi na hakuna maafikiano yanayofanywa."
+              "description": "Hakikisha kuwa katika shughuli na wasambazaji, wateja na wengine, maslahi ya Kampuni yanachukuliwa kama ya muhimu zaidi na hakuna maafikiano yanayofanywa."
             },
             {
               "title": "Kufuata Sheria:",

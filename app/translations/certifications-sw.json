@@ -6,8 +6,8 @@
         "about": "Kuhusu",
         "certifications": "Vyeti"
       },
-      "title": "Mitihani na Vyeti",
-      "highlight": "vya Kisheria",
+      "title": "Vipimo vya Ubora na",
+      "highlight": "Vyeti vya Kisheria",
       "description": "Angalia na pakua vyeti vyetu vya ubora na hati za uzingatiaji ambazo zinaonyesha dhamira yetu kwa ubora na viwango vya tasnia."
     },
     "categories": [
@@ -16,7 +16,7 @@
         "items": [
           {
             "image": "/images/certifications/iso-9001-logo.png",
-            "title": "ISO 9001:2008",
+            "title": "ISO 9001:2015",
             "downloadLink": "/docs/RENEWED DOCS/Latest ISO certificate- 2024 onwrad.pdf",
             "alt": "Nembo ya ISO 9001",
             "subItems": []

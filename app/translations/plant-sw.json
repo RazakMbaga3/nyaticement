@@ -11,7 +11,7 @@
       "stats": [
         {
           "value": "Tani 1M",
-          "label": "Uwezo wa Mwaka"
+          "label": "Uzalishaji wa Mwaka"
         },
         {
           "value": "Umeme",
@@ -26,8 +26,8 @@
           "label": "Jumuishi"
         },
         {
-          "value": "Endelevu",
-          "label": "Imeboreshwa"
+          "value": "Uendelevu",
+          "label": "Uliboreshwa"
         },
         {
           "value": "ISO",
@@ -35,7 +35,7 @@
         }
       ]
     },
-    "introduction": "Kitengo chetu cha uzalishaji wa saruji kina eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi zaidi Afrika Mashariki. Kiwanda, chenye uwezo wa kuzalisha tani 1,000,000 kwa mwaka, kipo katika kijiji cha Kimbiji katika Wilaya ya Kigamboni; umbali wa kilomita 45 tu kutoka katikati ya biashara ya jiji la Dar es Salaam.",
+    "introduction": "Kitengo chetu cha uzalishaji wa sarumbali wa kilomita 45 tu kutoka katikati ya biashara ya jiji la biashara la Dar es Salaam.uji kina eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi zaidi Afrika Mashariki. Kiwanda, chenye uwezo wa kuzalisha tani 1,000,000 kwa mwaka, kipo katika kijiji cha Kimbiji katika Wilaya ya Kigamboni; ",
     "features": [
       {
         "image": "/images/aboutus/the_plant-1.png",
@@ -45,7 +45,7 @@
       {
         "image": "/images/aboutus/the_plant-2.png",
         "title": "Usimamizi wa Wataalamu",
-        "description": "Kinakisimamiwa, kudumishwa na kuendeshwa na timu ya wataalamu wa tasnia ya saruji wenye uzoefu wa zaidi ya miaka 20."
+        "description": "Kinasimamiwa, kudumishwa na kuendeshwa na timu ya wataalamu wa tasnia ya saruji wenye uzoefu wa zaidi ya miaka 20."
       },
       {
         "image": "/images/aboutus/the_plant-3.png",

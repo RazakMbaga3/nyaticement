@@ -1,0 +1,34 @@
+{
+  "pageTitle": "Brochure ya Lake Cement",
+  "pageDescription": "Brochure yetu kamilifu inatoa taarifa za kina kuhusu kampuni yetu, bidhaa, huduma, na dhamira yetu ya ubora. Pakua ili kujifunza kuhusu:",
+  "brochurePreview": "Brochure ya Saruji ya Nyati",
+  "brochureName": "Brochure ya Saruji ya Nyati",
+  "bulletPoints": {
+    "products": "Orodha kamili ya bidhaa zetu pamoja na maelezo ya kina",
+    "quality": "Michakato ya udhibiti wa ubora na vyeti",
+    "sustainability": "Jitihada za endelevu na ahadi za mazingira",
+    "history": "Historia ya kampuni na mafanikio"
+  },
+  "downloadButton": "Pakua Brochure",
+  "additionalResources": {
+    "title": "Rasilimali za Ziada",
+    "description": "Chunguza nyaraka zaidi ili kukusaidia kuelewa bidhaa na huduma zetu vizuri zaidi",
+    "resources": {
+      "catalog": {
+        "title": "Katalogi ya Bidhaa",
+        "description": "Tazama orodha kamili ya bidhaa zetu pamoja na maelezo ya kina na matumizi.",
+        "linkText": "Angalia Bidhaa"
+      },
+      "certifications": {
+        "title": "Vyeti",
+        "description": "Fikia karatasi za data za kiufundi na hati za vyeti vya bidhaa zetu.",
+        "linkText": "Angalia Vyeti"
+      },
+      "contact": {
+        "title": "Wasiliana na Mauzo",
+        "description": "Wasiliana na timu yetu ya mauzo kwa bei maalum, maagizo ya jumla, au maswali maalum.",
+        "linkText": "Wasiliana Nasi"
+      }
+    }
+  }
+}

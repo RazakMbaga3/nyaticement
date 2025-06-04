@@ -1,0 +1,34 @@
+{
+  "pageTitle": "Lake Cement Brochure",
+  "pageDescription": "Our comprehensive brochure provides detailed information about our company, products, services, and commitment to quality. Download it to learn about:",
+  "brochurePreview": "Nyati Cement Brochure Preview",
+  "brochureName": "Nyati Cement Brochure",
+  "bulletPoints": {
+    "products": "Our complete product lineup with detailed specifications",
+    "quality": "Quality control processes and certifications",
+    "sustainability": "Sustainability initiatives and environmental commitments",
+    "history": "Company history and achievements"
+  },
+  "downloadButton": "Download Brochure",
+  "additionalResources": {
+    "title": "Additional Resources",
+    "description": "Explore more materials to help you understand our products and services better",
+    "resources": {
+      "catalog": {
+        "title": "Product Catalog",
+        "description": "View our complete product listings with detailed specifications and applications.",
+        "linkText": "View Products"
+      },
+      "certifications": {
+        "title": "Certifications",
+        "description": "Access technical data sheets and certification documents for our products.",
+        "linkText": "View Certifications"
+      },
+      "contact": {
+        "title": "Contact Sales",
+        "description": "Reach out to our sales team for custom quotes, bulk orders, or specific inquiries.",
+        "linkText": "Contact Us"
+      }
+    }
+  }
+}

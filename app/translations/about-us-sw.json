@@ -13,19 +13,19 @@
     "aboutSection": {
       "title": "KUHUSU SISI",
       "paragraphs": [
-        "Lake Cement Ltd ni mtaalamu katika utengenezaji wa saruji na kiwanda cha saruji kilichojumuishwa kikamilifu, pamoja na mtambo wa umeme wa joto wa 10MW. Kiwanda chetu kipo katika wilaya ya Kigamboni ya Dar es Salaam na kina uwezo wa kuzalisha tani 1,000,000 kwa mwaka.",
-        "Tunazalisha saruji ya ubora wa juu ya kuaminika ambayo tumeiboresha kwa kutumia teknolojia bora zaidi na uzoefu mpana wa sekta. Tulianza uzalishaji mnamo 2014 chini ya nembo ya Saruji ya Nyati. Saruji ya Nyati sasa ni chapa inayoongoza ya saruji si tu nchini Tanzania, lakini pia ina umaarufu Rwanda, Burundi na nchi jirani nyingine."
+        "Lake Cement Ltd ni wataalamu wa utengenezaji wa saruji na kiwanda cha saruji kilichojumuishwa kikamilifu, chenye mtambo wa umeme wa joto wa 10MW. Kiwanda chetu kipo katika wilaya ya Kigamboni Dar es Salaam na kina uwezo wa kuzalisha tani 1,000,000 kwa mwaka.",
+        "Tunazalisha saruji ya ubora wa juu ya kuaminika ambayo tumeiboresha kwa kutumia teknolojia bora zaidi na uzoefu mpana wa sekta. Tulianza uzalishaji mwaka 2014 chini ya nembo ya Nyati Cement. Saruji ya Nyati sasa ni chapa ya saruji inayofanya vizuri si tu nchini Tanzania, lakini pia ina umaarufu Rwanda, Burundi na nchi jirani nyingine."
       ],
       "brandName": "Saruji ya Nyati"
     },
     "missionVision": {
       "mission": {
         "title": "DHAMIRA YETU",
-        "description": "Kuwa mtengenezaji wa saruji anayeongoza Tanzania, kwa kutoa saruji ya ubora wa juu kwa wateja wetu na huduma zaidi ya matarajio ya wateja wetu"
+        "description": "Kuwa watengenezaji wa saruji inayoongoza Tanzania, kwa kutoa saruji ya ubora wa juu kwa wateja wetu na huduma zaidi ya matarajio ya wateja wetu"
       },
       "vision": {
         "title": "MAONO YETU",
-        "description": "Kuwa chachu muhimu katika ukuaji wa Tanzania kwa kuunda thamani kwa wateja wetu, wafanyakazi, washirika wa biashara na wanahisa - kupitia utawala na sera bora"
+        "description": "Kuwa chachu muhimu katika ukuaji wa Tanzania kwa kuthamini wateja wetu, wafanyakazi, washirika wa biashara na wanahisa - kupitia utawala na sera bora"
       }
     },
     "coreValues": {
@@ -43,13 +43,13 @@
         },
         {
           "icon": "🔒",
-          "title": "Imani",
+          "title": "Uaminifu",
           "description": "Sisi ni wadhamini wa imani iliyowekwa kwetu na wadau wetu, ikituelekeza katika hatua na maamuzi yetu katika kila ngazi."
         },
         {
           "icon": "👥",
           "title": "Juhudi za Ushirikiano",
-          "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, hii inatufanya tuwe na wajibu wa kuwa raia wema wa kampuni."
+          "description": "Tunatambua kuwa jamii yetu na jamii zinazotuzunguka ni wadau muhimu, hii inatufanya tuwajibike kuwa raia wema wa kampuni."
         }
       ]
     },
@@ -59,19 +59,19 @@
       "advantages": [
         {
           "title": "Uzalishaji Jumuishi",
-          "description": "Udhibiti kamili wa mchakato wa uzalishaji huhakikisha ubora na kuaminika kila wakati."
+          "description": "Udhibiti kamili wa mchakato wa uzalishaji huhakikisha ubora wa kuaminika na kutegemewa."
         },
         {
           "title": "Nishati Yetu kwa Uzalishaji Usiokatizwa",
-          "description": "Mtambo wa umeme wa joto wa 10MW unahakikisha shughuli zinazoendelea bila kutegemea matatizo ya gridi."
+          "description": "Mtambo kuzalisha umeme wa 10MW huhakikisha utendaji kazi endelevu bila kuwa tegemezi kwa gridi ya taifa."
         },
         {
           "title": "Clinker Yetu",
-          "description": "Uzalishaji wa klinker ndani ya kiwanda hudumisha ubora wa udhibiti kutoka malighafi hadi bidhaa ya mwisho."
+          "description": "Uzalishaji wetu wa klinker hudumisha ubora wa udhibiti kutoka malighafi hadi bidhaa ya mwisho."
         },
         {
           "title": "Ubora wa Kuaminika",
-          "description": "Upimaji mkali katika kila hatua huhakikisha saruji yetu inakidhi viwango vya juu kila wakati."
+          "description": "Upimaji makini katika kila hatua huhakikisha saruji yetu inakidhi viwango vya juu kila wakati."
         },
         {
           "title": "Ufanisi Bora wa Nishati",
@@ -79,19 +79,19 @@
         },
         {
           "title": "Uendelevu Ulioboreshwa",
-          "description": "Ahadi ya mazoea endelevu katika uzalishaji na ushirikishwaji wa jamii."
+          "description": "Kujitolea kwa utendaji endelevu katika uzalishaji na ushiriki wa jamii."
         }
       ]
     },
     "infoCards": [
       {
         "title": "KIWANDA",
-        "description": "Kitengo chetu cha uzalishaji wa saruji kinachojumuishwa, kilicho sambaa katika eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi katika Afrika Mashariki.",
+        "description": "Kiwanda chetu kilicho sambaa katika eneo la zaidi ya hekta 100, ni kiwanda cha kisasa zaidi, chenye mifumo ya kiotomatiki na kinachotumia nishati kwa ufanisi katika Afrika Mashariki.",
         "linkPath": "/about/plant"
       },
       {
         "title": "CSR",
-        "description": "Mbali na kuwa shirika la faida, pia tunajitahidi kuwa raia wa kampuni wenye wajibu. Mipango yetu ya CSR inagusa wadau wengi katika spektra pana.",
+        "description": "Mbali na kuwa shirika la faida, pia tunajitahidi kuwa wawajibikaji katika jamii. Mipango yetu ya CSR inagusa wadau wengi katika wigo mpana.",
         "linkPath": "/about/csr"
       },
       {
