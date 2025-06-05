@@ -75,7 +75,7 @@ export default function MonsoonConstructionPage() {
       relatedPosts={language === 'en' ? relatedPostsData.en : relatedPostsData.sw}
     >
       {language === 'en' ? (
-        <>
+        <React.Fragment>
           <div className="relative h-96 w-full mb-8 rounded-sm overflow-hidden">
               <Image 
                 src="/images/blog/monsoon.webp" 
@@ -468,106 +468,105 @@ export default function MonsoonConstructionPage() {
           <h2 className="text-2xl font-bold text-nyati-navy mt-10 mb-4">Troubleshooting Common Monsoon Construction Problems</h2>
           
           <p>
-            Even with the best precautions, rainy season construction can encounter challenges. Here's how to address common issues:
+            Hata ukiwa na tahadhari bora, ujenzi wa msimu wa mvua unaweza kukutana na changamoto. Hivi ndivyo unavyoweza kukabiliana na matatizo ya kawaida:
           </p>
 
           <div className="overflow-x-auto my-8">
             <table className="min-w-full border-collapse bg-white shadow-sm rounded-sm overflow-hidden">
               <thead>
                 <tr className="bg-nyati-navy text-nyati-grey">
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Problem</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Causes</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Prevention</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Remediation</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Tatizo</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Visababishi</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Kinga</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Suluhisho</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Surface Scaling/Flaking</td>
-                  <td className="border border-gray-300 px-4 py-2">Rain falling on fresh concrete; too much water in mix</td>
-                  <td className="border border-gray-300 px-4 py-2">Proper covering; weather monitoring; reduced water content</td>
-                  <td className="border border-gray-300 px-4 py-2">Remove weakened surface layer; apply bonded topping or surface treatment</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kung'oka/Kupasuka kwa Uso</td>
+                  <td className="border border-gray-300 px-4 py-2">Mvua kunyesha juu ya zege mbichi; maji mengi kwenye mchanganyiko</td>
+                  <td className="border border-gray-300 px-4 py-2">Funika ipasavyo; fuatilia hali ya hewa; punguza maji kwenye mchanganyiko</td>
+                  <td className="border border-gray-300 px-4 py-2">Ondoa safu dhaifu ya juu; tumia matibabu ya uso au ongeza tabaka jipya</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Delayed Setting</td>
-                  <td className="border border-gray-300 px-4 py-2">Low temperatures; high humidity; excess water</td>
-                  <td className="border border-gray-300 px-4 py-2">Use set accelerators; Nyati 42.5R cement; reduce water content</td>
-                  <td className="border border-gray-300 px-4 py-2">Protect from further moisture; allow extra time before form removal</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kuchelewa Kuganda</td>
+                  <td className="border bordergray-300 px-4 py-2">Joto la chini; unyevu mwingi; maji mengi</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia vichapuzi vya kuganda; saruji ya Nyati 42.5R; punguza maji</td>
+                  <td className="border border-gray-300 px-4 py-2">Linda dhidi ya unyevu zaidi; ongeza muda kabla ya kuondoa fomu</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-300 px-4 py-2 font-medium">Efflorescence</td>
-                  <td className="border border-gray-300 px-4 py-2">Water movement through masonry dissolving salts</td>
-                  <td className="border border-gray-300 px-4 py-2">Waterproofing admixtures; proper DPC; water repellent treatments</td>
-                  <td className="border border-gray-300 px-4 py-2">Dry brushing; diluted acid washing; application of breathable sealers</td>
+                  <td className="border border-gray-300 px-4 py-2">Maji kupita kwenye kuta na kuyeyusha chumvi</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia viongezwa vya kuzuia maji; DPC sahihi; matibabu ya kuzuia maji</td>
+                  <td className="border border-gray-300 px-4 py-2">Piga mswaki kavu; safisha kwa tindikali iliyopunguzwa; tumia sealant inayopumua</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Mold/Fungus Growth</td>
-                  <td className="border border-gray-300 px-4 py-2">Persistent dampness; inadequate ventilation</td>
-                  <td className="border border-gray-300 px-4 py-2">Anti-fungal admixtures; proper drainage; adequate ventilation</td>
-                  <td className="border border-gray-300 px-4 py-2">Clean with fungicidal solution; improve ventilation; apply fungus-resistant paint</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Ukuaji wa Ukungu/Kuvu</td>
+                  <td className="border border-gray-300 px-4 py-2">Unyevu wa kudumu; uingizaji hewa hafifu</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia viongezwa vya kuzuia kuvu; mifereji sahihi; uingizaji hewa wa kutosha</td>
+                  <td className="border border-gray-300 px-4 py-2">Safisha kwa dawa ya kuua kuvu; boresha uingizaji hewa; paka rangi inayozuia kuvu</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Excessive Bleeding</td>
-                  <td className="border border-gray-300 px-4 py-2">High water content; fine aggregate deficiency; high ambient humidity</td>
-                  <td className="border border-gray-300 px-4 py-2">Optimize mix design; use water-reducing agents; proper aggregate gradation</td>
-                  <td className="border border-gray-300 px-4 py-2">Remove bleed water; delay finishing until bleeding stops; rescreeding</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kutoa Maji Kupita Kiasi (Bleeding)</td>
+                  <td className="border border-gray-300 px-4 py-2">Maji mengi; upungufu wa kokoto laini; unyevu mwingi wa mazingira</td>
+                  <td className="border border-gray-300 px-4 py-2">Boresha muundo wa mchanganyiko; tumia viongezwa vya kupunguza maji; chagua kokoto bora</td>
+                  <td className="border border-gray-300 px-4 py-2">Ondoa maji ya juu; chelewesha kumaliza hadi bleeding iishe; rudia kusawazisha</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Quality Assurance During Rainy Seasons
-          
+          <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Uhakikisho wa Ubora Wakati wa Misimu ya Mvua</h2>
           <p className="mb-4">
-            Quality control becomes even more critical during monsoon construction. Implement these additional quality assurance measures:
+            Udhibiti wa ubora unakuwa muhimu zaidi wakati wa ujenzi wa masika. Tekeleza hatua hizi za ziada za uhakikisho wa ubora:
           </p>
 
           <div className="bg-white rounded-sm shadow-sm overflow-hidden my-6">
             <div className="p-6">
               <ol className="list-decimal pl-6 space-y-4">
                 <li>
-                  <strong className="text-nyati-navy">Increased Testing Frequency:</strong> 
-                  <p>Double the frequency of concrete cube tests during rainy seasons to ensure strength development remains on track despite challenging conditions.</p>
+                  <strong className="text-nyati-navy">Kuongeza Mara za Upimaji:</strong> 
+                  <p>Ongeza mara mbili idadi ya vipimo vya vijiwe vya zege wakati wa misimu ya mvua kuhakikisha maendeleo ya nguvu yanabaki kwenye njia sahihi licha ya changamoto za hali.</p>
                 </li>
                 <li>
-                  <strong className="text-nyati-navy">Moisture Content Monitoring:</strong> 
-                  <p>Regularly check moisture content of aggregates and adjust mix designs accordingly. Use moisture meters for accurate measurements.</p>
+                  <strong className="text-nyati-navy">Ufuatiliaji wa Kiwango cha Unyevu:</strong> 
+                  <p>Angalia mara kwa mara kiwango cha unyevu cha kokoto na rekebisha muundo wa mchanganyiko ipasavyo. Tumia vipima unyevu kwa vipimo sahihi.</p>
                 </li>
                 <li>
-                  <strong className="text-nyati-navy">Slump Tests:</strong> 
-                  <p>Perform slump tests on each batch to ensure consistency in workability despite variable humidity conditions.</p>
+                  <strong className="text-nyati-navy">Vipimo vya Slump:</strong> 
+                  <p>Fanya vipimo vya slump kwa kila seti kuhakikisha usawa katika urahisi wa kufanyia kazi licha ya mabadiliko ya unyevu na hali ya hewa.</p>
                 </li>
                 <li>
-                  <strong className="text-nyati-navy">Setting Time Verification:</strong> 
-                  <p>Check initial and final setting times periodically to detect any significant variations due to temperature and humidity changes.</p>
+                  <strong className="text-nyati-navy">Uthibitisho wa Muda wa Kuganda:</strong> 
+                  <p>Angalia nyakati za awali na za mwisho za kuganda mara kwa mara ili kugundua mabadiliko yoyote muhimu kutokana na mabadiliko ya joto na unyevu.</p>
                 </li>
                 <li>
-                  <strong className="text-nyati-navy">Visual Inspections:</strong> 
-                  <p>Increase frequency of visual inspections for water accumulation, surface defects, and signs of improper curing or water damage.</p>
+                  <strong className="text-nyati-navy">Ukaguzi wa Kuona:</strong> 
+                  <p>Ongeza idadi ya ukaguzi wa kuona kwa ajili ya mkusanyiko wa maji, kasoro za uso, na dalili za uharibifu wa maji au kutibu isiyofaa.</p>
                 </li>
               </ol>
             </div>
           </div>
 
           <div className="bg-white p-6 rounded-sm shadow-sm my-6">
-            <h3 className="text-xl font-bold text-nyati-navy mb-3">Documentation During Monsoon Construction</h3>
+            <h3 className="text-xl font-bold text-nyati-navy mb-3">Uwekaji Kumbukumbu Wakati wa Ujenzi wa Masika</h3>
             <p className="text-nyati-dark-grey mb-4">
-              Maintaining detailed records becomes even more important during rainy season construction:
+              Kuweka kumbukumbu za kina kunakuwa muhimu zaidi wakati wa ujenzi wa msimu wa mvua:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Record daily rainfall amounts and durations</li>
-              <li>Document temperature and humidity levels at mixing and placement times</li>
-              <li>Keep detailed logs of any rain-related construction delays</li>
-              <li>Photograph critical stages, especially waterproofing details</li>
-              <li>Maintain records of any modifications to standard mix designs</li>
-              <li>Document additional quality control measures implemented</li>
+              <li>Rekodi kiasi cha mvua ya kila siku na muda</li>
+              <li>Weka kumbukumbu za viwango vya joto na unyevu wakati wa kuchanganya na kuweka</li>
+              <li>Weka kumbukumbu za kina za ucheleweshaji wowote wa ujenzi unaohusiana na mvua</li>
+              <li>Piga picha hatua muhimu, hasa maelezo ya kuzuia maji</li>
+              <li>Dumisha kumbukumbu za marekebisho yoyote kwa muundo wa kawaida wa mchanganyiko</li>
+              <li>Weka kumbukumbu za hatua za ziada za udhibiti wa ubora zilizotekelezwa</li>
             </ul>
           </div>
 
-          <h2 className="text-2xl font-bold text-nyati-navy mt-10 mb-4">Recommended Nyati Cement Products for Monsoon Construction</h2>
+          <h2 className="text-2xl font-bold text-nyati-navy mt-10 mb-4">Bidhaa za Saruji za Nyati Zinazopendekezwa kwa Ujenzi wa Masika</h2>
           
           <p>
-            Selecting the right cement product is crucial for successful monsoon construction. Nyati Cement offers several options specifically suited for rainy season applications:
+            Kuchagua bidhaa sahihi ya saruji ni muhimu kwa mafanikio ya ujenzi wa masika. Saruji ya Nyati inatoa chaguzi kadhaa zinazofaa hasa kwa matumizi ya msimu wa mvua:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -575,17 +574,17 @@ export default function MonsoonConstructionPage() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II A-L 42.5R</h3>
                 <p className="text-nyati-dark-grey mb-4">
-                  Our premium rapid-hardening cement, ideal for monsoon conditions due to its fast setting and superior early strength development.
+                  Saruji yetu bora ya haraka ya kuganda, inafaa kwa hali za masika kutokana na kuganda kwake haraka na maendeleo bora ya nguvu ya mapema.
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
-                  <li>Early strength (2 days): 21-22 MPa</li>
-                  <li>Quick setting time: 171 minutes</li>
-                  <li>Reduced vulnerability to rain damage</li>
-                  <li>Allows faster formwork removal</li>
-                  <li>Excellent for structural elements</li>
+                  <li>Nguvu ya mapema (siku 2): 21-22 MPa</li>
+                  <li>Muda wa kuganda haraka: dakika 171</li>
+                  <li>Kupungua kwa uwezekano wa uharibifu wa mvua</li>
+                  <li>Inaruhusu kuondolewa haraka kwa fremu</li>
+                  <li>Nzuri kwa vipengele vya miundo</li>
                 </ul>
                 <p className="mt-4 text-sm font-medium text-nyati-orange">
-                  Recommended for: Critical structural elements, precast components, and time-sensitive construction during rainy periods.
+                  Inapendekezwa kwa: Vipengele muhimu vya miundo, vipengele vilivyotengenezwa kabla, na ujenzi unaohitaji muda wakati wa kipindi cha mvua.
                 </p>
               </div>
             </div>
@@ -594,44 +593,44 @@ export default function MonsoonConstructionPage() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II A-L 42.5N</h3>
                 <p className="text-nyati-dark-grey mb-4">
-                  Our versatile all-purpose cement with balanced setting properties and excellent workability, suitable for most monsoon construction applications.
+                  Saruji yetu ya matumizi mbalimbali yenye sifa za kuganda kwa uwiano na urahisi bora wa kufanyia kazi, inafaa kwa matumizi mengi ya ujenzi wa masika.
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
-                  <li>Good early strength (2 days): 20-21 MPa</li>
-                  <li>Consistent setting characteristics</li>
-                  <li>Superior workability with plasticizers</li>
-                  <li>Excellent for general construction</li>
-                  <li>Balanced performance in humid conditions</li>
+                  <li>Nguvu nzuri ya mapema (siku 2): 20-21 MPa</li>
+                  <li>Sifa thabiti za kuganda</li>
+                  <li>Urahisi bora wa kufanyia kazi na viongezwa vya plastiki</li>
+                  <li>Bora kwa ujenzi wa kawaida</li>
+                  <li>Utendaji wa uwiano katika hali za unyevu</li>
                 </ul>
                 <p className="mt-4 text-sm font-medium text-nyati-navy">
-                  Recommended for: General construction, structural work, and applications where balanced setting and strength properties are needed.
+                  Inapendekezwa kwa: Ujenzi wa kawaida, kazi za miundo, na matumizi ambapo sifa za uwiano wa kuganda na nguvu zinahitajika.
                 </p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Conclusion: Embracing the Challenge</h2>
+          <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Hitimisho: Kukumbatia Changamoto</h2>
           <p>
-            While monsoon construction presents significant challenges, with proper planning, appropriate materials, and specialized techniques, high-quality construction is absolutely achievable during Tanzania's rainy seasons. Rather than viewing rain as a reason to halt construction, consider it an opportunity to implement best practices that can actually enhance the long-term durability of your structures.
+            Ingawa ujenzi wa masika unawasilisha changamoto muhimu, kwa mipango sahihi, vifaa vinavyofaa, na mbinu maalum, ujenzi wa ubora wa juu unawezekana kabisa wakati wa misimu ya mvua ya Tanzania. Badala ya kuona mvua kama sababu ya kusitisha ujenzi, iangalie kama fursa ya kutekeleza mbinu bora ambazo zinaweza kuimarisha udhabiti wa muda mrefu wa miundo yako.
           </p>
           <p className="mt-4">
-            By following the guidelines outlined in this article and selecting quality materials like Nyati Cement products specifically suited for rainy conditions, contractors and builders can maintain productivity throughout the year while ensuring excellent construction quality.
+            Kwa kufuata miongozo iliyoainishwa katika makala hii na kuchagua vifaa vya ubora kama bidhaa za Saruji ya Nyati zinazofaa hasa kwa hali za mvua, kontrakta na wajenzi wanaweza kudumisha uzalishaji wakati wa mwaka mzima huku wakihakikisha ubora mzuri wa ujenzi.
           </p>
           <p className="mt-4">
-            Remember that the key to successful monsoon construction lies in proactive planning rather than reactive measures. By anticipating challenges and implementing appropriate strategies from the outset, you can navigate Tanzania's rainy seasons successfully and deliver projects that stand the test of time—and weather.
+            Kumbuka kwamba ufunguo wa ujenzi wa mafanikio wa masika uko katika mipango ya awali badala ya hatua za majibu. Kwa kutabiri changamoto na kutekeleza mikakati inayofaa tangu mwanzoni, unaweza kuendesha kwa mafanikio misimu ya mvua ya Tanzania na kukamilisha miradi ambayo yanastahimili mtihani wa muda—na hali ya hewa.
           </p>
 
           <div className="bg-nyati-orange/10 p-6 rounded-sm my-8 border-l-4 border-nyati-orange">
-            <h3 className="text-xl font-bold text-nyati-navy mb-3">Need Technical Support?</h3>
+            <h3 className="text-xl font-bold text-nyati-navy mb-3">Unahitaji Msaada wa Kiufundi?</h3>
             <p className="mb-4">
-              Nyati Cement's technical team is available to provide specialized guidance for your rainy season construction projects. From mix design optimization to troubleshooting on-site challenges, our experts can help ensure your monsoon construction success.
+              Timu ya kiufundi ya Nyati Cement inapatikana kukupa ushauri maalum kwa miradi yako ya ujenzi wa msimu wa mvua. Kuanzia kuboresha muundo wa mchanganyiko hadi kutatua changamoto za eneo la ujenzi, wataalamu wetu wako tayari kuhakikisha mafanikio ya ujenzi wako wa masika.
             </p>
             <div className="flex justify-center mt-4">
               <Link 
                 href="/contact" 
                 className="bg-nyati-orange hover:bg-nyati-navy text-white font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center"
               >
-                Contact Our Technical Team
+                Wasiliana na Timu Yetu ya Kiufundi
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
@@ -648,7 +647,7 @@ export default function MonsoonConstructionPage() {
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
-                Back to Blog
+                Rudi kwenye Blogu
               </Link>
             </div>
             <div className="ml-auto">
@@ -656,16 +655,16 @@ export default function MonsoonConstructionPage() {
                 href="/products" 
                 className="flex items-center text-nyati-navy hover:text-nyati-orange transition-colors"
               >
-                Explore our cement products
+                Angalia bidhaa zetu za saruji
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
           </div>
-        </>
+        </React.Fragment>
       ) : (
-        <>
+        <React.Fragment>
           <div className="relative h-96 w-full mb-8 rounded-sm overflow-hidden">
             <Image 
               src="/images/blog/monsoon.webp" 
@@ -997,7 +996,7 @@ export default function MonsoonConstructionPage() {
                     <strong>Ulinzi wa Kutunza:</strong> Ikiwa unatumia njia za kutibu kwa maji kama kutunza, unda mafuniko ya ulinzi kuzuia maji ya mvua kutosha maji ya kutibu.
                   </li>
                   <li>
-                    <strong>Ufuatiliaji wa Halijoto:</strong> Fuatilia halijoto ya mazingira, kwani hali za baridi za mvua hupunguza kasi ya uwashaji wa saruji.
+                    <strong>Ufuatiliaji wa Halijoto:</strong> Fuatilia halijoto ya mazingira, kwani hali za baridi za mvua hupunguza kasi ya uwashaji wa saruji. Fikiria kutumia blanketi za kutunza joto ikiwa halijoto itashuka chini ya kiwango.
                   </li>
                   <li>
                     <strong>Hewa Inayodhibitiwa:</strong> Ikiwa unatiba katika maeneo yaliyofungwa, toa hewa inayodhibitiwa kudhibiti viwango vya unyevu.
@@ -1054,59 +1053,58 @@ export default function MonsoonConstructionPage() {
             </ul>
           </div>
 
-          <h2 className="text-2xl font-bold text-nyati-navy mt-10 mb-4">Troubleshooting Common Monsoon Construction Problems</h2>
+          <h2 className="text-2xl font-bold text-nyati-navy mt-10 mb-4">Utatuzi wa Matatizo ya Kawaida ya Ujenzi wa Masika</h2>
           
           <p>
-            Even with the best precautions, rainy season construction can encounter challenges. Here's how to address common issues:
+            Hata ukiwa na tahadhari bora, ujenzi wa msimu wa mvua unaweza kukutana na changamoto. Hivi ndivyo unavyoweza kukabiliana na matatizo ya kawaida:
           </p>
 
           <div className="overflow-x-auto my-8">
             <table className="min-w-full border-collapse bg-white shadow-sm rounded-sm overflow-hidden">
               <thead>
                 <tr className="bg-nyati-navy text-nyati-grey">
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Problem</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Causes</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Prevention</th>
-                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Remediation</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Tatizo</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Visababishi</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Kinga</th>
+                  <th className="border border-gray-300 px-4 py-2 text-nyati-light-orange text-left">Suluhisho</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Surface Scaling/Flaking</td>
-                  <td className="border border-gray-300 px-4 py-2">Rain falling on fresh concrete; too much water in mix</td>
-                  <td className="border border-gray-300 px-4 py-2">Proper covering; weather monitoring; reduced water content</td>
-                  <td className="border border-gray-300 px-4 py-2">Remove weakened surface layer; apply bonded topping or surface treatment</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kung'oka/Kupasuka kwa Uso</td>
+                  <td className="border border-gray-300 px-4 py-2">Mvua kunyesha juu ya zege mbichi; maji mengi kwenye mchanganyiko</td>
+                  <td className="border border-gray-300 px-4 py-2">Funika ipasavyo; fuatilia hali ya hewa; punguza maji kwenye mchanganyiko</td>
+                  <td className="border border-gray-300 px-4 py-2">Ondoa safu dhaifu ya juu; tumia matibabu ya uso au ongeza tabaka jipya</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Delayed Setting</td>
-                  <td className="border border-gray-300 px-4 py-2">Low temperatures; high humidity; excess water</td>
-                  <td className="border border-gray-300 px-4 py-2">Use set accelerators; Nyati 42.5R cement; reduce water content</td>
-                  <td className="border border-gray-300 px-4 py-2">Protect from further moisture; allow extra time before form removal</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kuchelewa Kuganda</td>
+                  <td className="border bordergray-300 px-4 py-2">Joto la chini; unyevu mwingi; maji mengi</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia vichapuzi vya kuganda; saruji ya Nyati 42.5R; punguza maji</td>
+                  <td className="border border-gray-300 px-4 py-2">Linda dhidi ya unyevu zaidi; ongeza muda kabla ya kuondoa fomu</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-300 px-4 py-2 font-medium">Efflorescence</td>
-                  <td className="border border-gray-300 px-4 py-2">Water movement through masonry dissolving salts</td>
-                  <td className="border border-gray-300 px-4 py-2">Waterproofing admixtures; proper DPC; water repellent treatments</td>
-                  <td className="border border-gray-300 px-4 py-2">Dry brushing; diluted acid washing; application of breathable sealers</td>
+                  <td className="border border-gray-300 px-4 py-2">Maji kupita kwenye kuta na kuyeyusha chumvi</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia viongezwa vya kuzuia maji; DPC sahihi; matibabu ya kuzuia maji</td>
+                  <td className="border border-gray-300 px-4 py-2">Piga mswaki kavu; safisha kwa tindikali iliyopunguzwa; tumia sealant inayopumua</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Mold/Fungus Growth</td>
-                  <td className="border border-gray-300 px-4 py-2">Persistent dampness; inadequate ventilation</td>
-                  <td className="border border-gray-300 px-4 py-2">Anti-fungal admixtures; proper drainage; adequate ventilation</td>
-                  <td className="border border-gray-300 px-4 py-2">Clean with fungicidal solution; improve ventilation; apply fungus-resistant paint</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Ukuaji wa Ukungu/Kuvu</td>
+                  <td className="border border-gray-300 px-4 py-2">Unyevu wa kudumu; uingizaji hewa hafifu</td>
+                  <td className="border border-gray-300 px-4 py-2">Tumia viongezwa vya kuzuia kuvu; mifereji sahihi; uingizaji hewa wa kutosha</td>
+                  <td className="border border-gray-300 px-4 py-2">Safisha kwa dawa ya kuua kuvu; boresha uingizaji hewa; paka rangi inayozuia kuvu</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 font-medium">Excessive Bleeding</td>
-                  <td className="border border-gray-300 px-4 py-2">High water content; fine aggregate deficiency; high ambient humidity</td>
-                  <td className="border border-gray-300 px-4 py-2">Optimize mix design; use water-reducing agents; proper aggregate gradation</td>
-                  <td className="border border-gray-300 px-4 py-2">Remove bleed water; delay finishing until bleeding stops; rescreeding</td>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">Kutoa Maji Kupita Kiasi (Bleeding)</td>
+                  <td className="border border-gray-300 px-4 py-2">Maji mengi; upungufu wa kokoto laini; unyevu mwingi wa mazingira</td>
+                  <td className="border border-gray-300 px-4 py-2">Boresha muundo wa mchanganyiko; tumia viongezwa vya kupunguza maji; chagua kokoto bora</td>
+                  <td className="border border-gray-300 px-4 py-2">Ondoa maji ya juu; chelewesha kumaliza hadi bleeding iishe; rudia kusawazisha</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Uhakikisho wa Ubora Wakati wa Misimu ya Mvua</h2>
-          
           <p className="mb-4">
             Udhibiti wa ubora unakuwa muhimu zaidi wakati wa ujenzi wa masika. Tekeleza hatua hizi za ziada za uhakikisho wa ubora:
           </p>
@@ -1211,16 +1209,16 @@ export default function MonsoonConstructionPage() {
           </p>
 
           <div className="bg-nyati-orange/10 p-6 rounded-sm my-8 border-l-4 border-nyati-orange">
-            <h3 className="text-xl font-bold text-nyati-navy mb-3">Need Technical Support?</h3>
+            <h3 className="text-xl font-bold text-nyati-navy mb-3">Unahitaji Msaada wa Kiufundi?</h3>
             <p className="mb-4">
-              Nyati Cement's technical team is available to provide specialized guidance for your rainy season construction projects. From mix design optimization to troubleshooting on-site challenges, our experts can help ensure your monsoon construction success.
+              Timu ya kiufundi ya Nyati Cement inapatikana kukupa ushauri maalum kwa miradi yako ya ujenzi wa msimu wa mvua. Kuanzia kuboresha muundo wa mchanganyiko hadi kutatua changamoto za eneo la ujenzi, wataalamu wetu wako tayari kuhakikisha mafanikio ya ujenzi wako wa masika.
             </p>
             <div className="flex justify-center mt-4">
               <Link 
                 href="/contact" 
                 className="bg-nyati-orange hover:bg-nyati-navy text-white font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center"
               >
-                Contact Our Technical Team
+                Wasiliana na Timu Yetu ya Kiufundi
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
@@ -1237,7 +1235,7 @@ export default function MonsoonConstructionPage() {
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
-                Back to Blog
+                Rudi kwenye Blogu
               </Link>
             </div>
             <div className="ml-auto">
@@ -1245,15 +1243,15 @@ export default function MonsoonConstructionPage() {
                 href="/products" 
                 className="flex items-center text-nyati-navy hover:text-nyati-orange transition-colors"
               >
-                Explore our cement products
+                Angalia bidhaa zetu za saruji
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
           </div>
-        </>
+        </React.Fragment>
       )}
     </BlogPost>
-  )
+  );
 }
