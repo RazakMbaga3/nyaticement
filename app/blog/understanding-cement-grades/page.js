@@ -101,7 +101,7 @@ export default function CementGradesPage() {
         </p>
       ) : (
         <p>
-          Namba katika daraja za saruji (kama vile 32.5N au 42.5R) zinaonesha nguvu za chini za kushindilia katika megapascali (MPa) ambazo saruji itafikia baada ya siku 28 za kuimarisha. Herufi inaonesha kiwango cha ukuaji wa nguvu:
+          Namba katika daraja za saruji (kama vile 32.5N au 42.5R) zinaonesha nguvu za chini za kushindilia katika megapascali (MPa) ambazo saruji itafikia baada ya siku 28 za kuimarisha. Herufi inaonesha kiwango cha muda cha ukuaji wa nguvu:
         </p>
       )}
       <ul className="list-disc pl-6 mt-3 mb-6">
@@ -301,7 +301,7 @@ export default function CementGradesPage() {
             </>
           ) : (
             <>
-              <li>Vipengele vya zege vilivyotengenezwa kabla</li>
+              <li>Miundo ya zege ilivyotengenezwa kabla</li>
               <li>Zege la Daraja la Juu</li>
               <li>Miradi Kubwa</li>
               <li>Matumizi yanayohitaji mchanganyiko wa zege uliotengenezwa kwa viungo maalum</li>
@@ -349,12 +349,12 @@ export default function CementGradesPage() {
               <p>Fikiria mahitaji ya kubeba uzito na umuhimu wa muundo wa mradi wako. Daraja za juu zaidi (42.5 na zaidi) kwa kawaida hutumiwa kwa vipengele vya muundo vinavyobeba mizigo mikubwa.</p>
             </li>
             <li>
-              <strong className="text-nyati-navy">Ratiba ya Ujenzi:</strong> 
+              <strong className="text-nyati-navy">Muda wa Ujenzi:</strong> 
               <p>Miradi ya haraka hunufaika na saruji za daraja R ambazo zinaruhusu kuondolewa kwa fomu haraka na maendeleo ya haraka ya ujenzi.</p>
             </li>
             <li>
               <strong className="text-nyati-navy">Hali ya Hewa:</strong> 
-              <p>Ujenzi wa hali ya hewa baridi unaweza kuhitaji saruji za daraja la juu zaidi ili kupinga muda wa pole pole wa kuganda katika halijoto ya chini.</p>
+              <p>Ujenzi wa hali ya hewa baridi unaweza kuhitaji saruji za daraja la juu zaidi ili kukabiliana muda wa pole pole wa kuganda katika halijoto ya chini.</p>
             </li>
             <li>
               <strong className="text-nyati-navy">Masuala ya Kiuchumi:</strong> 
@@ -392,7 +392,7 @@ export default function CementGradesPage() {
             Kuchagua daraja sahihi la saruji ni muhimu kwa mafanikio ya mradi. Saruji za Nyati Cement zinatoa suluhisho kwa kila hitaji la ujenzi, kutoka kwa mahitaji ya kuganda kwa haraka hadi matumizi ya kawaida. Kwa usaidizi wa kiufundi katika kuchagua daraja sahihi la saruji kwa mradi wako mahususi, Nyati Cement hutoa ushauri wa wataalamu kupitia timu yetu ya msaada wa kiufundi.
           </p>
           <p className="mt-4">
-            Kumbuka kuwa bidhaa zote za Nyati Cement huzidi mahitaji ya Shirika la Viwango la Tanzania (TBS), kuhakikisha kuwa bila kujali ni daraja gani unachochagua, unajenga na saruji inayotoa nguvu, kuaminika, na kudumu kwa muda mrefu.
+            Kumbuka kuwa bidhaa zote za Nyati Cement hukidhi mahitaji ya Shirika la Viwango la Tanzania (TBS), kuhakikisha kuwa bila kujali ni daraja gani unalochagua, unajenga na saruji inayotoa nguvu, kuaminika, na kudumu kwa muda mrefu.
           </p>
         </>
       )}

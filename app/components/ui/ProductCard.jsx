@@ -4,10 +4,12 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '../../hooks/useTranslations'
 
 export default function ProductCard({ product, index }) {
   const { image, title, description, features, applications } = product || {};
   const [isExpanded, setIsExpanded] = useState(false)
+  const { t } = useTranslations()
   
   return (
     <motion.div 
@@ -61,8 +63,7 @@ export default function ProductCard({ product, index }) {
                 <div className="w-6 h-6 rounded-full bg-nyati-orange flex items-center justify-center mr-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                  </svg>
-                </div>                <h3 className="font-semibold text-lg text-nyati-navy">Features</h3>
+                  </svg>                </div>                <h3 className="font-semibold text-lg text-nyati-navy">{t('ui.features', 'Features')}</h3>
               </div>
               <ul className="space-y-2 mb-6 md:mb-0">
                 {features && features.slice(0, isExpanded ? features.length : 3).map((feature, index) => (
@@ -87,8 +88,7 @@ export default function ProductCard({ product, index }) {
                 <div className="w-6 h-6 rounded-full bg-nyati-green flex items-center justify-center mr-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
-                  </svg>
-                </div>                <h3 className="font-semibold text-lg text-nyati-navy">Applications</h3>
+                  </svg>                </div>                <h3 className="font-semibold text-lg text-nyati-navy">{t('ui.applications', 'Applications')}</h3>
               </div>
               <ul className="space-y-2">
                 {applications && applications.slice(0, isExpanded ? applications.length : 3).map((application, index) => (
@@ -116,17 +116,16 @@ export default function ProductCard({ product, index }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-            >
-              {isExpanded ? (
+            >              {isExpanded ? (
                 <>
-                  Show Less
+                  {t('ui.showLess', 'Show Less')}
                   <svg className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                   </svg>
                 </>
               ) : (
                 <>
-                  Show More
+                  {t('ui.showMore', 'Show More')}
                   <svg className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>

@@ -5,8 +5,8 @@
         "home": "Nyumbani",
         "careers": "Kazi"
       },
-      "title": "Unda Siku zijazo",
-      "highlight": "Pamoja Nasi",
+      "title": "Tujenge Kesho Yetu",
+      "highlight": "Pamoja",
       "description": "Jiunge na timu yetu yenye ari na uwe sehemu ya kampuni inayojenga mustakabali wa Tanzania. Gundua fursa za kusisimua na kukua pamoja nasi.",
       "metrics": {
         "teamMembers": {
@@ -32,7 +32,7 @@
       "values": [
         {
           "title": "Ubunifu",
-          "description": "Tunakuza utamaduni wa ubunifu na kuboresha endelevu katika nyanja zote za shughuli zetu."
+          "description": "Tunakuza utamaduni wa ubunifu na maboresho endelevu katika nyanja zote za shughuli zetu."
         },
         {
           "title": "Kazi ya Pamoja",
@@ -67,7 +67,7 @@
     },
     "cta": {
       "title": "Uko Tayari Kujiunga na Timu Yetu?",
-      "description": "Tuna shauku kuhusu saruji yetu. Ikiwa una nia ya kufanya vizuri na kupaa juu, tuma wasifu wako kwa",
+      "description": "Tuna shauku kuhusu saruji yetu. Ikiwa una nia ya kufanya vizuri na kukua zaidi, tuma wasifu wako kwa",
       "emailLabel": "career@lakecement.co.tz",
       "buttonText": "Tuma Wasifu Wako"
     }

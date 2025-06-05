@@ -416,11 +416,16 @@
     "regions": "Kanda",
     "becomeDistributor": "Kuwa Msambazaji",
     "findDealer": "Tafuta Msambazaji Karibu Nawe"
-  },
-  "news": {
+  },  "news": {
     "latest": "Habari za Hivi Karibuni",
     "pressReleases": "Taarifa kwa Vyombo vya Habari",
     "events": "Matukio",
     "mediaKit": "Mawsiliano ya Vyombo vya Habari"
+  },
+  "ui": {
+    "features": "Vipengele",
+    "applications": "Matumizi",
+    "showMore": "Onyesha Zaidi",
+    "showLess": "Onyesha Kidogo"
   }
 }

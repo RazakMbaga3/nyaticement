@@ -18,10 +18,10 @@
     },
     "applications": {
       "title": "Matumizi Mbalimbali",
-      "description": "Kuanzia miradi midogo ya makazi hadi miundombinu kubwa, Saruji ya Nyati inatoa matokeo ya kipekee katika matumizi mbalimbali."
+      "description": "Kuanzia miradi midogo ya makazi hadi miundombinu mikubwa, Saruji ya Nyati inatoa matokeo ya kipekee katika matumizi mbalimbali."
     },
     "packaging": {
-      "title": "Chaguo za Ufungashaji",
+      "title": "Chaguo za Ufungaji",
       "description": "Tunatoa suluhisho za ufungashaji zinazobadilika kulingana na ukubwa wa miradi, kuanzia ujenzi mdogo wa makazi hadi maendeleo makubwa ya kibiashara.",
       "options": [
         {
@@ -33,19 +33,19 @@
           "description": "Suluhisho lenye ufanisi kwa miradi ya kati hadi kubwa, kupunguza muda wa kushughulika na taka za ufungashaji wakati wa kuongeza uzalishaji."
         },
         {
-          "title": "Magari ya Kusafirisha kwa Wingi",
+          "title": "Magari ya Kusafirisha Saraji kwa Wingi",
           "description": "Inafaa kwa miradi kubwa, ikitoa ufanisi wa hali ya juu na usafirishaji wa moja kwa moja kwa silos, kuondoa kabisa ufungashaji."
         }
       ]
     },
     "cta": {
-      "title": "Tayari Kujenga na Bora Zaidi?",
+      "title": "Upo Tayari Kujenga kwa Ubora Zaidi?",
       "description": "Wasiliana nasi leo kujadili jinsi bidhaa za Saruji ya Nyati zinaweza kukidhi mahitaji yako maalum ya ujenzi.",
       "button": "Wasiliana Nasi"
     },
     "products": [
       {
-        "title": "Saruji ya Portland ya Jiwe la Chokaa ya Daraja 42.5R",
+        "title": "Saruji ya Daraja 42.5R",
         "description": "Imeundwa kwa miradi inayohitaji kuongezeka kwa uimara kwa haraka na udumishaji wa muda mrefu. Inafaa kwa kutengeneza matofali, zege lililotengezwa awali, zege lililokaza, na zege la daraja la juu kwa miundo ya nguvu kubwa kama madaraja na mabwawa.",
         "features": [
           "Nguvu ya Awali ya Juu",
@@ -63,7 +63,7 @@
         ]
       },
       {
-        "title": "Saruji ya Portland ya Jiwe la Chokaa ya Daraja 42.5N",
+        "title": "Saruji ya Daraja 42.5N",
         "description": "Saruji yenye utendaji wa hali ya juu kwa miundo imara na yenye kudumu. Inatoa urahisi wa kufanyiakazi na nguvu ya shinikizo, inaifanya kuwa bora kwa miradi ya kawaida ya ujenzi.",
         "features": [
           "Uzalishaji wa Joto la Chini",
@@ -80,7 +80,7 @@
         ]
       },
       {
-        "title": "Saruji ya Kawaida ya Portland",
+        "title": "Ordinary Portland Cement OPC",
         "description": "Saruji bora inayojulikana kwa nguvu isiyolinganishwa, udumishaji, na utendaji wa kipekee. Chaguo bora kwa miundo muhimu na miradi kubwa kama majengo marefu, madaraja, na mabwawa.",
         "features": [
           "Nguvu ya Awali ya Juu",
@@ -97,7 +97,7 @@
         ]
       },
       {
-        "title": "Saruji ya Portland ya Daraja 32.5N",
+        "title": "Saruji ya Daraja 32.5N",
         "description": "Saruji ya kuaminika, ya matumizi ya kawaida kwa ujenzi wa kila siku. Inafaa kwa misingi, kuweka matofali, ujenzi wa mawe, na uimarishaji wa barabara, inatoa nguvu thabiti, urahisi wa kufanyiakazi, na matokeo ya kudumu.",
         "features": [
           "Kuweka kwa Kawaida",
@@ -108,7 +108,7 @@
         ],
         "applications": [
           "Uimarishaji wa Barabara",
-          "Mota na Ujenzi wa Mawe",
+          "Mota na Ujenzi kwa Matofali",
           "lipu na sakafu",
           "Kutengeneza Matofali kwa Gharama Nafuu",
           "Kazi za jumla za uhandisi wa kiraia"

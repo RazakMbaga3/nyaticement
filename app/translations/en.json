@@ -414,11 +414,16 @@
     "regions": "Regions",
     "becomeDistributor": "Become a Distributor",
     "findDealer": "Find a Dealer Near You"
-  },
-  "news": {
+  },  "news": {
     "latest": "Latest News",
     "pressReleases": "Press Releases",
     "events": "Events",
     "mediaKit": "Media Kit"
+  },
+  "ui": {
+    "features": "Features",
+    "applications": "Applications",
+    "showMore": "Show More",
+    "showLess": "Show Less"
   }
 }
