@@ -375,12 +375,12 @@ const newsArticles = [
   // Additional articles can be added here
 ];
 
-export function getNewsArticle(id) {
+function getNewsArticle(id) {
   return newsArticles.find(article => article.id.toString() === id.toString());
 }
 
 // Function to get article content based on language
-export function getLocalizedArticleContent(article, language) {
+function getLocalizedArticleContent(article, language) {
   if (!article) return null;
   
   // Create a localized version of the article
@@ -435,7 +435,7 @@ export function getLocalizedArticleContent(article, language) {
   return localizedArticle;
 }
 
-export function getRelatedArticles(currentArticleId, count = 3) {
+function getRelatedArticles(currentArticleId, count = 3) {
   // First try to get related articles specified by the current article
   const currentArticle = getNewsArticle(currentArticleId);
   if (currentArticle && currentArticle.relatedArticles && currentArticle.relatedArticles.length > 0) {
@@ -454,8 +454,7 @@ export function getRelatedArticles(currentArticleId, count = 3) {
   // If there are no articles in the same category, get any other articles
   const otherArticles = newsArticles
     .filter(article => article.id !== currentArticleId);
-  
-  // Choose from same category if available, otherwise from other articles
+    // Choose from same category if available, otherwise from other articles
   const pool = sameCategory.length > 0 ? sameCategory : otherArticles;
   
   // Shuffle the pool and pick the first 'count' articles
@@ -463,3 +462,6 @@ export function getRelatedArticles(currentArticleId, count = 3) {
     .sort(() => 0.5 - Math.random())
     .slice(0, count);
 }
+
+// Export the news articles
+export { newsArticles, getNewsArticle, getRelatedArticles, getLocalizedArticleContent };

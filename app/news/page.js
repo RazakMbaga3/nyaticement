@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import { newsArticles as allNewsArticles } from './newsData'
 
 // Assume these components are properly implemented in your project
 import NewsSlider from './components/NewsSlider'
@@ -14,7 +15,7 @@ import Newsletter from '@/app/components/ui/Newsletter'
 
 export default function NewsPage() {
   // Get language context and general translations
-  const { language } = useLanguage()
+  const { language, setLanguage } = useLanguage()
   const { t } = useTranslations()
   
   // State for page-specific translations
@@ -98,92 +99,23 @@ export default function NewsPage() {
   }
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: { 
+    hidden: { y: 30, opacity: 0 },    visible: { 
       y: 0, 
       opacity: 1,
       transition: { type: 'spring', stiffness: 300, damping: 25 }
     }
   }
-  // Mock data for the news (would be replaced with actual data in production)
-  const newsArticles = [
-    {
-      id: 8,
-      title: "Nyati Cement Engagement at the 2025 Annual Consultative Meeting for Contractors (ACM) organized by the CRB",
-      excerpt: "Lake Cement Ltd, the proud manufacturer of Nyati Cement, participated at the 2025 Annual Consultative Meeting for Contractors (ACM) and Exhibition in Dar es Salaam, engaging with over 500 stakeholders and highlighting opportunities for sector growth.",
-      date: "2025-05-16",
-      image: "/images/news/acm/1.jpg",
-      category: "company",
-      featured: true,
-      tag: "Industry Event"
-    },
-    {
-      id: 1,
-      title: "Dar es Salaam Regional Commissioner Visits Lake Cement on Workers' Day",
-      excerpt: "The Dar es Salaam Regional Commissioner, Hon. Chalamila, has announced upcoming inspections of workplaces, including factories, to assess employee relations and working conditions. Lake Cement welcomed this initiative as part of our commitment to maintaining excellent labor standards.",
-      date: "2024-06-15",
-      image: "/images/news/RC-Chalamila.png",
-      category: "company",
-      featured: true,
-      tag: "Recent",
-      link: "https://www.mwananchi.co.tz/mw/habari/kitaifa/ukaguzi-wa-haki-za-wafanyakazi-viwandani-waja--4659252"
-    },
-    {
-      id: 2,
-      title: "RC Chalamila Conducts Tour of Kigamboni District",
-      excerpt: "Dar es Salaam Regional Commissioner Albert John Chalamila conducted an extensive tour of Kigamboni District to inspect various development projects and engage with community members. During his visit, he emphasized the government's commitment to infrastructure development and public service improvement.",
-      date: "2024-05-15",
-      image: "/images/news/chalamila.jpg",
-      category: "company",
-      featured: true,
-      link: "https://dsm.go.tz/new/rc-chalamila-afanya-ziara-kigamboni"
-    },
-    {
-      id: 3,
-      title: "Nyati Cement Donates Cement Bags for School Construction",
-      excerpt: "Nyati Cement Donates 400 bags to the Bagamoyo District Commissioner for the construction of School. Showing our commitment to CSR and support for education infrastructure development in local communities.",
-      date: "2016-11-25",
-      image: "/images/news/5.jpg",
-      category: "csr",
-      featured: true
-    },    {
-      id: 4,
-      title: "Lake Cement Plants Trees in the Annual Ceremony",
-      excerpt: "Lake Cement demonstrated its commitment to environmental sustainability through planting tress in the annual ceremony, which also featured employee recognition awards and team-building activities at the company's factory at Kimbiji.",
-      date: "2022-07-26",
-      image: "/images/news/env.webp",
-      category: "company"
-    },
-    {
-      id: 5,
-      title: "Lake Cement Leads Blood Donation Drive to Save Lives",
-      excerpt: "Lake Cement has demonstrated corporate social responsibility through an impactful blood donation drive at our factory. The initiative aims to address the critical shortage of blood supplies in Tanzania's healthcare system and highlights our dedication to community health and wellbeing.",
-      date: "2017-05-17",
-      image: "/images/news/damu4.webp",
-      category: "csr",
-      link: "https://www.michuzi.co.tz/2017/05/lake-cement-yachangia-damu-katika.html"
-    },
-    {
-      id: 6,
-      title: "Prime Minister Majaliwa Assures Lake Cement of Government Support",
-      excerpt: "During his visit to Lake Cement's state-of-the-art factory, Prime Minister Kassim Majaliwa praised our production quality and affirmed the government's commitment to supporting local manufacturers. The PM emphasized the importance of private sector investment in strengthening Tanzania's industrial capacity.",
-      date: "2021-03-27",
-      image: "/images/news/PM-Majaliwa.png",
-      category: "company",
-      link: "https://www.thecitizen.co.tz/tanzania/business/majaliwa-assures-investors-of-government-cooperation-2596696"
-    },
-    {
-      id: 7,
-      title: "Nyati Cement Hands Over Kigamboni Bus Terminal, Citizens Urged to Embrace Opportunities",
-      excerpt: "Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner. The company invested 46 million shillings in this infrastructure project, demonstrating its commitment to supporting President Samia Suluhu Hassan's efforts to bring essential services closer to citizens.",
-      date: "2022-11-08",
-      image: "/images/news/bs3.webp",
-      category: "csr",
-      featured: true,
-      tag: "Community Development",
-      link: "https://www.michuzi.co.tz/2022/11/nyati-cement-wakabidhi-stendi-ya-kigamboni.html"
-    }
-  ];
+  
+  // Get language-specific articles
+  const newsArticles = allNewsArticles.map(article => {
+    return {
+      ...article,
+      title: language === 'sw' && article.title_sw ? article.title_sw : article.title,
+      excerpt: language === 'sw' && article.excerpt_sw ? article.excerpt_sw : article.excerpt,
+      author: language === 'sw' && article.author_sw ? article.author_sw : article.author,
+      image: article.mainImage || article.image // Use mainImage from newsData.js or fallback to image
+    };
+  });
 
   // Sort articles by date (newest first)
   const sortedArticles = [...newsArticles].sort((a, b) => 
@@ -200,12 +132,11 @@ export default function NewsPage() {
 
   // Get featured articles
   const featuredArticles = filteredArticles.filter(article => article.featured);
-
   // Format date for consistency
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', options);
+    return date.toLocaleDateString(language === 'sw' ? 'sw-TZ' : 'en-US', options);
   };
 
   return (

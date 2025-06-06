@@ -66,13 +66,18 @@ const relatedPostsData = {
 
 export default function MonsoonConstructionPage() {
   const { language } = useLanguage();
-  return (
-    <BlogPost 
-      title={language === 'en' ? "Monsoon Construction Guide: Building with Cement During Rainy Seasons" : "Mwongozo wa Ujenzi wa Masika: Kujenga kwa Saruji Wakati wa Msimu wa Mvua"}
-      date={language === 'en' ? "April 25, 2025" : "Aprili 25, 2025"}
-      author={language === 'en' ? "Nyati Cement Technical Team" : "Timu ya Kiufundi ya Nyati Cement"}
-      category={language === 'en' ? "Construction Best Practices" : "Mbinu Bora za Ujenzi"}      readTime={language === 'en' ? "9 min read" : "Dakika 9 za kusoma"}
-      relatedPosts={language === 'en' ? relatedPostsData.en : relatedPostsData.sw}
+  return (    <BlogPost 
+      title="Monsoon Construction Guide: Building with Cement During Rainy Seasons"
+      titleSw="Mwongozo wa Ujenzi wa Masika: Kujenga kwa Saruji Wakati wa Msimu wa Mvua"
+      date="April 25, 2025"
+      dateSw="Aprili 25, 2025"
+      author="Nyati Cement Technical Team"
+      authorSw="Timu ya Kiufundi ya Nyati Cement"
+      category="Construction Best Practices"
+      categorySw="Mbinu Bora za Ujenzi"
+      readTime="9 min read"
+      readTimeSw="Dakika 9 za kusoma"
+      relatedPosts={relatedPostsData}
     >
       {language === 'en' ? (
         <React.Fragment>
@@ -695,7 +700,7 @@ export default function MonsoonConstructionPage() {
               Kusanyiko la maji kwenye mitaro na mashimo ya msingi
             </li>
             <li>
-              Kuongezeka kwa hatari ya efflorescence na kasoro nyingine zinazohusiana na unyevu
+              Kuongezeka kwa hatari ya  na kasoro nyingine zinazohusiana na unyevu
             </li>
             <li>
               Kupungua kwa saa za kazi kutokana na mvua za mara kwa mara
@@ -728,7 +733,7 @@ export default function MonsoonConstructionPage() {
                   <li>Hakikisha una saruji ya ziada kwa ajili ya upotevu unaoweza kutokea</li>
                   <li>Andaa maeneo ya kuhifadhi yaliyofunikwa kwa saruji na kokoto zote</li>
                   <li>Tafuta mifumo ya saruji yenye kuganda haraka kama Nyati CEM II A-L 42.5R</li>
-                  <li>Nunua vifaa vya kuzuia maji na additives mapema</li>
+                  <li>Nunua vifaa vya kuzuia maji na viongezwa mapema</li>
                   <li>Hakikisha upatikanaji wa pampu za maji na vifaa vya kuondoa maji</li>
                 </ul>
               </div>
@@ -753,7 +758,7 @@ export default function MonsoonConstructionPage() {
                   <li>Weka pampu za mifereji kwenye maeneo yanayoweza kukusanya maji</li>
                   <li>Tengeneza nyuso zenye mteremko kuelekezea maji mbali na misingi</li>
                   <li>Weka matandiko ya kokoto kwenye maeneo yenye trafiki kubwa kuzuia matope</li>
-                  <li>Fikiria mifumo ya mifereji ya French kwa maeneo yenye matatizo ya kudumu ya maji</li>
+                  <li>Zingatia mifumo ya mifereji ya French kwa maeneo yenye matatizo ya kudumu ya maji</li>
                 </ul>
               </div>
               <div className="relative h-64 md:h-auto rounded-sm overflow-hidden bg-gray-100">
