@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslations } from '@/app/hooks/useTranslations';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import emailjs from '@emailjs/browser';
 
 // Animation variants
 const fadeIn = {
@@ -85,6 +86,8 @@ export default function DistributionForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+  const form = useRef();
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData(prev => ({
@@ -92,6 +95,37 @@ export default function DistributionForm() {
       [id]: value
     }));
   };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_gm7eghi', 'template_10t1fom', form.current, {
+        publicKey: 'xhWX7T_yzqXUD83lP',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setSubmitStatus({
+            success: true,
+            message: pt('distributionPage.form.success')
+          });
+          // Reset form after successful submission
+          setFormData({
+            firmName: '', address: '', area: '', city: '', poBox: '', 
+            contactPerson: '', contactNumber: '', email: ''
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setSubmitStatus({
+            success: false,
+            message: pt('distributionPage.form.error')
+          });
+        },
+      );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -283,12 +317,13 @@ export default function DistributionForm() {
               </div>
             )}
             
-            <form onSubmit={handleSubmit} className="text-sm">
+            <form ref={form} onSubmit={sendEmail} className="text-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">                <div className="form-group">
                   <label htmlFor="firmName" className="block text-gray-700 text-xs mb-1">{pt('distributionPage.form.labels.firmName')}</label>
                   <input 
                     type="text" 
                     id="firmName" 
+                    name="firmName"
                     value={formData.firmName}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -301,6 +336,7 @@ export default function DistributionForm() {
                   <input 
                     type="text" 
                     id="address" 
+                    name="address"
                     value={formData.address}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -313,6 +349,7 @@ export default function DistributionForm() {
                   <input 
                     type="text" 
                     id="area" 
+                    name="area"
                     value={formData.area}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -325,6 +362,7 @@ export default function DistributionForm() {
                   <input 
                     type="text" 
                     id="city" 
+                    name="city"
                     value={formData.city}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -337,6 +375,7 @@ export default function DistributionForm() {
                   <input 
                     type="text" 
                     id="poBox" 
+                    name="poBox"
                     value={formData.poBox}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -349,6 +388,7 @@ export default function DistributionForm() {
                   <input 
                     type="text" 
                     id="contactPerson" 
+                    name="contactPerson"
                     value={formData.contactPerson}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -361,6 +401,7 @@ export default function DistributionForm() {
                   <input 
                     type="tel" 
                     id="contactNumber" 
+                    name="contactNumber"
                     value={formData.contactNumber}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
@@ -373,6 +414,7 @@ export default function DistributionForm() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 

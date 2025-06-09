@@ -105,13 +105,13 @@ const blogPostsData = {
       )
     },
     sw: {
-      title: "Kujenga Nyumba Yako ya Ndoto na Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua",
+      title: "Kujenga Nyumba ya Ndoto Yako kwa Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua",
       date: "Aprili 3, 2025",
       category: "DIY & Ujenzi wa Nyumba",
       readTime: "6 Dakika za Kusoma",
       relatedPosts: [
         {
-          title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+          title: 'Kuelewa Daraja  (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
           excerpt: 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.',
           date: 'Machi 28, 2025',
           category: 'Ujuzi wa Kiufundi',
@@ -119,7 +119,7 @@ const blogPostsData = {
           readTime: '3 Dakika za Kusoma'
         },
         {
-          title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+          title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
           excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
           date: 'Machi 26, 2025',
           category: 'Ujuzi wa Kiufundi',
@@ -280,13 +280,13 @@ const blogPostsData = {
       )
     },
     sw: {
-      title: "Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako",
+      title: "Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako",
       date: "Machi 28, 2025",
       category: "Ujuzi wa Kiufundi",
       readTime: "7 dakika za kusoma",
       relatedPosts: [
         {
-          title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+          title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
           excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
           category: 'Ujuzi wa Kiufundi',
           date: 'Machi 26, 2025',
@@ -294,7 +294,7 @@ const blogPostsData = {
           slug: '/blog/water-cement-ratio'
         },
         {
-          title: 'Kwa Nini Nguvu za Kushindilia ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
+          title: 'Kwanini Nguvu ya Shinikizo la Saruji ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
           excerpt: 'Elewa umuhimu wa upimaji wa nguvu za kushindilia na jinsi Nyati inavyohakikisha ubora endelevu.',
           category: 'Ujuzi wa Kiufundi',
           date: 'Aprili 10, 2025',
@@ -384,13 +384,13 @@ const blogPostsData = {
       ]
     },
     sw: {
-      title: "Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege",
+      title: "Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege",
       date: "Machi 26, 2025",
       category: "Ujuzi wa Kiufundi",
       readTime: "6 dakika za kusoma",
       relatedPosts: [
         {
-          title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+          title: 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
           excerpt: 'Jifunze jinsi ya kuchagua daraja la saruji sahihi kwa mahitaji yako maalum ya ujenzi.',
           category: 'Ujuzi wa Kiufundi',
           date: 'Machi 28, 2025',
@@ -511,7 +511,7 @@ const blogPostsData = {
       readTime: "6 dakika za kusoma",
       relatedPosts: [
         {
-          title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+          title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
           excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
           category: 'Ujuzi wa Kiufundi',
           date: 'Machi 26, 2025',
@@ -703,7 +703,7 @@ const blogPostsData = {
       )
     },
     sw: {
-      title: "Kwa Nini Nguvu za Kushindilia ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati",
+      title: "Kwanini Nguvu ya Shinikizo la Saruji ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati",
       date: "Aprili 10, 2025",
       category: "Ujuzi wa Kiufundi",
       readTime: "5 dakika za kusoma",
@@ -717,7 +717,7 @@ const blogPostsData = {
           slug: '/blog/understanding-cement-grades'
         },
         {
-          title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+          title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
           excerpt: 'Jinsi kiasi cha maji kinavyoathiri nguvu na udhabiti wa zege.',
           category: 'Ujuzi wa Kiufundi',
           date: 'Machi 26, 2025',

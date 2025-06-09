@@ -30,7 +30,7 @@ const relatedPostsData = {
   ],
   sw: [
     {
-      title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+      title: 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
       excerpt: 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.',
       date: 'Machi 28, 2025',
       category: 'Ujuzi wa Kiufundi',
@@ -38,7 +38,7 @@ const relatedPostsData = {
       readTime: '3 Dakika za Kusoma'
     },
     {
-      title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+      title: '',
       excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
       date: 'Machi 26, 2025',
       category: 'Ujuzi wa Kiufundi',
@@ -59,7 +59,7 @@ export default function BuildingYourDreamHomePage() {
       readTime: "6 Minute Read"
     },
     sw: {
-      title: "Kujenga Nyumba Yako ya Ndoto na Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua",
+      title: "Kujenga Nyumba ya Ndoto Yako kwa Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua",
       date: "Aprili 3, 2025",
       category: "DIY & Ujenzi wa Nyumba",
       readTime: "6 Dakika za Kusoma"
@@ -349,13 +349,13 @@ export default function BuildingYourDreamHomePage() {
             />
           </div>
           <p className="lead">
-            Kujenga nyumba yako mwenyewe ni moja ya mafanikio makubwa maishani. Kwa kutumia vifaa bora kama Saruji ya Nyati na kupanga kwa umakini, unaweza kujenga nyumba itakayodumu kwa vizazi. Mwongozo huu wa kina utakupitisha hatua muhimu za ujenzi wa nyumba, ukiweka mkazo kwenye matumizi sahihi ya saruji kwa matokeo bora.
+            Kujenga nyumba yako mwenyewe ni moja ya mafanikio makubwa maishani. Kwa kutumia Saruji ya Nyati na mipango makini, unaweza kujenga nyumba itakayodumu kwa vizazi. Mwongozo huu wa kina utakupitisha hatua muhimu za ujenzi wa nyumba, ukizingatia matumizi sahihi ya saruji kwa matokeo bora.
           </p>
           <h2>1. Mipango na Maandalizi</h2>
           <h3>Kubuni Nyumba Yako</h3>
           <p>Kabla ya kuanza ujenzi wowote, unahitaji mpango madhubuti:</p>
           <ul>
-            <li>Fanya kazi na mbunifu ili kupata michoro ya kina</li>
+            <li>Fanya kazi na mbunifu (architect) ili kupata michoro ya kina</li>
             <li>Pata vibali vyote muhimu vya ujenzi</li>
             <li>Andaa bajeti na ratiba halisi</li>
             <li>Chagua bidhaa sahihi za Saruji ya Nyati kwa kila hatua</li>

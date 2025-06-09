@@ -19,7 +19,7 @@ const featuredPosts = [
       readTime: '3 Minute Read'
     },
     sw: {
-      title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+      title: 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
       excerpt: 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.',
       date: 'Machi 28, 2025',
       category: 'Ujuzi wa Kiufundi',
@@ -134,16 +134,12 @@ export default function BlogHighlights() {
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                
-                <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center mb-4">
                     <span className={`px-2 py-1 text-xs font-medium rounded ${getCategoryColor(postContent.category)}`}>
                       {postContent.category}
                     </span>
                     <span className="ml-2 text-sm text-gray-500">{postContent.date}</span>
-                    <span className="ml-auto text-xs text-gray-500">
-                      {postContent.readTime}
-                    </span>
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-2 text-nyati-navy">

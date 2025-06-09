@@ -38,7 +38,7 @@ export default function CompressiveStrengthTestingPage() {
         slug: '/blog/water-cement-ratio'
       },
       {
-        title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+        title: 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
         excerpt: 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.',
         category: 'Ujuzi wa Kiufundi',
         date: 'Machi 28, 2025',

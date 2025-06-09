@@ -1,6 +1,6 @@
 export function getImageMetadata(imageUrl) {
   const imageMetadata = {
-    alt: '',
+    alt: 'Nyati Cement',
     width: 1200,
     height: 630,
     type: 'image/jpeg',
@@ -28,6 +28,16 @@ export function getImageMetadata(imageUrl) {
       width: 1920,
       height: 1080,
     },
+    'hero': {
+      alt: 'Nyati Cement Hero Image',
+      width: 1920,
+      height: 1080,
+    },
+    'sustainability': {
+      alt: 'Nyati Cement Sustainability',
+      width: 1200,
+      height: 800,
+    },
   };
 
   // Find matching pattern and return its metadata
@@ -40,8 +50,8 @@ export function getImageMetadata(imageUrl) {
   return imageMetadata;
 }
 
-export function generateSrcSet(basePath, formats = ['jpg', 'webp']) {
-  const widths = [640, 750, 828, 1080, 1200, 1920, 2048];
+export function generateSrcSet(basePath, formats = ['jpg', 'webp', 'avif']) {
+  const widths = [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048];
   const srcSet = [];
 
   for (const format of formats) {

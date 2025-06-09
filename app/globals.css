@@ -16,36 +16,36 @@
 /* Base styles */
 @layer base {
   html {
-    @apply text-nyati-dark-grey;
+    @apply text-nyati-dark-grey scroll-smooth;
   }
   
   body {
-    @apply font-sans text-sm antialiased; /* Reduced base font size */
+    @apply font-sans text-base antialiased text-gray-800 bg-white selection:bg-nyati-orange/20 selection:text-nyati-navy;
   }
 
-  /* Typography - Headings */
+  /* Typography - Improved Heading System */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-futura font-bold leading-tight text-nyati-navy;
+    @apply font-futura font-bold leading-tight tracking-tight text-nyati-navy;
   }
 
   h1 {
-    @apply text-2xl md:text-3xl lg:text-4xl; /* Reduced heading sizes */
+    @apply text-3xl md:text-4xl lg:text-5xl mb-6;
   }
 
   h2 {
-    @apply text-xl md:text-2xl; /* Reduced heading sizes */
+    @apply text-2xl md:text-3xl lg:text-4xl mb-5;
   }
 
   h3 {
-    @apply text-lg md:text-xl; /* Reduced heading sizes */
+    @apply text-xl md:text-2xl lg:text-3xl mb-4;
   }
 
   h4 {
-    @apply text-base md:text-lg; /* Reduced heading sizes */
+    @apply text-lg md:text-xl lg:text-2xl mb-3;
   }
 
   h5 {
-    @apply text-sm md:text-base font-semibold; /* Reduced heading sizes */
+    @apply text-base md:text-lg font-semibold mb-2;
   }
 
   h6 {

@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^12.10.5",

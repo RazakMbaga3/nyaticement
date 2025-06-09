@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useState, useEffect } from 'react'
-import LanguageSwitcher from './ui/LanguageSwitcher'
 
 const BlogPost = ({ 
   title, 
@@ -78,14 +77,8 @@ const BlogPost = ({
     };
     
     return categories[categoryName] || 'bg-gray-100 text-gray-800';
-  };
-  return (
+  };  return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Language Switcher */}
-      <div className="absolute top-24 right-4 z-40">
-        <LanguageSwitcher />
-      </div>
-      
       {/* Breadcrumbs */}
       <div className="mb-8">
         <nav className="flex text-sm">
@@ -132,15 +125,6 @@ const BlogPost = ({
               <time>{language === 'en' ? date : dateSw}</time>
             </div>
           )}
-          
-          {(readTime || readTimeSw) && (
-            <div className="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>{language === 'en' ? readTime : readTimeSw}</span>
-            </div>
-          )}
         </div>
       </header>
       
@@ -155,7 +139,7 @@ const BlogPost = ({
             aria-label={`${t('ui.shareOn')} Facebook`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.049c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.049H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
             </svg>
           </button>
           <button className="w-8 h-8 rounded-full bg-[#1da1f2] text-white flex items-center justify-center hover:opacity-90 transition-opacity">
@@ -234,7 +218,6 @@ const BlogPost = ({
                   </p>
                   <div className="flex justify-between items-center text-xs text-gray-500">
                     <span>{post.date}</span>
-                    <span>{post.readTime}</span>
                   </div>
                 </div>
               </div>

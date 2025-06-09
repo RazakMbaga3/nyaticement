@@ -44,7 +44,7 @@ export default function WaterCementRatioPage() {
       readTimeSw="Dakika 8 za kusoma"
       relatedPosts={{ en: relatedPosts, sw: relatedPosts.map(post => ({
         ...post,
-        title: post.title === 'Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project' ? 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako' : 'Kuelewa Utibuaji wa Zege: Mbinu Bora za Nguvu ya Juu',
+        title: post.title === 'Understanding Cement Grades: Choosing the Right Nyati Cement for Your Project' ? 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako' : 'Kuelewa Utibuaji wa Zege: Mbinu Bora za Nguvu ya Juu',
         excerpt: post.excerpt === 'Learn how to select the perfect cement grade for your specific construction needs with our comprehensive guide.' ? 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.' : 'Jifunze mbinu bora za kutibu zege ili kufikia nguvu na udhabiti bora katika miradi yako ya ujenzi.',
         category: post.category === 'Technical Knowledge' ? 'Ujuzi wa Kiufundi' : 'Mbinu Bora za Ujenzi',
         date: post.date === 'March 28, 2025' ? 'Machi 28, 2025' : 'Inakuja Hivi Karibuni',

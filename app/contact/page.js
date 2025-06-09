@@ -1,11 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   // Get language context and general translations
@@ -64,44 +65,39 @@ export default function ContactPage() {
   })
 
   const [submitStatus, setSubmitStatus] = useState(null)
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setSubmitStatus(null)
-    
-    try {
-      const response = await fetch('/api/send-contact-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      const data = await response.json()
-        if (response.ok) {
-        setSubmitStatus({
-          success: true,
-          message: pt('contactPage.form.status.success') || 'Your message has been sent successfully! We will get back to you soon.'
-        })
-        // Reset form after successful submission
-        handleReset()
-      } else {
-        throw new Error(data.message || 'Failed to send message')
-      }
-    } catch (error) {
-      console.error('Error sending message:', error)
-      setSubmitStatus({
-        success: false,
-        message: pt('contactPage.form.status.error') || 'There was an error sending your message. Please try again later.'
+    emailjs
+      .sendForm('service_gm7eghi', 'template_10t1fom', form.current, {
+        publicKey: 'xhWX7T_yzqXUD83lP',
       })
-    }
-  }
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setSubmitStatus({
+            success: true,
+            message: pt('contactPage.form.status.success') || 'Your message has been sent successfully! We will get back to you soon.'
+          })
+          // Reset form after successful submission
+          handleReset()
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setSubmitStatus({
+            success: false,
+            message: pt('contactPage.form.status.error') || 'There was an error sending your message. Please try again later.'
+          })
+        },
+      );
+  };
 
   const handleReset = () => {
     setFormData({
@@ -324,7 +320,7 @@ export default function ContactPage() {
                     <div className="flex items-start">
                       <svg className="w-4 h-4 text-nyati-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                       <p className="text-sm text-gray-600 whitespace-pre-line">{contactInfo.corporate.address}</p>
                     </div>
@@ -455,7 +451,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 
-                <form onSubmit={handleSubmit} className="p-8">
+                <form ref={form} onSubmit={sendEmail} className="p-8">
                   {submitStatus && (
                     <motion.div 
                       initial={{ opacity: 0, y: -10 }}

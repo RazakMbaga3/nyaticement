@@ -30,7 +30,7 @@ const relatedPostsData = {
   ],
   sw: [
     {
-      title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+      title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
       excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
       category: 'Ujuzi wa Kiufundi',
       date: 'Inakuja Hivi Karibuni',
@@ -38,7 +38,7 @@ const relatedPostsData = {
       slug: '#'
     },
     {
-      title: 'Kwa Nini Nguvu za Kushindilia ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
+      title: 'Kwanini Nguvu ya Shinikizo la Saruji ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
       excerpt: 'Elewa umuhimu wa upimaji wa nguvu za kushindilia na jinsi Nyati inavyohakikisha ubora endelevu.',
       category: 'Ujuzi wa Kiufundi',
       date: 'Inakuja Hivi Karibuni',
@@ -59,7 +59,7 @@ export default function CementGradesPage() {
       readTime: "7 min read"
     },
     sw: {
-      title: "Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako",
+      title: "Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako",
       date: "Machi 28, 2025",
       category: "Ujuzi wa Kiufundi",
       readTime: "7 dakika za kusoma"

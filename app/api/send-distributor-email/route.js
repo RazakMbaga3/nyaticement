@@ -25,14 +25,13 @@ export async function POST(request) {
         { status: 400 }
       );
     }    // Create email transporter
-    // Using environment variables with fallbacks to prevent build failures
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_SERVER_HOST || 'smtp.example.com',
-      port: parseInt(process.env.EMAIL_SERVER_PORT || '587', 10),
-      secure: process.env.EMAIL_SERVER_SECURE === 'true',
+      host: 'mail.lakecement.co.tz',
+      port: 465,
+      secure: true, // Use SSL/TLS
       auth: {
-        user: process.env.EMAIL_SERVER_USER || 'default-user',
-        pass: process.env.EMAIL_SERVER_PASSWORD || 'default-password',
+        user: '_mainaccount@lakecement.co.tz',
+        pass: 'Encrypt3d@4934',
       },
     });
 
@@ -104,13 +103,11 @@ export async function POST(request) {
           </div>
         </body>
       </html>
-    `;
-
-    // Email message configuration
+    `;    // Email message configuration
     const message = {
-      from: process.env.EMAIL_FROM || 'website@lakecement.co.tz',
-      to: recipient,
-      subject: subject,
+      from: '_mainaccount@lakecement.co.tz',
+      to: recipient || 'info@lakecement.co.tz',
+      subject: subject || 'New Distributor Application',
       html: htmlContent,
       // Also include a text version for email clients that don't support HTML
       text: `
@@ -130,19 +127,34 @@ Please contact the applicant to proceed with the distributor application process
     };
 
     // Send the email
-    await transporter.sendMail(message);
-
-    // Return success response
-    return NextResponse.json(
-      { message: 'Email sent successfully' },
-      { status: 200 }
-    );
+    try {
+      console.log('Received data:', data);
+      console.log('SMTP Configuration:', {
+        host: 'mail.lakecement.co.tz',
+        port: 465,
+        secure: true,
+        user: '_mainaccount@lakecement.co.tz',
+      });
+      console.log('Email message:', message);
+      await transporter.sendMail(message);
+      console.log('Email sent successfully');
+      return NextResponse.json(
+        { message: 'Email sent successfully' },
+        { status: 200 }
+      );
+    } catch (error) {
+      console.error('Error sending email:', error);
+      return NextResponse.json(
+        { message: 'Failed to send email', error: error.message },
+        { status: 500 }
+      );
+    }
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error processing request:', error);
     
     // Return error response
     return NextResponse.json(
-      { message: 'Failed to send email', error: error.message },
+      { message: 'Failed to process request', error: error.message },
       { status: 500 }
     );
   }

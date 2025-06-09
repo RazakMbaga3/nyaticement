@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Newsletter from '@/app/components/ui/Newsletter';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import LanguageSwitcher from '@/app/components/ui/LanguageSwitcher';
 
 // Note: Metadata is removed from this file as it can't be exported from a client component
 
@@ -185,7 +184,7 @@ const allPostsData = {
   sw: [
     {
       id: 'building-your-dream-home',
-      title: 'Kujenga Nyumba Yako ya Ndoto na Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua',
+      title: 'Kujenga Nyumba ya Ndoto Yako kwa Saruji ya Nyati: Mwongozo wa Hatua kwa Hatua',
       excerpt: 'Jifunze mchakato kamili wa ujenzi wa nyumba kutoka msingi hadi kumalizia na bidhaa za ubora za Saruji ya Nyati.',
       image: '/images/blog/home.webp',
       date: 'Aprili 3, 2025',
@@ -196,7 +195,7 @@ const allPostsData = {
     },
     {
       id: 'understanding-cement-grades',
-      title: 'Kuelewa Daraja za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
+      title: 'Kuelewa Daraja (Grade) za Saruji: Kuchagua Saruji ya Nyati Sahihi kwa Mradi Wako',
       excerpt: 'Jifunze jinsi ya kuchagua daraja kamili la saruji kwa mahitaji yako maalum ya ujenzi kupitia mwongozo wetu wa kina.',
       image: '/images/blog/understanding-cement-grades.jpg',
       date: 'Machi 28, 2025',
@@ -207,7 +206,7 @@ const allPostsData = {
     },
     {
       id: 'water-cement-ratio',
-      title: 'Jukumu la Uwiano wa Maji-Saruji katika Udhabiti wa Zege',
+      title: 'Athari ya Uwiano wa Maji na Saruji katika Udhabiti wa Zege',
       excerpt: 'Gundua jinsi uwiano wa maji-saruji unavyoathiri nguvu ya zege, udhabiti, na utendaji wa jumla.',
       image: '/images/blog/water-cement-ratio.jpg',
       date: 'Machi 26, 2025',
@@ -218,7 +217,7 @@ const allPostsData = {
     },
     {
       id: 'concrete-curing',
-      title: 'Kuelewa Utiaji Dawa Zege: Mbinu Bora kwa Nguvu ya Juu',
+      title: 'Kuelewa Uimarishaji wa Zege: Mbinu Bora kwa Nguvu ya Juu',
       excerpt: 'Kuwa mtaalamu wa sanaa ya utiaji dawa sahihi wa zege ili kupata nguvu bora na udhabiti katika miradi yako ya ujenzi.',
       image: '/images/blog/concrete-curing.jpg',
       date: 'Machi 24, 2025',
@@ -229,7 +228,7 @@ const allPostsData = {
     },
     {
       id: 'compressive-strength',
-      title: 'Kwa Nini Nguvu za Kushindilia ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
+      title: 'Kwanini Nguvu ya Shinikizo la Saruji ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati',
       excerpt: 'Elewa umuhimu wa upimaji wa nguvu za kushindilia na jinsi Nyati inavyohakikisha ubora endelevu.',
       image: '/images/blog/compression-test.jpg',
       date: 'Machi 22, 2025',
@@ -314,14 +313,8 @@ export default function BlogPage() {
   const filteredPosts = selectedCategory === 'All' 
     ? allPosts 
     : allPosts.filter(post => post.category === selectedCategory);
-  
-  return (
-    <div className="bg-gray-50">
-      {/* Language Switcher */}
-      <div className="absolute top-24 right-4 z-40">
-        <LanguageSwitcher />
-      </div>
-      
+    return (
+    <div className="bg-gray-50">      
       {/* Hero Section with Modern Design */}
       <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
         <motion.div 
@@ -504,12 +497,11 @@ export default function BlogPage() {
                   {/* Excerpt */}
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
                   
-                  {/* Author & Read Time */}
+                  {/* Author */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <span className="text-sm font-medium text-gray-700">{post.author}</span>
                     </div>
-                    <span className="text-xs text-gray-500">{post.readTime}</span>
                   </div>
                 </div>
               </div>
@@ -559,12 +551,11 @@ export default function BlogPage() {
                   {/* Excerpt */}
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
                   
-                  {/* Author & Read Time */}
+                  {/* Author */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <span className="text-sm font-medium text-gray-700">{post.author}</span>
                     </div>
-                    <span className="text-xs text-gray-500">{post.readTime}</span>
                   </div>
                 </div>
               </div>

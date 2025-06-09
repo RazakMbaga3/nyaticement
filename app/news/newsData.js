@@ -289,11 +289,10 @@ const newsArticles = [
       category: "company",
       externalLink: "https://www.thecitizen.co.tz/tanzania/business/majaliwa-assures-investors-of-government-cooperation-2596696",
       relatedArticles: [1, 2, 4]
-    },    {        id: 8,
-        title: "Nyati Cement Engages with contractors at the 2025 ACM organized by Contractors Registration Board",
+    },    {        id: 8,        title: "Nyati Cement Engages with contractors at the 2025 ACM organized by Contractors Registration Board",
         title_sw: "Nyati Cement Washiriki na Makandarasi kwenye ACM 2025 iliyoandaliwa na Bodi ya Usajili wa Makandarasi",
-        excerpt: "",
-        excerpt_sw: "",
+        excerpt: "The ACM & Exhibition served as a strategic platform for Nyati Cement to showcase our commitment to quality and innovation in cement manufacturing. The event facilitated direct engagement with contractors and stakeholders in the construction industry.",
+        excerpt_sw: "ACM & Maonyesho ilitumika kama jukwaa la kimkakati kwa Nyati Cement kuonyesha dhamira yetu ya ubora na uvumbuzi katika uzalishaji wa saruji. Tukio hilo liliwezesha ushirikiano wa moja kwa moja na makandarasi na wadau katika sekta ya ujenzi.",
         fullContent: {
           intro: "",
           intro_sw: "",
@@ -331,9 +330,10 @@ const newsArticles = [
         relatedArticles: [1, 2, 6]
     },
     {
-        id: 7,
-        title: "Nyati Cement Hands Over Geza Kigamboni Bus Terminal, Citizens Urged to Embrace Opportunities",
+        id: 7,        title: "Nyati Cement Hands Over Geza Kigamboni Bus Terminal, Citizens Urged to Embrace Opportunities",
+        title_sw: "Nyati Cement Yakabidhi Stendi ya Geza Kigamboni, Wananchi Wahimizwa Kutumia Fursa",
         excerpt: "Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner. The company invested 46 million shillings in this infrastructure project, demonstrating its commitment to supporting President Samia Suluhu Hassan's efforts to bring essential services closer to citizens.",
+        excerpt_sw: "Nyati Cement imekabidhi rasmi kituo kipya cha mabasi cha Kigamboni kwa Mkuu wa Wilaya. Kampuni hiyo iliwekeza shilingi milioni 46 katika mradi huu wa miundombinu, ikionyesha dhamira yake ya kusaidia juhudi za Rais Samia Suluhu Hassan za kuleta huduma muhimu karibu na wananchi.",
         fullContent: {
           intro: "In a significant community development initiative, Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner of Kigamboni, Dar es Salaam on November 8, 2022. This infrastructure project represents another milestone in the company's ongoing commitment to supporting local communities and enhancing public transportation infrastructure.",
           paragraphs: [

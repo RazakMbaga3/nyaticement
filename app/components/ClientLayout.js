@@ -4,7 +4,10 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Navbar from './ui/navbar';
 import Footer from './ui/footer';
 import LoadingOverlay from './ui/LoadingOverlay';
+import LoadingIndicator from './ui/LoadingIndicator';
 import LanguageSwitcher from './ui/LanguageSwitcher';
+import ScrollToTop from './ui/ScrollToTop';
+import PageProgress from './ui/PageProgress';
 import { usePathname } from 'next/navigation';
 
 export default function ClientLayout({ children }) {
@@ -13,9 +16,12 @@ export default function ClientLayout({ children }) {
   
   // Check if we're on a news article page to avoid duplicate language switchers
   const isNewsArticlePage = pathname && pathname.startsWith('/news/') && pathname !== '/news';
-    return (
+  
+  return (
     <>
       {isLoading && <LoadingOverlay />}
+      <LoadingIndicator />
+      <PageProgress color="#F7941D" height={3} showOnlyBelowFold={true} />
       <Navbar />
       {/* Fixed Language Switcher - don't show on news article pages */}
       {!isNewsArticlePage && (
@@ -28,6 +34,7 @@ export default function ClientLayout({ children }) {
         {children}
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

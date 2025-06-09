@@ -2,7 +2,7 @@
 export const metadata = {
   title: {
     default: 'Why Compressive Strength Matters: Nyati Cement\'s Testing Standards',
-    sw: 'Kwa Nini Nguvu za Kushindilia ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati'
+    sw: 'Kwanini Nguvu ya Shinikizo la Saruji ni Muhimu: Viwango vya Upimaji vya Saruji ya Nyati'
   },
   description: {
     default: 'Learn about cement compressive strength testing and how Nyati Cement ensures consistent quality through rigorous testing procedures.',
