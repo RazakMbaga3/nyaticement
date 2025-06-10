@@ -402,7 +402,7 @@ export default function TanzaniaInfrastructureBoomPage() {
             <h3 className="text-xl font-bold text-nyati-navy mb-3">Maendeleo ya Miundombinu Tanzania</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center bg-white p-4 rounded-sm shadow-sm">
-                <div className="text-base font-bold text-nyati-orange mb-1">Mkubwa</div>
+                <div className="text-base font-bold text-nyati-orange mb-1">Mikubwa</div>
                 <div className="text-sm text-nyati-dark-grey">Uwekezaji wa miundombinu</div>
               </div>
               <div className="text-center bg-white p-4 rounded-sm shadow-sm">
@@ -414,7 +414,7 @@ export default function TanzaniaInfrastructureBoomPage() {
                 <div className="text-sm text-nyati-dark-grey">Ajira zilizotengenezwa</div>
               </div>
               <div className="text-center bg-white p-4 rounded-sm shadow-sm">
-                <div className="text-base font-bold text-nyati-orange mb-1">Kubwa</div>
+                <div className="text-base font-bold text-nyati-orange mb-1">Muhimu</div>
                 <div className="text-sm text-nyati-dark-grey">Mahitaji ya saruji</div>
               </div>
             </div>
@@ -625,7 +625,7 @@ export default function TanzaniaInfrastructureBoomPage() {
                   <h4 className="font-bold text-nyati-navy mb-2">Mbinu ya Saruji ya Kiwango cha Juu</h4>
                   <ul className="list-disc pl-6 space-y-1">
                     <li>Uwekezaji wa juu wa vifaa vya awali</li>
-                    <li>Upinzani mkubwa dhidi ya uharibifu</li>
+                    <li>Upinzani  dhidi ya uharibifu</li>
                     <li>Mara chache za matengenezo</li>
                     <li>Muda mrefu wa matumizi</li>
                     <li>Gharama ndogo za matengenezo kwa maisha yote</li>

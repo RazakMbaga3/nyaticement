@@ -101,7 +101,7 @@ export default function CementGradesPage() {
         </p>
       ) : (
         <p>
-          Namba katika daraja za saruji (kama vile 32.5N au 42.5R) zinaonesha nguvu za chini za kushindilia katika megapascali (MPa) ambazo saruji itafikia baada ya siku 28 za kuimarisha. Herufi inaonesha kiwango cha muda cha ukuaji wa nguvu:
+          Namba katika daraja za saruji (kama vile 32.5N au 42.5R) zinaonesha nguvu za chini za kustahimili shindikizo katika megapascali (MPa) ambazo saruji itafikia baada ya siku 28 za kuimarisha. Herufi inaonesha kiwango cha muda cha ukuaji wa nguvu:
         </p>
       )}
       <ul className="list-disc pl-6 mt-3 mb-6">
@@ -189,8 +189,8 @@ export default function CementGradesPage() {
           ) : (
             <>
               <li>Nguvu za Awali za Kawaida</li>
-              <li>Profaili ya uwiano wa ukuaji wa nguvu</li>
-              <li>Kufanya kazi vizuri sana</li>
+              <li>Uwiano mzuri wa ukuaji wa nguvu</li>
+              <li>Urahisi wa kuchanganya na kutumika</li>
               <li>Nguvu ya juu ya mwisho ya kushindilia (42.5-51 MPa kwa siku 28)</li>
             </>
           )}
@@ -238,8 +238,8 @@ export default function CementGradesPage() {
           ) : (
             <>
               <li>Joto la wastani la kuchanganyika na maji</li>
-              <li>Kufanya kazi vizuri na ulaini</li>
-              <li>Ugandishaji bora</li>
+              <li>Urahisi mzuri wa kuchanganyika na ulegevu mzuri wa zege</li>
+              <li>Ushikamano bora wa saruji</li>
             </>
           )}
         </ul>

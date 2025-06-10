@@ -71,12 +71,25 @@ export default function ContactPage() {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
-
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    // Format full name for the template
+    const fullName = `${formData.firstName} ${formData.lastName}`;
+    
+    // Prepare template parameters
+    const templateParams = {
+      name: fullName,
+      time: new Date().toLocaleString(),
+      query: formData.query,
+      firmName: formData.firmName,
+      contactNumber: formData.contactNumber,
+      email: formData.email,
+      address: formData.address
+    };
 
     emailjs
-      .sendForm('service_gm7eghi', 'template_10t1fom', form.current, {
+      .send('service_gm7eghi', 'template_10t1fom', templateParams, {
         publicKey: 'xhWX7T_yzqXUD83lP',
       })
       .then(
@@ -450,8 +463,11 @@ export default function ContactPage() {
                     {pt('contactPage.form.writeToUs.description') || "Get in touch with our team. We're here to help with your questions, requests, and cement needs. Our team will get back to you as soon as possible."}
                   </p>
                 </div>
-                
-                <form ref={form} onSubmit={sendEmail} className="p-8">
+                  <form ref={form} onSubmit={sendEmail} className="p-8">
+                  {/* Hidden fields for EmailJS template */}
+                  <input type="hidden" name="from_name" value="Contact Form Submission" />
+                  <input type="hidden" name="subject" value="New Contact Form Submission" />
+                  
                   {submitStatus && (
                     <motion.div 
                       initial={{ opacity: 0, y: -10 }}

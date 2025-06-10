@@ -95,12 +95,22 @@ export default function DistributionForm() {
       [id]: value
     }));
   };
-
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    // Prepare template parameters
+    const templateParams = {
+      name: formData.contactPerson,
+      time: new Date().toLocaleString(),
+      query: `Distributor Application from ${formData.area}, ${formData.city}`,
+      firmName: formData.firmName,
+      contactNumber: formData.contactNumber,
+      email: formData.email,
+      address: `${formData.address}, ${formData.city}, P.O. Box: ${formData.poBox}`
+    };
 
     emailjs
-      .sendForm('service_gm7eghi', 'template_10t1fom', form.current, {
+      .send('service_gm7eghi', 'template_10t1fom', templateParams, {
         publicKey: 'xhWX7T_yzqXUD83lP',
       })
       .then(
@@ -316,9 +326,12 @@ export default function DistributionForm() {
                   : pt('distributionPage.form.error')}
               </div>
             )}
-            
-            <form ref={form} onSubmit={sendEmail} className="text-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">                <div className="form-group">
+              <form ref={form} onSubmit={sendEmail} className="text-sm">
+              {/* Hidden fields for EmailJS template */}
+              <input type="hidden" name="from_name" value="Distributor Application" />
+              <input type="hidden" name="subject" value="New Distributor Application" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2"><div className="form-group">
                   <label htmlFor="firmName" className="block text-gray-700 text-xs mb-1">{pt('distributionPage.form.labels.firmName')}</label>
                   <input 
                     type="text" 

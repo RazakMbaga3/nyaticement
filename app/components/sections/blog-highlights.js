@@ -110,7 +110,7 @@ const categories = [
 export default function BlogHighlights() {
   const { t } = useTranslations();
   const { language } = useLanguage();
-  
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -118,11 +118,11 @@ export default function BlogHighlights() {
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-nyati-navy">{t('blog.title')}</h2>
           <p className="text-lg text-nyati-gray">{t('blog.subtitle')}</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredPosts.map((post) => {
             const postContent = language === 'en' ? post.en : post.sw;
-            
+
             return (
               <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 w-full overflow-hidden">
@@ -134,32 +134,32 @@ export default function BlogHighlights() {
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center mb-4">
                     <span className={`px-2 py-1 text-xs font-medium rounded ${getCategoryColor(postContent.category)}`}>
                       {postContent.category}
                     </span>
                     <span className="ml-2 text-sm text-gray-500">{postContent.date}</span>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold mb-2 text-nyati-navy">
                     {postContent.title}
                   </h3>
-                  
-                  <p className="text-gray-600 mb-4 flex-grow">{postContent.excerpt}</p>
-                  
-                  <Link href={`${post.slug}?lang=${language}`} className="text-nyati-orange font-medium hover:text-nyati-navy transition-colors mt-auto inline-flex items-center">
-                    {t('blog.ui.readMore')}
-                    <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                    </svg>
-                  </Link>
+
+                  <p className="text-gray-600 mb-4 flex-grow">{postContent.excerpt}</p>                  <div className="mt-auto">
+                    <Link href={`${post.slug}?lang=${language}`} className="text-nyati-orange font-medium hover:text-nyati-navy transition-colors inline-flex items-center">
+                      {language === 'sw' ? 'Soma Zaidi' : 'Read More'}
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
-        
+
         <div className="text-center mt-10">
           <Link href="/blog" className="inline-block px-6 py-3 bg-nyati-orange text-white font-medium rounded-md shadow hover:bg-nyati-orange-dark transition-colors">
             {t('common.viewAll')}
