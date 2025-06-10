@@ -15,10 +15,22 @@
         "category": "Viwango vya Ubora",
         "items": [
           {
-            "image": "/images/certifications/iso-9001-logo.png",
-            "title": "ISO 9001:2015",
+            "image": "/images/certifications/9001.png",
+            "title": "ISO 9001:2015 - Mfumo wa Usimamizi wa Ubora",
             "downloadLink": "/docs/RENEWED DOCS/Latest ISO certificate- 2024 onwrad.pdf",
             "alt": "Nembo ya ISO 9001",
+            "subItems": []
+          },
+          {
+            "image": "/images/certifications/14001.png",
+            "title": "ISO 14001:2015 - Mfumo wa Usimamizi wa Mazingira",
+            "downloadLink": "/docs/RENEWED DOCS/Cert Lake Cement TZ24-31101B.PDF",
+            "subItems": []
+          },
+          {
+            "image": "/images/certifications/45001.png",
+            "title": "ISO 45001:2018 - Mfumo wa Usimamizi wa Afya na Usalama Kazini",
+            "downloadLink": "/docs/RENEWED DOCS/Cert Lake Cement TZ24-31101C.PDF",
             "subItems": []
           },
           {
@@ -71,10 +83,21 @@
             "downloadLink": "/docs/TIN CERTIFICATE.jpg",
             "alt": "NEMBO YA TRA",
             "subItems": []
+          },          {
+            "image": "/images/certifications/OSHA.png",
+            "title": "Cheti cha Usajili wa OSHA",
+            "downloadLink": "/docs/RENEWED DOCS/OSHA REGISTRATION CERTIFICATE.pdf",
+            "alt": "Nembo ya OSHA",
+            "subItems": []
           },
           {
-            "title": "Leseni ya Biashara",
+            "title": "Leseni ya Biashara ya Ofisi Kuu",
             "downloadLink": "/docs/RENEWED DOCS/Renewed business License - 2025.pdf",
+            "subItems": []
+          },
+          {
+            "title": "Leseni ya Biashara ya Kiwanda",
+            "downloadLink": "/docs/RENEWED DOCS/Lake Cement Kimbiji Business License 2025.pdf",
             "subItems": []
           },
           {

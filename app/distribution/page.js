@@ -94,46 +94,54 @@ export default function DistributionForm() {
       ...prev,
       [id]: value
     }));
-  };
-  const sendEmail = (e) => {
+  };  const sendEmail = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     // Prepare template parameters
     const templateParams = {
+      from_name: "Distributor Application",
+      to_name: "Recipient",
       name: formData.contactPerson,
       time: new Date().toLocaleString(),
       query: `Distributor Application from ${formData.area}, ${formData.city}`,
       firmName: formData.firmName,
       contactNumber: formData.contactNumber,
       email: formData.email,
-      address: `${formData.address}, ${formData.city}, P.O. Box: ${formData.poBox}`
+      address: `${formData.address}, ${formData.city}, P.O. Box: ${formData.poBox}`,
+      subject: "New Distributor Application",
+      message: `Distributor Application from ${formData.area}, ${formData.city}`
     };
 
-    emailjs
-      .send('service_gm7eghi', 'template_10t1fom', templateParams, {
-        publicKey: 'xhWX7T_yzqXUD83lP',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSubmitStatus({
-            success: true,
-            message: pt('distributionPage.form.success')
-          });
-          // Reset form after successful submission
-          setFormData({
-            firmName: '', address: '', area: '', city: '', poBox: '', 
-            contactPerson: '', contactNumber: '', email: ''
-          });
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setSubmitStatus({
-            success: false,
-            message: pt('distributionPage.form.error')
-          });
-        },
+    // Log the parameters to check
+    console.log('Sending with params:', templateParams);
+      try {
+      const result = await emailjs.send(
+        'service_gm7eghi', 
+        'template_10t1fom', 
+        templateParams, 
+        'xhWX7T_yzqXUD83lP'
       );
+      
+      console.log('SUCCESS!', result);
+      setSubmitStatus({
+        success: true,
+        message: pt('distributionPage.form.success')
+      });
+      // Reset form after successful submission
+      setFormData({
+        firmName: '', address: '', area: '', city: '', poBox: '', 
+        contactPerson: '', contactNumber: '', email: ''
+      });
+    } catch (error) {
+      console.log('FAILED...', error);
+      setSubmitStatus({
+        success: false,
+        message: pt('distributionPage.form.error')
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -325,11 +333,8 @@ export default function DistributionForm() {
                   ? pt('distributionPage.form.success') 
                   : pt('distributionPage.form.error')}
               </div>
-            )}
-              <form ref={form} onSubmit={sendEmail} className="text-sm">
-              {/* Hidden fields for EmailJS template */}
-              <input type="hidden" name="from_name" value="Distributor Application" />
-              <input type="hidden" name="subject" value="New Distributor Application" />
+            )}            <form onSubmit={sendEmail} className="text-sm">
+              {/* We're using direct parameters instead of form ref */}
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2"><div className="form-group">
                   <label htmlFor="firmName" className="block text-gray-700 text-xs mb-1">{pt('distributionPage.form.labels.firmName')}</label>

@@ -66,12 +66,12 @@ export default function ContactPage() {
 
   const [submitStatus, setSubmitStatus] = useState(null)
   const form = useRef();
-
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-  }
-  const sendEmail = (e) => {
+  };
+  
+  const sendEmail = async (e) => {
     e.preventDefault();
     
     // Format full name for the template
@@ -79,37 +79,42 @@ export default function ContactPage() {
     
     // Prepare template parameters
     const templateParams = {
+      from_name: "Contact Form Submission",
+      to_name: "Recipient",
       name: fullName,
       time: new Date().toLocaleString(),
       query: formData.query,
       firmName: formData.firmName,
       contactNumber: formData.contactNumber,
       email: formData.email,
-      address: formData.address
+      address: formData.address,
+      subject: "New Contact Form Submission",
+      message: formData.query
     };
 
-    emailjs
-      .send('service_gm7eghi', 'template_10t1fom', templateParams, {
-        publicKey: 'xhWX7T_yzqXUD83lP',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSubmitStatus({
-            success: true,
-            message: pt('contactPage.form.status.success') || 'Your message has been sent successfully! We will get back to you soon.'
-          })
-          // Reset form after successful submission
-          handleReset()
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setSubmitStatus({
-            success: false,
-            message: pt('contactPage.form.status.error') || 'There was an error sending your message. Please try again later.'
-          })
-        },
+    // Log the parameters to check
+    console.log('Sending with params:', templateParams);    try {
+      const result = await emailjs.send(
+        'service_gm7eghi', 
+        'template_10t1fom', 
+        templateParams, 
+        'xhWX7T_yzqXUD83lP'
       );
+      
+      console.log('SUCCESS!', result);
+      setSubmitStatus({
+        success: true,
+        message: pt('contactPage.form.status.success') || 'Your message has been sent successfully! We will get back to you soon.'
+      });
+      // Reset form after successful submission
+      handleReset();
+    } catch (error) {
+      console.log('FAILED...', error);
+      setSubmitStatus({
+        success: false,
+        message: pt('contactPage.form.status.error') || 'There was an error sending your message. Please try again later.'
+      });
+    }
   };
 
   const handleReset = () => {
@@ -462,11 +467,8 @@ export default function ContactPage() {
                   <p className="text-blue-100 text-lg max-w-3xl relative z-10">
                     {pt('contactPage.form.writeToUs.description') || "Get in touch with our team. We're here to help with your questions, requests, and cement needs. Our team will get back to you as soon as possible."}
                   </p>
-                </div>
-                  <form ref={form} onSubmit={sendEmail} className="p-8">
-                  {/* Hidden fields for EmailJS template */}
-                  <input type="hidden" name="from_name" value="Contact Form Submission" />
-                  <input type="hidden" name="subject" value="New Contact Form Submission" />
+                </div>                  <form onSubmit={sendEmail} className="p-8">
+                  {/* We're using direct parameters instead of form ref */}
                   
                   {submitStatus && (
                     <motion.div 
