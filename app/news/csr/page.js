@@ -1,12 +1,140 @@
 'use client'
+import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Newsletter from '@/app/components/ui/Newsletter';
+import { useLanguage } from '@/app/contexts/LanguageContext';
+import { useTranslations } from '@/app/hooks/useTranslations';
 
-import { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import Newsletter from '@/app/components/ui/Newsletter'
+// Define CSR pillars const
+const csrPillars = [
+  { id: 'education', name: 'Education', icon: 'M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z M12 14l-6.16-3.422a12.083 12.083 0 00-.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 016.824-2.998 12.078 12.078 0 00-.665-6.479L12 14z' },
+  { id: 'health', name: 'Healthcare', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
+  { id: 'environment', name: 'Environment', icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
+  { id: 'community', name: 'Community', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' }
+];
 
-export default function CSRNewsPage() {
+// Mock data for CSR news with translation support
+const csrNewsArticles = [
+  {
+    id: 3,
+    titles: {
+      en: "Nyati Cement Donates Cement Bags for School Construction",
+      sw: "Nyati Cement Yatoa Mifuko ya Saruji kwa Ajili ya Ujenzi wa Shule"
+    },
+    excerpts: {
+      en: "Nyati Cement Donates 400 bags to the Bagamoyo District Commissioner for the construction of School. Showing our commitment to CSR and support for education infrastructure development in local communities.",
+      sw: "Nyati Cement yatoa mifuko 400 kwa Mkuu wa Wilaya ya Bagamoyo kwa ajili ya ujenzi wa Shule. Ikionyesha dhamira yetu ya CSR na msaada kwa maendeleo ya miundombinu ya elimu katika jamii za ndani."
+    },
+    date: "2024-01-25",
+    image: "/images/news/5.jpg",
+    category: "csr",
+    pillar: "education",
+    featured: true
+  },
+  {
+    id: 5,
+    titles: {
+      en: "Lake Cement Leads Blood Donation Drive to Save Lives",
+      sw: "Lake Cement Yaongoza Kampeni ya Kutoa Damu kuokoa Maisha"
+    },
+    excerpts: {
+      en: "Lake Cement has demonstrated corporate social responsibility through an impactful blood donation drive at our factory. The initiative aims to address the critical shortage of blood supplies in Tanzania's healthcare system and highlights our dedication to community health and wellbeing.",
+      sw: "Lake Cement imeonyesha uwajibikaji wa kijamii kupitia kampeni yenye athari ya kutoa damu katika kiwanda chetu. Mpango huu unalenga kushughulikia upungufu mkubwa wa ugavi wa damu katika mfumo wa afya wa Tanzania na kuonyesha dhamira yetu ya afya na ustawi wa jamii."
+    },
+    date: "2023-05-17",
+    image: "/images/news/damu4.webp",
+    category: "csr",
+    pillar: "health",
+    link: "https://www.michuzi.co.tz/2017/05/lake-cement-yachangia-damu-katika.html"
+  },
+  // ...more articles with similar structure
+];
+
+// Define animation variants
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+export default function CSRNewsPage() {  // Get language context and translations
+  const { language } = useLanguage();
+  const { t } = useTranslations();
+  
+  // State for page-specific translations
+  const [pageTranslations, setPageTranslations] = useState({});
+  
+  // Load page-specific translations
+  useEffect(() => {
+    const loadPageTranslations = async () => {
+      try {
+        console.log(`Loading CSR news translations for language: ${language}`);
+        const response = await import(`../../translations/csr-${language}.json`);
+        console.log('Loaded CSR news translations:', response.default);
+        setPageTranslations(response.default);
+      } catch (error) {
+        console.error('Error loading page translations:', error);
+        // Fallback to English
+        try {
+          const fallback = await import('../../translations/csr-en.json');
+          setPageTranslations(fallback.default);
+        } catch (fallbackError) {
+          console.error('Error loading fallback translations:', fallbackError);
+          setPageTranslations({});
+        }
+      }
+    };
+    
+    loadPageTranslations();
+  }, [language]);
+  
+  // Helper function to get page translations
+  const pt = (key) => {
+    if (!key || !pageTranslations) {
+      return key; 
+    }
+    
+    // Handle nested keys (e.g., 'csrPage.hero.title')
+    const keys = key.split('.');
+    let value = pageTranslations;
+    
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        // If the key is not found in page translations, try using the general translations
+        return t(key, key);
+      }
+    }
+    
+    // Make sure we're returning a valid string, not an object
+    if (value !== null && typeof value === 'object') {
+      console.warn(`Translation value is an object, not a string: ${key}`);
+      return key;
+    }
+    
+    return value === null || value === undefined ? key : value;
+  };
+
   // State for parallax scrolling effect
   const [scrollY, setScrollY] = useState(0)
   // State for search functionality
@@ -34,113 +162,33 @@ export default function CSRNewsPage() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { 
-        staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: { type: 'spring', stiffness: 300, damping: 25 }
-    }
-  }
-
-  // CSR pillars for the category filter
-  const csrPillars = [
-    { id: 'all', name: 'All Initiatives', icon: 'M4 6h16M4 12h16M4 18h16' },
-    { id: 'education', name: 'Education', icon: 'M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z M12 14l-6.16-3.422a12.083 12.083 0 00-.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 016.824-2.998 12.078 12.078 0 00-.665-6.479L12 14z' },
-    { id: 'health', name: 'Healthcare', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
-    { id: 'environment', name: 'Environment', icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
-    { id: 'community', name: 'Community', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' }
-  ];
-
-  // Mock data for CSR news (filtered from main news data)
-  const csrNewsArticles = [
-    {
-      id: 3,
-      title: "Nyati Cement Donates Cement Bags for School Construction",
-      excerpt: "Nyati Cement Donates 400 bags to the Bagamoyo District Commissioner for the construction of School. Showing our commitment to CSR and support for education infrastructure development in local communities.",
-      date: "2024-01-25",
-      image: "/images/news/5.jpg",
-      category: "csr",
-      pillar: "education",
-      featured: true
-    },
-    {
-      id: 5,
-      title: "Lake Cement Leads Blood Donation Drive to Save Lives",
-      excerpt: "Lake Cement has demonstrated corporate social responsibility through an impactful blood donation drive at our factory. The initiative aims to address the critical shortage of blood supplies in Tanzania's healthcare system and highlights our dedication to community health and wellbeing.",
-      date: "2023-05-17",
-      image: "/images/news/damu4.webp",
-      category: "csr",
-      pillar: "health",
-      link: "https://www.michuzi.co.tz/2017/05/lake-cement-yachangia-damu-katika.html"
-    },
-    // Add more mock CSR initiatives
-    {
-      id: 7,
-      title: "Lake Cement Supports Local Schools with Infrastructure Improvements",
-      excerpt: "As part of our ongoing commitment to education, Lake Cement has completed improvements to classrooms and sanitation facilities in three local schools, benefiting over 1,200 students in the community.",
-      date: "2023-09-12",
-      image: "/images/news/school-support.jpg",
-      category: "csr",
-      pillar: "education"
-    },
-    {
-      id: 8,
-      title: "Environmental Conservation Program Launched by Lake Cement",
-      excerpt: "Lake Cement has launched a comprehensive environmental conservation program that includes tree planting, waste management initiatives, and environmental education for local communities.",
-      date: "2023-08-05",
-      image: "/images/news/environmental-program.jpg",
-      category: "csr",
-      pillar: "environment",
-      featured: true
-    },
-    {
-      id: 9,
-      title: "Nyati Cement Hands Over Kigamboni Bus Terminal",
-      excerpt: "Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner. The company invested 46 million shillings in this infrastructure project, demonstrating its commitment to supporting community development.",
-      date: "2022-11-08",
-      image: "/images/news/kigamboni-terminal.jpg",
-      category: "csr",
-      pillar: "community",
-      featured: true,
-      link: "https://www.michuzi.co.tz/2022/11/nyati-cement-wakabidhi-stendi-ya-kigamboni.html"
-    }
-  ];
-
-  // Sort articles by date (newest first)
-  const sortedArticles = [...csrNewsArticles].sort((a, b) => 
-    new Date(b.date) - new Date(a.date)
-  );
-
-  // Filter articles based on search query and category
-  const filteredArticles = sortedArticles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = activeCategory === 'all' || article.pillar === activeCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  // Get featured articles
-  const featuredArticles = filteredArticles.filter(article => article.featured);
-
   // Format date for consistency
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', options);
+    // Use correct locale based on language
+    return date.toLocaleDateString(language === 'sw' ? 'sw-TZ' : 'en-US', options);
+  };  // Update pillar names based on language
+  const localizedPillars = csrPillars.map(pillar => ({
+    ...pillar,
+    name: pt(`csrPage.pillars.${pillar.id === 'health' ? 'healthcare' : pillar.id}.name`) || pillar.name
+  }));
+
+  // Add a helper function to get localized content
+  const getLocalizedContent = (content, language) => {
+    return content[language] || content['en']; // Fallback to English if translation not available
   };
+
+  // Get filtered articles
+  const filteredArticles = csrNewsArticles.filter(article => {
+    const title = getLocalizedContent(article.titles, language);
+    const excerpt = getLocalizedContent(article.excerpts, language);
+    const matchesSearch = searchQuery === '' || 
+                         title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = activeCategory === 'all' || article.pillar === activeCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div ref={contentRef} className="min-h-screen bg-gray-50">
@@ -148,254 +196,34 @@ export default function CSRNewsPage() {
       <section className="relative h-60 md:h-72 lg:h-80 overflow-hidden">
         <motion.div 
           className="absolute inset-0 w-full h-full"
-          style={{ y, opacity }}
+          style={{ y }}
         >
           <div className="absolute inset-0 bg-nyati-green opacity-90 z-10"></div>
-          <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center z-0"></div>
-          
-          {/* Decorative Elements */}
           <motion.div 
-            className="absolute top-1/3 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-xl"
-            animate={{ 
-              scale: [1, 1.1, 1],
-              x: [0, 10, 0],
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-          />
-        </motion.div>
-        
-        {/* Content overlay */}
-        <div className="absolute inset-0 flex items-center z-20">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-4xl"
-            >
+            className="relative container mx-auto px-4 h-full flex items-center z-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div>
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-3 font-futura">
-                CORPORATE SOCIAL RESPONSIBILITY
+                {pt('intro.title')}
               </h1>
               <div className="h-1 w-32 bg-nyati-orange mb-4"></div>
               <p className="text-white/90 text-sm md:text-base max-w-xl">
-                Discover how Lake Cement is making a positive impact in our communities through sustainable and meaningful initiatives.
+                {pt('intro.description')}
               </p>
-            </motion.div>
-          </div>
-        </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       <main className="pt-10 pb-20">
         <div className="container mx-auto px-4 max-w-7xl">
-          {/* Introduction Section */}
+          {/* Search and Filter Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-10 text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-nyati-green text-2xl md:text-3xl font-bold mb-4 font-futura">BUILDING STRONGER COMMUNITIES</h2>
-            <p className="text-gray-700">
-              At Lake Cement, we believe in giving back to the communities where we operate. Our corporate social responsibility initiatives focus on education, healthcare, environmental conservation, and community development. Through strategic partnerships and targeted programs, we strive to create meaningful and lasting positive impact.
-            </p>
-          </motion.div>
-          
-          {/* CSR Philosophy Section - NEW SECTION */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-16"
-          >
-            <div className="flex items-center mb-8">
-              <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>
-              <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                OUR CSR PHILOSOPHY
-              </h2>
-              <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-white rounded-xl shadow-soft overflow-hidden">
-                <div className="relative h-64">
-                  <Image 
-                    src="/images/news/community-meeting.jpg"
-                    alt="Community Meeting"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Our Approach</h3>
-                  <p className="text-gray-700">
-                    Our CSR initiatives are guided by a commitment to sustainable development and community empowerment. We believe in creating programs that address real needs, involve local stakeholders, and deliver measurable impact. By focusing on key pillars of education, healthcare, environment, and community infrastructure, we ensure our efforts contribute to holistic development.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-soft overflow-hidden">
-                <div className="relative h-64">
-                  <Image 
-                    src="/images/news/environmental-program.jpg"
-                    alt="Environmental Program"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Sustainable Development Goals</h3>
-                  <p className="text-gray-700">
-                    Our CSR programs align with the United Nations Sustainable Development Goals (SDGs), focusing particularly on Quality Education (SDG 4), Good Health and Well-being (SDG 3), Sustainable Cities and Communities (SDG 11), and Climate Action (SDG 13). This framework helps us ensure our initiatives contribute to globally recognized development priorities.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.section>
-          
-          {/* CSR Pillars - IMPROVED SECTION WITH CATEGORIES */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-16"
-          >
-            <div className="flex items-center mb-8">
-              <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>
-              <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                </svg>
-                CSR PILLARS
-              </h2>
-              <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-              <motion.div 
-                variants={itemVariants}
-                className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-6">
-                  <div className="w-16 h-16 bg-nyati-green/10 rounded-full flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Education</h3>
-                  <p className="text-gray-700 mb-4">
-                    We support education through school infrastructure improvements, learning materials, and scholarship programs, fostering knowledge and skills development in our communities.
-                  </p>
-                  <button 
-                    onClick={() => setActiveCategory('education')}
-                    className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                  >
-                    View Initiatives
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                variants={itemVariants}
-                className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-6">
-                  <div className="w-16 h-16 bg-nyati-green/10 rounded-full flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Healthcare</h3>
-                  <p className="text-gray-700 mb-4">
-                    Our healthcare initiatives include blood donation drives, medical facility support, and health education campaigns to promote wellbeing in the communities we serve.
-                  </p>
-                  <button 
-                    onClick={() => setActiveCategory('health')}
-                    className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                  >
-                    View Initiatives
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                variants={itemVariants}
-                className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-6">
-                  <div className="w-16 h-16 bg-nyati-green/10 rounded-full flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Environment</h3>
-                  <p className="text-gray-700 mb-4">
-                    We implement environmental conservation programs including tree planting, waste management, and sustainable manufacturing practices to protect our natural resources.
-                  </p>
-                  <button 
-                    onClick={() => setActiveCategory('environment')}
-                    className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                  >
-                    View Initiatives
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                variants={itemVariants}
-                className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-6">
-                  <div className="w-16 h-16 bg-nyati-green/10 rounded-full flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-nyati-green">Community</h3>
-                  <p className="text-gray-700 mb-4">
-                    We develop infrastructure and support programs that directly benefit local communities, improving quality of life and creating sustainable development opportunities.
-                  </p>
-                  <button 
-                    onClick={() => setActiveCategory('community')}
-                    className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                  >
-                    View Initiatives
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </div>
-              </motion.div>
-            </div>
-          </motion.section>
-          
-          {/* Search and Filter Bar - NEW SECTION */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-white rounded-xl shadow-soft p-4 mb-10 flex flex-col md:flex-row justify-between items-center gap-4"
           >
@@ -403,7 +231,7 @@ export default function CSRNewsPage() {
             <div className="relative w-full md:w-auto flex-grow max-w-md">
               <input
                 type="text"
-                placeholder="Search CSR initiatives..."
+                placeholder={pt('search.placeholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nyati-green/50"
@@ -415,7 +243,7 @@ export default function CSRNewsPage() {
             
             {/* Category Filters */}
             <div className="flex flex-wrap justify-center gap-2">
-              {csrPillars.map((pillar) => (
+              {localizedPillars.map((pillar) => (
                 <button 
                   key={pillar.id}
                   onClick={() => setActiveCategory(pillar.id)}
@@ -432,106 +260,9 @@ export default function CSRNewsPage() {
                 </button>
               ))}
             </div>
-            
-            {/* Link to All News */}
-            <Link href="/news" className="px-4 py-2 rounded-full text-sm font-medium transition-all bg-nyati-navy text-white hover:bg-nyati-navy/90 shrink-0">
-              <span className="flex items-center">
-                All News
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
           </motion.div>
-          
-          {/* Featured CSR Initiatives */}
-          {featuredArticles.length > 0 && (
-            <motion.section
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <div className="flex items-center mb-8">
-                <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>
-                <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5h14M5 12h14m-7-7v14" />
-                  </svg>
-                  FEATURED INITIATIVES
-                </h2>
-                <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {featuredArticles.slice(0, 2).map((article) => (
-                  <motion.div 
-                    key={article.id}
-                    variants={itemVariants}
-                    className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="relative h-64 overflow-hidden">
-                      <motion.div 
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.4 }}
-                        className="w-full h-full"
-                      >
-                        <Image 
-                          src={article.image} 
-                          alt={article.title} 
-                          fill
-                          className="object-cover transition-transform group-hover:scale-105"
-                        />
-                      </motion.div>
-                      <div className="absolute top-0 right-0 m-4">
-                        <span className="bg-nyati-green text-white text-xs px-3 py-1 rounded-full uppercase font-semibold tracking-wide">
-                          {article.pillar}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="text-sm text-gray-500 mb-2">
-                        {formatDate(article.date)}
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-nyati-green group-hover:text-nyati-orange transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-gray-700 mb-4">
-                        {article.excerpt}
-                      </p>
-                      {article.link ? (
-                        <a 
-                          href={article.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                        >
-                          Read More
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
-                      ) : (
-                        <Link 
-                          href={`/news/${article.id}`} 
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
-                        >
-                          Read More
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                          </svg>
-                        </Link>
-                      )}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.section>
-          )}
-          
-          {/* All CSR Initiatives Grid */}
+
+          {/* Articles Grid */}
           <motion.section
             variants={containerVariants}
             initial="hidden"
@@ -540,16 +271,12 @@ export default function CSRNewsPage() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>
-              <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                </svg>
-                {activeCategory === 'all' ? 'ALL CSR INITIATIVES' : `${csrPillars.find(p => p.id === activeCategory)?.name.toUpperCase()} INITIATIVES`}
+              <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>              <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
+                {activeCategory === 'all' ? pt('initiatives.all') : pt(`csrPage.pillars.${activeCategory === 'health' ? 'healthcare' : activeCategory}.name`)}
               </h2>
               <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
             </div>
-            
+
             {filteredArticles.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredArticles.map((article) => (
@@ -562,13 +289,12 @@ export default function CSRNewsPage() {
                     <div className="relative h-52 overflow-hidden">
                       <Image 
                         src={article.image} 
-                        alt={article.title} 
+                        alt={getLocalizedContent(article.titles, language)} 
                         fill
                         className="object-cover transition-transform group-hover:scale-105"
-                      />
-                      <div className="absolute top-0 right-0 m-3">
+                      />                      <div className="absolute top-0 right-0 m-3">
                         <span className="bg-nyati-green text-white text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">
-                          {article.pillar}
+                          {pt(`csrPage.pillars.${article.pillar === 'health' ? 'healthcare' : article.pillar}.name`)}
                         </span>
                       </div>
                     </div>
@@ -577,10 +303,10 @@ export default function CSRNewsPage() {
                         {formatDate(article.date)}
                       </div>
                       <h3 className="text-lg font-bold mb-2 text-nyati-green group-hover:text-nyati-orange transition-colors">
-                        {article.title}
+                        {getLocalizedContent(article.titles, language)}
                       </h3>
                       <p className="text-gray-700 text-sm mb-4 line-clamp-3">
-                        {article.excerpt}
+                        {getLocalizedContent(article.excerpts, language)}
                       </p>
                       {article.link ? (
                         <a 
@@ -589,7 +315,7 @@ export default function CSRNewsPage() {
                           rel="noopener noreferrer" 
                           className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
                         >
-                          Read More
+                          {pt('initiatives.readMore')}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
@@ -599,7 +325,7 @@ export default function CSRNewsPage() {
                           href={`/news/${article.id}`}
                           className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
                         >
-                          Read More
+                          {pt('initiatives.readMore')}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
@@ -614,8 +340,8 @@ export default function CSRNewsPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h3 className="text-xl font-bold text-gray-700 mb-2">No CSR initiatives found</h3>
-                <p className="text-gray-500">Try adjusting your search criteria</p>
+                <h3 className="text-xl font-bold text-gray-700 mb-2">{pt('initiatives.noResults.title')}</h3>
+                <p className="text-gray-500">{pt('initiatives.noResults.description')}</p>
               </div>
             )}
           </motion.section>

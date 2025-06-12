@@ -77,31 +77,35 @@ export default function EnhancedCSRPage() {
   
   // Transform for parallax movement
   const y = useTransform(parallaxProgress, [0, 1], [0, 100]);
-
-  // Get language context and general translations
+  // Get language context and translations
   const { language } = useLanguage();
   const { t } = useTranslations();
-  
+
   // State for page-specific translations
   const [pageTranslations, setPageTranslations] = useState({});
-  
-  // Load page-specific translations
+    // Load page-specific translations
   useEffect(() => {
     const loadPageTranslations = async () => {
       try {
+        console.log(`Loading translations for language: ${language}`);
         const response = await import(`../../translations/csr-${language}.json`);
+        console.log('Loaded translations:', response.default);
         setPageTranslations(response.default);
       } catch (error) {
         console.error('Error loading page translations:', error);
         // Fallback to English
-        const fallback = await import('../../translations/csr-en.json');
-        setPageTranslations(fallback.default);
+        try {
+          const fallback = await import('../../translations/csr-en.json');
+          setPageTranslations(fallback.default);
+        } catch (fallbackError) {
+          console.error('Error loading fallback translations:', fallbackError);
+          setPageTranslations({});
+        }
       }
     };
     
     loadPageTranslations();
   }, [language]);
-  
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -116,14 +120,23 @@ export default function EnhancedCSRPage() {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
+        // If the key is not found, check if it might be a direct key without nesting
+        if (pageTranslations && typeof pageTranslations === 'object' && key in pageTranslations) {
+          return pageTranslations[key];
+        }
         console.warn(`Translation key not found: ${key}`);
         return key; // Return the key if not found
       }
     }
     
+    // Make sure we're returning a valid string, not an object
+    if (value !== null && typeof value === 'object') {
+      console.warn(`Translation value is an object, not a string: ${key}`);
+      return key;
+    }
+    
     return value === null || value === undefined ? key : value;
-  };
-  const csrInitiatives = Array.isArray(pageTranslations?.csrPage?.initiatives) 
+  };  const csrInitiatives = Array.isArray(pageTranslations?.csrPage?.initiatives) 
     ? pageTranslations.csrPage.initiatives 
     : [
       {
@@ -159,13 +172,18 @@ export default function EnhancedCSRPage() {
         altText: "Employees and suppliers illustration"
       }
     ];
-
-  // News articles data
+  // News articles data with bilingual support
   const newsArticles = [
     {
       id: 3,
-      title: "Nyati Cement Donates Cement Bags for School Construction",
-      excerpt: "Nyati Cement Donates 400 bags to the Bagamoyo District Commissioner for the construction of School. Showing our commitment to CSR and support for education infrastructure development in local communities.",
+      titles: {
+        en: "Nyati Cement Donates Cement Bags for School Construction",
+        sw: "Nyati Cement Yatoa Mifuko ya Saruji kwa Ajili ya Ujenzi wa Shule"
+      },
+      excerpts: {
+        en: "Nyati Cement Donates 400 bags to the Bagamoyo District Commissioner for the construction of School. Showing our commitment to CSR and support for education infrastructure development in local communities.",
+        sw: "Nyati Cement yatoa mifuko 400 kwa Mkuu wa Wilaya ya Bagamoyo kwa ajili ya ujenzi wa Shule. Ikionyesha dhamira yetu ya CSR na msaada kwa maendeleo ya miundombinu ya elimu katika jamii za ndani."
+      },
       date: "2016-11-25",
       image: "/images/news/5.jpg",
       category: "csr",
@@ -174,8 +192,14 @@ export default function EnhancedCSRPage() {
     },
     {
       id: 5,
-      title: "Lake Cement Leads Blood Donation Drive to Save Lives",
-      excerpt: "Lake Cement has demonstrated corporate social responsibility through an impactful blood donation drive at our factory. The initiative aims to address the critical shortage of blood supplies in Tanzania's healthcare system and highlights our dedication to community health and wellbeing.",
+      titles: {
+        en: "Lake Cement Leads Blood Donation Drive to Save Lives",
+        sw: "Lake Cement Yaongoza Kampeni ya Kutoa Damu kuokoa Maisha"
+      },
+      excerpts: {
+        en: "Lake Cement has demonstrated corporate social responsibility through an impactful blood donation drive at our factory. The initiative aims to address the critical shortage of blood supplies in Tanzania's healthcare system and highlights our dedication to community health and wellbeing.",
+        sw: "Lake Cement imeonyesha uwajibikaji wa kijamii kupitia kampeni yenye athari ya kutoa damu katika kiwanda chetu. Mpango huu unalenga kushughulikia upungufu mkubwa wa ugavi wa damu katika mfumo wa afya wa Tanzania na kuonyesha dhamira yetu ya afya na ustawi wa jamii."
+      },
       date: "2017-05-17",
       image: "/images/news/damu4.webp",
       category: "csr",
@@ -184,8 +208,14 @@ export default function EnhancedCSRPage() {
     },
     {
       id: 9,
-      title: "Nyati Cement Hands Over Kigamboni Bus Terminal",
-      excerpt: "Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner. The company invested 46 million shillings in this infrastructure project, demonstrating its commitment to supporting community development.",
+      titles: {
+        en: "Nyati Cement Hands Over Kigamboni Bus Terminal",
+        sw: "Nyati Cement Wakabidhi Stendi ya Kigamboni"
+      },
+      excerpts: {
+        en: "Nyati Cement has officially handed over the newly constructed Kigamboni Bus Terminal to the District Commissioner. The company invested 46 million shillings in this infrastructure project, demonstrating its commitment to supporting community development.",
+        sw: "Nyati Cement imekabidhi rasmi Stendi mpya ya Mabasi ya Kigamboni kwa Mkuu wa Wilaya. Kampuni ilitumia shilingi milioni 46 katika mradi huu wa miundombinu, ikionyesha dhamira yake ya kusaidia maendeleo ya jamii."
+      },
       date: "2022-11-08",
       image: "/images/news/bs2.webp",
       category: "csr",
@@ -199,12 +229,17 @@ export default function EnhancedCSRPage() {
   const sortedArticles = [...newsArticles].sort((a, b) => 
     new Date(b.date) - new Date(a.date)
   );
-
   // Format date for consistency
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', options);
+    // Use correct locale based on language
+    return date.toLocaleDateString(language === 'sw' ? 'sw-TZ' : 'en-US', options);
+  };
+
+  // Helper function to get localized content based on current language
+  const getLocalizedContent = (content, language) => {
+    return content[language] || content['en']; // Fallback to English if translation not available
   };
 
   return (
@@ -382,17 +417,15 @@ export default function EnhancedCSRPage() {
                   key={article.id}
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-xl shadow-soft overflow-hidden"
-                >
-                  <div className="relative h-52 overflow-hidden">
+                >                  <div className="relative h-52 overflow-hidden">
                     <Image 
                       src={article.image} 
-                      alt={article.title} 
+                      alt={getLocalizedContent(article.titles, language)} 
                       fill
                       className="object-cover group-hover:scale-105 transition-transform"
-                    />
-                    <div className="absolute top-0 right-0 m-3">
+                    />                    <div className="absolute top-0 right-0 m-3">
                       <span className="bg-nyati-green text-white text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">
-                        {article.pillar}
+                        {pt(`csrPage.pillars.${article.pillar === 'health' ? 'healthcare' : article.pillar}.name`)}
                       </span>
                     </div>
                   </div>
@@ -401,10 +434,10 @@ export default function EnhancedCSRPage() {
                       {formatDate(article.date)}
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-nyati-green line-clamp-2">
-                      {article.title}
+                      {getLocalizedContent(article.titles, language)}
                     </h3>
                     <p className="text-gray-700 text-sm mb-4 line-clamp-3">
-                      {article.excerpt}
+                      {getLocalizedContent(article.excerpts, language)}
                     </p>
                     <Link 
                       href={`/news/${article.id}`}
