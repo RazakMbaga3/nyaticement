@@ -1,7 +1,7 @@
 'use client';
 
 import { Suspense } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import Navbar from './ui/navbar';
 import Footer from './ui/footer';
 import LoadingOverlay from './ui/LoadingOverlay';

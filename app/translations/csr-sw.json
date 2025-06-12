@@ -10,9 +10,21 @@
       "highlight": "Kijamii wa Kampuni",
       "description": "Kujenga jamii zenye nguvu zaidi kupitia desturi endelevu na mipango yenye maana."
     },
+    "intro": {
+      "title": "KUJENGA JAMII ZENYE NGUVU",
+      "description": "Katika Lake Cement, tunaamini katika kurudisha kwa jamii tunakoishi. Mipango yetu ya uwajibikaji wa kijamii inazingatia elimu, afya, uhifadhi wa mazingira, na maendeleo ya jamii."
+    },
+    "philosophy": {
+      "title": "FALSAFA YETU YA CSR",
+      "description": "Mipango yetu ya CSR inaongozwa na dhamira ya maendeleo endelevu na uwezeshaji wa jamii. Tunaamini katika kuunda programu zinazoshughulikia mahitaji halisi, kuhusisha wadau wa ndani, na kuleta matokeo yanayopimika."
+    },
     "approach": {
-      "title": "Mbinu Yetu ya Uwajibikaji wa Kijamii wa Kampuni",
-      "description": "Tunaamini kuwa mafanikio yetu yanahusiana sana na ustawi wa jamii tunazohudumia. Mipango yetu ya CSR imeundwa ili kuunda athari endelevu na zenye maana katika vipimo mbalimbali vya maendeleo ya kijamii na mazingira."
+      "title": "Mtazamo Wetu",
+      "description": "Kwa kuzingatia nguzo muhimu za elimu, afya, mazingira, na miundombinu ya jamii, tunahakikisha juhudi zetu zinachangia maendeleo kamili."
+    },
+    "sdg": {
+      "title": "Malengo ya Maendeleo Endelevu",
+      "description": "Programu zetu za CSR zinaendana na Malengo ya Maendeleo Endelevu ya Umoja wa Mataifa (SDGs), hususan Elimu Bora (SDG 4), Afya na Ustawi (SDG 3), Miji na Jamii Endelevu (SDG 11), na Hatua za Hali ya Hewa (SDG 13)."
     },
     "initiatives": [
       {
@@ -67,6 +79,71 @@
         "description": "Endelea kupata taarifa kuhusu miradi yetu ya CSR inayoendelea na gundua jinsi unavyoweza kuchangia dhamira yetu ya kuunda mabadiliko chanya katika elimu, afya, na maendeleo ya jamii.",
         "button": "Jisajili kwa Taarifa"
       }
+    },
+    "pillars": {
+      "title": "NGUZO ZA CSR",
+      "education": {
+        "name": "Elimu",
+        "description": "Kusaidia mipango ya elimu kutoka ngazi ya msingi hadi chuo kupitia maendeleo ya miundombinu, utoaji wa rasilimali, na programu za ufadhili."
+      },
+      "healthcare": {
+        "name": "Afya",
+        "description": "Kuboresha upatikanaji wa huduma bora za afya kupitia kambi za matibabu, kusaidia kliniki za karibu, na programu za uhamasishaji wa afya."
+      },
+      "environment": {
+        "name": "Mazingira",
+        "description": "Kutekeleza programu za uhifadhi wa mazingira ikiwa ni pamoja na upandaji miti, usimamizi wa taka, na uzalishaji endelevu."
+      },
+      "community": {
+        "name": "Jamii",
+        "description": "Kuendeleza miundombinu na programu za msaada zinazofaidisha jamii za karibu moja kwa moja, kuboresha ubora wa maisha."
+      }
+    },
+    "search": {
+      "placeholder": "Tafuta mipango ya CSR..."
+    },
+    "stats": {
+      "schools": {
+        "number": "15+",
+        "label": "Shule Zilizosaidiwa"
+      },
+      "communities": {
+        "number": "5,000+",
+        "label": "Wanajamii Walionufaika"
+      },
+      "donations": {
+        "number": "500+",
+        "label": "Michango ya Damu"
+      },
+      "trees": {
+        "number": "10,000+",
+        "label": "Miti Iliyopandwa"
+      }
+    },
+    "contact": {
+      "title": "Wasiliana Nasi",
+      "description": "Una nia ya kujifunza zaidi kuhusu mipango yetu ya CSR au kujadili ushirikiano unaowezekana? Wasiliana na timu yetu ya Uwajibikaji wa Kijamii wa Kampuni:",
+      "phone": {
+        "label": "Simu",
+        "value": "+255 (0) 22 123 4567"
+      },
+      "email": {
+        "label": "Barua pepe",
+        "value": "csr@lakecement.co.tz"
+      },
+      "address": {
+        "label": "Anwani",
+        "value": "Lake Cement Ltd, Plot 1, Industrial Area, Kimbiji, Kigamboni, Dar es Salaam, Tanzania"
+      }
     }
+  },
+  "newsletter": {
+    "title": "Endelea Kupata Taarifa",
+    "subtitle": "Pokea habari na taarifa mpya kutoka Nyati Cement.",
+    "inputPlaceholder": "Ingiza anwani yako ya barua pepe",
+    "subscribeButton": "Jisajili",
+    "subscribingButton": "Inajisajili...",
+    "successMessage": "Asante kwa kujisajili kupokea jarida letu!",
+    "errorMessage": "Kulikuwa na hitilafu katika kujisajili kwa jarida. Tafadhali jaribu tena."
   }
 }

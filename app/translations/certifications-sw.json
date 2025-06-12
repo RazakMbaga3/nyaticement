@@ -43,25 +43,25 @@
         ]
       },
       {
-        "category": "Matokeo ya Mitihani ya Ndani",
+        "category": "Matokeo ya Vipimo vya Ndani",
         "items": [
           {
-            "title": "Cheti cha mtihani wa ndani 42.5 N",
+            "title": "Cheti cha  ndani 42.5 N",
             "downloadLink": "/docs/16-W,NO-42.5N-28DAYS.pdf",
             "subItems": []
           },
           {
-            "title": "Cheti cha mtihani wa ndani 42.5 R",
+            "title": "Cheti cha vipimo vya ndani 42.5 R",
             "downloadLink": "/docs/16-WNO-42.5R-28DAYS.pdf",
             "subItems": []
           },
           {
-            "title": "Cheti cha mtihani wa ndani 32.5 N",
+            "title": "Cheti cha vipimo vya ndani 32.5 N",
             "downloadLink": "/docs/16-W,NO-32.5N-28DAYS.pdf",
             "subItems": []
           },
           {
-            "title": "Cheti cha mtihani wa ndani OPC",
+            "title": "Cheti cha vipimo vya ndani OPC",
             "downloadLink": "/docs/16-W,NO-CEM I-42.5N-28DAYS.pdf",
             "subItems": []
           }

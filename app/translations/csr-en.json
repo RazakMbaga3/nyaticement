@@ -10,9 +10,21 @@
       "highlight": "Responsibility",
       "description": "Building stronger communities through sustainable practices and meaningful initiatives."
     },
+    "intro": {
+      "title": "BUILDING STRONGER COMMUNITIES",
+      "description": "At Lake Cement, we believe in giving back to the communities where we operate. Our corporate social responsibility initiatives focus on education, healthcare, environmental conservation, and community development."
+    },
+    "philosophy": {
+      "title": "OUR CSR PHILOSOPHY",
+      "description": "Our CSR initiatives are guided by a commitment to sustainable development and community empowerment. We believe in creating programs that address real needs, involve local stakeholders, and deliver measurable impact."
+    },
     "approach": {
-      "title": "Our Approach to Corporate Social Responsibility",
-      "description": "We believe that our success is intrinsically linked to the well-being of the communities we serve. Our CSR initiatives are designed to create sustainable, meaningful impact across multiple dimensions of social and environmental development."
+      "title": "Our Approach",
+      "description": "By focusing on key pillars of education, healthcare, environment, and community infrastructure, we ensure our efforts contribute to holistic development."
+    },
+    "sdg": {
+      "title": "Sustainable Development Goals",
+      "description": "Our CSR programs align with the United Nations Sustainable Development Goals (SDGs), focusing particularly on Quality Education (SDG 4), Good Health and Well-being (SDG 3), Sustainable Cities and Communities (SDG 11), and Climate Action (SDG 13)."
     },
     "initiatives": [
       {
@@ -67,6 +79,71 @@
         "description": "Stay informed about our ongoing CSR projects and discover how you can contribute to our mission of creating positive change in education, healthcare, and community development.",
         "button": "Subscribe to Updates"
       }
+    },
+    "pillars": {
+      "title": "CSR PILLARS",
+      "education": {
+        "name": "Education",
+        "description": "Supporting educational initiatives from primary to tertiary levels through infrastructure development, resource provision, and scholarship programs."
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "description": "Improving access to quality healthcare through medical camps, support for local clinics, and health awareness programs."
+      },
+      "environment": {
+        "name": "Environment",
+        "description": "Implementing environmental conservation programs including tree planting, waste management, and sustainable manufacturing practices."
+      },
+      "community": {
+        "name": "Community",
+        "description": "Developing infrastructure and support programs that directly benefit local communities, improving quality of life."
+      }
+    },
+    "search": {
+      "placeholder": "Search CSR initiatives..."
+    },
+    "stats": {
+      "schools": {
+        "number": "15+",
+        "label": "Schools Supported"
+      },
+      "communities": {
+        "number": "5,000+",
+        "label": "Community Members Impacted"
+      },
+      "donations": {
+        "number": "500+",
+        "label": "Blood Donations"
+      },
+      "trees": {
+        "number": "10,000+",
+        "label": "Trees Planted"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Interested in learning more about our CSR initiatives or discussing potential partnerships? Reach out to our Corporate Social Responsibility team:",
+      "phone": {
+        "label": "Phone",
+        "value": "+255 (0) 22 123 4567"
+      },
+      "email": {
+        "label": "Email",
+        "value": "csr@lakecement.co.tz"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Lake Cement Ltd, Plot 1, Industrial Area, Kimbiji, Kigamboni, Dar es Salaam, Tanzania"
+      }
     }
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Receive the latest news and updates from Nyati Cement.",
+    "inputPlaceholder": "Enter your email address",
+    "subscribeButton": "Subscribe",
+    "subscribingButton": "Subscribing...",
+    "successMessage": "Thank you for subscribing to our newsletter!",
+    "errorMessage": "There was an error subscribing to the newsletter. Please try again."
   }
 }
