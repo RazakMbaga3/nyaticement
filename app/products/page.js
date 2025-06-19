@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: 2,
-    image: '/images/products/Nyati-42.5N.jpg',
+    image: '/images/products/Nyati-42.5N.webp',
     title: '42.5N Grade Portland Limestone Cement',
     description: 'A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.',
     features: [
