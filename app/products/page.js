@@ -33,8 +33,8 @@ const products = [
       'Ready mix Concrete (RMC)'
     ]  },  {
     id: 2,
-    image: '/images/products/product-42-5n.jpg', // Using a simple, reliable image name
-    fallbackImage: '/images/products/Nyati-42.5.jpg', // Fallback to a known working image
+    image: '/images/products/Nyati-42.5N.webp', // Using a simple, reliable image name
+    fallbackImage: '/images/products/Nyati-42.5N.jpg', // Fallback to a known working image
     title: '42.5N Grade Portland Limestone Cement',
     description: 'A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.',
     features: [
