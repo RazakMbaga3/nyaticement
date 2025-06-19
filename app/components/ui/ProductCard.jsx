@@ -21,13 +21,14 @@ export default function ProductCard({ product, index }) {
         <motion.div 
           className="lg:w-2/5 p-6 flex items-center justify-center bg-gray-50 relative overflow-hidden"
           layoutId={`image-container-${title}`}
-        >
-          <div className="relative h-64 w-full">
+        >          <div className="relative h-72 w-full">
             <Image 
               src={image} 
               alt={title} 
               fill
               className="object-contain transition-transform duration-700 hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 500px"
+              priority
             />
           </div>
           <motion.div 
