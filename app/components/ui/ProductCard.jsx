@@ -22,11 +22,11 @@ export default function ProductCard({ product, index }) {
       whileHover={{ y: -5 }}
       layout
     >
-      <div className="flex flex-col lg:flex-row">
-        <motion.div 
+      <div className="flex flex-col lg:flex-row">        <motion.div 
           className="lg:w-2/5 p-6 flex items-center justify-center bg-gray-50 relative overflow-hidden"
           layoutId={`image-container-${title}`}
-        >            <div className="relative h-72 w-full">
+        >
+          <div className="relative h-80 w-full">
             {!imageError ? (
               <Image 
                 src={image} 
@@ -41,7 +41,7 @@ export default function ProductCard({ product, index }) {
                 }}
               />
             ) : (
-              product.fallbackImage ? (
+              product?.fallbackImage ? (
                 <Image 
                   src={product.fallbackImage} 
                   alt={title || 'Product image'} 
