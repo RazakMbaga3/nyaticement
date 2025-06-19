@@ -356,7 +356,7 @@ const newsArticles = [
         author: "Corporate Affairs Department",        mainImage: "images/news/Geza Bus Station.webp",
         gallery: [
           "/images/news/bs3.webp",
-          "/images/news/bs2.webp",
+          "/images/news/bs2.webp",3
           "/images/news/bs5.webp",
           "/images/news/bs1.webp",
           "/images/news/bs8.png",

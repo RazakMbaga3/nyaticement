@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import ProductCard from '@/app/components/ui/ProductCard'
+import ProductCard from '@/app/components/ui/NewProductCard'
 import KeyFeatureCard from '@/app/components/ui/KeyFeatureCard'
 import PackagingOption from '@/app/components/sections/PackagingOption'
 import { useTranslations } from '@/app/hooks/useTranslations'
@@ -15,6 +15,7 @@ const products = [
   {
     id: 1,
     image: '/images/products/Nyati-42.5.jpg',
+    fallbackImage: '/images/products/Nyati-42.5.jpg', // Same image as fallback for consistency
     title: '42.5R Grade Portland Limestone Cement',
     description: 'Designed for projects requiring rapid strength gain and long-term durability. Suitable for blocks making, precast, prestressed concrete, and high-grade concrete for high-strength structures like bridges and reservoirs.',
     features: [
@@ -27,14 +28,14 @@ const products = [
     applications: [
       'Quality Blocks',
       'High Grade Concrete',
-      'Reiforced Concrete Structures',
+      'Reinforced Concrete Structures',
       'Hydraulic structures',
       'Ready mix Concrete (RMC)'
     ]
-  },
-  {
+  },  {
     id: 2,
-    image: '/images/products/Nyati-42.5N.jpg',
+    image: '/images/products/Nyati-42.5N.webp', // Using a simple, reliable image name
+    fallbackImage: '/images/products/Nyati-42.5N.jpg', // Fallback to a known working image
     title: '42.5N Grade Portland Limestone Cement',
     description: 'A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.',
     features: [
@@ -389,43 +390,62 @@ export default function ProductsPage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               {pt('productsPage.intro.text')}
             </p>
-          </motion.div>
-          
-          <div className="space-y-6">
+          </motion.div>            <div className="space-y-6">
             {Array.isArray(pageTranslations?.productsPage?.products) ? 
-              pageTranslations.productsPage.products.map((product, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, delay: index * 0.1 }}
-                >
-                  <ProductCard 
-                    product={{
-                      image: products[index]?.image || '',
-                      title: product.title,
-                      description: product.description,
-                      features: product.features,
-                      applications: product.applications
-                    }}
-                  />
-                </motion.div>
-              ))
+              pageTranslations.productsPage.products.map((product, index) => {
+                // Get the base product data including images
+                const productData = products[index] || {};
+                
+                // Create the complete product object combining translations and base data
+                const combinedProduct = {
+                  id: productData.id || index,
+                  image: productData.image || '',
+                  fallbackImage: productData.fallbackImage || '',
+                  title: product.title || `Product ${index + 1}`,
+                  description: product.description || '',
+                  features: product.features || [],
+                  applications: product.applications || []
+                };
+                
+                // Debug log to help diagnose issues
+                console.log(`Rendering translated product ${index}:`, combinedProduct);
+                
+                return (
+                  <motion.div 
+                    key={combinedProduct.id}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.7, delay: index * 0.1 }}
+                  >
+                    <ProductCard 
+                      product={combinedProduct}
+                      index={index}
+                    />
+                  </motion.div>
+                );
+              })
               :
-              products.map((product, index) => (
-                <motion.div 
-                  key={product.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, delay: index * 0.1 }}
-                >
-                  <ProductCard 
-                    product={product}
-                  />
-                </motion.div>
-              ))
+              // Fallback to using hardcoded product data
+              products.map((product, index) => {
+                // Debug log
+                console.log(`Rendering hardcoded product ${index}:`, product);
+                
+                return (
+                  <motion.div 
+                    key={product.id}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.7, delay: index * 0.1 }}
+                  >
+                    <ProductCard 
+                      product={product}
+                      index={index}
+                    />
+                  </motion.div>
+                );
+              })
             }
           </div>
         </div>

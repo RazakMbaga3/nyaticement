@@ -248,14 +248,14 @@ export default function Navbar() {
               </ul>
             </nav>            {/* Right side container with Logo */}
             <div className="hidden lg:flex items-center space-x-3">
-              {/* Right Logo - minimized */}
-              <Link href="/" className="flex-shrink-0">
-                <Image 
+              {/* Right Logo - minimized */}              <Link href="/" className="flex-shrink-0">                
+              <Image 
                   src="/images/lake-cement-ltd.png" 
                   alt="Lake Cement Logo" 
-                  width={60} 
-                  height={15}
-                  className="h-4 w-auto object-contain"
+                  width={140}
+                  height={20}
+                  className="h-5 w-auto"
+                  priority
                 />
               </Link>
             </div>
@@ -304,14 +304,15 @@ export default function Navbar() {
         } overflow-y-auto`}
       >        {/* Mobile Menu Header */}
         <div className="p-4 flex items-center justify-between border-b border-gray-100">          {/* Lake Cement Logo for Mobile */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0">            
             <Image 
-              src="/images/lake-cement-ltd.png" 
+              src="/images/lake-cement-ltd.png"
               alt="Lake Cement Logo" 
-              width={75} 
-              height={20}
-              className="h-5 w-auto object-contain"
-            />          </div>
+              width={200} 
+              height={50}
+              className="h-7 w-auto"
+              priority
+            /></div>
             <div className="flex items-center">
             <button 
               className="p-2 rounded-full hover:bg-gray-100 transition-colors"
