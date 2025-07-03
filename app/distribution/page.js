@@ -117,10 +117,10 @@ export default function DistributionForm() {
     console.log('Sending with params:', templateParams);
       try {
       const result = await emailjs.send(
-        'service_gm7eghi', 
-        'template_10t1fom', 
+        'service_fgi4rn3', 
+        'template_22wvb58', 
         templateParams, 
-        'xhWX7T_yzqXUD83lP'
+        '28FR-UzDU9CujXlxM'
       );
       
       console.log('SUCCESS!', result);
