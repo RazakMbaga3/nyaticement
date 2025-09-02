@@ -388,8 +388,8 @@ const newsArticles = [
     quote: {
       text: "It is very important that we serve the humanity and the community by donating, it doesn't cost you anything. Its a healthy habit and help others survive. We are very glad we regularly organize blood donation camps in the last eight years.",
       text_sw: "Ni muhimu sana kuhudumia binadamu na jamii kwa kuchangia damu, haina gharama yoyote. Ni tabia yenye afya na inasaidia wengine kuishi. Tunajivunia sana kwamba tumekuwa tukiandaa kambi za kuchangia damu mara kwa mara kwa kipindi cha miaka minane iliyopita.",
-      author: "Mr. Mallick, Plant Manager, Lake Cement",
-      author_sw: "Bwana Mallick, Meneja wa Kiwanda, Lake Cement"
+      author: "Biswajeet Mallik, Plant Manager, Lake Cement",
+      author_sw: "Biswajeet Mallik, Meneja wa Kiwanda, Lake Cement"
     },
     additionalContent: [
       "By partnering with NBTS, Lake Cement continues to demonstrate that its corporate responsibility extends beyond cement production to life-saving initiatives that directly support the healthcare system.",
