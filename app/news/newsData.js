@@ -367,8 +367,55 @@ const newsArticles = [
         tag: "Community Development",
         externalLink: "https://www.michuzi.co.tz/2022/11/nyati-cement-wakabidhi-stendi-ya-kigamboni.html",
         relatedArticles: [3, 5, 2]
-      }
-
+      },
+ {
+  id: 9,
+  title: "Lake Cement Continues Culture of Blood Donation",
+  title_sw: "Lake Cement Yaendeleza Utamaduni wa Kuchangia Damu",
+  excerpt: "Lake Cement has once again upheld its long-standing culture of organizing blood donation camps, partnering with the National Blood Transfusion Service to support Tanzania’s healthcare system.",
+  excerpt_sw: "Lake Cement imeendeleza utamaduni wake wa muda mrefu wa kuandaa kambi za kuchangia damu, kwa kushirikiana na Huduma ya Kitaifa ya Kuhamisha Damu kusaidia mfumo wa afya wa Tanzania.",
+  fullContent: {
+    intro: "On 28th and 29th August 2025, Lake Cement Limited in collaboration with the National Blood Transfusion Service (NBTS) successfully organized a two-day blood donation drive at its Kimbiji factory in Kigamboni. The initiative reinforced the company’s culture of regularly hosting blood donation camps to save lives and support community wellbeing.",
+    intro_sw: "Mnamo tarehe 28 na 29 Agosti 2025, Lake Cement Limited kwa kushirikiana na Huduma ya Kitaifa ya Kuhamisha Damu (NBTS) iliandaa kampeni ya siku mbili ya kuchangia damu katika kiwanda chake cha Kimbiji kilichopo Kigamboni. Zoezi hili liliimarisha utamaduni wa kampuni wa kuandaa kambi za kuchangia damu mara kwa mara ili kuokoa maisha na kusaidia ustawi wa jamii.",
+    paragraphs: [
+      "An officer from the National Blood Transfusion Service emphasized that the organization has a target of collecting 15,000 blood bags annually. Regular contributors like Lake Cement play a vital role in helping them move closer to this goal, ensuring hospitals have reliable blood supplies for patients in need.",
+      "Lake Cement’s leadership highlighted that this drive reflects the company’s broader commitment to community health, alongside its contributions to environmental protection and economic growth."
+    ],
+    paragraphs_sw: [
+      "Afisa kutoka Huduma ya Kitaifa ya Kuhamisha Damu alibainisha kuwa taasisi hiyo inalenga kukusanya mifuko 15,000 ya damu kila mwaka. Wadau wa mara kwa mara kama Lake Cement wana mchango mkubwa katika kuwasaidia kufikia lengo hili, na kuhakikisha hospitali zinapata damu ya kutosha kwa wagonjwa wanaohitaji.",
+      "Uongozi wa Lake Cement ulisisitiza kuwa kampeni hii inaonyesha dhamira ya kampuni kwa afya ya jamii, sambamba na michango yake katika kulinda mazingira na kukuza uchumi."
+    ],
+    quote: {
+      text: "It is very important that we serve the humanity and the community by donating, it doesn't cost you anything. Its a healthy habit and help others survive. We are very glad we regularly organize blood donation camps in the last eight years.",
+      text_sw: "Ni muhimu sana kuhudumia binadamu na jamii kwa kuchangia damu, haina gharama yoyote. Ni tabia yenye afya na inasaidia wengine kuishi. Tunajivunia sana kwamba tumekuwa tukiandaa kambi za kuchangia damu mara kwa mara kwa kipindi cha miaka minane iliyopita.",
+      author: "Mr. Mallick, Plant Manager, Lake Cement",
+      author_sw: "Bwana Mallick, Meneja wa Kiwanda, Lake Cement"
+    },
+    additionalContent: [
+      "By partnering with NBTS, Lake Cement continues to demonstrate that its corporate responsibility extends beyond cement production to life-saving initiatives that directly support the healthcare system.",
+      "The event reaffirmed Lake Cement’s philosophy that true corporate leadership includes caring for people and uplifting the communities it serves."
+    ],
+    additionalContent_sw: [
+      "Kwa kushirikiana na NBTS, Lake Cement inaendelea kuonyesha kuwa uwajibikaji wake wa shirika unaenda zaidi ya uzalishaji wa saruji hadi kushiriki katika mipango ya kuokoa maisha inayosaidia moja kwa moja mfumo wa afya.",
+      "Tukio hili liliimarisha falsafa ya Lake Cement kwamba uongozi wa kweli wa shirika unajumuisha kujali watu na kuinua jamii zinazohudumiwa."
+    ],
+    conclusion: "Through this blood donation drive, Lake Cement has once again demonstrated its culture of service and community responsibility, contributing to Tanzania’s healthcare system while raising awareness about the importance of regular blood donation.",
+    conclusion_sw: "Kupitia kampeni hii ya kuchangia damu, Lake Cement imeonyesha tena utamaduni wake wa huduma na uwajibikaji wa kijamii, ikichangia mfumo wa afya wa Tanzania huku ikiongeza uelewa kuhusu umuhimu wa kuchangia damu mara kwa mara."
+  },
+  date: "2025-08-30",
+  author: "CSR & Communications Department",
+  author_sw: "Idara ya CSR na Mawasiliano",
+  mainImage: "/images/news/damu2025main.webp",
+  gallery: [
+    "/images/news/damu20251.webp",
+    "/images/news/damu20252.webp",
+    "/images/news/damu20253.webp",
+    "/images/news/damu20254.webp"
+  ],
+  category: "csr",
+  externalLink: "",
+  relatedArticles: [5, 7, 9]
+}
 
 
   // Additional articles can be added here
