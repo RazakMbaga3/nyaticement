@@ -392,8 +392,8 @@ fullContent: {
   quote: {
     text: "Donating blood is a simple yet powerful act of humanity. It costs nothing but means everything to those in need. We are proud to continue our eight-year tradition of hosting blood donation drives and contributing to the well-being of our community.",
     text_sw: "Kuchangia damu ni tendo rahisi lakini lenye nguvu la kibinadamu. Haina gharama yoyote lakini ina maana yote kwa wale wanaohitaji. Tunajivunia kuendeleza utamaduni wetu wa miaka minane wa kuandaa kambi za kuchangia damu na kuchangia ustawi wa jamii yetu.",
-    author: "Mr. Mallick, Unit Head, Lake Cement",
-    author_sw: "Bwana Mallick, Mkuu wa Kitengo, Lake Cement"
+    author: "Biswajeet Mallik, Unit Head, Lake Cement",
+    author_sw: "Biswajeet Mallik, Mkuu wa Kitengo, Lake Cement"
   },
   additionalContent: [
     "The event reflected a shared spirit of generosity and care among participants, with both employees and community members coming together for this life-saving cause.",
