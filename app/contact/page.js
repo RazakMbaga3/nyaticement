@@ -161,11 +161,11 @@ export default function ContactPage() {
     },
     plant: {
       title: pt('contactPage.offices.locations.plant.title') || "Plant",
-      name: "Biswajeet Mallik",
+      name: "Pavan Gandhi",
       position: pt('contactPage.offices.locations.plant.position') || "Chief Plant Operations Officer",
       address: pt('contactPage.offices.locations.plant.address') || "Kimbiji, Plot No. 265, Municipal Council - Temeke,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
-      phone: pt('contactPage.offices.locations.plant.phone') || "Tel: +255 677 047 650",
-      email: "biswajeet.mallik@lakecement.co.tz"
+      phone: pt('contactPage.offices.locations.plant.phone') || "Tel: +255677042360",
+      email: "pavan.gandhi@lakecement.co.tz"
     },
     sales: [
       {
