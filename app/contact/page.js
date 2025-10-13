@@ -164,7 +164,7 @@ export default function ContactPage() {
       name: "Pavan Gandhi",
       position: pt('contactPage.offices.locations.plant.position') || "Chief Plant Operations Officer",
       address: pt('contactPage.offices.locations.plant.address') || "Kimbiji, Plot No. 265, Municipal Council - Temeke,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
-      phone: pt('contactPage.offices.locations.plant.phone') || "Tel: +255677042360",
+      phone: pt('contactPage.offices.locations.plant.phone') || "Tel:  +255 777 286 841",
       email: "pavan.gandhi@lakecement.co.tz"
     },
     sales: [
