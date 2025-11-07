@@ -2,6 +2,7 @@ import { Inter, Merriweather } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 import ClientLayout from './components/ClientLayout'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
       <body className="flex flex-col min-h-screen">
+        <Analytics />
         <Providers>
           <ClientLayout>
             {children}
