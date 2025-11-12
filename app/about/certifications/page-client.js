@@ -162,7 +162,7 @@ export default function CertificationsClient({ certifications }) {
         en: '1st Runner Up for our Head Office in the Office Support category at AOSH 2024. Shows our commitment to safety and health in corporate offices. Recognized by OSHA.',
         sw: 'Mshindi wa pili Makao Makuu, kitengo cha Usaidizi wa Ofisi, AOSH 2024. Inaonyesha kujitolea kwetu kwa usalama na afya ofisini. Imethibitishwa na OSHA.'
       },
-      image: '/images/certifications/awards/38cca972-e934-4ba2-a292-98428e89452c.png'
+      image: '/images/certifications/awards/38cca972-e934-4ba2-a292-98428e89452c.webp'
     },
     {
       title: {
@@ -174,7 +174,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Awarded for supporting the 4th International Mineral and Mining Conference. Highlights our commitment to Tanzania’s mining sector. Presented by Ministry of Minerals.',
         sw: 'Imetolewa kwa kusaidia Mkutano wa 4 wa Kimataifa wa Madini na Migodi. Inaonyesha kujitolea kwetu sekta ya madini Tanzania. Imewasilishwa na Wizara ya Madini.'
       },
-      image: '/images/certifications/awards/014cbba6-3cbc-41d7-97d4-087c2f029a58.png'
+      image: '/images/certifications/awards/014cbba6-3cbc-41d7-97d4-087c2f029a58.webp'
     },
     {
       title: {
@@ -186,7 +186,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Recognized for top safety standards in cement manufacturing. Awarded during World Day for Safety and Health at Work. Presented by OSHA.',
         sw: 'Imetambuliwa kwa viwango bora vya usalama kwenye utengenezaji wa saruji. Tuzo ya Siku ya Usalama na Afya Kazini. Imewasilishwa na OSHA.'
       },
-      image: '/images/certifications/awards/d6571d79-903b-4438-86fa-09389806a79d.png'
+      image: '/images/certifications/awards/d6571d79-903b-4438-86fa-09389806a79d.webp'
     },
     {
       title: {
@@ -198,7 +198,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Awarded for excellence in workplace safety in manufacturing. Recognizes our safe operations across all sectors. Presented by OSHA.',
         sw: 'Imetunukiwa kwa ubora wa usalama kazini sekta ya uzalishaji. Inatambua usalama wa shughuli zetu zote. Imewasilishwa na OSHA.'
       },
-      image: '/images/certifications/awards/c1c23faf-deb7-494c-bb5e-1541f23ddd6f (1).png'
+      image: '/images/certifications/awards/c1c23faf-deb7-494c-bb5e-1541f23ddd6f (1).webp'
     },
     {
       title: {
@@ -210,7 +210,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Honored for outstanding commitment to a safe and healthy workplace. Early recognition of our safety culture. Presented by OSHA.',
         sw: 'Imetambuliwa kwa kujitolea kwa mazingira salama na yenye afya kazini. Tuzo ya awali ya utamaduni wa usalama. Imewasilishwa na OSHA.'
       },
-      image: '/images/certifications/awards/7787bf48-6961-41ed-a861-05089c2e6d2a.png'
+      image: '/images/certifications/awards/7787bf48-6961-41ed-a861-05089c2e6d2a.webp'
     },
     {
       title: {
@@ -222,7 +222,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Recognized for responsible water management and environmental stewardship. Awarded by WRBWB. Shows our commitment to sustainability.',
         sw: 'Imetambuliwa kwa usimamizi bora wa maji na utunzaji wa mazingira. Tuzo ya WRBWB. Inaonyesha kujitolea kwetu kwa uendelevu.'
       },
-      image: '/images/certifications/awards/8b06153a-d54b-499e-9af5-1ff9a103b463.png'
+      image: '/images/certifications/awards/8b06153a-d54b-499e-9af5-1ff9a103b463.webp'
     },
     {
       title: {
@@ -234,7 +234,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Appreciation for strong partnerships and continued support to TANESCO Kigamboni. Recognizes our valuable relationship with utilities.',
         sw: 'Shukrani kwa ushirikiano imara na msaada endelevu kwa TANESCO Kigamboni. Inatambua uhusiano wetu na watoa huduma.'
       },
-      image: '/images/certifications/awards/73e69476-9992-482d-84a5-c9f5de3842ab.png'
+      image: '/images/certifications/awards/73e69476-9992-482d-84a5-c9f5de3842ab.webp'
     },
     {
       title: {
@@ -246,7 +246,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Certificate of appreciation for leadership and cooperation with Kimbiji Ward. Highlights our support for community development.',
         sw: 'Cheti cha shukrani kwa uongozi na ushirikiano na jamii ya Kimbiji. Inaonyesha mchango wetu kwa maendeleo ya jamii.'
       },
-      image: '/images/certifications/awards/d48e5422-450b-4f03-b343-120433f9e635.png'
+      image: '/images/certifications/awards/d48e5422-450b-4f03-b343-120433f9e635.webp'
     },
     {
       title: {
@@ -258,7 +258,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Honored for supporting workers’ rights and social events during International Women’s Day. Presented by TALGWU.',
         sw: 'Imetambuliwa kwa kusaidia haki za wafanyakazi na matukio ya kijamii Siku ya Wanawake Duniani. Imewasilishwa na TALGWU.'
       },
-      image: '/images/certifications/awards/a3a8adb5-c318-48c5-a996-95556d2aea16.png'
+      image: '/images/certifications/awards/a3a8adb5-c318-48c5-a996-95556d2aea16.webp'
     },
     {
       title: {
@@ -270,7 +270,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Recognized as Best Employer for excellent labor relations and employee welfare. Awarded by TUICO.',
         sw: 'Imetambuliwa kama Mwajiri Bora kwa mahusiano bora ya kazi na ustawi wa wafanyakazi. Tuzo ya TUICO.'
       },
-      image: '/images/certifications/awards/9ede846d-6613-41e1-873d-e9539b865fde.png'
+      image: '/images/certifications/awards/9ede846d-6613-41e1-873d-e9539b865fde.webp'
     },
     {
       title: {
@@ -282,7 +282,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Winner for safety excellence in manufacturing on World Day for Safety and Health at Work. Presented by Prime Minister’s Office.',
         sw: 'Mshindi wa ubora wa usalama katika uzalishaji Siku ya Usalama na Afya Kazini. Imewasilishwa na Ofisi ya Waziri Mkuu.'
       },
-      image: '/images/certifications/awards/a2c55ea4-5707-4fe3-8739-3a7014201976.png'
+      image: '/images/certifications/awards/a2c55ea4-5707-4fe3-8739-3a7014201976.webp'
     },
     {
       title: {
@@ -294,7 +294,7 @@ export default function CertificationsClient({ certifications }) {
         en: 'Awarded for significant contribution to Kigamboni development and community support. Presented by District Commissioner.',
         sw: 'Imetolewa kwa mchango mkubwa katika maendeleo ya Kigamboni na msaada kwa jamii. Imewasilishwa na Mkuu wa Wilaya.'
       },
-      image: '/images/certifications/awards/dce7aed3-6613-4c45-9dad-07ca6e687d83.png'
+      image: '/images/certifications/awards/dce7aed3-6613-4c45-9dad-07ca6e687d83.webp'
     }
   ].sort((a, b) => {
     // Sort by year/date descending
@@ -446,9 +446,7 @@ export default function CertificationsClient({ certifications }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-            {pt('certificationsPage.hero.title')}
-            <br />
-              <span className="text-nyati-orange">{pt('certificationsPage.hero.highlight')}</span>
+            {language === 'sw' ? 'Vyeti na Tuzo' : 'Certifications & Awards'}
             </motion.h1>
             
             <motion.p
