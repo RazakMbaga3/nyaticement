@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/typography": "^0.5.16",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "critters": "^0.0.23",
     "framer-motion": "^12.10.5",
     "next": "15.2.2",
