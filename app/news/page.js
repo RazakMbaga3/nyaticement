@@ -382,8 +382,8 @@ export default function NewsPage() {
                   >
                     <div className="relative h-52 overflow-hidden">
                       <Image 
-                        src={article.image} 
-                        alt={article.title} 
+                        src={typeof article.image === 'string' && article.image.startsWith('/') ? article.image : '/images/news/Geza Bus Station.webp'}
+                        alt={article.title}
                         fill
                         className="object-cover transition-transform group-hover:scale-105"
                       />
