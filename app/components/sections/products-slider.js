@@ -11,7 +11,7 @@ const products = [
   {
     id: 1,
     nameKey: 'products.items.425r.name',
-    defaultName: 'Nyati Super 42',
+    defaultName: 'Nyati Super 42 (CEM II A-L 42.5R)',
     image: '/images/products/super42.jpg',
     descriptionKey: 'products.items.425r.description',
     specs: [
@@ -23,7 +23,7 @@ const products = [
   {
     id: 2,
     nameKey: 'products.items.425n.name',
-    defaultName: 'Nyati Duramax 42',
+    defaultName: 'Nyati Duramax 42 (CEM II A-L 42.5N)',
     image: '/images/products/duramax42.jpg',
     descriptionKey: 'products.items.425n.description',
     specs: [
@@ -35,7 +35,7 @@ const products = [
   {
     id: 3,
     nameKey: 'products.items.opc.name',
-    defaultName: 'Nyati Premium OPC',
+    defaultName: 'Nyati Premium OPC (CEM I OPC 42.5N)',
     image: '/images/products/premiumOPC.jpg',
     descriptionKey: 'products.items.opc.description',
     specs: [
@@ -47,7 +47,7 @@ const products = [
   {
     id: 4,
     nameKey: 'products.items.325n.name',
-    defaultName: 'Nyati Max 32',
+    defaultName: 'Nyati Max 32 (CEM II B-L 32.5N)',
     image: '/images/products/max32.jpg',
     descriptionKey: 'products.items.325n.description',
     specs: [

@@ -49,7 +49,7 @@
     },
     "items": {
       "425r": {
-          "name": "Nyati Super 42",
+          "name": "Nyati Super 42 (CEM II A-L 42.5R)",
         "description": "Higher early strength for fast construction projects",
         "specs": {
           "1": "Early strength development",
@@ -58,7 +58,7 @@
         }
       },
       "425n": {
-         "name": "Nyati Duramax 42",
+         "name": "Nyati Duramax 42 (CEM II A-L 42.5N)",
         "description": "Balanced performance for general construction needs",
         "specs": {
           "1": "Regular strength development",
@@ -67,7 +67,7 @@
         }
       },
       "opc": {
-         "name": "Nyati Premium OPC",
+         "name": "Nyati Premium OPC (CEM I OPC 42.5N)",
         "description": "CEM I OPC 42.5N for specialized applications",
         "specs": {
           "1": "High pure clinker content",
@@ -76,7 +76,7 @@
         }
       },
       "325n": {
-         "name": "Nyati Max 32",
+         "name": "Nyati Max 32 (CEM II B-L 32.5N)",
         "description": "Economic solution for general masonry work",
         "specs": {
           "1": "Mortar and plaster works",

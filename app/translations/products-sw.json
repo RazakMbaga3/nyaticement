@@ -45,7 +45,7 @@
     },
     "products": [
       {
-        "title": "Nyati Super 42",
+        "title": "Nyati Super 42 (CEM II A-L 42.5R)",
         "description": "Imeundwa kwa miradi inayohitaji kuongezeka kwa uimara kwa haraka na udumishaji wa muda mrefu. Inafaa kwa kutengeneza matofali, zege lililotengezwa awali, zege lililokaza, na zege la daraja la juu kwa miundo ya nguvu kubwa kama madaraja na mabwawa.",
         "features": [
           "Nguvu ya Awali ya Juu",
@@ -63,7 +63,7 @@
         ]
       },
       {
-        "title": "Nyati Duramax 42",
+        "title": "Nyati Duramax 42 (CEM II A-L 42.5N)",
         "description": "Saruji yenye utendaji wa hali ya juu kwa miundo imara na yenye kudumu. Inatoa urahisi wa kufanyiakazi na nguvu ya shinikizo, inaifanya kuwa bora kwa miradi ya kawaida ya ujenzi.",
         "features": [
           "Uzalishaji wa Joto la Chini",
@@ -80,7 +80,7 @@
         ]
       },
       {
-        "title": "Nyati Premium OPC",
+        "title": "Nyati Premium OPC (CEM I OPC 42.5N)",
         "description": "Saruji bora inayojulikana kwa nguvu isiyolinganishwa, udumishaji, na utendaji wa kipekee. Chaguo bora kwa miundo muhimu na miradi kubwa kama majengo marefu, madaraja, na mabwawa.",
         "features": [
           "Nguvu ya Awali ya Juu",
@@ -97,7 +97,7 @@
         ]
       },
       {
-        "title": "Nyati Max 32",
+        "title": "Nyati Max 32 (CEM II B-L 32.5N)",
         "description": "Saruji ya kuaminika, ya matumizi ya kawaida kwa ujenzi wa kila siku. Inafaa kwa misingi, kuweka matofali, ujenzi wa mawe, na uimarishaji wa barabara, inatoa nguvu thabiti, urahisi wa kufanyiakazi, na matokeo ya kudumu.",
         "features": [
           "Kuweka kwa Kawaida",

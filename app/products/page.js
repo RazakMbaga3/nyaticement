@@ -16,7 +16,7 @@ const products = [
     id: 1,
     image: '/images/products/super42.jpg',
     fallbackImage: '/images/products/super42.jpg',
-    title: 'Nyati Super 42',
+    title: 'Nyati Super 42 (CEM II A-L 42.5R)',
     subtitle: '42.5R Grade Portland Limestone Cement',
     description: 'Designed for projects requiring rapid strength gain and long-term durability. Suitable for blocks making, precast, prestressed concrete, and high-grade concrete for high-strength structures like bridges and reservoirs.',
     features: [
@@ -38,7 +38,7 @@ const products = [
     id: 2,
     image: '/images/products/duramax42.jpg',
     fallbackImage: '/images/products/duramax42.jpg',
-    title: 'Nyati Duramax 42',
+    title: 'Nyati Duramax 42 (CEM II A-L 42.5N)',
     subtitle: '42.5N Grade Portland Limestone Cement',
     description: 'A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.',
     features: [
@@ -59,7 +59,7 @@ const products = [
     id: 3,
     image: '/images/products/premiumOPC.jpg',
     fallbackImage: '/images/products/premiumOPC.jpg',
-    title: 'Nyati Premium OPC',
+    title: 'Nyati Premium OPC (CEM I OPC 42.5N)',
     subtitle: 'Ordinary Portland Cement (OPC)',
     description: 'A premium cement known for unmatched strength, durability and exceptional performance. The go-to choice for critical structures and large-scale projects like skyscrapers, bridges, and reserviors.',
     features: [
@@ -80,7 +80,7 @@ const products = [
     id: 4,
     image: '/images/products/max32.jpg',
     fallbackImage: '/images/products/max32.jpg',
-    title: 'Nyati Max 32',
+    title: 'Nyati Max 32 (CEM II B-L 32.5N)',
     subtitle: '32.5N Grade Portland Cement',
     description: 'A reliable, general-purpose cement for everyday construction. Ideal for foundations, bricklaying, masonry, and road stabilization, it offers consistent strength, smooth workability, and durable results.',
     features: [

@@ -50,7 +50,7 @@
     },
     "items": {
       "425r": {
-        "name": "Nyati Super 42",
+        "name": "Nyati Super 42 (CEM II A-L 42.5R)",
         "description": "Nguvu ya haraka ya awali kwa miradi ya ujenzi unayohitaji uharaka",
         "specs": {
           "1": "Ukuzaji wa nguvu wa mapema",
@@ -59,7 +59,7 @@
         }
       },
       "425n": {
-        "name": "Nyati Duramax 42",
+        "name": "Nyati Duramax 42 (CEM II A-L 42.5N)",
         "description": "Utendaji ulioimarishwa kwa mahitaji ya kawaida ya ujenzi",
         "specs": {
           "1": "Ukuzaji wa nguvu wa kawaida",
@@ -68,7 +68,7 @@
         }
       },
       "opc": {
-        "name": "Nyati Premium OPC",
+        "name": "Nyati Premium OPC (CEM I OPC 42.5N)",
         "description": "CEM I OPC 42.5N kwa matumizi maalum",
         "specs": {
           "1": "Kiwango cha juu cha klinker safi",
@@ -77,7 +77,7 @@
         }
       },
       "325n": {
-        "name": "Nyati Max 32",
+        "name": "Nyati Max 32 (CEM II B-L 32.5N)",
         "description": "Suluhisho la kiuchumi kwa kazi za ujenzi wa kawaida",
         "specs": {
           "1": "Kazi za mota na plasta",
