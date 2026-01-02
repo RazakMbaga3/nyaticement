@@ -16,6 +16,7 @@ export default function NewProductCard({ product, index }) {
     image = '',
     fallbackImage = '',
     title = 'Product Title',
+    subtitle = '',
     description = 'Product Description',
     features = [],
     applications = []
@@ -91,11 +92,21 @@ export default function NewProductCard({ product, index }) {
         <div className="lg:w-3/5 p-6">
           {/* Product Title */}
           <motion.h2 
-            className="text-2xl font-bold mb-3 text-nyati-navy"
+            className="text-2xl font-bold mb-1 text-nyati-navy"
             layoutId={`title-${index}`}
           >
             {title}
           </motion.h2>
+          {subtitle && (
+            <motion.h3
+              className="text-base font-semibold mb-3 text-nyati-orange"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.15 }}
+            >
+              {subtitle}
+            </motion.h3>
+          )}
           
           {/* Product Description */}
           <motion.p 

@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useTranslations } from '../../hooks/useTranslations'
 
 export default function ProductCard({ product, index }) {
-  const { image, fallbackImage, title, description, features, applications } = product || {};
+  const { image, fallbackImage, title, subtitle, description, features, applications } = product || {};
   const [isExpanded, setIsExpanded] = useState(false)
   const [imageError, setImageError] = useState(false)
   const { t } = useTranslations()
@@ -65,11 +65,22 @@ export default function ProductCard({ product, index }) {
         
         <div className="lg:w-3/5 p-6">
           <motion.h2 
-            className="text-2xl font-bold mb-3 text-nyati-navy"
+            className="text-2xl font-bold mb-1 text-nyati-navy"
             layoutId={`title-${title}`}
           >
             {title || 'Product Title'}
-          </motion.h2>          <motion.p 
+          </motion.h2>
+          {subtitle && (
+            <motion.h3
+              className="text-base font-semibold mb-3 text-nyati-orange"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.15 }}
+            >
+              {subtitle}
+            </motion.h3>
+          )}
+          <motion.p 
             className="text-gray-700 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

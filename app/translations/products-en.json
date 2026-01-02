@@ -45,7 +45,8 @@
     },
     "products": [
       {
-        "title": "42.5R Grade Portland Limestone Cement",
+        "title": "Nyati Super 42",
+        "subtitle": "42.5R Grade Portland Limestone Cement",
         "description": "Designed for projects requiring rapid strength gain and long-term durability. Suitable for blocks making, precast, prestressed concrete, and high-grade concrete for high-strength structures like bridges and reservoirs.",
         "features": [
           "High Early Strength",
@@ -63,7 +64,8 @@
         ]
       },
       {
-        "title": "42.5N Grade Portland Limestone Cement",
+        "title": "Nyati Duramax 42",
+        "subtitle": "42.5N Grade Portland Limestone Cement",
         "description": "A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.",
         "features": [
           "Low Heat Generation",
@@ -80,7 +82,8 @@
         ]
       },
       {
-        "title": "Ordinary Portland Cement",
+        "title": "Nyati Premium OPC",
+        "subtitle": "Ordinary Portland Cement",
         "description": "A premium cement known for unmatched strength, durability and exceptional performance. The go-to choice for critical structures and large-scale projects like skyscrapers, bridges, and reserviors.",
         "features": [
           "High Early Strength",
@@ -97,7 +100,8 @@
         ]
       },
       {
-        "title": "32.5N Grade Portland Cement",
+        "title": "Nyati Max 32",
+        "subtitle": "32.5N Grade Portland Cement",
         "description": "A reliable, general-purpose cement for everyday construction. Ideal for foundations, bricklaying, masonry, and road stabilization, it offers consistent strength, smooth workability, and durable results.",
         "features": [
           "Normal Setting",

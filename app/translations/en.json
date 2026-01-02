@@ -49,7 +49,7 @@
     },
     "items": {
       "425r": {
-        "name": "Nyati 42.5R",
+          "name": "Nyati Super 42",
         "description": "Higher early strength for fast construction projects",
         "specs": {
           "1": "Early strength development",
@@ -58,7 +58,7 @@
         }
       },
       "425n": {
-        "name": "Nyati 42.5N",
+         "name": "Nyati Duramax 42",
         "description": "Balanced performance for general construction needs",
         "specs": {
           "1": "Regular strength development",
@@ -67,7 +67,7 @@
         }
       },
       "opc": {
-        "name": "Nyati OPC",
+         "name": "Nyati Premium OPC",
         "description": "CEM I OPC 42.5N for specialized applications",
         "specs": {
           "1": "High pure clinker content",
@@ -76,7 +76,7 @@
         }
       },
       "325n": {
-        "name": "Nyati 32.5N",
+         "name": "Nyati Max 32",
         "description": "Economic solution for general masonry work",
         "specs": {
           "1": "Mortar and plaster works",
@@ -350,20 +350,49 @@
     "description": "Easy access to our products through distribution points nationwide"
   },
   "productsPage": {
-    "title": "Our Products",
-    "subtitle": "Superior Solutions for All Your Construction Needs",
-    "description": "We offer superior cement products designed to meet the diverse requirements of your project",
-    "keyFeatures": "Key Features",
-    "idealFor": "Ideal For",
-    "applications": "Applications",
-    "packagingOptions": "Packaging Options",
-    "grade": "Grade",
-    "viewDetails": "View Details",
-    "learnMore": "Learn More",
-    "howToBuy": "How to Buy",
-    "whereToFind": "Where to Find",
-    "qualityCertifications": "Quality Certifications",
-    "technicalSpecifications": "Technical Specifications"
+    "hero": {
+      "breadcrumb": {
+        "home": "Home",
+        "products": "Products"
+      },
+      "title": "Our Products",
+      "highlight": "Quality Cement",
+      "description": "Explore our high-quality cement products designed for excellence in every construction project."
+    },
+    "intro": {
+      "text": "Our premium cement products are engineered to meet a wide range of construction needs, from everyday building to specialized engineering applications."
+    },
+    "features": {
+      "title": "What Makes Us Different",
+      "description": "Our cement products excel in key areas that ensure top performance and quality for your construction projects."
+    },
+    "applications": {
+      "title": "Versatile Applications",
+      "description": "From small residential projects to major infrastructure, Nyati Cement delivers outstanding results across a variety of uses."
+    },
+    "packaging": {
+      "title": "Packaging Options",
+      "description": "We offer flexible packaging solutions for every project size, from small home builds to large commercial developments.",
+      "options": [
+        {
+          "title": "50kg Bags",
+          "description": "Standard packaging suitable for small to medium projects. Easy to handle, transport, and store at any construction site."
+        },
+        {
+          "title": "1.5 Ton Bulk Bags",
+          "description": "Efficient solution for medium to large projects, reducing packaging waste and increasing productivity."
+        },
+        {
+          "title": "Bulk Tanker Delivery",
+          "description": "Ideal for large-scale projects, providing maximum efficiency and direct delivery to silos, eliminating packaging altogether."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Build Better?",
+      "description": "Contact us today to discuss how Nyati Cement products can meet your specific construction needs.",
+      "button": "Contact Us"
+    }
   },
   "productsSection": {
     "title": "Our Products",
@@ -381,17 +410,17 @@
       "resistance": "Resistance"
     },
     "nyati32": {
-      "title": "Nyati 32.5N",
+      "title": "Nyati Max 32",
       "description": "Ideal for general masonry works, plastering and screeding",
       "features": "Perfect balance of workability and strength for everyday construction needs"
     },
     "nyati42": {
-      "title": "Nyati 42.5N",
+      "title": "Nyati Duramax 42",
       "description": "Versatile cement for structural concrete applications",
       "features": "Superior strength development for demanding construction projects"
     },
     "nyati42r": {
-      "title": "Nyati 42.5R",
+      "title": "Nyati Super 42",
       "description": "Rapid-hardening cement for fast-track construction",
       "features": "Excellent early strength development for quick form removal and fast construction"
     },

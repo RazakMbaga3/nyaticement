@@ -11,8 +11,8 @@ const products = [
   {
     id: 1,
     nameKey: 'products.items.425r.name',
-    defaultName: 'Nyati 42.5R',
-    image: '/images/products/Nyati-42.5.jpg',
+    defaultName: 'Nyati Super 42',
+    image: '/images/products/super42.jpg',
     descriptionKey: 'products.items.425r.description',
     specs: [
       'products.items.425r.specs.1',
@@ -23,8 +23,8 @@ const products = [
   {
     id: 2,
     nameKey: 'products.items.425n.name',
-    defaultName: 'Nyati 42.5N',
-    image: '/images/products/Nyati-42.5N.jpg',
+    defaultName: 'Nyati Duramax 42',
+    image: '/images/products/duramax42.jpg',
     descriptionKey: 'products.items.425n.description',
     specs: [
       'products.items.425n.specs.1',
@@ -35,8 +35,8 @@ const products = [
   {
     id: 3,
     nameKey: 'products.items.opc.name',
-    defaultName: 'Nyati OPC',
-    image: '/images/products/Nyati-OPC.png',
+    defaultName: 'Nyati Premium OPC',
+    image: '/images/products/premiumOPC.jpg',
     descriptionKey: 'products.items.opc.description',
     specs: [
       'products.items.opc.specs.1',
@@ -47,8 +47,8 @@ const products = [
   {
     id: 4,
     nameKey: 'products.items.325n.name',
-    defaultName: 'Nyati 32.5N',
-    image: '/images/products/Nyati-32.5N.jpg',
+    defaultName: 'Nyati Max 32',
+    image: '/images/products/max32.jpg',
     descriptionKey: 'products.items.325n.description',
     specs: [
       'products.items.325n.specs.1',

@@ -50,7 +50,7 @@
     },
     "items": {
       "425r": {
-        "name": "Nyati 42.5R",
+        "name": "Nyati Super 42",
         "description": "Nguvu ya haraka ya awali kwa miradi ya ujenzi unayohitaji uharaka",
         "specs": {
           "1": "Ukuzaji wa nguvu wa mapema",
@@ -59,7 +59,7 @@
         }
       },
       "425n": {
-        "name": "Nyati 42.5N",
+        "name": "Nyati Duramax 42",
         "description": "Utendaji ulioimarishwa kwa mahitaji ya kawaida ya ujenzi",
         "specs": {
           "1": "Ukuzaji wa nguvu wa kawaida",
@@ -68,7 +68,7 @@
         }
       },
       "opc": {
-        "name": "Nyati OPC",
+        "name": "Nyati Premium OPC",
         "description": "CEM I OPC 42.5N kwa matumizi maalum",
         "specs": {
           "1": "Kiwango cha juu cha klinker safi",
@@ -77,7 +77,7 @@
         }
       },
       "325n": {
-        "name": "Nyati 32.5N",
+        "name": "Nyati Max 32",
         "description": "Suluhisho la kiuchumi kwa kazi za ujenzi wa kawaida",
         "specs": {
           "1": "Kazi za mota na plasta",
@@ -382,17 +382,17 @@
       "resistance": "Usugu"
     },
     "nyati32": {
-      "title": "Nyati 32.5N",
+      "title": "Nyati Max 32",
       "description": "Inafaa kwa kazi za jumla za uashi, kupaka na kushikiza",
       "features": "Usawa kamili wa kufanya kazi kwa urahisi na nguvu kwa mahitaji ya ujenzi ya kila siku"
     },
     "nyati42": {
-      "title": "Nyati 42.5N",
+      "title": "Nyati Duramax 42",
       "description": "Saruji ya matumizi mbalimbali kwa matumizi ya konkriti ya muundo",
       "features": "Ukuzaji wa nguvu wa juu kwa miradi ya ujenzi yenye mahitaji makubwa"
     },
     "nyati42r": {
-      "title": "Nyati 42.5R",
+      "title": "Nyati Super 42",
       "description": "Saruji inayoganda haraka kwa ujenzi wa haraka",
       "features": "Ukuzaji wa nguvu mzuri wa mapema kwa kuondoa fomu haraka na ujenzi wa haraka"
     },
@@ -428,5 +428,97 @@
     "applications": "Matumizi",
     "showMore": "Onyesha Zaidi",
     "showLess": "Onyesha Kidogo"
+  }
+  ,
+  "newsPage": {
+    "hero": {
+      "breadcrumbs": {"home": "Nyumbani", "news": "Habari"},
+      "title": "Habari",
+      "titleSpan": "Habari Mpya",
+      "description": "Pata habari na matangazo mapya."
+    },
+    "introduction": {"title": "Utangulizi", "description": "Karibu kwenye sehemu ya habari."},
+    "sections": {"featured": "Habari Maarufu", "allNews": "Habari Zote"},
+    "categories": {"company": "Kampuni"},
+    "actions": {"readMore": "Soma Zaidi"}
+  },
+  "plantPage": {
+    "hero": {
+      "breadcrumb": {"home": "Nyumbani", "about": "Kuhusu", "plant": "Kiwanda"},
+      "title": "Kiwanda Chetu",
+      "highlight": "Teknolojia ya Kisasa"
+    },
+    "introduction": "Jifunze zaidi kuhusu kiwanda chetu cha kisasa."
+  },
+  "csrPage": {
+    "hero": {
+      "breadcrumb": {"home": "Nyumbani", "about": "Kuhusu", "csr": "CSR"},
+      "title": "Uwajibikaji wa Shirika",
+      "highlight": "Mchango kwa Jamii",
+      "description": "Dhamira yetu ya uwajibikaji wa kijamii."
+    },
+    "approach": {"title": "Mtazamo Wetu", "description": "Jinsi tunavyofanya mabadiliko."},
+    "impactStories": {"title": "Hadithi za Mabadiliko", "description": "Hadithi za mafanikio.", "readMore": "Soma Zaidi", "viewAll": "Angalia Yote"},
+    "pillars": {"community": {"name": "Jamii"}, "healthcare": {"name": "Afya"}, "education": {"name": "Elimu"}},
+    "getInvolved": {"title": "Shiriki Nasi", "description": "Jiunge na miradi yetu.", "partnership": {"title": "Ushirikiano", "description": "Shirikiana nasi.", "button": "Shirikiana"}, "support": {"title": "Saidia", "description": "Saidia kazi yetu.", "button": "Saidia"}}
+  },
+  "careersPage": {
+    "hero": {
+      "breadcrumb": {"home": "Nyumbani", "careers": "Ajira"},
+      "title": "Ajira",
+      "highlight": "Jiunge na Timu Yetu",
+      "description": "Gundua fursa za kazi nasi.",
+      "metrics": {"teamMembers": {"count": "100+", "label": "Wafanyakazi"}, "departments": {"count": "5", "label": "Idara"}, "growthFocus": {"count": "Ukuaji", "label": "Mkazo"}}
+    },
+    "mission": {"title": "Dhamira Yetu", "description": "Kukuza vipaji."},
+    "joinTeam": {"title": "Jiunge na Timu Yetu"},
+    "futureLeaders": {"title": "Viongozi wa Baadaye", "description": "Jenga kazi yako nasi."},
+    "whyWorkWithUs": {"title": "Kwa Nini Ufanye Kazi Nasi"},
+    "cta": {"title": "Omba Sasa", "description": "Tuma maombi yako.", "emailLabel": "Barua Pepe", "buttonText": "Tuma"}
+  },
+  "contactPage": {
+    "offices": {"locations": {"corporate": {"title": "Ofisi Kuu", "position": "Makao Makuu", "address": "Mtaa Mkuu 123", "phone": "+255 123 456"}, "plant": {"title": "Kiwanda", "position": "Eneo la Kiwanda", "address": "Anwani ya Kiwanda", "phone": "+255 987 654"}, "title": "Eneo"}, "sales": {"regions": [{"region": "Kanda 1", "phone": "+255 111 111"}, {"region": "Kanda 2", "phone": "+255 222 222"}, {"region": "Kanda 3", "phone": "+255 333 333"}], "title": "Mauzo"}},
+    "hero": {"breadcrumbs": {"home": "Nyumbani", "contact": "Wasiliana Nasi"}, "title": "Wasiliana Nasi", "titleSpan": "Tupo Kwa Ajili Yako", "description": "Wasiliana nasi.", "stats": {"support": {"value": "24/7", "label": "Msaada"}, "responseTime": {"value": "1h", "label": "Wastani wa Majibu"}, "customerFocus": {"value": "100%", "label": "Mteja Kwanza"}}},
+    "form": {"title": "Fomu ya Mawasiliano", "writeToUs": {"title": "Tuandikie", "description": "Tuma ujumbe."}, "fields": {"firstName": "Jina la Kwanza", "lastName": "Jina la Mwisho", "contactNumber": "Namba ya Simu", "email": "Barua Pepe", "firmName": "Jina la Kampuni", "address": "Anwani", "message": "Ujumbe"}, "buttons": {"reset": "Futa", "submit": "Tuma"}},
+    "maps": {"title": "Eneo Letu", "headOffice": "Ofisi Kuu", "factory": "Kiwanda"}
+  },
+  "productsPage": {
+    "hero": {"title": "Bidhaa Zetu", "breadcrumb": {"home": "Nyumbani", "products": "Bidhaa"}, "highlight": "Saruji Bora", "description": "Chunguza bidhaa zetu."},
+    "intro": {"text": "Saruji bora kwa mahitaji yako."},
+    "features": {"title": "Sifa", "description": "Sifa kuu za bidhaa zetu."},
+    "applications": {"title": "Matumizi", "description": "Mahali pa kutumia saruji yetu."},
+    "packaging": {"title": "Ufungaji", "description": "Chaguzi za ufungaji."},
+    "cta": {"title": "Agiza Sasa", "description": "Wasiliana nasi kuagiza.", "button": "Agiza"}
+  },
+  "distributionPage": {
+    "hero": {"breadcrumb": {"home": "Nyumbani", "distribution": "Usambazaji"}, "title": "Mtandao wa Usambazaji", "highlight": "Nchi Nzima", "description": "Mtandao wetu wa usambazaji.", "stats": {"support": "24/7", "supportText": "Daima Tupo"}},
+    "hotline": {"title": "Namba ya Dharura", "number": "+255 800 123 456"},
+    "form": {"title": "Fomu ya Msambazaji", "subtitle": "Kuwa msambazaji.", "labels": {"firmName": "Jina la Kampuni", "address": "Anwani", "area": "Eneo", "city": "Jiji", "poBox": "Sanduku la Posta", "contactPerson": "Mtu wa Mawasiliano", "contactNumber": "Namba ya Simu", "email": "Barua Pepe"}, "buttons": {"submit": "Tuma", "reset": "Futa"}},
+    "service": {"title": "Huduma Zetu"}
+  },
+  "aboutUsPage": {
+    "hero": {"breadcrumb": {"home": "Nyumbani", "about": "Kuhusu", "aboutUs": "Kuhusu Sisi"}, "title": "Kuhusu Sisi", "highlight": "Hadithi Yetu", "description": "Jifunze zaidi kuhusu sisi."},
+    "aboutSection": {"title": "Kuhusu Sisi"},
+    "missionVision": {"mission": {"title": "Dhamira", "description": "Dhamira yetu."}, "vision": {"title": "Maono", "description": "Maono yetu."}},
+    "coreValues": {"title": "Maadili"},
+    "advantage": {"title": "Faida Yetu", "description": "Kwa nini utuchague?"}
+  },
+  "certificationsPage": {
+    "hero": {"breadcrumb": {"home": "Nyumbani", "about": "Kuhusu", "certifications": "Vyeti"}, "description": "Vyeti vyetu."},
+    "downloadButton": "Pakua"
+  },
+  "sustainabilityPage": {
+    "policy": {"cards": [{"title": "Sera 1", "text": "Maelezo ya sera."}, {"title": "Sera 2", "text": "Maelezo ya sera."}]},
+    "technologies": {"items": [{"title": "Teknolojia 1", "text": "Maelezo ya teknolojia."}, {"title": "Teknolojia 2", "text": "Maelezo ya teknolojia."}, {"title": "Teknolojia 3", "text": "Maelezo ya teknolojia."}]},
+    "energy": {"items": [{"title": "Nishati 1", "text": "Maelezo ya nishati."}, {"title": "Nishati 2", "text": "Maelezo ya nishati."}]},
+    "initiatives": {"items": [{"title": "Mpango 1", "text": "Maelezo ya mpango."}, {"title": "Mpango 2", "text": "Maelezo ya mpango."}]},
+    "hero": {"breadcrumb": {"home": "Nyumbani", "sustainability": "Uendelevu"}, "title": "Uendelevu", "highlight": "Mustakabali wa Kijani", "titleEnd": "Kwa Wote", "description": "Juhudi zetu za uendelevu."},
+    "intro": {"title": "Utangulizi", "highlight": "Uendelevu", "text": "Tumejitolea kwa uendelevu."},
+    "policy": {"title": "Sera Yetu"},
+    "sustainability": {"title": "Uendelevu", "text": "Mikakati yetu ya uendelevu."},
+    "commitment": {"title": "Dhamira Yetu", "quote": "Tunajali sayari.", "attribution": "Mkurugenzi Mtendaji"},
+    "technologies": {"title": "Teknolojia"},
+    "energy": {"title": "Nishati"},
+    "initiatives": {"title": "Mikakati"}
   }
 }
