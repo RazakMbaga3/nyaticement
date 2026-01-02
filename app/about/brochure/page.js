@@ -122,7 +122,7 @@ export default function BrochurePage() {
                   
                   {/* Download Button */}
                   <motion.a 
-                    href="/PDF/Brochure2024.pdf" 
+                    href="/PDF/Brochure2025.pdf" 
                     download
                     className="inline-flex items-center justify-center bg-nyati-orange hover:bg-nyati-navy text-white px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 shadow-lg w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
