@@ -175,7 +175,7 @@ export default function CementGradesPage() {
             'Wakati muda ni muhimu lakini nguvu haiwezi kupunguzwa, Nyati 42.5R inaruhusu kuondolewa kwa fomu haraka zaidi, kupakia mapema kwa miundo, na kukamilisha mradi haraka zaidi huku ikidumisha udhabiti wa kipekee wa muda mrefu.'
           }
         </p>
-      </div>      <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">{language === 'en' ? 'Nyati Cement CEM II A-L 42.5N: The All-Purpose Performer' : 'Saruji ya Nyati CEM II A-L 42.5N: Mtendaji wa Madhumuni Yote'}</h2>
+      </div>      <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">{language === 'en' ? 'Nyati Cement CEM II B-M 42.5N: The All-Purpose Performer' : 'Saruji ya Nyati CEM II B-M 42.5N: Mtendaji wa Madhumuni Yote'}</h2>
       <div className="bg-amber-50 p-6 rounded-lg mb-6 border-l-4 border-nyati-orange">
         <h3 className="text-xl font-bold text-nyati-navy mb-3">{language === 'en' ? 'Key Features:' : 'Sifa Muhimu:'}</h3>
         <ul className="list-disc pl-6 mb-4">
