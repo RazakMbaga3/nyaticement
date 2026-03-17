@@ -104,7 +104,7 @@ export default function Header() {
                       <li><Link href="/certifications" className="block px-4 py-2 text-sm text-nyati-dark-blue hover:bg-nyati-orange hover:text-white transition-colors">CERTIFICATIONS</Link></li>
                       <li><Link href="/csr" className="block px-4 py-2 text-sm text-nyati-dark-blue hover:bg-nyati-orange hover:text-white transition-colors">CSR</Link></li>
                       <li><Link href="/code-of-conduct" className="block px-4 py-2 text-sm text-nyati-dark-blue hover:bg-nyati-orange hover:text-white transition-colors">CODE OF CONDUCT</Link></li>
-                      <li><a href="/PDF/Brochure 2024 FINAL LOW RES.pdf" target="_blank" className="block px-4 py-2 text-sm text-nyati-dark-blue hover:bg-nyati-orange hover:text-white transition-colors">BROCHURE</a></li>
+                      <li><a href="/PDF/Brochure2026.pdf.pdf" target="_blank" className="block px-4 py-2 text-sm text-nyati-dark-blue hover:bg-nyati-orange hover:text-white transition-colors">BROCHURE</a></li>
                     </motion.ul>
                   )}
                 </AnimatePresence>
