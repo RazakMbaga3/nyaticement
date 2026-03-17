@@ -23,7 +23,7 @@ const products = [
   {
     id: 2,
     nameKey: 'products.items.425n.name',
-    defaultName: 'Nyati Duramax 42 (CEM II A-L 42.5N)',
+    defaultName: 'Nyati Duramax 42 (CEM II B-M 42.5N)',
     image: '/images/products/duramax42.jpg',
     descriptionKey: 'products.items.425n.description',
     specs: [
