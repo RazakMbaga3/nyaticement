@@ -358,7 +358,7 @@ export default function CareersPage() {
                       className="lg:col-span-5 relative rounded-sm overflow-hidden shadow-md h-80"
                     >
                       <Image 
-                        src="/images/career7.jpg" 
+                        src="/images/LakeCementStaffs121.jpg" 
                         alt="Graduates Together" 
                         fill
                         className="object-cover"
