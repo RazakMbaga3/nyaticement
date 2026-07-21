@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function CTABanner() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-nyati-navy py-20">

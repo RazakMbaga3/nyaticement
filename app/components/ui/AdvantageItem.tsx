@@ -1,9 +1,14 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const AdvantageItem = ({ title, description, index }) => {
+interface AdvantageItemProps {
+  title: string;
+  description: string;
+  index: number;
+}
+
+export default function AdvantageItem({ title, description, index }: AdvantageItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -16,6 +21,4 @@ const AdvantageItem = ({ title, description, index }) => {
       <p className="text-gray-600 text-sm">{description}</p>
     </motion.div>
   );
-};
-
-export default AdvantageItem;
+}

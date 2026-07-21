@@ -37,7 +37,7 @@ const values = [
 
 export default function BrandValues() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.12 })
+  const isInView = useInView(ref, { once: true, amount: 0.12 })
 
   return (
     <section ref={ref} className="py-20 bg-nyati-navy relative overflow-hidden">

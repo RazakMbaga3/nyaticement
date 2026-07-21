@@ -1,4 +1,3 @@
-// app/components/ui/CementBanner.jsx
 'use client'
 
 import { useRef } from 'react'
@@ -7,8 +6,8 @@ import Image from 'next/image'
 
 export default function CementBanner() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.2 })
-  
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
+
   return (
     <div className="w-full my-8" ref={ref}>
       <div className="container mx-auto px-0">
@@ -23,7 +22,7 @@ export default function CementBanner() {
             fill
             className="object-cover"
           />
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-r from-nyati-navy/30 to-transparent"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}

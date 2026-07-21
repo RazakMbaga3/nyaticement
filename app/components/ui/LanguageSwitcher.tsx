@@ -1,12 +1,10 @@
 'use client';
 
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import { useTranslations } from '@/app/hooks/useTranslations';
 
 export default function LanguageSwitcher() {
   const { language, switchLanguage } = useLanguage();
-  const { t } = useTranslations();
-  
+
   return (
     <div className="flex items-center space-x-2 text-sm bg-white/80 backdrop-blur-sm p-1 rounded shadow-sm">
       <button

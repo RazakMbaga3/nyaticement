@@ -1,9 +1,14 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const CoreValueCard = ({ icon, title, description }) => {
+interface CoreValueCardProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export default function CoreValueCard({ icon, title, description }: CoreValueCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -14,6 +19,4 @@ const CoreValueCard = ({ icon, title, description }) => {
       <p className="text-gray-600 text-sm">{description}</p>
     </motion.div>
   );
-};
-
-export default CoreValueCard;
+}

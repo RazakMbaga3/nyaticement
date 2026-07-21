@@ -1,11 +1,18 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-const CompactInfoCard = ({ title, imageSrc, description, linkPath, index }) => {
+interface CompactInfoCardProps {
+  title: string;
+  imageSrc: string;
+  description: string;
+  linkPath: string;
+  index: number;
+}
+
+export default function CompactInfoCard({ title, imageSrc, description, linkPath, index }: CompactInfoCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -24,7 +31,7 @@ const CompactInfoCard = ({ title, imageSrc, description, linkPath, index }) => {
       <div className="p-4">
         <h3 className="text-nyati-navy font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{description}</p>
-        <Link 
+        <Link
           href={linkPath}
           className="text-nyati-orange hover:text-nyati-navy text-sm font-medium flex items-center"
         >
@@ -36,6 +43,4 @@ const CompactInfoCard = ({ title, imageSrc, description, linkPath, index }) => {
       </div>
     </motion.div>
   );
-};
-
-export default CompactInfoCard;
+}

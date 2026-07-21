@@ -83,7 +83,7 @@ function AnimatedCounter({ value, suffix, active }) {
 
 export default function StatsStrip() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.25 })
+  const isInView = useInView(ref, { once: true, amount: 0.25 })
 
   return (
     <section ref={ref} className="bg-nyati-orange py-14 relative overflow-hidden">

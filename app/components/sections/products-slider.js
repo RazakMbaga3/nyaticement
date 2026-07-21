@@ -62,7 +62,7 @@ export default function ProductsSlider() {
   const { t } = useTranslations();
   const [activeIndex, setActiveIndex] = useState(0)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
   
   const nextSlide = () => {
     setActiveIndex((current) => (current === products.length - 1 ? 0 : current + 1))

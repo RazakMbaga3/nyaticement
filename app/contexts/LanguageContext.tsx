@@ -1,12 +1,22 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+// Nested translation JSON structure - shape varies per page/locale file
+type Translations = Record<string, any>;
+
+interface LanguageContextValue {
+  language: string;
+  translations: Translations;
+  switchLanguage: (newLanguage: string) => Promise<void>;
+  isLoading: boolean;
+}
 
 // Create the language context
-const LanguageContext = createContext(null);
+const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 // Default translations to use when keys are missing
-const defaultFallbacks = {
+const defaultFallbacks: Translations = {
   common: {
     loading: 'Loading...',
     readMore: 'Read More',
@@ -20,15 +30,15 @@ const defaultFallbacks = {
 };
 
 // Language Provider Component
-export function LanguageProvider({ children }) {
+export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState('en');
-  const [translations, setTranslations] = useState(defaultFallbacks);
+  const [translations, setTranslations] = useState<Translations>(defaultFallbacks);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Load saved language preference
     let savedLanguage = 'en';
-    
+
     // Only access localStorage on the client side
     if (typeof window !== 'undefined') {
       savedLanguage = localStorage.getItem('language') || 'en';
@@ -62,14 +72,14 @@ export function LanguageProvider({ children }) {
     loadTranslations();
   }, []);
 
-  const switchLanguage = async (newLanguage) => {
+  const switchLanguage = async (newLanguage: string) => {
     try {
       setIsLoading(true);
       const response = await import(`../translations/${newLanguage}.json`);
       // Merge with default fallbacks
       setTranslations({...defaultFallbacks, ...response.default});
       setLanguage(newLanguage);
-      
+
       // Only access localStorage on the client side
       if (typeof window !== 'undefined') {
         localStorage.setItem('language', newLanguage);
@@ -79,7 +89,7 @@ export function LanguageProvider({ children }) {
       if (process.env.NODE_ENV !== 'production') {
         console.error('Error switching language:', error);
       }
-      
+
       // If switching fails, revert to defaults with fallbacks
       try {
         const fallback = await import('../translations/en.json');
@@ -93,7 +103,7 @@ export function LanguageProvider({ children }) {
   };
 
   // The value that will be provided to consumers of this context
-  const contextValue = {
+  const contextValue: LanguageContextValue = {
     language,
     translations,
     switchLanguage,
