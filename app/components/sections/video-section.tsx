@@ -1,4 +1,4 @@
-// app/components/sections/video-section.js
+// app/components/sections/video-section.tsx
 'use client'
 
 import { useRef, useState } from 'react'
@@ -58,7 +58,7 @@ export default function VideoSection() {
       }
     }
   }
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -69,12 +69,12 @@ export default function VideoSection() {
   }
 
   return (
-    <section 
-      ref={ref} 
+    <section
+      ref={ref}
       className="py-8 bg-gradient-to-b from-white to-gray-50 max-w-7xl mx-auto"
     >
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
@@ -86,7 +86,7 @@ export default function VideoSection() {
           <p className="text-gray-600 text-lg">
             {t('videos.description')}
           </p>
-          
+
           {/* Tabs */}
           <div className="flex justify-center mt-2 border-b border-gray-200">
             <motion.button
@@ -94,13 +94,13 @@ export default function VideoSection() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab('videos')}
               className={`px-6 py-3 font-medium text-sm transition-all duration-300 relative ${
-                activeTab === 'videos' 
+                activeTab === 'videos'
                   ? 'text-nyati-orange'                  : 'text-gray-500 hover:text-nyati-navy'
               }`}
             >
               {t('videos.watchVideos')}
               {activeTab === 'videos' && (
-                <motion.span 
+                <motion.span
                   layoutId="activeTab"
                   className="absolute bottom-0 left-0 right-0 h-0.5 bg-nyati-orange "
                 ></motion.span>
@@ -111,13 +111,13 @@ export default function VideoSection() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab('audio')}
               className={`px-6 py-3 font-medium text-sm transition-all duration-300 relative ${
-                activeTab === 'audio' 
-                  ? 'text-nyati-orange' 
+                activeTab === 'audio'
+                  ? 'text-nyati-orange'
                   : 'text-gray-500 hover:text-nyati-navy'              }`}
             >
               {t('videos.listenAudio')}
               {activeTab === 'audio' && (
-                <motion.span 
+                <motion.span
                   layoutId="activeTab"
                   className="absolute bottom-0 left-0 right-0 h-0.5 bg-nyati-orange"
                 ></motion.span>
@@ -129,7 +129,7 @@ export default function VideoSection() {
         <AnimatePresence mode="wait">
           {/* Videos Content */}
           {activeTab === 'videos' && (
-            <motion.div 
+            <motion.div
               key="videos"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -138,11 +138,11 @@ export default function VideoSection() {
               className="mt-0 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start"
             >
               {/* Featured Video */}
-              <motion.div 
+              <motion.div
                 className="lg:col-span-2"
                 variants={itemVariants}
               >
-                <motion.div 
+                <motion.div
                   className="bg-white rounded-sm shadow-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1"
                   whileHover={{ y: -5 }}
                 >
@@ -154,8 +154,8 @@ export default function VideoSection() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10 flex items-center justify-center">
-                      <motion.a 
-                        href={mainVideo.url} 
+                      <motion.a
+                        href={mainVideo.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-20 h-20 rounded-full bg-nyati-orange/90 flex items-center justify-center transform transition-transform duration-500"
@@ -173,7 +173,7 @@ export default function VideoSection() {
                     <p className="text-gray-600 mb-4">
                       {t(mainVideo.descriptionKey) || "Experience the strength and reliability of Nyati Cement in our featured advertisement."}
                     </p>
-                    <motion.a 
+                    <motion.a
                       href={mainVideo.url}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -181,29 +181,29 @@ export default function VideoSection() {
                       whileHover={{ x: 5 }}
                     >
                       <span>{t('videos.watchOnYouTube')}</span>
-                      <svg 
-                        className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover/link:translate-x-1" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover/link:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path strokeLinecap="square" strokeLinejoin="square" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        <path strokeLinecap="square" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </motion.a>
                   </div>
                 </motion.div>
               </motion.div>
-              
+
               {/* Secondary Videos */}
-              <motion.div 
+              <motion.div
                 className="space-y-6"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
               >
                 {secondaryVideos.map((video, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="bg-white rounded-sm shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
                     variants={itemVariants}
@@ -216,10 +216,10 @@ export default function VideoSection() {
                           className="object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <motion.a 
+                          <motion.a
                             href={video.url}
                             target="_blank"
-                            rel="noopener noreferrer" 
+                            rel="noopener noreferrer"
                             className="w-12 h-12 rounded-full bg-nyati-orange flex items-center justify-center"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
@@ -232,27 +232,27 @@ export default function VideoSection() {
                       </div>
                       <div className="p-4 sm:w-2/3 lg:w-full">
                         <h3 className="font-bold text-sm text-nyati-navy mb-1">{t(video.titleKey, video.defaultTitle)}</h3>
-                        <motion.a 
+                        <motion.a
                           href={video.url}
                           target="_blank"
-                          rel="noopener noreferrer" 
+                          rel="noopener noreferrer"
                           className="text-sm inline-flex items-center font-medium text-nyati-orange hover:text-nyati-navy transition-colors duration-300"
                           whileHover={{ x: 3 }}
                         >                          <span>{t('videos.watchVideo')}</span>
                           <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="square" strokeLinejoin="square" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            <path strokeLinecap="square" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
                         </motion.a>
                       </div>
                     </div>
                   </motion.div>
                 ))}
-                
-                <motion.div 
+
+                <motion.div
                   className="text-center pt-4"
                   variants={itemVariants}
                 >
-                  <motion.a 
+                  <motion.a
                     href="https://www.youtube.com/channel/UChjS00dKvqhw0uSoepoqIIQ"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -272,7 +272,7 @@ export default function VideoSection() {
 
           {/* Audio Content */}
           {activeTab === 'audio' && (
-            <motion.div 
+            <motion.div
               key="audio"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ export default function VideoSection() {
               transition={{ duration: 0.5 }}
               className="mt-12"
             >
-              <motion.div 
+              <motion.div
                 className="max-w-4xl mx-auto bg-gradient-to-br from-nyati-navy to-navy-700 rounded-sm shadow-xl p-8 text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -289,17 +289,17 @@ export default function VideoSection() {
                 <div className="flex flex-col md:flex-row items-center mb-12">
                   <div className="md:w-1/3 mb-6 md:mb-0">
                     <div className="w-48 h-48 mx-auto relative">
-                      <motion.div 
+                      <motion.div
                         className="absolute inset-0 rounded-full bg-nyati-orange/20"
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       ></motion.div>
-                      <motion.div 
+                      <motion.div
                         className="absolute inset-4 rounded-full bg-nyati-orange/40"
                         animate={{ scale: [1, 1.15, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
                       ></motion.div>
-                      <motion.div 
+                      <motion.div
                         className="absolute inset-8 rounded-full bg-nyati-orange/60"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
@@ -321,15 +321,15 @@ export default function VideoSection() {
                     </p>
                   </div>
                 </div>
-                
-                <motion.div 
+
+                <motion.div
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
                 >
                   {audioSpots.map((spot, index) => (
-                    <motion.a 
+                    <motion.a
                       key={index}
                       href={spot.url}
                       target="_blank"
@@ -340,7 +340,7 @@ export default function VideoSection() {
                       whileTap={{ scale: 0.98 }}
                     >
                       <div className="flex items-center">
-                        <motion.div 
+                        <motion.div
                           className="mr-4 w-12 h-12 rounded-sm bg-nyati-orange flex items-center justify-center"
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.3 }}

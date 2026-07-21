@@ -1,14 +1,28 @@
-// components/sections/blog-highlights.js
 'use client'
 
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from '@/app/hooks/useTranslations';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
+interface PostContent {
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+}
+
+interface FeaturedPost {
+  id: string;
+  en: PostContent;
+  sw: PostContent;
+  image: string;
+  slug: string;
+}
+
 // Importing only the latest 3 posts for the homepage with bilingual support
-const featuredPosts = [
+const featuredPosts: FeaturedPost[] = [
   {
     id: 'understanding-cement-grades',
     en: {
@@ -70,39 +84,39 @@ const featuredPosts = [
 
 // Blog post categories with their respective colors
 const categories = [
-  { 
-    id: 'technical-knowledge', 
-    name: 'Technical Knowledge', 
+  {
+    id: 'technical-knowledge',
+    name: 'Technical Knowledge',
     color: 'bg-blue-100 text-blue-800',
   },
-  { 
-    id: 'construction-best-practices', 
-    name: 'Construction Best Practices', 
+  {
+    id: 'construction-best-practices',
+    name: 'Construction Best Practices',
     color: 'bg-amber-100 text-amber-800',
   },
-  { 
-    id: 'diy-home-building', 
-    name: 'DIY & Home Building', 
+  {
+    id: 'diy-home-building',
+    name: 'DIY & Home Building',
     color: 'bg-green-100 text-green-800',
   },
-  { 
-    id: 'sustainability-innovation', 
-    name: 'Sustainability & Innovation', 
+  {
+    id: 'sustainability-innovation',
+    name: 'Sustainability & Innovation',
     color: 'bg-teal-100 text-teal-800',
   },
-  { 
-    id: 'industry-insights', 
-    name: 'Industry Insights', 
+  {
+    id: 'industry-insights',
+    name: 'Industry Insights',
     color: 'bg-violet-100 text-violet-800',
   },
-  { 
-    id: 'application-guides', 
-    name: 'Application Guides', 
+  {
+    id: 'application-guides',
+    name: 'Application Guides',
     color: 'bg-orange-100 text-orange-800',
   },
-  { 
-    id: 'customer-spotlights', 
-    name: 'Customer Spotlights', 
+  {
+    id: 'customer-spotlights',
+    name: 'Customer Spotlights',
     color: 'bg-red-100 text-red-800',
   }
 ];
@@ -126,8 +140,8 @@ export default function BlogHighlights() {
             return (
               <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 w-full overflow-hidden">
-                  <Image 
-                    src={post.image} 
+                  <Image
+                    src={post.image}
                     alt={postContent.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -171,30 +185,19 @@ export default function BlogHighlights() {
 }
 
 // Helper function to get the right category color
-function getCategoryColor(category) {
+function getCategoryColor(category: string): string {
   // First try to find it in the predefined categories array
   const categoryItem = categories.find(cat => cat.name === category);
   if (categoryItem) {
     return categoryItem.color;
   }
-  
+
   // Fallback to hardcoded mapping for specific categories
-  const categoryMap = {
+  const categoryMap: Record<string, string> = {
     'Technical Knowledge': 'bg-blue-100 text-blue-800',
     'Construction Best Practices': 'bg-amber-100 text-amber-800',
     'Industry Insights': 'bg-green-100 text-green-800'
   };
-  
-  return categoryMap[category] || 'bg-gray-100 text-gray-800';
-}
 
-// Helper function to translate categories
-function translateCategory(category, t) {
-  const categoryMap = {
-    'Technical Knowledge': t('blog.category.technicalKnowledge'),
-    'Construction Best Practices': t('blog.category.constructionBestPractices'),
-    'Industry Insights': t('blog.category.industryInsights')
-  };
-  
-  return categoryMap[category] || category;
+  return categoryMap[category] || 'bg-gray-100 text-gray-800';
 }

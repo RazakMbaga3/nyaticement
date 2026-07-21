@@ -1,7 +1,7 @@
-// app/components/sections/hero.js
+// app/components/sections/hero.tsx
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, Variants } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,10 +9,10 @@ import { useTranslations } from '@/app/hooks/useTranslations'
 
 export default function Hero() {
   const { t } = useTranslations();
-  
+
   // State for slideshow
   const [currentSlide, setCurrentSlide] = useState(0)
-  
+
   // Slideshow images
   const slideshowImages = [
     '/images/slideshow/1.jpeg',
@@ -28,24 +28,24 @@ export default function Hero() {
   // Effect for slideshow autoplay
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => 
+      setCurrentSlide((prevSlide) =>
         prevSlide === slideshowImages.length - 1 ? 0 : prevSlide + 1
       )
     }, 5000) // Change slide every 5 seconds
-    
+
     return () => clearInterval(interval)
   }, [slideshowImages.length])
 
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
-      } 
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
     }
   }
 
@@ -62,39 +62,39 @@ export default function Hero() {
 
   const badgeVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
-      transition: { 
+      transition: {
         duration: 0.5,
         ease: "easeOut"
-      } 
+      }
     }
   }
 
   // Slide animation variants with crossfade effect
   const slideVariants = {
-    enter: { 
+    enter: {
       opacity: 0,
       transition: { duration: 0.8 }
     },
-    center: { 
+    center: {
       opacity: 1,
       transition: { duration: 1.2 }
     },
-    exit: { 
+    exit: {
       opacity: 0,
       transition: { duration: 0.8 }
     }
   }
 
   // Enhanced scale animation for product image
-  const productAnimation = {
+  const productAnimation: Variants = {
     rest: { scale: 1, y: 0 },
-    hover: { 
+    hover: {
       scale: 1.03,
-      transition: { 
-        duration: 0.4, 
+      transition: {
+        duration: 0.4,
         ease: "easeInOut"
       }
     },
@@ -110,7 +110,7 @@ export default function Hero() {
   }
 
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -118,10 +118,10 @@ export default function Hero() {
     >
       {/* Background base color to prevent white flash during transitions */}
       <div className="absolute inset-0 bg-nyati-navy z-0"></div>
-      
+
       {/* Background Slideshow with crossfade effect */}
       <AnimatePresence mode="sync">
-        <motion.div 
+        <motion.div
           key={currentSlide}
           variants={slideVariants}
           initial="enter"
@@ -129,7 +129,7 @@ export default function Hero() {
           exit="exit"
           className="absolute inset-0 z-0"
         >
-          <Image 
+          <Image
             src={slideshowImages[currentSlide]}
             alt={`Slideshow image ${currentSlide + 1}`}
             fill
@@ -141,26 +141,26 @@ export default function Hero() {
       </AnimatePresence>
 
       {/* Animated shapes with Framer Motion */}
-      <motion.div 
-        animate={{ 
+      <motion.div
+        animate={{
           scale: [1, 1.1, 1],
-          opacity: [0.05, 0.15, 0.05] 
+          opacity: [0.05, 0.15, 0.05]
         }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity, 
-          repeatType: "reverse" 
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          repeatType: "reverse"
         }}
         className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
       ></motion.div>
-      
-      <motion.div 
-        animate={{ 
+
+      <motion.div
+        animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.03, 0.1, 0.03] 
+          opacity: [0.03, 0.1, 0.03]
         }}
-        transition={{ 
-          duration: 10, 
+        transition={{
+          duration: 10,
           repeat: Infinity,
           repeatType: "reverse",
           delay: 1.5
@@ -170,7 +170,7 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 relative z-10 py-10 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
@@ -178,44 +178,44 @@ export default function Hero() {
           >
             {/* Title with text shadow for better readability */}
             <div>
-              <motion.h1 
+              <motion.h1
                 variants={fadeInUp}
                 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-white [text-shadow:_2px_2px_4px_rgb(0_0_0_/_50%),_0_0_30px_rgb(0_0_0_/_30%)]"              >
                 <span className="font-light">{t('hero.title')},</span>
-                <br/>                <motion.span 
+                <br/>                <motion.span
                   initial={{ color: "#fff" }}
-                  animate={{ color: "#F79752" }}
+                  animate={{ color: "#F49545" }}
                   transition={{ duration: 1.5, delay: 1 }}
                   className="text-nyati-orange font-bold [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)]"
                 >{t('hero.subtitle')}</motion.span>
                 <br/>
-                <span className="font-bold">{t('hero.strongDurable')} <motion.span 
+                <span className="font-bold">{t('hero.strongDurable')} <motion.span
                   initial={{ color: "#fff" }}
-                  animate={{ color: "#F79752" }}
+                  animate={{ color: "#F49545" }}
                   transition={{ duration: 1.5, delay: 1.5 }}
                   className="text-nyati-orange [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)]"
                 ></motion.span> {t('hero.construction')}</span>
               </motion.h1>
-              
-              <motion.div 
+
+              <motion.div
                 variants={fadeInUp}
                 className="space-y-4 text-lg text-gray-200 mt-4 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_40%)]"
               >
                 <p>{t('hero.description')}</p>
               </motion.div>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               variants={fadeInUp}
               className="space-y-8"
             >
-              <motion.div 
+              <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
                 className="flex flex-wrap gap-4"
               >
-                <motion.div 
+                <motion.div
                   variants={badgeVariants}
                   whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
                   className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-sm flex items-center space-x-3 border border-white/10 shadow-md"
@@ -226,26 +226,26 @@ export default function Hero() {
                   >✓</motion.span>
                   <span className="font-semibold text-sm">{t('hero.badges.ownClinker')}</span>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   variants={badgeVariants}
                   whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
                   className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-sm flex items-center space-x-3 border border-white/10 shadow-md"
                 >
-                  <motion.span 
+                  <motion.span
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.3 }}
                     className="text-nyati-orange text-lg"
                   >✓</motion.span>
                   <span className="font-semibold text-sm">{t('hero.badges.ownPower')}</span>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   variants={badgeVariants}
                   whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
                   className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-sm flex items-center space-x-3 border border-white/10 shadow-md"
                 >
-                  <motion.span 
+                  <motion.span
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.6 }}
                     className="text-nyati-orange text-lg"
@@ -253,7 +253,7 @@ export default function Hero() {
                   <span className="font-semibold text-sm">{t('hero.badges.consistentQuality')}</span>
                 </motion.div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -263,18 +263,18 @@ export default function Hero() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Link                    href="/contact" 
+                  <Link                    href="/contact"
                     className="inline-flex items-center space-x-2 group bg-nyati-orange text-white px-6 hover:bg-nyati-light-grey py-3 rounded-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <span>{t('hero.cta')}</span>
-                    <motion.svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
+                    <motion.svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
                       animate={{ x: [0, 5, 0] }}
-                      transition={{ 
+                      transition={{
                         duration: 1.5,
                         repeat: Infinity,
                         repeatType: "loop",
@@ -287,7 +287,7 @@ export default function Hero() {
                 </motion.div>
               </motion.div>
 
-          
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -296,19 +296,19 @@ export default function Hero() {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                >                  <Link 
-                    href="/about/certifications" 
+                >                  <Link
+                    href="/about/certifications"
                     className="inline-flex items-center space-x-2 group bg-nyati-navy hover:bg-white text-white px-6 py-3 rounded-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <span>{t('hero.certifications')}</span>
-                    <motion.svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
+                    <motion.svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
                       animate={{ x: [0, 5, 0] }}
-                      transition={{ 
+                      transition={{
                         duration: 1.5,
                         repeat: Infinity,
                         repeatType: "loop",
@@ -322,15 +322,15 @@ export default function Hero() {
               </motion.div>
             </motion.div>
           </motion.div>
-          
+
           {/* Product display with improved animations */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="hidden lg:block relative lg:col-span-5"
           >
-            <motion.div 
+            <motion.div
               whileHover="hover"
               initial="rest"
               animate={["rest", "float"]}
@@ -339,18 +339,18 @@ export default function Hero() {
             >
               {/* Glow effect behind the product */}
               <motion.div
-                animate={{ 
+                animate={{
                   opacity: [0.4, 0.7, 0.4],
                   scale: [0.9, 1.1, 0.9]
                 }}
-                transition={{ 
+                transition={{
                   duration: 5,
                   repeat: Infinity,
                   repeatType: "reverse"
                 }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-sm bg-nyati-orange/20 filter blur-xl"
               />
-              
+
               <Image
                 src="/images/ALLNYATIBAGS.webp"
                 alt="Nyati Cement Product"
@@ -359,14 +359,14 @@ export default function Hero() {
                 className="object-contain relative z-10 mx-auto"
               />
             </motion.div>
-            
+
             {/* Product info card with improved styling */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
               className="absolute -bottom-4 -right-6 rounded-sm p-4 shadow-xl bg-gradient-to-br from-nyati-orange to-orange-300 border border-white/20"
-            >              <motion.h3 
+            >              <motion.h3
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.4 }}
@@ -374,7 +374,7 @@ export default function Hero() {
               >
                 {t('hero.productCard.title')}
               </motion.h3>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.6, duration: 0.5 }}
@@ -386,11 +386,11 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Improved slideshow indicator dots */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slideshowImages.map((_, index) => (
-          <button 
+          <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2 rounded-full transition-all duration-300 ${

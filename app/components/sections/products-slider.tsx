@@ -1,4 +1,4 @@
-// app/components/sections/products-slider.js
+// app/components/sections/products-slider.tsx
 'use client'
 
 import { useState, useRef } from 'react'
@@ -63,7 +63,7 @@ export default function ProductsSlider() {
   const [activeIndex, setActiveIndex] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
-  
+
   const nextSlide = () => {
     setActiveIndex((current) => (current === products.length - 1 ? 0 : current + 1))
   }
@@ -74,7 +74,7 @@ export default function ProductsSlider() {
 
   // Slide animation variants
   const variants = {
-    enter: (direction) => ({
+    enter: (direction: number) => ({
       x: direction > 0 ? '100%' : '-100%',
       opacity: 0
     }),
@@ -82,7 +82,7 @@ export default function ProductsSlider() {
       x: 0,
       opacity: 1
     },
-    exit: (direction) => ({
+    exit: (direction: number) => ({
       x: direction < 0 ? '100%' : '-100%',
       opacity: 0
     })
@@ -93,7 +93,7 @@ export default function ProductsSlider() {
       <div className="container mx-auto relative z-10 max-w-7xl">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-16">
           {/* Text and CTA - Full width on mobile, half width on desktop */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
@@ -105,22 +105,22 @@ export default function ProductsSlider() {
             <p className="text-nyati-navy text-base md:text-lg mb-6">
               {t('products.sliderDescription')}
             </p>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-4"
             >
-              <Link 
+              <Link
                 href="/products"                className="bg-nyati-orange hover:bg-nyati-navy text-white px-6 py-2.5 rounded-lg font-medium transition-colors duration-300 inline-flex items-center uppercase tracking-wider text-sm md:text-base"
               >
                 <span>{t('products.viewAll')}</span>
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-4 w-4 ml-2" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -128,9 +128,9 @@ export default function ProductsSlider() {
               </Link>
             </motion.div>
           </motion.div>
-          
+
           {/* Product Display - Full width on mobile, half width on desktop */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -138,7 +138,7 @@ export default function ProductsSlider() {
           >
             <div className="relative h-[350px] md:h-[500px] overflow-hidden bg-white/50 rounded-lg shadow-xl">
               <AnimatePresence initial={false} custom={activeIndex}>
-                <motion.div 
+                <motion.div
                   key={activeIndex}
                   custom={activeIndex}
                   variants={variants}
@@ -167,26 +167,26 @@ export default function ProductsSlider() {
                   </div>
                 </motion.div>
               </AnimatePresence>
-              
+
               {/* Navigation dots */}
               <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
                 {products.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveIndex(index)}                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
-                      activeIndex === index 
-                        ? 'bg-nyati-orange w-6 md:w-8' 
+                      activeIndex === index
+                        ? 'bg-nyati-orange w-6 md:w-8'
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
-                    aria-label={t('products.navigation.slideNumber', { number: index + 1 })}
+                    aria-label={t('products.navigation.slideNumber', { number: index + 1 } as any)}
                   />
                 ))}
               </div>
             </div>
-            
+
             {/* Arrow Controls - Made more touch-friendly */}
             <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F7941D" }}
+              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
               whileTap={{ scale: 0.95 }}              className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
               onClick={prevSlide}
               aria-label={t('products.navigation.previous')}
@@ -195,7 +195,7 @@ export default function ProductsSlider() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </motion.button>            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F7941D" }}
+              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
               whileTap={{ scale: 0.95 }}              className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
               onClick={nextSlide}
               aria-label={t('products.navigation.next')}

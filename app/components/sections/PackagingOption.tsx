@@ -5,18 +5,25 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { useTranslations } from '@/app/hooks/useTranslations'
 
-const PackagingOption = ({ image, title, description, index }) => {
+interface PackagingOptionProps {
+  image: string;
+  title: string;
+  description: string;
+  index: number;
+}
+
+export default function PackagingOption({ image, title, description, index }: PackagingOptionProps) {
   const [imageError, setImageError] = useState(false);
   const { t } = useTranslations();
-  
+
   return (
-    <motion.div 
+    <motion.div
       className="bg-white rounded-sm shadow-lg overflow-hidden flex flex-col h-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      whileHover={{ 
+      whileHover={{
         y: -10,
         boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
         transition: { duration: 0.3 }
@@ -47,13 +54,11 @@ const PackagingOption = ({ image, title, description, index }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold mb-2 text-nyati-navy">{title}</h3>
         <p className="text-gray-600 text-sm">{description}</p>
       </div>
     </motion.div>
   );
-};
-
-export default PackagingOption;
+}

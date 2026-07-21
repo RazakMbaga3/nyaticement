@@ -1,18 +1,22 @@
-// app/components/ui/Newsletter.jsx
 'use client'
 
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
 
+interface SubscribeStatus {
+  success: boolean;
+  message: string;
+}
+
 export default function Newsletter() {
   const [email, setEmail] = useState('');
-  const [subscribeStatus, setSubscribeStatus] = useState(null);
+  const [subscribeStatus, setSubscribeStatus] = useState<SubscribeStatus | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { language } = useLanguage();
   const { t } = useTranslations();
-  const [pageTranslations, setPageTranslations] = useState({});
-  
+  const [pageTranslations, setPageTranslations] = useState<Record<string, any>>({});
+
   // Load page-specific translations for the newsletter
   useEffect(() => {
     const loadPageTranslations = async () => {
@@ -29,11 +33,11 @@ export default function Newsletter() {
         }
       }
     };
-    
+
     loadPageTranslations();
   }, [language]);
   // Helper function to get translated content from page translations or fallback to global translations
-  const getTranslation = (key) => {
+  const getTranslation = (key: string) => {
     // Check if we have the key in page-specific translations
     if (pageTranslations && pageTranslations.newsletter) {
       const keys = key.split('.');
@@ -47,16 +51,16 @@ export default function Newsletter() {
     // Fallback to global translations
     return t(key);
   };
-  
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // In a real implementation, you would send the email to your backend
       // For now, we'll simulate a successful subscription
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setSubscribeStatus({
         success: true,
         message: getTranslation('newsletter.successMessage')
@@ -78,13 +82,13 @@ export default function Newsletter() {
           {getTranslation('newsletter.title')}
         </h2>
         <p className="mb-8">{getTranslation('newsletter.subtitle')}</p>
-        
+
         {subscribeStatus && (
           <div className={`mb-6 p-4 rounded-sm text-left ${subscribeStatus.success ? 'bg-green-800/50 text-green-100' : 'bg-red-800/50 text-red-100'}`}>
             {subscribeStatus.message}
           </div>
         )}
-        
+
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
           <input
             type="email"

@@ -1,16 +1,31 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslations } from '../../hooks/useTranslations';
 
-export default function NewProductCard({ product, index }) {
+interface Product {
+  image?: string;
+  fallbackImage?: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  features?: string[];
+  applications?: string[];
+}
+
+interface NewProductCardProps {
+  product?: Product;
+  index: number;
+}
+
+export default function NewProductCard({ product, index }: NewProductCardProps) {
   const { t } = useTranslations();
   const [isExpanded, setIsExpanded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
-  
+
   // Extract product details with safe fallbacks
   const {
     image = '',
@@ -21,36 +36,25 @@ export default function NewProductCard({ product, index }) {
     features = [],
     applications = []
   } = product || {};
-  
-  // Debug info
-  useEffect(() => {
-    console.log(`ProductCard rendering: ${title}`, { 
-      image, 
-      fallbackImage, 
-      imageLoaded, 
-      imageError,
-      index 
-    });
-  }, [title, image, fallbackImage, imageLoaded, imageError, index]);
-  
+
   // Determine which image to show
   const imageToShow = imageError && fallbackImage ? fallbackImage : image;
-  
+
   return (
-    <motion.div 
+    <motion.div
       className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300"
       whileHover={{ y: -5 }}
       layout
     >
       <div className="flex flex-col lg:flex-row">
         {/* Image Container */}
-        <motion.div 
+        <motion.div
           className="lg:w-2/5 p-4 flex items-center justify-center bg-gray-50 relative overflow-hidden"
           layoutId={`image-container-${index}`}
         >
           <div className="relative h-80 w-full">
             {/* Next.js Image with Error Handling */}
-            <Image 
+            <Image
               src={imageToShow}
               alt={title}
               fill
@@ -65,14 +69,14 @@ export default function NewProductCard({ product, index }) {
                 }
               }}
             />
-            
+
             {/* Show placeholder while loading */}
             {!imageLoaded && !imageError && (
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                 <div className="animate-pulse bg-gray-200 h-48 w-48 rounded-md"></div>
               </div>
             )}
-            
+
             {/* Fallback if both images fail */}
             {imageError && !fallbackImage && (
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
@@ -80,18 +84,18 @@ export default function NewProductCard({ product, index }) {
               </div>
             )}
           </div>
-          
+
           {/* Hover effect */}
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-t from-nyati-navy/10 to-transparent opacity-0 transition-opacity duration-300"
             whileHover={{ opacity: 1 }}
           />
         </motion.div>
-        
+
         {/* Content Container */}
         <div className="lg:w-3/5 p-6">
           {/* Product Title */}
-          <motion.h2 
+          <motion.h2
             className="text-2xl font-bold mb-1 text-nyati-navy"
             layoutId={`title-${index}`}
           >
@@ -107,9 +111,9 @@ export default function NewProductCard({ product, index }) {
               {subtitle}
             </motion.h3>
           )}
-          
+
           {/* Product Description */}
-          <motion.p 
+          <motion.p
             className="text-gray-700 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -117,9 +121,9 @@ export default function NewProductCard({ product, index }) {
           >
             {description}
           </motion.p>
-          
+
           {/* Features and Applications */}
-          <motion.div 
+          <motion.div
             className="flex flex-col md:flex-row gap-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -135,12 +139,12 @@ export default function NewProductCard({ product, index }) {
                 </div>
                 <h3 className="font-semibold text-lg text-nyati-navy">{t('ui.features', 'Features')}</h3>
               </div>
-              
+
               {/* Features List */}
               <ul className="space-y-2 mb-6 md:mb-0">
                 {features.slice(0, isExpanded ? features.length : 3).map((feature, idx) => (
-                  <motion.li 
-                    key={idx} 
+                  <motion.li
+                    key={idx}
                     className="flex items-start"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -154,7 +158,7 @@ export default function NewProductCard({ product, index }) {
                 ))}
               </ul>
             </div>
-            
+
             {/* Applications Column */}
             <div className="md:w-1/2">
               <div className="flex items-center mb-3">
@@ -165,12 +169,12 @@ export default function NewProductCard({ product, index }) {
                 </div>
                 <h3 className="font-semibold text-lg text-nyati-navy">{t('ui.applications', 'Applications')}</h3>
               </div>
-              
+
               {/* Applications List */}
               <ul className="space-y-2">
                 {applications.slice(0, isExpanded ? applications.length : 3).map((application, idx) => (
-                  <motion.li 
-                    key={idx} 
+                  <motion.li
+                    key={idx}
                     className="flex items-start"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -185,10 +189,10 @@ export default function NewProductCard({ product, index }) {
               </ul>
             </div>
           </motion.div>
-          
+
           {/* Show More/Less Button */}
           {((features.length > 3) || (applications.length > 3)) && (
-            <motion.button 
+            <motion.button
               className="mt-4 text-nyati-orange text-sm font-medium flex items-center hover:text-nyati-navy transition-colors duration-300"
               onClick={() => setIsExpanded(!isExpanded)}
               whileTap={{ scale: 0.97 }}

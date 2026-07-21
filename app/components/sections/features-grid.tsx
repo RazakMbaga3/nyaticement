@@ -1,4 +1,3 @@
-// app/components/sections/features-grid.js
 'use client'
 
 import { useRef } from 'react'
@@ -32,10 +31,10 @@ export default function FeaturesGrid() {
       link: '/sustainability'
     }
   ]
-  
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -45,7 +44,7 @@ export default function FeaturesGrid() {
       }
     }
   }
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -54,11 +53,11 @@ export default function FeaturesGrid() {
       transition: { duration: 0.5 }
     }
   }
-  
+
   return (
     <section ref={ref} className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
@@ -72,14 +71,14 @@ export default function FeaturesGrid() {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
-          {features.map((feature, index) => (
-            <motion.div 
+          {features.map((feature) => (
+            <motion.div
               key={feature.id}
               variants={itemVariants}
               className="bg-white rounded-sm shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -100,19 +99,19 @@ export default function FeaturesGrid() {
                 <p className="text-gray-600 mb-4">
                   {feature.text}
                 </p>
-                <Link 
-                  href={feature.link} 
+                <Link
+                  href={feature.link}
                   className="text-nyati-orange font-semibold inline-flex items-center group"
                 >
                   <span>{t('common.readMore')}</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path strokeLinecap="square" strokeLinejoin="square" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    <path strokeLinecap="square" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
               </div>
