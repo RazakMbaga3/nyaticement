@@ -17,14 +17,14 @@ export default function BrochurePage() {
   useEffect(() => {
     const loadBrochureTranslations = async () => {
       try {
-        const module = await import(`../../translations/brochure-${language}.json`);
-        setBrochureTranslations(module.default);
+        const translationModule = await import(`../../translations/brochure-${language}.json`);
+        setBrochureTranslations(translationModule.default);
       } catch (error) {
         console.error('Error loading brochure translations', error);
         // Fallback to English if there's an error
         try {
-          const module = await import('../../translations/brochure-en.json');
-          setBrochureTranslations(module.default);
+          const translationModule = await import('../../translations/brochure-en.json');
+          setBrochureTranslations(translationModule.default);
         } catch (fallbackError) {
           console.error('Error loading fallback translations', fallbackError);
         }
