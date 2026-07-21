@@ -28,12 +28,12 @@ export async function POST(request) {
       );
     }    // Create email transporter
     const transporter = nodemailer.createTransport({
-      host: 'mail.lakecement.co.tz',
-      port: 465,
-      secure: true, // Use SSL/TLS
+      host: process.env.EMAIL_SERVER_HOST,
+      port: Number(process.env.EMAIL_SERVER_PORT),
+      secure: process.env.EMAIL_SERVER_SECURE === 'true',
       auth: {
-        user: '_mainaccount@lakecement.co.tz',
-        pass: 'Encrypt3d@4934',
+        user: process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_SERVER_PASSWORD,
       },
     });
 
@@ -107,7 +107,7 @@ export async function POST(request) {
       </html>
     `;    // Email message configuration
     const message = {
-      from: '_mainaccount@lakecement.co.tz',
+      from: process.env.EMAIL_FROM,
       to: recipient || 'info@lakecement.co.tz',
       subject: subject || 'New Distributor Application',
       html: htmlContent,
@@ -130,16 +130,7 @@ Please contact the applicant to proceed with the distributor application process
 
     // Send the email
     try {
-      console.log('Received data:', data);
-      console.log('SMTP Configuration:', {
-        host: 'mail.lakecement.co.tz',
-        port: 465,
-        secure: true,
-        user: '_mainaccount@lakecement.co.tz',
-      });
-      console.log('Email message:', message);
       await transporter.sendMail(message);
-      console.log('Email sent successfully');
       return NextResponse.json(
         { message: 'Email sent successfully' },
         { status: 200 }

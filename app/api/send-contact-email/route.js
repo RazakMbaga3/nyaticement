@@ -8,18 +8,18 @@ export async function POST(req) {
 
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      host: 'mail.lakecement.co.tz',
-      port: 465,
-      secure: true, // Use SSL/TLS
+      host: process.env.EMAIL_SERVER_HOST,
+      port: Number(process.env.EMAIL_SERVER_PORT),
+      secure: process.env.EMAIL_SERVER_SECURE === 'true',
       auth: {
-        user: '_mainaccount@lakecement.co.tz',
-        pass: 'Encrypt3d@4934', // Replace with the actual cPanel password
+        user: process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_SERVER_PASSWORD,
       },
     });
 
     // Email options
     const mailOptions = {
-      from: '_mainaccount@lakecement.co.tz',
+      from: process.env.EMAIL_FROM,
       to: 'info@lakecement.co.tz',
       subject: 'New Contact Form Submission',
       text: `You have a new contact form submission:

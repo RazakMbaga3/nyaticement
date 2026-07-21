@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslations } from '@/app/hooks/useTranslations';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import emailjs from '@emailjs/browser';
 
 // Animation variants
 const fadeIn = {
@@ -86,62 +85,12 @@ export default function DistributionForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const form = useRef();
-
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [id]: value
     }));
-  };  const sendEmail = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Prepare template parameters
-    const templateParams = {
-      from_name: "Distributor Application",
-      to_name: "Recipient",
-      name: formData.contactPerson,
-      time: new Date().toLocaleString(),
-      query: `Distributor Application from ${formData.area}, ${formData.city}`,
-      firmName: formData.firmName,
-      contactNumber: formData.contactNumber,
-      email: formData.email,
-      address: `${formData.address}, ${formData.city}, P.O. Box: ${formData.poBox}`,
-      subject: "New Distributor Application",
-      message: `Distributor Application from ${formData.area}, ${formData.city}`
-    };
-
-    // Log the parameters to check
-    console.log('Sending with params:', templateParams);
-      try {
-      const result = await emailjs.send(
-        'service_fgi4rn3', 
-        'template_22wvb58', 
-        templateParams, 
-        '28FR-UzDU9CujXlxM'
-      );
-      
-      console.log('SUCCESS!', result);
-      setSubmitStatus({
-        success: true,
-        message: pt('distributionPage.form.success')
-      });
-      // Reset form after successful submission
-      setFormData({
-        firmName: '', address: '', area: '', city: '', poBox: '', 
-        contactPerson: '', contactNumber: '', email: ''
-      });
-    } catch (error) {
-      console.log('FAILED...', error);
-      setSubmitStatus({
-        success: false,
-        message: pt('distributionPage.form.error')
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -333,9 +282,7 @@ export default function DistributionForm() {
                   ? pt('distributionPage.form.success') 
                   : pt('distributionPage.form.error')}
               </div>
-            )}            <form onSubmit={sendEmail} className="text-sm">
-              {/* We're using direct parameters instead of form ref */}
-              
+            )}            <form onSubmit={handleSubmit} className="text-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2"><div className="form-group">
                   <label htmlFor="firmName" className="block text-gray-700 text-xs mb-1">{pt('distributionPage.form.labels.firmName')}</label>
                   <input 

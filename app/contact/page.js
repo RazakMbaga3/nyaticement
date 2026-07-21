@@ -95,10 +95,10 @@ export default function ContactPage() {
     // Log the parameters to check
     console.log('Sending with params:', templateParams);    try {
       const result = await emailjs.send(
-        'service_fgi4rn3', 
-        'template_22wvb58', 
-        templateParams, 
-        '28FR-UzDU9CujXlxM'
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
       
       console.log('SUCCESS!', result);
