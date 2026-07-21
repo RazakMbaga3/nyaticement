@@ -468,7 +468,7 @@ export default function CareersPage() {
                       <div className="absolute right-0 top-0 h-full w-full md:w-1/3 lg:w-2/5 z-0">
                         <div className="relative w-full h-full">
                           <Image
-                            src="/images/career8.jpg"
+                            src="/images/career-team-cta.jpg"
                             alt="Join Our Team"
                             fill
                             className="object-cover"
