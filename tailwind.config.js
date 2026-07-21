@@ -9,11 +9,11 @@ module.exports = {
     extend: {
       colors: {
         nyati: {
-          // Primary brand colors (exact matches from the brand assets)
-          navy: '#293f63',     // C100 M80 Y25 K40 - Navy blue from logo
-          orange: '#F79752',   // C0 M50 Y80 K0 - Orange from logo
-          green: '#21A649',    // C80 M7 Y80 K12 - Green from logo
-          
+          // Primary brand colors - exact hex from the Nyati Cement brand manual
+          navy: '#173158',
+          orange: '#F49545',
+          green: '#239557',
+
           // Extended color palette
           'dark-blue': '#293f63',  // Existing dark blue
           'light-orange': '#feb47b', // Existing light orange
@@ -22,43 +22,45 @@ module.exports = {
           'light-grey': '#f8fafc', // Existing light grey
           'dark-grey': '#334155', // Existing dark grey
         },
-        
-        // Extended palette versions of the main brand colors for design flexibility
+
+        // Tint/shade scales for the brand colors, anchored on the exact
+        // brand manual hex (navy at 900, orange at 500, green at 700 -
+        // their natural lightness), interpolated smoothly around it.
         orange: {
-          50: '#FFF8F0',
-          100: '#FEECDA',
-          200: '#FDDAB6',
-          300: '#FCC892',
-          400: '#FAB66D',
-          500: '#F7941D', // Brand orange
-          600: '#E17A0A',
-          700: '#BB6308',
-          800: '#944D06',
-          900: '#6E3904',
+          50: '#FAF4EF',
+          100: '#F2E2D4',
+          200: '#F2CFB1',
+          300: '#F8BB88',
+          400: '#F6A866',
+          500: '#F49545', // Brand orange
+          600: '#F17914',
+          700: '#C5600C',
+          800: '#934809',
+          900: '#623006',
         },
         navy: {
-          50: '#E7ECF4',
-          100: '#C2CEE4',
-          200: '#99ADD2',
-          300: '#708DBF',
-          400: '#4E71AF',
-          500: '#2E559F',
-          600: '#1F447E',
-          700: '#13335E',
-          800: '#0A2E5E', // Brand navy
-          900: '#041E3F',
+          50: '#F1F4F8',
+          100: '#D5DEEB',
+          200: '#B2C6E3',
+          300: '#8BADE1',
+          400: '#6996D8',
+          500: '#487ECF',
+          600: '#3169BC',
+          700: '#28569B',
+          800: '#204479',
+          900: '#173158', // Brand navy
         },
         green: {
-          50: '#E9F7EE',
-          100: '#C6EAD4',
-          200: '#9FDCB7',
-          300: '#78CD9A',
-          400: '#51BF7D',
-          500: '#2BAC60',
-          600: '#21A649', // Brand green
-          700: '#1B8A3A',
-          800: '#156F2E',
-          900: '#0F5422',
+          50: '#F1F9F4',
+          100: '#D3EBDE',
+          200: '#AEE4C7',
+          300: '#84E2AF',
+          400: '#61DA98',
+          500: '#3ED281',
+          600: '#2BB86C',
+          700: '#239557', // Brand green
+          800: '#1B7142',
+          900: '#124D2D',
         },
       },
       fontFamily: {
