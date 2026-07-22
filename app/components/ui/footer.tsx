@@ -6,8 +6,8 @@ import { useTranslations } from '@/app/hooks/useTranslations'
 
 export default function Footer() {
   const { t } = useTranslations();
-  
-  return (    
+
+  return (
     <footer className="bg-gradient-to-b from-nyati-navy to-[#0c1524] text-white relative overflow-hidden">
       {/* Abstract Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -20,15 +20,15 @@ export default function Footer() {
           {/* Company Info Section */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <Image 
-                src="/images/lake-cement-ltd-white.png" 
-                alt={t('footer.logoAlt')} 
-                width={150} 
-                height={75} 
+              <Image
+                src="/images/lake-cement-ltd-white.png"
+                alt={t('footer.logoAlt')}
+                width={150}
+                height={75}
                 className="h-auto transition-transform duration-300 hover:scale-105"
               />
             </Link>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 text-xs">
               <div className="flex items-center space-x-2 group">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-nyati-orange to-nyati-orange/70 flex items-center justify-center shadow-lg">
@@ -42,7 +42,7 @@ export default function Footer() {
                   <span className="text-gray-200">{t('contact.email')}</span>
                 </div>
               </div>
-          
+
               <div className="flex items-center space-x-2 group">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-nyati-orange to-nyati-orange/70 flex items-center justify-center shadow-lg">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -76,10 +76,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/about/about-us" 
+                <Link
+                  href="/about/about-us"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
-                > 
+                >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -87,8 +87,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/products" 
+                <Link
+                  href="/products"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -98,8 +98,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/quality-control" 
+                <Link
+                  href="/quality-control"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +109,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/sustainability" 
+                <Link
+                  href="/sustainability"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -129,8 +129,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/about/plant" 
+                <Link
+                  href="/about/plant"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -140,8 +140,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/about/certifications" 
+                <Link
+                  href="/about/certifications"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -151,8 +151,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/careers" 
+                <Link
+                  href="/careers"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -162,8 +162,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -182,8 +182,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/about/csr" 
+                <Link
+                  href="/about/csr"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -193,8 +193,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/about/code-of-conduct" 
+                <Link
+                  href="/about/code-of-conduct"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -204,8 +204,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/distribution" 
+                <Link
+                  href="/distribution"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -215,8 +215,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/news" 
+                <Link
+                  href="/news"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -226,8 +226,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/blog" 
+                <Link
+                  href="/blog"
                   className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
                 >
                   <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -280,11 +280,11 @@ export default function Footer() {
             {t('footer.copyright')}
           </p>
           <div className="flex items-center space-x-4 mt-2 md:mt-0">
-            <Image 
-              src="/images/lake-cement-ltd-white.png" 
-              alt={t('footer.logoAlt')} 
-              width={120} 
-              height={18} 
+            <Image
+              src="/images/lake-cement-ltd-white.png"
+              alt={t('footer.logoAlt')}
+              width={120}
+              height={18}
               className="h-auto opacity-60 hover:opacity-100 transition-opacity"
             />
           </div>
