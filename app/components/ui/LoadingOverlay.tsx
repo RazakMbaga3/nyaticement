@@ -35,7 +35,7 @@ export default function LoadingOverlay() {
             }}
           />
         </div>
-        <motion.p 
+        <motion.p
           className="mt-4 text-nyati-navy font-medium"
           animate={{
             opacity: [1, 0.5, 1]

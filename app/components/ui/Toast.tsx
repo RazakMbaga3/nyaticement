@@ -1,13 +1,35 @@
 'use client'
 
-import { createContext, useContext, useState, useCallback } from 'react'
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+type ToastType = 'success' | 'error' | 'info' | 'warning';
+
+interface ToastOptions {
+  autoClose?: boolean;
+  duration?: number;
+}
+
+interface ToastItem extends ToastOptions {
+  id: string;
+  message: string;
+  type: ToastType;
+}
+
+interface ToastContextValue {
+  addToast: (message: string, type?: ToastType, options?: ToastOptions) => string;
+  removeToast: (id: string) => void;
+  success: (message: string, options?: ToastOptions) => string;
+  error: (message: string, options?: ToastOptions) => string;
+  info: (message: string, options?: ToastOptions) => string;
+  warning: (message: string, options?: ToastOptions) => string;
+}
+
 // Create context
-const ToastContext = createContext(null)
+const ToastContext = createContext<ToastContextValue | null>(null)
 
 // Toast types
-const TOAST_TYPES = {
+const TOAST_TYPES: Record<string, ToastType> = {
   SUCCESS: 'success',
   ERROR: 'error',
   INFO: 'info',
@@ -17,33 +39,40 @@ const TOAST_TYPES = {
 // Toast variants
 const toastVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     scale: 1,
     transition: { duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }
   },
-  exit: { 
-    opacity: 0, 
-    scale: 0.8, 
+  exit: {
+    opacity: 0,
+    scale: 0.8,
     y: 20,
     transition: { duration: 0.2 }
   }
 }
 
+interface ToastProps extends ToastOptions {
+  id: string;
+  message: string;
+  type: ToastType;
+  onClose: (id: string) => void;
+}
+
 // Toast component
-function Toast({ id, message, type, onClose, autoClose = true, duration = 5000 }) {
+function Toast({ id, message, type, onClose, autoClose = true, duration = 5000 }: ToastProps) {
   // Auto close toast after duration
-  useState(() => {
+  useEffect(() => {
     if (autoClose) {
       const timer = setTimeout(() => {
         onClose(id)
       }, duration)
-      
+
       return () => clearTimeout(timer)
     }
   }, [autoClose, duration, id, onClose])
-  
+
   // Toast colors
   const colors = {
     [TOAST_TYPES.SUCCESS]: {
@@ -87,9 +116,9 @@ function Toast({ id, message, type, onClose, autoClose = true, duration = 5000 }
       )
     }
   }
-  
+
   const { bg, border, text, icon } = colors[type] || colors[TOAST_TYPES.INFO]
-  
+
   return (
     <motion.div
       layout
@@ -119,18 +148,18 @@ function Toast({ id, message, type, onClose, autoClose = true, duration = 5000 }
 }
 
 // Toast provider component
-export function ToastProvider({ children }) {
-  const [toasts, setToasts] = useState([])
-  
+export function ToastProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<ToastItem[]>([])
+
   // Remove toast
-  const removeToast = useCallback((id) => {
+  const removeToast = useCallback((id: string) => {
     setToasts(prevToasts => prevToasts.filter(toast => toast.id !== id))
   }, [])
-  
+
   // Add toast
-  const addToast = useCallback((message, type = TOAST_TYPES.INFO, options = {}) => {
+  const addToast = useCallback((message: string, type: ToastType = TOAST_TYPES.INFO, options: ToastOptions = {}) => {
     const id = Date.now().toString()
-    
+
     setToasts(prevToasts => [
       ...prevToasts,
       {
@@ -140,25 +169,25 @@ export function ToastProvider({ children }) {
         ...options
       }
     ])
-    
+
     return id
   }, [])
-  
+
   // Convenience methods
-  const success = useCallback((message, options) => 
+  const success = useCallback((message: string, options?: ToastOptions) =>
     addToast(message, TOAST_TYPES.SUCCESS, options), [addToast])
-  
-  const error = useCallback((message, options) => 
+
+  const error = useCallback((message: string, options?: ToastOptions) =>
     addToast(message, TOAST_TYPES.ERROR, options), [addToast])
-  
-  const info = useCallback((message, options) => 
+
+  const info = useCallback((message: string, options?: ToastOptions) =>
     addToast(message, TOAST_TYPES.INFO, options), [addToast])
-  
-  const warning = useCallback((message, options) => 
+
+  const warning = useCallback((message: string, options?: ToastOptions) =>
     addToast(message, TOAST_TYPES.WARNING, options), [addToast])
-  
+
   // Value to provide
-  const value = {
+  const value: ToastContextValue = {
     addToast,
     removeToast,
     success,
@@ -166,16 +195,16 @@ export function ToastProvider({ children }) {
     info,
     warning
   }
-  
+
   return (
     <ToastContext.Provider value={value}>
       {children}
-      
+
       {/* Toast container */}
       <div className="fixed top-0 right-0 p-4 w-full max-w-sm z-50 flex flex-col items-end">
         <AnimatePresence>
           {toasts.map(toast => (
-            <Toast 
+            <Toast
               key={toast.id}
               onClose={removeToast}
               {...toast}
@@ -190,10 +219,10 @@ export function ToastProvider({ children }) {
 // Hook to use toast
 export function useToast() {
   const context = useContext(ToastContext)
-  
+
   if (!context) {
     throw new Error('useToast must be used within a ToastProvider')
   }
-  
+
   return context
 }

@@ -1,6 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: string;
+  animate?: boolean;
+  [key: string]: any;
+}
 
 // Basic skeleton component
 export function Skeleton({
@@ -10,15 +17,15 @@ export function Skeleton({
   rounded = 'rounded-md',
   animate = true,
   ...props
-}) {
+}: SkeletonProps) {
   return (
     <div
       className={`bg-gray-200 ${rounded} ${className}`}
-      style={{ 
-        width, 
+      style={{
+        width,
         height,
-        backgroundImage: animate 
-          ? 'linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.05) 80%)' 
+        backgroundImage: animate
+          ? 'linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.05) 80%)'
           : 'none',
         backgroundSize: animate ? '200% 100%' : 'auto',
         animation: animate ? 'shimmer 1.5s infinite' : 'none'
@@ -26,6 +33,15 @@ export function Skeleton({
       {...props}
     />
   )
+}
+
+interface TextSkeletonProps {
+  lines?: number;
+  className?: string;
+  lastLineWidth?: string;
+  lineHeight?: string;
+  lineGap?: string;
+  animate?: boolean;
 }
 
 // Text skeleton with multiple lines
@@ -36,7 +52,7 @@ export function TextSkeleton({
   lineHeight = '20px',
   lineGap = '12px',
   animate = true,
-}) {
+}: TextSkeletonProps) {
   return (
     <div className={`space-y-[${lineGap}] ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
@@ -49,6 +65,20 @@ export function TextSkeleton({
       ))}
     </div>
   )
+}
+
+interface CardSkeletonProps {
+  hasImage?: boolean;
+  imageHeight?: string;
+  hasTitle?: boolean;
+  titleWidth?: string;
+  titleHeight?: string;
+  hasDescription?: boolean;
+  descriptionLines?: number;
+  hasFooter?: boolean;
+  footerHeight?: string;
+  className?: string;
+  animate?: boolean;
 }
 
 // Card skeleton
@@ -64,44 +94,44 @@ export function CardSkeleton({
   footerHeight = '40px',
   className = '',
   animate = true,
-}) {
+}: CardSkeletonProps) {
   return (
     <div className={`bg-white rounded-xl shadow-md overflow-hidden ${className}`}>
       {/* Image skeleton */}
       {hasImage && (
-        <Skeleton 
-          width="100%" 
-          height={imageHeight} 
+        <Skeleton
+          width="100%"
+          height={imageHeight}
           rounded="rounded-none"
           animate={animate}
         />
       )}
-      
+
       {/* Content skeleton */}
       <div className="p-4 space-y-4">
         {/* Title skeleton */}
         {hasTitle && (
-          <Skeleton 
-            width={titleWidth} 
+          <Skeleton
+            width={titleWidth}
             height={titleHeight}
             animate={animate}
           />
         )}
-        
+
         {/* Description skeleton */}
         {hasDescription && (
-          <TextSkeleton 
-            lines={descriptionLines} 
+          <TextSkeleton
+            lines={descriptionLines}
             animate={animate}
           />
         )}
       </div>
-      
+
       {/* Footer skeleton */}
       {hasFooter && (
         <div className="p-4 border-t border-gray-100">
-          <Skeleton 
-            width="100%" 
+          <Skeleton
+            width="100%"
             height={footerHeight}
             animate={animate}
           />
@@ -111,13 +141,19 @@ export function CardSkeleton({
   )
 }
 
+interface CardGridSkeletonProps extends Omit<CardSkeletonProps, 'className'> {
+  count?: number;
+  columns?: number | { sm?: number; md?: number; lg?: number };
+  gap?: string;
+}
+
 // Grid of card skeletons
 export function CardGridSkeleton({
   count = 3,
   columns = { sm: 1, md: 2, lg: 3 },
   gap = 'gap-6',
   ...cardProps
-}) {
+}: CardGridSkeletonProps) {
   // Generate CSS grid class
   const gridClass = `grid ${gap} ${
     typeof columns === 'object'
@@ -128,7 +164,7 @@ export function CardGridSkeleton({
           .join(' ')
       : `grid-cols-${columns}`
   }`;
-  
+
   return (
     <div className={gridClass}>
       {Array.from({ length: count }).map((_, index) => (
