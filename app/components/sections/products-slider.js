@@ -62,7 +62,7 @@ export default function ProductsSlider() {
   const { t } = useTranslations();
   const [activeIndex, setActiveIndex] = useState(0)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
   
   const nextSlide = () => {
     setActiveIndex((current) => (current === products.length - 1 ? 0 : current + 1))
@@ -186,7 +186,7 @@ export default function ProductsSlider() {
             
             {/* Arrow Controls - Made more touch-friendly */}
             <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F7941D" }}
+              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
               whileTap={{ scale: 0.95 }}              className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
               onClick={prevSlide}
               aria-label={t('products.navigation.previous')}
@@ -195,7 +195,7 @@ export default function ProductsSlider() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </motion.button>            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F7941D" }}
+              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
               whileTap={{ scale: 0.95 }}              className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
               onClick={nextSlide}
               aria-label={t('products.navigation.next')}
