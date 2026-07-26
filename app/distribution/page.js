@@ -147,106 +147,68 @@ export default function DistributionForm() {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/distribution/driver.jpg"
-              alt="Distribution Network"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/distribution/driver.jpg"
+            alt="Distribution Network"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">            {/* Breadcrumb Navigation */}
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
+            {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('distributionPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('distributionPage.hero.breadcrumb.distribution')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('distributionPage.hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('distributionPage.hero.highlight')}</span>
             </motion.h1>
 
-            <motion.p 
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+            <motion.p
+              className="text-lg md:text-xl text-white/75 max-w-2xl mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('distributionPage.hero.description')}
             </motion.p>
 
             {/* Key Metrics */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="bg-nyati-navy border border-white/10 p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('distributionPage.hero.stats.support')}</div>
                 <div className="text-white text-sm">{pt('distributionPage.hero.stats.supportText')}</div>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>      {/* Hotline Section - Styled similarly to the reference */}
+      </section>
+      {/* Hotline Section */}
       <div className="bg-white py-2 border-b border-gray-200">
         <div className="container mx-auto px-4 flex items-center">
           <div className="flex items-center text-nyati-orange font-medium">
@@ -277,7 +239,7 @@ export default function DistributionForm() {
             </p>
             
             {submitStatus && (
-              <div className={`mb-3 p-2 text-sm rounded-sm ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+              <div className={`mb-3 p-2 text-sm border ${submitStatus.success ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'}`}>
                 {submitStatus.success 
                   ? pt('distributionPage.form.success') 
                   : pt('distributionPage.form.error')}
@@ -291,7 +253,7 @@ export default function DistributionForm() {
                     name="firmName"
                     value={formData.firmName}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -304,7 +266,7 @@ export default function DistributionForm() {
                     name="address"
                     value={formData.address}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -317,7 +279,7 @@ export default function DistributionForm() {
                     name="area"
                     value={formData.area}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -330,7 +292,7 @@ export default function DistributionForm() {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -343,7 +305,7 @@ export default function DistributionForm() {
                     name="poBox"
                     value={formData.poBox}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -356,7 +318,7 @@ export default function DistributionForm() {
                     name="contactPerson"
                     value={formData.contactPerson}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -369,7 +331,7 @@ export default function DistributionForm() {
                     name="contactNumber"
                     value={formData.contactNumber}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -382,7 +344,7 @@ export default function DistributionForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 border text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
+                    className="w-full px-2 py-1 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-nyati-orange" 
                     required 
                   />
                 </div>
@@ -391,14 +353,14 @@ export default function DistributionForm() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-nyati-orange text-white py-1 px-4 text-sm rounded-sm hover:bg-nyati-navy transition-colors duration-300 disabled:opacity-50"
+                  className="bg-nyati-orange text-white py-1 px-4 text-sm hover:bg-nyati-navy transition-colors duration-300 disabled:opacity-50"
                 >
                   {isSubmitting ? pt('distributionPage.form.buttons.submitting') : pt('distributionPage.form.buttons.submit')}
                 </button>
                 <button 
                   type="button" 
                   onClick={handleReset}
-                  className="bg-gray-200 text-gray-800 py-1 px-4 text-sm rounded-sm hover:bg-gray-300 transition-colors duration-300"
+                  className="bg-gray-200 text-gray-800 py-1 px-4 text-sm hover:bg-gray-300 transition-colors duration-300"
                 >
                   {pt('distributionPage.form.buttons.reset')}
                 </button>
@@ -414,7 +376,7 @@ export default function DistributionForm() {
           >
             <h2 className="text-xl font-bold mb-2 text-nyati-navy">{pt('distributionPage.service.title')}</h2>
             
-            <div className="grid grid-cols-1 gap-4">              <div className="bg-gray-50 p-3 rounded-sm">
+            <div className="grid grid-cols-1 gap-4">              <div className="bg-gray-50 p-3 border border-gray-200">
                 <p className="text-sm text-gray-700">
                   {pageTranslations && 
                    pageTranslations.distributionPage && 
@@ -426,7 +388,7 @@ export default function DistributionForm() {
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-3 rounded-sm">
+              <div className="bg-gray-50 p-3 border border-gray-200">
                 <p className="text-sm text-gray-700">
                   {pageTranslations && 
                    pageTranslations.distributionPage && 
@@ -439,7 +401,7 @@ export default function DistributionForm() {
               </div>
               
               <div className="bg-white">
-                <div className="relative h-72 w-full overflow-hidden rounded-sm">
+                <div className="relative h-72 w-full overflow-hidden">
                   <Image 
                     src="/images/distribution/fundis.jpg" 
                     alt="Technical Seminar" 
