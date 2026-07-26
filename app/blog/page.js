@@ -315,77 +315,37 @@ export default function BlogPage() {
     : allPosts.filter(post => post.category === selectedCategory);
     return (
     <div className="bg-gray-50">      
-      {/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/blog/hero.jpg"
-              alt={t('hero.title')}
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/blog/hero.jpg"
+            alt={t('hero.title')}
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity, 
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{t('breadcrumbs.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{t('breadcrumbs.blog')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {language === 'en' ? (
                 <>
@@ -402,12 +362,12 @@ export default function BlogPage() {
               )}
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+              className="text-lg md:text-xl text-white/75 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
-              {language === 'en' ? 
+              {language === 'en' ?
                 'Expert advice, industry trends, and construction best practices to help you build better.' :
                 'Ushauri wa wataalamu, mienendo ya tasnia, na mbinu bora za ujenzi kukusaidia kujenga vyema zaidi.'
               }
@@ -422,7 +382,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto">
             <div className="flex space-x-2 pb-2">
               <button 
-                className={`${selectedCategory === 'All' ? 'bg-nyati-orange text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'} px-6 py-2 rounded-sm text-sm font-medium transition-colors`}
+                className={`${selectedCategory === 'All' ? 'bg-nyati-orange text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'} px-6 py-2 text-sm font-medium transition-colors`}
                 onClick={() => setSelectedCategory('All')}
               >
                 {language === 'en' ? 'All' : 'Zote'}
@@ -430,7 +390,7 @@ export default function BlogPage() {
               {categories.map(category => (
                 <button 
                   key={category.id}
-                  className={`${selectedCategory === category.name ? 'bg-nyati-orange text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'} px-6 py-2 rounded-sm text-sm font-medium whitespace-nowrap transition-colors`}
+                  className={`${selectedCategory === category.name ? 'bg-nyati-orange text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'} px-6 py-2 text-sm font-medium whitespace-nowrap transition-colors`}
                   onClick={() => setSelectedCategory(category.name)}
                 >
                   {category.name}
@@ -458,7 +418,7 @@ export default function BlogPage() {
           {filteredPosts.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {filteredPosts.slice(0, 3).map((post, index) => (
-              <div key={post.id} className="bg-white rounded-sm overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+              <div key={post.id} className="bg-white border border-gray-200 overflow-hidden transition-all duration-300">
                 {/* Image Container */}
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
@@ -470,7 +430,7 @@ export default function BlogPage() {
                   />
                   {post.status === 'upcoming' && (
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                      <span className="text-white font-semibold px-3 py-1 bg-nyati-orange rounded-sm">
+                      <span className="text-white font-semibold px-3 py-1 bg-nyati-orange">
                         {language === 'en' ? 'Coming Soon' : 'Inakuja Hivi Karibuni'}
                       </span>
                     </div>
@@ -513,7 +473,7 @@ export default function BlogPage() {
           {filteredPosts.length > 3 && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {filteredPosts.slice(3).map((post) => (
-              <div key={post.id} className="bg-white rounded-sm overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+              <div key={post.id} className="bg-white border border-gray-200 overflow-hidden transition-all duration-300">
                 {/* Image Container */}
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
@@ -524,7 +484,7 @@ export default function BlogPage() {
                   />
                   {post.status === 'upcoming' && (
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                      <span className="text-white font-semibold px-3 py-1 bg-nyati-orange rounded-sm">
+                      <span className="text-white font-semibold px-3 py-1 bg-nyati-orange">
                         {language === 'en' ? 'Coming Soon' : 'Inakuja Hivi Karibuni'}
                       </span>
                     </div>
@@ -580,12 +540,12 @@ export default function BlogPage() {
               <input 
                 type="email" 
                 placeholder={language === 'en' ? 'Your email address' : 'Anwani yako ya barua pepe'} 
-                className="flex-1 px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange"
+                className="flex-1 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-nyati-orange"
                 required
               />
               <button 
                 type="submit" 
-                className="bg-nyati-orange hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-sm transition-colors"
+                className="bg-nyati-orange hover:bg-orange-600 text-white font-medium px-6 py-3 transition-colors"
               >
                 {language === 'en' ? 'Subscribe' : 'Jiandikishe'}
               </button>
