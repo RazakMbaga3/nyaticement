@@ -86,42 +86,34 @@ export default function StatsStrip() {
   const isInView = useInView(ref, { once: true, amount: 0.25 })
 
   return (
-    <section ref={ref} className="bg-nyati-orange py-14 relative overflow-hidden">
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)',
-          backgroundSize: '12px 12px',
-        }}
-      />
-
-      <div className="relative container mx-auto px-6 max-w-7xl">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-white/20">
+    <section ref={ref} className="bg-nyati-navy border-t border-white/10">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.09 }}
-              className="px-6 py-2 text-center first:pl-0 last:pr-0 flex flex-col items-center"
+              transition={{ duration: 0.4, delay: i * 0.07 }}
+              className="px-6 py-8 lg:py-10 text-left"
             >
-              {/* Icon */}
-              <div className="text-white/60 mb-3">
-                {stat.icon}
-              </div>
-
               {/* Number */}
-              <div className="text-4xl lg:text-5xl font-bold text-white mb-1 tabular-nums">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} active={isInView} />
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-3xl lg:text-4xl font-bold text-white tabular-nums font-futura">
+                  <AnimatedCounter value={stat.value} suffix="" active={isInView} />
+                </span>
+                {stat.suffix && (
+                  <span className="text-nyati-orange text-lg lg:text-xl font-bold">{stat.suffix}</span>
+                )}
               </div>
 
               {/* Label */}
-              <div className="text-white font-bold text-sm uppercase tracking-wider mb-0.5">
+              <div className="text-white font-bold text-sm uppercase tracking-wider mt-3">
                 {stat.label}
               </div>
 
               {/* Sub */}
-              <div className="text-white/60 text-xs">{stat.sub}</div>
+              <div className="text-white/50 text-xs mt-1">{stat.sub}</div>
             </motion.div>
           ))}
         </div>

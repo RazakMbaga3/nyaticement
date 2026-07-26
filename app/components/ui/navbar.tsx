@@ -9,6 +9,8 @@ import { useTranslations } from '@/app/hooks/useTranslations'
 interface NavDropdownItem {
   name: string;
   path: string;
+  blurb?: string;
+  icon?: string;
 }
 
 interface NavLink {
@@ -17,20 +19,43 @@ interface NavLink {
   dropdown?: NavDropdownItem[];
 }
 
+// Icon paths for the mega-menu tiles (purely presentational — no copy lives here)
+const ICONS: Record<string, string> = {
+  about: 'M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1',
+  plant: 'M4 21V9l8-6 8 6v12M9 21v-6h6v6',
+  certifications: 'M12 21a9 9 0 100-18 9 9 0 000 18zM9 12l2 2 4-4',
+  csr: 'M12 21c-4-4-7-7.5-7-11a7 7 0 0114 0c0 3.5-3 7-7 11z',
+  codeOfConduct: 'M9 12h6m-6 4h6M9 8h6M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z',
+  brochure: 'M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  super42: 'M4 4h16v16H4V4zM4 10h16',
+  duramax42: 'M4 4h16v16H4V4zM4 10h16',
+  opc: 'M4 4h16v16H4V4zM4 10h16',
+  max32: 'M4 4h16v16H4V4zM4 10h16',
+}
+
 const getNavLinks = (t: (key: string) => string): NavLink[] => [
   {
     name: t('nav.about'),
     path: '/about',
     dropdown: [
-      { name: t('nav.about'), path: '/about/about-us' },
-      { name: t('nav.plant'), path: '/about/plant' },
-      { name: t('nav.certifications'), path: '/about/certifications' },
-      { name: t('nav.csr'), path: '/about/csr' },
-      { name: t('nav.codeOfConduct'), path: '/about/code-of-conduct' },
-      { name: t('nav.brochure'), path: '/about/brochure' },
+      { name: t('nav.about'), path: '/about/about-us', icon: ICONS.about, blurb: 'Our story & leadership' },
+      { name: t('nav.plant'), path: '/about/plant', icon: ICONS.plant, blurb: 'Production & capacity' },
+      { name: t('nav.certifications'), path: '/about/certifications', icon: ICONS.certifications, blurb: 'ISO & TBS standards' },
+      { name: t('nav.csr'), path: '/about/csr', icon: ICONS.csr, blurb: 'Community impact' },
+      { name: t('nav.codeOfConduct'), path: '/about/code-of-conduct', icon: ICONS.codeOfConduct, blurb: 'How we do business' },
+      { name: t('nav.brochure'), path: '/about/brochure', icon: ICONS.brochure, blurb: 'Download company profile' },
     ]
   },
-  { name: t('nav.products'), path: '/products' },
+  {
+    name: t('nav.products'),
+    path: '/products',
+    dropdown: [
+      { name: t('products.items.425r.name'), path: '/products', icon: ICONS.super42, blurb: '42.5R — fast early strength' },
+      { name: t('products.items.425n.name'), path: '/products', icon: ICONS.duramax42, blurb: '42.5N — balanced & versatile' },
+      { name: t('products.items.opc.name'), path: '/products', icon: ICONS.opc, blurb: 'CEM I — specialized strength' },
+      { name: t('products.items.325n.name'), path: '/products', icon: ICONS.max32, blurb: '32.5N — economic masonry' },
+    ]
+  },
   { name: t('nav.quality'), path: '/quality-control' },
   { name: t('nav.distribution'), path: '/distribution' },
   { name: t('nav.sustainability'), path: '/sustainability' },
@@ -224,35 +249,42 @@ export default function Navbar() {
                       </Link>
                     </div>
 
-                    {/* Desktop Dropdown */}
+                    {/* Desktop Mega-Menu Dropdown */}
                     {link.dropdown && (
                       <div
-                        className={`absolute left-0 mt-0 bg-white rounded-b-lg shadow-lg border-t-2 border-nyati-orange
-                          transition-all duration-300 w-64 z-50
-                          ${activeDropdown === index ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-4 invisible'}`}
+                        className={`absolute left-1/2 -translate-x-1/2 mt-0 bg-white shadow-xl border-t-2 border-nyati-orange
+                          transition-all duration-200 w-[520px] z-50 p-3
+                          ${activeDropdown === index ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}
                         onMouseEnter={() => handleDropdownHover(index, true)}
                         onMouseLeave={() => handleDropdownHover(index, false)}
                       >
-                        <ul className="py-2">
+                        <div className="grid grid-cols-2 gap-1">
                           {link.dropdown.map((item, idx) => (
-                            <li key={idx}>
-                              <Link
-                                href={item.path}
-                                className={`block px-6 py-3 text-sm hover:bg-nyati-orange/10 hover:text-nyati-orange
-                                  transition-all duration-200 relative
-                                  ${pathname === item.path ? 'text-nyati-orange bg-nyati-orange/5' : 'text-nyati-dark-grey'}`}
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <span className="transform transition-transform duration-300 inline-block hover:translate-x-1">
+                            <Link
+                              key={idx}
+                              href={item.path}
+                              className={`flex items-start gap-3 p-3 transition-colors duration-150 border border-transparent
+                                ${pathname === item.path ? 'bg-nyati-orange/5 border-nyati-orange/20' : 'hover:bg-gray-50 hover:border-gray-100'}`}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {item.icon && (
+                                <span className="flex-shrink-0 w-9 h-9 bg-gray-50 flex items-center justify-center text-nyati-navy">
+                                  <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={item.icon} />
+                                  </svg>
+                                </span>
+                              )}
+                              <span className="min-w-0">
+                                <span className={`block text-sm font-bold leading-tight ${pathname === item.path ? 'text-nyati-orange' : 'text-nyati-navy'}`}>
                                   {item.name}
                                 </span>
-                                <span className={`absolute left-0 top-0 bottom-0 w-1 bg-nyati-orange transform transition-all duration-300
-                                  ${pathname === item.path ? 'scale-y-100' : 'scale-y-0 hover:scale-y-100'}`}>
-                                </span>
-                              </Link>
-                            </li>
+                                {item.blurb && (
+                                  <span className="block text-xs text-nyati-grey mt-0.5">{item.blurb}</span>
+                                )}
+                              </span>
+                            </Link>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     )}
                   </li>

@@ -1,8 +1,8 @@
 // app/components/sections/products-slider.tsx
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from '@/app/hooks/useTranslations'
@@ -14,6 +14,7 @@ const products = [
     defaultName: 'Nyati Super 42 (CEM II A-L 42.5R)',
     image: '/images/products/super42.jpg',
     descriptionKey: 'products.items.425r.description',
+    accent: 'bg-nyati-orange',
     specs: [
       'products.items.425r.specs.1',
       'products.items.425r.specs.2',
@@ -26,6 +27,7 @@ const products = [
     defaultName: 'Nyati Duramax 42 (CEM II B-M 42.5N)',
     image: '/images/products/duramax42.jpg',
     descriptionKey: 'products.items.425n.description',
+    accent: 'bg-[#F5C842]',
     specs: [
       'products.items.425n.specs.1',
       'products.items.425n.specs.2',
@@ -38,6 +40,7 @@ const products = [
     defaultName: 'Nyati Premium OPC (CEM I OPC 42.5N)',
     image: '/images/products/premiumOPC.jpg',
     descriptionKey: 'products.items.opc.description',
+    accent: 'bg-[#C8C8C8]',
     specs: [
       'products.items.opc.specs.1',
       'products.items.opc.specs.2',
@@ -50,6 +53,7 @@ const products = [
     defaultName: 'Nyati Max 32 (CEM II B-L 32.5N)',
     image: '/images/products/max32.jpg',
     descriptionKey: 'products.items.325n.description',
+    accent: 'bg-nyati-green',
     specs: [
       'products.items.325n.specs.1',
       'products.items.325n.specs.2',
@@ -60,152 +64,134 @@ const products = [
 
 export default function ProductsSlider() {
   const { t } = useTranslations();
-  const [activeIndex, setActiveIndex] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
-  const nextSlide = () => {
-    setActiveIndex((current) => (current === products.length - 1 ? 0 : current + 1))
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.08 }
+    }
   }
 
-  const prevSlide = () => {
-    setActiveIndex((current) => (current === 0 ? products.length - 1 : current - 1))
-  }
-
-  // Slide animation variants
-  const variants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? '100%' : '-100%',
-      opacity: 0
-    }),
-    center: {
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? '100%' : '-100%',
-      opacity: 0
-    })
+  const itemVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
   }
 
   return (
-    <section ref={ref} className="py-8 px-4 relative bg-nyati-pattern bg-fixed bg-cover before:content-[''] before:absolute before:inset-0 before:bg-nyati-navy/5">
-      <div className="container mx-auto relative z-10 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-16">
-          {/* Text and CTA - Full width on mobile, half width on desktop */}
+    <section ref={ref} className="py-16 md:py-20 px-4 bg-white">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid md:grid-cols-2 gap-8 items-end mb-12 pb-8 border-b border-gray-200">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
-            className="w-full md:w-1/2 text-left mb-6 md:mb-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-4xl font-bold text-nyati-navy mb-3">
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="block w-7 h-0.5 bg-nyati-orange" />
+              <span className="text-nyati-orange text-xs font-bold tracking-[0.18em] uppercase">
+                {t('products.title')}
+              </span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-bold text-nyati-navy">
               {t('products.sliderTitle')}
             </h2>
-            <p className="text-nyati-navy text-base md:text-lg mb-6">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex flex-col md:items-end gap-4"
+          >
+            <p className="text-gray-600 text-sm md:text-base md:text-right max-w-md">
               {t('products.sliderDescription')}
             </p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-4"
+            <Link
+              href="/products"
+              className="group inline-flex items-center bg-nyati-orange hover:bg-nyati-navy text-white px-6 py-2.5 font-medium transition-colors duration-200 uppercase tracking-wider text-sm"
             >
-              <Link
-                href="/products"                className="bg-nyati-orange hover:bg-nyati-navy text-white px-6 py-2.5 rounded-lg font-medium transition-colors duration-300 inline-flex items-center uppercase tracking-wider text-sm md:text-base"
+              <span>{t('products.viewAll')}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <span>{t('products.viewAll')}</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 ml-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Product Display - Full width on mobile, half width on desktop */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full md:w-1/2 relative"
-          >
-            <div className="relative h-[350px] md:h-[500px] overflow-hidden bg-white/50 rounded-lg shadow-xl">
-              <AnimatePresence initial={false} custom={activeIndex}>
-                <motion.div
-                  key={activeIndex}
-                  custom={activeIndex}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0 flex"
-                >
-                  <div className="w-full h-full relative p-4 md:p-8 flex flex-col justify-center items-center">
-                    <div className="relative h-[200px] md:h-[350px] w-full">                    <Image
-                        src={products[activeIndex].image}
-                        alt={t(products[activeIndex].nameKey) || products[activeIndex].defaultName}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority
-                        className="object-contain drop-shadow-xl"
-                      />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-nyati-navy mt-3 md:mt-4 mb-1 md:mb-2 text-center">
-                      {t(products[activeIndex].nameKey) || products[activeIndex].defaultName}
-                    </h3>
-                    <p className="text-center text-gray-600 text-sm md:text-base px-2">
-                      {t(products[activeIndex].descriptionKey)}
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Navigation dots */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-                {products.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveIndex(index)}                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
-                      activeIndex === index
-                        ? 'bg-nyati-orange w-6 md:w-8'
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                    aria-label={t('products.navigation.slideNumber', { number: index + 1 } as any)}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Arrow Controls - Made more touch-friendly */}
-            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
-              whileTap={{ scale: 0.95 }}              className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
-              onClick={prevSlide}
-              aria-label={t('products.navigation.previous')}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </motion.button>            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F49545" }}
-              whileTap={{ scale: 0.95 }}              className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-nyati-navy/80 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10 shadow-md"
-              onClick={nextSlide}
-              aria-label={t('products.navigation.next')}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </motion.button>
+            </Link>
           </motion.div>
         </div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-200"
+        >
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              variants={itemVariants}
+              className="border-r border-b border-gray-200 flex flex-col group"
+            >
+              <div className={`h-1 w-full ${product.accent}`} />
+              <div className="relative h-48 bg-nyati-navy/5 flex items-center justify-center p-6">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={product.image}
+                    alt={t(product.nameKey) || product.defaultName}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-base md:text-lg font-bold text-nyati-navy mb-2 leading-snug">
+                  {t(product.nameKey) || product.defaultName}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 flex-1">
+                  {t(product.descriptionKey)}
+                </p>
+
+                <ul className="space-y-1.5 mb-5">
+                  {product.specs.map((specKey) => (
+                    <li key={specKey} className="text-xs text-gray-700 flex items-start gap-2">
+                      <span className="block w-1 h-1 mt-1.5 bg-nyati-orange flex-shrink-0" />
+                      <span>{t(specKey)}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/products"
+                  className="mt-auto pt-4 border-t border-gray-100 inline-flex items-center gap-1.5 text-nyati-navy hover:text-nyati-orange font-semibold text-sm transition-colors duration-200"
+                >
+                  <span>{t('common.readMore')}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

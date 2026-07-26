@@ -10,20 +10,7 @@ export default function CTABanner() {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-nyati-navy py-20">
-
-      {/* Decorative circles */}
-      <div className="absolute -top-24 -right-24 w-80 h-80 bg-nyati-orange/8 rounded-full blur-2xl pointer-events-none" />
-      <div className="absolute -bottom-20 -left-16 w-60 h-60 bg-white/3 rounded-full blur-2xl pointer-events-none" />
-
-      {/* Subtle grid texture */}
-      <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
-        style={{
-          backgroundImage: 'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }}
-      />
+    <section ref={ref} className="relative bg-nyati-navy py-20 border-t border-white/10">
 
       {/* Top accent bar */}
       <div className="absolute top-0 left-0 right-0 flex h-1">
@@ -68,7 +55,7 @@ export default function CTABanner() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center justify-center gap-2.5 bg-nyati-orange hover:bg-orange-500 text-white px-8 py-4 font-bold text-xs tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-nyati-orange/20"
+              className="group inline-flex items-center justify-center gap-2.5 bg-nyati-orange hover:bg-orange-600 text-white px-8 py-4 font-bold text-xs tracking-[0.18em] uppercase transition-colors duration-200"
             >
               Find a Dealer
               <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
