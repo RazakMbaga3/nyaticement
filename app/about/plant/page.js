@@ -141,88 +141,52 @@ export default function PlantPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/slideshow/1.jpeg"
-              alt="Our Manufacturing Plant"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/slideshow/1.jpeg"
+            alt="Our Manufacturing Plant"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">            <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
+            <nav className="mb-6">
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('plantPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><Link href="/about" className="hover:text-nyati-orange transition-colors">{pt('plantPage.hero.breadcrumb.about')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('plantPage.hero.breadcrumb.plant')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('plantPage.hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('plantPage.hero.highlight')}</span>
-            </motion.h1>            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            </motion.h1>
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               {Array.isArray(pageTranslations?.plantPage?.hero?.stats) ? (
                 pageTranslations.plantPage.hero.stats.map((stat, index) => (
                   <div 
                     key={index} 
-                    className={`bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10 ${index === 5 ? 'hidden md:block' : ''}`}
+                    className={`bg-nyati-navy p-4 ${index === 5 ? 'hidden md:block' : ''}`}
                   >
                     <div className="text-nyati-orange text-2xl font-bold mb-1">{stat.value}</div>
                     <div className="text-white text-sm">{stat.label}</div>
@@ -230,27 +194,27 @@ export default function PlantPage() {
                 ))
               ) : (
                 <>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">1M Tons</div>
                     <div className="text-white text-sm">Annual Capacity</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">Own</div>
                     <div className="text-white text-sm">Power</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">Own</div>
                     <div className="text-white text-sm">Clinker</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">Integrated</div>
                     <div className="text-white text-sm">Manufacturing</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">Enhanced</div>
                     <div className="text-white text-sm">Sustainability</div>
                   </div>
-                  <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+                  <div className="hidden md:block bg-nyati-navy p-4">
                     <div className="text-nyati-orange text-2xl font-bold mb-1">ISO</div>
                     <div className="text-white text-sm">Certified</div>
                   </div>
@@ -291,7 +255,7 @@ export default function PlantPage() {
                 whileHover="hover"
                 animate="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="bg-white rounded-lg shadow-md overflow-hidden h-full"
+                className="bg-white border border-gray-200 overflow-hidden h-full"
               >
                 <div className="p-6 flex items-start">
                   <div className="w-16 h-16 relative flex-shrink-0 mr-4">
@@ -322,7 +286,7 @@ export default function PlantPage() {
                 whileHover="hover"
                 animate="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="bg-white rounded-lg shadow-md overflow-hidden h-full"
+                className="bg-white border border-gray-200 overflow-hidden h-full"
               >
                 <div className="p-6 flex items-start">
                   <div className="w-16 h-16 relative flex-shrink-0 mr-4">

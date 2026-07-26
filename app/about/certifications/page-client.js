@@ -340,10 +340,9 @@ export default function CertificationsClient({ certifications }) {
               <motion.button
                 key={`${a.title[lang]}-${i}`}
                 onClick={() => setOpenIndex(i)}
-                className="bg-white rounded-sm shadow-soft overflow-hidden text-left p-4 flex flex-col items-start"
-                whileHover={{ scale: 1.02 }}
+                className="bg-white border border-gray-200 overflow-hidden text-left p-4 flex flex-col items-start"
               >
-                <div className="relative w-full h-40 mb-3 bg-gray-50 rounded-sm p-3">
+                <div className="relative w-full h-40 mb-3 bg-gray-50 border border-gray-100 p-3">
                   <Image src={a.image} alt={a.title[lang]} fill className="object-contain" />
                 </div>
                 <div className="text-sm font-semibold text-nyati-navy">{a.title[lang]}</div>
@@ -355,7 +354,7 @@ export default function CertificationsClient({ certifications }) {
 
           {openIndex !== null && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={() => setOpenIndex(null)}>
-              <div className="bg-white rounded-sm overflow-hidden max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
+              <div className="bg-white border border-gray-200 overflow-hidden max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
                 <div className="relative w-full h-[70vh]">
                   <Image src={items[openIndex].image} alt={items[openIndex].title[lang]} fill className="object-contain" />
                 </div>
@@ -364,7 +363,7 @@ export default function CertificationsClient({ certifications }) {
                   {items[openIndex].year && items[openIndex].year.trim() ? <div className="text-xs text-gray-500 mb-2">{items[openIndex].year}</div> : null}
                   {items[openIndex].description[lang] ? <p className="text-sm text-gray-700 mt-2">{items[openIndex].description[lang]}</p> : null}
                   <div className="mt-3 text-right">
-                    <button onClick={() => setOpenIndex(null)} className="px-3 py-1 bg-nyati-navy text-white rounded-sm">{lang === 'sw' ? 'Funga' : 'Close'}</button>
+                    <button onClick={() => setOpenIndex(null)} className="px-3 py-1 bg-nyati-navy text-white">{lang === 'sw' ? 'Funga' : 'Close'}</button>
                   </div>
                 </div>
               </div>
@@ -376,94 +375,52 @@ export default function CertificationsClient({ certifications }) {
   }
 
   return (
-    <div className="bg-gray-50">      {/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/certifications/CERTIMG.jpg"
-              alt="Our Certifications"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+    <div className="bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/certifications/CERTIMG.jpg"
+            alt="Our Certifications"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.15, 1],
-              opacity: [0.05, 0.1, 0.05] 
-            }}
-            transition={{ 
-              duration: 6, 
-              repeat: Infinity, 
-              repeatType: "reverse",
-              delay: 1
-            }}
-            className="absolute bottom-20 left-20 w-56 h-56 bg-nyati-green/10 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb */}
-            <motion.nav 
-              className="mb-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >              <ol className="flex items-center space-x-2 text-sm text-white/80">
+            <nav className="mb-6">
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('certificationsPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><Link href="/about" className="hover:text-nyati-orange transition-colors">{pt('certificationsPage.hero.breadcrumb.about')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('certificationsPage.hero.breadcrumb.certifications')}</span></li>
               </ol>
-            </motion.nav>            <motion.h1 
+            </nav>
+            <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
             {language === 'sw' ? 'Vyeti na Tuzo' : 'Certifications & Awards'}
             </motion.h1>
-            
+
             <motion.p
-              className="text-lg text-white/90 max-w-2xl"
+              className="text-lg text-white/75 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('certificationsPage.hero.description')}
             </motion.p>
 
-            <motion.div 
-              className="h-1 w-24 bg-nyati-orange mt-6"
-              initial={{ width: 0 }}
-              animate={{ width: 96 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            />
+            <div className="h-0.5 w-24 bg-nyati-orange mt-6" />
           </div>
         </div>
       </section>
@@ -497,13 +454,13 @@ export default function CertificationsClient({ certifications }) {
                     key={item.title}
                     variants={cardVariant}
                     whileHover="hover"
-                    className="bg-white rounded-sm shadow-soft overflow-hidden group"
+                    className="bg-white border border-gray-200 overflow-hidden group"
                   >
                     <div className="p-6">
                       {item.image && (
                         <div className="relative">
-                          <motion.div 
-                            className="mb-6 relative h-28 bg-gray-50 rounded-sm p-4 overflow-hidden"
+                          <motion.div
+                            className="mb-6 relative h-28 bg-gray-50 border border-gray-100 p-4 overflow-hidden"
                             variants={imageVariant}
                             whileHover="hover"
                           >
@@ -535,7 +492,7 @@ export default function CertificationsClient({ certifications }) {
                           href={item.downloadLink}
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-4 py-2 bg-nyati-navy text-white rounded-sm hover:bg-nyati-navy/90 transition-all group/button"
+                          className="inline-flex items-center px-4 py-2 bg-nyati-navy text-white hover:bg-nyati-navy/90 transition-colors group/button"
                         >
                           <motion.span 
                             variants={downloadButtonVariant}
