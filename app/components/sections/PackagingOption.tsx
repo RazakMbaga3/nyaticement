@@ -18,16 +18,11 @@ export default function PackagingOption({ image, title, description, index }: Pa
 
   return (
     <motion.div
-      className="bg-white rounded-sm shadow-lg overflow-hidden flex flex-col h-full"
-      initial={{ opacity: 0, y: 50 }}
+      className="bg-white border border-gray-200 overflow-hidden flex flex-col h-full"
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
-      whileHover={{
-        y: -10,
-        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        transition: { duration: 0.3 }
-      }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="relative h-64 w-full overflow-hidden group">
         {!imageError ? (

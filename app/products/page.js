@@ -191,22 +191,21 @@ const ApplicationCard = ({ application, index }) => {
   const [imageError, setImageError] = useState(false);
   
   return (
-    <motion.div 
-      className="bg-white rounded-sm shadow-md overflow-hidden h-full"
+    <motion.div
+      className="bg-white border border-gray-200 overflow-hidden h-full group"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)' }}
     >
-      {/* Image Container with Category Overlay */}
+      {/* Image Container */}
       <div className="relative h-52 w-full overflow-hidden">
         {!imageError ? (
           <Image
             src={application.image}
             alt={application.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             onError={() => {
               console.log(`Error loading image: ${application.image}`);
               setImageError(true);
@@ -224,11 +223,11 @@ const ApplicationCard = ({ application, index }) => {
           />
         )}
       </div>
-      
+
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-xl font-bold text-nyati-navy mb-2">{application.title}</h3>
-        <p className="text-gray-600 text-sm mb-4">{application.description}</p>
+        <h3 className="text-lg font-bold text-nyati-navy mb-2">{application.title}</h3>
+        <p className="text-gray-600 text-sm">{application.description}</p>
       </div>
     </motion.div>
   );
@@ -294,88 +293,48 @@ export default function ProductsPage() {
   
   return (
     <div className="bg-gray-50">
-      {/* Hero section with parallax effect */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/products/prod.jpg"
-              alt={pt('productsPage.hero.title')}
-              fill
-              priority
-              className="object-cover"
-              onError={() => setHeroImageError(true)}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      {/* Hero section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/products/prod.jpg"
+            alt={pt('productsPage.hero.title')}
+            fill
+            priority
+            className="object-cover"
+            onError={() => setHeroImageError(true)}
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity, 
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('productsPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('productsPage.hero.breadcrumb.products')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('productsPage.hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('productsPage.hero.highlight')}</span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+              className="text-lg md:text-xl text-white/75 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('productsPage.hero.description')}
             </motion.p>
@@ -458,34 +417,8 @@ export default function ProductsPage() {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-10 bg-nyati-navy relative overflow-hidden">
-        {/* Animated background elements */}
-        <motion.div 
-          className="absolute top-20 right-0 w-64 h-64 bg-nyati-orange/5 rounded-full"
-          animate={{ 
-            x: [0, 30, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ 
-            duration: 8, 
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-20 left-0 w-96 h-96 bg-nyati-navy/5 rounded-full"
-          animate={{ 
-            x: [0, -30, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{ 
-            duration: 10, 
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-        />
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-14 bg-nyati-navy border-t border-white/10">
+        <div className="container mx-auto px-4">
           <motion.div 
             className="mb-4 text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -578,43 +511,19 @@ export default function ProductsPage() {
       </section>
       
       {/* Packaging Options Section */}
-      <section className="py-6 bg-gradient-to-b from-nyati-light-orange to-nyati-navy relative overflow-hidden">
-        {/* Animated background elements */}
-        <motion.div 
-          className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-nyati-orange/5"
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.05, 1]
-          }}
-          transition={{ 
-            rotate: { duration: 40, repeat: Infinity, ease: "linear" },
-            scale: { duration: 8, repeat: Infinity, repeatType: "reverse" }
-          }}
-        />
-        <motion.div 
-          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-nyati-navy/5"
-          animate={{ 
-            rotate: -360,
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            rotate: { duration: 50, repeat: Infinity, ease: "linear" },
-            scale: { duration: 10, repeat: Infinity, repeatType: "reverse" }
-          }}
-        />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="mb-6 text-center"
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="mb-10 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-nyati-navy mb-4 mt-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-nyati-navy mb-4">
               {pt('productsPage.packaging.title')}
             </h2>
-            <p className="text-nyati-light-grey text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               {pt('productsPage.packaging.description')}
             </p>
           </motion.div>
@@ -647,27 +556,29 @@ export default function ProductsPage() {
       
 
       {/* Call to Action Section */}
-      <section className="py-16 bg-gradient-to-r from-nyati-navy to-navy-800 text-white">
+      <section className="relative py-20 bg-nyati-navy border-t border-white/10">
+        <div className="absolute top-0 left-0 right-0 flex h-1">
+          <div className="flex-[2] bg-nyati-orange" />
+          <div className="flex-[3] bg-white/8" />
+        </div>
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-5xl mx-auto text-center"
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl text-nyati-light-orange md:text-4xl font-bold mb-6">{pt('productsPage.cta.title')}</h2>
-            <p className="text-xl mb-8 text-white/80">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{pt('productsPage.cta.title')}</h2>
+            <p className="text-lg mb-8 text-white/70">
               {pt('productsPage.cta.description')}
             </p>
-            <motion.a 
-              href="/contact" 
-              className="inline-block bg-nyati-orange hover:bg-nyati-navy text-white px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2.5 bg-nyati-orange hover:bg-orange-600 text-white px-8 py-4 font-bold text-sm tracking-[0.1em] uppercase transition-colors duration-200"
             >
               {pt('productsPage.cta.button')}
-            </motion.a>
+            </a>
           </motion.div>
         </div>
       </section>

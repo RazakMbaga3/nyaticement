@@ -41,24 +41,17 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
   const imageToShow = imageError && fallbackImage ? fallbackImage : image;
 
   return (
-    <motion.div
-      className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300"
-      whileHover={{ y: -5 }}
-      layout
-    >
+    <div className="bg-white border border-gray-200">
       <div className="flex flex-col lg:flex-row">
         {/* Image Container */}
-        <motion.div
-          className="lg:w-2/5 p-4 flex items-center justify-center bg-gray-50 relative overflow-hidden"
-          layoutId={`image-container-${index}`}
-        >
+        <div className="lg:w-2/5 p-4 flex items-center justify-center bg-nyati-navy/5 relative overflow-hidden">
           <div className="relative h-80 w-full">
             {/* Next.js Image with Error Handling */}
             <Image
               src={imageToShow}
               alt={title}
               fill
-              className="object-contain transition-transform duration-700 hover:scale-105"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 500px"
               priority={true}
               onLoadingComplete={() => setImageLoaded(true)}
@@ -73,7 +66,7 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
             {/* Show placeholder while loading */}
             {!imageLoaded && !imageError && (
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                <div className="animate-pulse bg-gray-200 h-48 w-48 rounded-md"></div>
+                <div className="animate-pulse bg-gray-200 h-48 w-48"></div>
               </div>
             )}
 
@@ -84,51 +77,27 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
               </div>
             )}
           </div>
-
-          {/* Hover effect */}
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-t from-nyati-navy/10 to-transparent opacity-0 transition-opacity duration-300"
-            whileHover={{ opacity: 1 }}
-          />
-        </motion.div>
+        </div>
 
         {/* Content Container */}
-        <div className="lg:w-3/5 p-6">
+        <div className="lg:w-3/5 p-6 border-t lg:border-t-0 lg:border-l border-gray-200">
           {/* Product Title */}
-          <motion.h2
-            className="text-2xl font-bold mb-1 text-nyati-navy"
-            layoutId={`title-${index}`}
-          >
+          <h2 className="text-2xl font-bold mb-1 text-nyati-navy">
             {title}
-          </motion.h2>
+          </h2>
           {subtitle && (
-            <motion.h3
-              className="text-base font-semibold mb-3 text-nyati-orange"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.15 }}
-            >
+            <h3 className="text-base font-semibold mb-3 text-nyati-orange">
               {subtitle}
-            </motion.h3>
+            </h3>
           )}
 
           {/* Product Description */}
-          <motion.p
-            className="text-gray-700 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
+          <p className="text-gray-700 mb-6">
             {description}
-          </motion.p>
+          </p>
 
           {/* Features and Applications */}
-          <motion.div
-            className="flex flex-col md:flex-row gap-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
+          <div className="flex flex-col md:flex-row gap-6">
             {/* Features Column */}
             <div className="md:w-1/2">
               <div className="flex items-center mb-3">
@@ -188,7 +157,7 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
 
           {/* Show More/Less Button */}
           {((features.length > 3) || (applications.length > 3)) && (
@@ -219,6 +188,6 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
