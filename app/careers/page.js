@@ -115,117 +115,78 @@ export default function CareersPage() {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/career5.jpg"
-              alt="Join Our Team"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/career5.jpg"
+            alt="Join Our Team"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('careersPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('careersPage.hero.breadcrumb.careers')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('careersPage.hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('careersPage.hero.highlight')}</span>
             </motion.h1>
 
-            <motion.p 
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+            <motion.p
+              className="text-lg md:text-xl text-white/75 max-w-2xl mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('careersPage.hero.description')}
             </motion.p>
 
             {/* Key Metrics */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('careersPage.hero.metrics.teamMembers.count')}</div>
                 <div className="text-white text-sm">{pt('careersPage.hero.metrics.teamMembers.label')}</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('careersPage.hero.metrics.departments.count')}</div>
                 <div className="text-white text-sm">{pt('careersPage.hero.metrics.departments.label')}</div>
               </div>
-              <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="hidden md:block bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('careersPage.hero.metrics.growthFocus.count')}</div>
                 <div className="text-white text-sm">{pt('careersPage.hero.metrics.growthFocus.label')}</div>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>      <div className="container mx-auto px-4">
-        {/* Main content with solid white background that extends to footer */}
-        <div className="relative bg-white min-h-screen z-10 shadow-xl mt-12">
+      </section>
+      <div className="container mx-auto px-4">
+        {/* Main content */}
+        <div className="relative bg-white min-h-screen z-10 border border-gray-200 mt-12">
           <div className="bg-white w-full h-full">
             <main className="py-16">
                 <div className="container mx-auto px-4 max-w-6xl">
@@ -234,10 +195,10 @@ export default function CareersPage() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="mb-10 bg-white p-6 rounded-sm shadow-soft"
+                    className="mb-10 bg-white p-6 border border-gray-200"
                   >
                     <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-sm bg-nyati-orange/10 flex items-center justify-center mr-3">
+                      <div className="w-10 h-10 bg-nyati-orange/10 flex items-center justify-center mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
@@ -270,9 +231,9 @@ export default function CareersPage() {
                             key={index}
                             variants={cardVariants}
                             whileHover={{ y: -5 }}
-                            className="bg-white rounded-sm shadow-soft p-5 flex items-start hover:shadow-md transition-all duration-300"
+                            className="bg-white border border-gray-200 p-5 flex items-start transition-all duration-300"
                           >
-                            <div className="mr-4 bg-blue-100 rounded-sm p-3">
+                            <div className="mr-4 bg-nyati-navy/5 p-3">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {index === 0 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
                                 {index === 1 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />}
@@ -292,9 +253,9 @@ export default function CareersPage() {
                           <motion.div 
                             variants={cardVariants}
                             whileHover={{ y: -5 }}
-                            className="bg-white rounded-sm shadow-soft p-5 flex items-start hover:shadow-md transition-all duration-300"
+                            className="bg-white border border-gray-200 p-5 flex items-start transition-all duration-300"
                           >
-                            <div className="mr-4 bg-blue-100 rounded-sm p-3">
+                            <div className="mr-4 bg-nyati-navy/5 p-3">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                               </svg>
@@ -310,9 +271,9 @@ export default function CareersPage() {
                           <motion.div 
                             variants={cardVariants}
                             whileHover={{ y: -5 }}
-                            className="bg-white rounded-sm shadow-soft p-5 flex items-start hover:shadow-md transition-all duration-300"
+                            className="bg-white border border-gray-200 p-5 flex items-start transition-all duration-300"
                           >
-                            <div className="mr-4 bg-blue-100 rounded-sm p-3">
+                            <div className="mr-4 bg-nyati-navy/5 p-3">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                               </svg>
@@ -328,9 +289,9 @@ export default function CareersPage() {
                           <motion.div 
                             variants={cardVariants}
                             whileHover={{ y: -5 }}
-                            className="bg-white rounded-sm shadow-soft p-5 flex items-start hover:shadow-md transition-all duration-300"
+                            className="bg-white border border-gray-200 p-5 flex items-start transition-all duration-300"
                           >
-                            <div className="mr-4 bg-blue-100 rounded-sm p-3">
+                            <div className="mr-4 bg-nyati-navy/5 p-3">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                               </svg>
@@ -355,7 +316,7 @@ export default function CareersPage() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="lg:col-span-5 relative rounded-sm overflow-hidden shadow-md h-80"
+                      className="lg:col-span-5 relative border border-gray-200 overflow-hidden h-80"
                     >
                       <Image 
                         src="/images/LakeCementStaffs121.jpg" 
@@ -390,9 +351,9 @@ export default function CareersPage() {
                             <motion.div 
                               key={index}
                               variants={cardVariants}
-                              className="bg-white rounded-sm shadow-soft p-4 flex items-start hover:shadow-md transition-all duration-300"
+                              className="bg-white border border-gray-200 p-4 flex items-start transition-all duration-300"
                             >
-                              <div className="mr-3 flex-shrink-0 bg-blue-100 rounded-sm p-2">
+                              <div className="mr-3 flex-shrink-0 bg-nyati-navy/5 p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   {index === 0 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />}
                                   {index === 1 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />}
@@ -409,9 +370,9 @@ export default function CareersPage() {
                           <>
                             <motion.div 
                               variants={cardVariants}
-                              className="bg-white rounded-sm shadow-soft p-4 flex items-start hover:shadow-md transition-all duration-300"
+                              className="bg-white border border-gray-200 p-4 flex items-start transition-all duration-300"
                             >
-                              <div className="mr-3 flex-shrink-0 bg-blue-100 rounded-sm p-2">
+                              <div className="mr-3 flex-shrink-0 bg-nyati-navy/5 p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -424,9 +385,9 @@ export default function CareersPage() {
                             
                             <motion.div 
                               variants={cardVariants}
-                              className="bg-white rounded-sm shadow-soft p-4 flex items-start hover:shadow-md transition-all duration-300"
+                              className="bg-white border border-gray-200 p-4 flex items-start transition-all duration-300"
                             >
-                              <div className="mr-3 flex-shrink-0 bg-blue-100 rounded-sm p-2">
+                              <div className="mr-3 flex-shrink-0 bg-nyati-navy/5 p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
@@ -439,9 +400,9 @@ export default function CareersPage() {
                             
                             <motion.div 
                               variants={cardVariants}
-                              className="bg-white rounded-sm shadow-soft p-4 flex items-start hover:shadow-md transition-all duration-300"
+                              className="bg-white border border-gray-200 p-4 flex items-start transition-all duration-300"
                             >
-                              <div className="mr-3 flex-shrink-0 bg-blue-100 rounded-sm p-2">
+                              <div className="mr-3 flex-shrink-0 bg-nyati-navy/5 p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                 </svg>
@@ -463,7 +424,7 @@ export default function CareersPage() {
                     transition={{ duration: 0.6 }}
                     className="mt-12"
                   >
-                    <div className="bg-nyati-navy rounded-sm overflow-hidden shadow-md relative">
+                    <div className="bg-nyati-navy overflow-hidden relative border-t-2 border-nyati-orange">
                       {/* Right side image */}
                       <div className="absolute right-0 top-0 h-full w-full md:w-1/3 lg:w-2/5 z-0">
                         <div className="relative w-full h-full">
@@ -504,7 +465,7 @@ export default function CareersPage() {
                           >
                             <Link 
                               href="/contact" 
-                              className="inline-block bg-nyati-orange hover:bg-nyati-orange/90 text-white font-semibold rounded-sm px-8 py-4 shadow-md transition-all duration-300"
+                              className="inline-block bg-nyati-orange hover:bg-nyati-orange/90 text-white font-semibold px-8 py-4 transition-all duration-300"
                             >
                               {pt('careersPage.cta.buttonText')}
                             </Link>
