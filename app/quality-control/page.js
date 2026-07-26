@@ -93,108 +93,72 @@ export default function QualityControlPage() {
       animate="visible" 
       className="bg-white"
     >
-     {/* Hero Section */}
-           <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-             <motion.div
-               className="absolute inset-0 z-0"
-               initial={{ scale: 1.1 }}
-               animate={{ scale: 1 }}
-               transition={{ duration: 0.8 }}
-             >
-               <div className="absolute inset-0">
-                 <Image 
-                   src="/images/quality/QC.jpg"
-                   alt="Our Manufacturing Plant"
-                   fill
-                   priority
-                   className="object-cover"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-               </div>
-     
-               <motion.div 
-                 animate={{ 
-                   scale: [1, 1.1, 1],
-                   opacity: [0.05, 0.15, 0.05] 
-                 }}
-                 transition={{ 
-                   duration: 8, 
-                   repeat: Infinity, 
-                   repeatType: "reverse" 
-                 }}
-                 className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
-               />
-               
-               <motion.div 
-                 animate={{ 
-                   scale: [1, 1.2, 1],
-                   opacity: [0.03, 0.1, 0.03] 
-                 }}
-                 transition={{ 
-                   duration: 10, 
-                   repeat: Infinity,
-                   repeatType: "reverse",
-                   delay: 1.5
-                 }}
-                 className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-               />
-             </motion.div>
-     
-             <div className="container mx-auto px-4 h-full relative z-10">
-               <div className="flex flex-col justify-center h-full max-w-4xl">                 <nav className="mb-6">
-                   <motion.ol 
-                     className="flex items-center space-x-2 text-sm text-white/80"
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     transition={{ delay: 0.2 }}
-                   >
-                     <li><Link href="/" className="hover:text-nyati-orange transition-colors">{t('quality.hero.breadcrumb.home') || "Home"}</Link></li>
-                     <li><span className="text-white/60">/</span></li>
-                     <li><Link href="/quality-control" className="text-white hover:text-nyati-orange transition-colors">{t('quality.hero.breadcrumb.quality') || "Quality Control"}</Link></li>
-                   </motion.ol>
-                 </nav>
-     
-                 <motion.h1 
-                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
-                   initial={{ opacity: 0, y: 20 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: 0.3 }}
-                 >
-                  {t('quality.hero.title') || "Uncompromised Quality."}
-                   <br />
-                   <span className="text-nyati-orange">{t('quality.hero.highlight') || "Cement You Can Trust"}</span>
-                 </motion.h1>
-     
-                 <motion.p 
-                   className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
-                   initial={{ opacity: 0, y: 20 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: 0.5 }}
-                 >
-                   {t('quality.hero.description') || "Our commitment to quality starts long before the cement reaches your hands. Through automated systems, skilled oversight, and industry-leading standards, we deliver consistency you can count on."}
-                 </motion.p>
-     
-                 <motion.div 
-                   className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
-                   initial={{ opacity: 0, y: 20 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: 0.7 }}
-                 >                   <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
-                     <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.iso') || "ISO"}</div>
-                     <div className="text-white text-sm">{t('quality.hero.stats.certified') || "Certified"}</div>
-                   </div>
-                   <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
-                     <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.tbs') || "TBS"}</div>
-                     <div className="text-white text-sm">{t('quality.hero.stats.approved') || "Approved"}</div>
-                   </div>
-                   <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
-                     <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.quality') || "100%"}</div>
-                     <div className="text-white text-sm">{t('quality.hero.stats.assured') || "Quality Assured"}</div>
-                   </div>
-                 </motion.div>
-               </div>
-             </div>
-           </section>
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/quality/QC.jpg"
+            alt="Our Manufacturing Plant"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
+
+        <div className="container mx-auto px-4 h-full relative z-10">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
+            <nav className="mb-6">
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
+                <li><Link href="/" className="hover:text-nyati-orange transition-colors">{t('quality.hero.breadcrumb.home') || "Home"}</Link></li>
+                <li><span className="text-white/40">/</span></li>
+                <li><Link href="/quality-control" className="text-white hover:text-nyati-orange transition-colors">{t('quality.hero.breadcrumb.quality') || "Quality Control"}</Link></li>
+              </ol>
+            </nav>
+
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+             {t('quality.hero.title') || "Uncompromised Quality."}
+              <br />
+              <span className="text-nyati-orange">{t('quality.hero.highlight') || "Cement You Can Trust"}</span>
+            </motion.h1>
+
+            <motion.p
+              className="text-lg md:text-xl text-white/75 max-w-2xl mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
+              {t('quality.hero.description') || "Our commitment to quality starts long before the cement reaches your hands. Through automated systems, skilled oversight, and industry-leading standards, we deliver consistency you can count on."}
+            </motion.p>
+
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 max-w-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="bg-nyati-navy p-4">
+                <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.iso') || "ISO"}</div>
+                <div className="text-white text-sm">{t('quality.hero.stats.certified') || "Certified"}</div>
+              </div>
+              <div className="bg-nyati-navy p-4">
+                <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.tbs') || "TBS"}</div>
+                <div className="text-white text-sm">{t('quality.hero.stats.approved') || "Approved"}</div>
+              </div>
+              <div className="hidden md:block bg-nyati-navy p-4">
+                <div className="text-nyati-orange text-2xl font-bold mb-1">{t('quality.hero.stats.quality') || "100%"}</div>
+                <div className="text-white text-sm">{t('quality.hero.stats.assured') || "Quality Assured"}</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <div className="container mx-auto px-4 max-w-6xl py-4">
         {/* Intro Section */}
@@ -224,7 +188,7 @@ export default function QualityControlPage() {
                 key={index}
                 variants={cardVariant}
                 whileHover="hover"
-                className="px-4 py-3 bg-nyati-navy rounded-sm flex items-center transition-all duration-300"
+                className="px-4 py-3 bg-nyati-navy flex items-center transition-all duration-300"
               >
                 <div className="flex-shrink-0 text-4xl font-bold text-nyati-orange mr-3">
                   {card.number}
@@ -251,7 +215,7 @@ export default function QualityControlPage() {
                 key={index} 
                 variants={cardVariant}
                 whileHover="hover"
-                className="bg-gray-50 rounded-sm overflow-hidden transition-all duration-300 group flex flex-col shadow-sm"
+                className="bg-gray-50 border border-gray-200 overflow-hidden transition-all duration-300 group flex flex-col"
               >
                 <div className="relative h-32 w-full overflow-hidden flex justify-center items-center">
                   {!imgErrors[feature.image] ? (
@@ -295,11 +259,11 @@ export default function QualityControlPage() {
         {/* New Laboratory Photo Section */}
         <motion.section
           variants={fadeIn}
-          className="mb-8 rounded-sm overflow-hidden shadow-md"
+          className="mb-8 border border-gray-200 overflow-hidden"
         >
           <div className="flex flex-col md:flex-row">
             {/* Image side */}
-            <motion.div 
+            <motion.div
               variants={slideUp}
               className="md:w-1/2 relative h-64 md:h-auto"
             >
@@ -309,13 +273,12 @@ export default function QualityControlPage() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/10 to-transparent mix-blend-multiply"></div>
             </motion.div>
-            
+
             {/* Content side */}
-            <motion.div 
+            <motion.div
               variants={staggerContainer}
-              className="md:w-1/2 bg-white p-6 flex flex-col justify-center"
+              className="md:w-1/2 bg-white p-6 flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-200"
             >              <motion.div variants={slideUp}>
                 <h2 className="text-xl font-bold text-nyati-navy mb-2">{t('quality.commitment.title') || "OUR QUALITY COMMITMENT"}</h2>
               </motion.div>
@@ -358,7 +321,7 @@ export default function QualityControlPage() {
             <motion.div
               variants={cardVariant}
               whileHover="hover"
-              className="bg-gray-50 p-5 rounded-sm shadow-sm border-t-4 border-nyati-orange"
+              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
             >              <div className="text-nyati-orange font-bold text-xl mb-2">
                 {t('quality.process.steps') && t('quality.process.steps')[0] ? 
                   t('quality.process.steps')[0].title : "01. Raw Material Selection"}
@@ -372,7 +335,7 @@ export default function QualityControlPage() {
             <motion.div
               variants={cardVariant}
               whileHover="hover"
-              className="bg-gray-50 p-5 rounded-sm shadow-sm border-t-4 border-nyati-orange"
+              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
             >              <div className="text-nyati-orange font-bold text-xl mb-2">
                 {t('quality.process.steps') && t('quality.process.steps')[1] ? 
                   t('quality.process.steps')[1].title : "02. Production Monitoring"}
@@ -386,7 +349,7 @@ export default function QualityControlPage() {
             <motion.div
               variants={cardVariant}
               whileHover="hover"
-              className="bg-gray-50 p-5 rounded-sm shadow-sm border-t-4 border-nyati-orange"
+              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
             >              <div className="text-nyati-orange font-bold text-xl mb-2">
                 {t('quality.process.steps') && t('quality.process.steps')[2] ? 
                   t('quality.process.steps')[2].title : "03. Testing"}
@@ -402,7 +365,7 @@ export default function QualityControlPage() {
         {/* Quality Commitment Banner */}
         <motion.div
           variants={fadeIn}
-          className="bg-nyati-navy rounded-sm p-6 text-center mb-8"
+          className="bg-nyati-navy border-t-2 border-nyati-orange p-6 text-center mb-8"
         >          <motion.h3 
             variants={slideUp}
             className="text-white text-xl font-bold mb-2"

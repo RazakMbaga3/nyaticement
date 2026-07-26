@@ -66,7 +66,7 @@ const CompactInfoCard = ({ title, imageSrc, description, linkPath, index }) => {
     <motion.div
       variants={cardVariant}
       whileHover="hover"
-      className="bg-white rounded-sm overflow-hidden shadow-md flex flex-col h-full"
+      className="bg-white border border-gray-200 overflow-hidden flex flex-col h-full"
     >
       <div className="relative h-32 overflow-hidden">
         <Image 
@@ -105,11 +105,11 @@ const CoreValueCard = ({ icon, title, description }) => {
       whileHover="hover"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="bg-white rounded-sm overflow-hidden shadow-md relative group"
+      className="bg-white border border-gray-200 overflow-hidden relative group"
     >
       <div className={`p-5 transition-all duration-300 ${isHovered ? 'bg-nyati-light-orange bg-opacity-5' : ''}`}>
         <div className="flex mb-3">
-          <div className="w-12 h-12 bg-nyati-orange/10 rounded-sm flex items-center justify-center mr-3">
+          <div className="w-12 h-12 bg-nyati-orange/10 flex items-center justify-center mr-3">
             <span className="text-nyati-orange text-xl">{icon}</span>
           </div>
           <h3 className="text-lg font-bold text-nyati-navy self-center">{title}</h3>
@@ -129,7 +129,7 @@ const AdvantageItem = ({ title, description, index }) => {
     <motion.div
       variants={cardVariant}
       whileHover="hover"
-      className="bg-white rounded-sm overflow-hidden shadow-sm"
+      className="bg-white border border-gray-200 overflow-hidden"
     >
       <div className="flex items-center">
         <div className="bg-nyati-orange w-2 self-stretch"></div>
@@ -232,89 +232,49 @@ export default function AboutUsPage() {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/aboutus/group1.jpg"
-              alt="About Lake Cement"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/aboutus/group1.jpg"
+            alt="About Lake Cement"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity, 
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('aboutUsPage.hero.breadcrumb.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><Link href="/about" className="hover:text-nyati-orange transition-colors">{pt('aboutUsPage.hero.breadcrumb.about')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('aboutUsPage.hero.breadcrumb.aboutUs')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('aboutUsPage.hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('aboutUsPage.hero.highlight')}</span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+              className="text-lg md:text-xl text-white/75 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('aboutUsPage.hero.description')}
             </motion.p>
@@ -341,7 +301,7 @@ export default function AboutUsPage() {
               
               <motion.div 
                 variants={staggerContainer}
-                className="space-y-2 mb-8 bg-white p-6 rounded-sm shadow-sm"
+                className="space-y-2 mb-8 bg-white p-6 border border-gray-200"
               >
                 {Array.isArray(pageTranslations?.aboutUsPage?.aboutSection?.paragraphs) ?
                   pageTranslations.aboutUsPage.aboutSection.paragraphs.map((paragraph, index) => (
@@ -386,7 +346,7 @@ export default function AboutUsPage() {
                     whileHover="hover"
                     onMouseEnter={() => setActiveVisionMission('mission')}
                     onMouseLeave={() => setActiveVisionMission(null)}
-                    className={`transition-all duration-300 rounded-sm overflow-hidden shadow-md ${activeVisionMission === 'mission' ? 'bg-nyati-navy' : 'bg-white'}`}
+                    className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'mission' ? 'bg-nyati-navy border-nyati-navy' : 'bg-white border-gray-200'}`}
                   >
                     <div className="p-6">
                       <h2 className={`font-bold text-xl mb-1 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-orange'}`}>
@@ -402,7 +362,7 @@ export default function AboutUsPage() {
                     whileHover="hover"
                     onMouseEnter={() => setActiveVisionMission('vision')}
                     onMouseLeave={() => setActiveVisionMission(null)}
-                    className={`transition-all duration-300 rounded-sm overflow-hidden shadow-md ${activeVisionMission === 'vision' ? 'bg-nyati-orange' : 'bg-white'}`}
+                    className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'vision' ? 'bg-nyati-orange border-nyati-orange' : 'bg-white border-gray-200'}`}
                   >
                     <div className="p-6">
                       <h2 className={`font-bold text-xl mb-1 ${activeVisionMission === 'vision' ? 'text-white' : 'text-nyati-navy'}`}>
@@ -467,7 +427,7 @@ export default function AboutUsPage() {
                 variants={fadeIn}
                 className="mb-12"
               >
-                <div className="bg-nyati-navy p-6 rounded-sm shadow-md mb-6">
+                <div className="bg-nyati-navy p-6 border-t-2 border-nyati-orange mb-6">
                   <h2 className="text-xl font-bold text-white mb-1">{pt('aboutUsPage.advantage.title')}</h2>
                   <p className="text-white/80 text-sm">{pt('aboutUsPage.advantage.description')}</p>
                 </div>

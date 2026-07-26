@@ -18,7 +18,7 @@ export default function CompactInfoCard({ title, imageSrc, description, linkPath
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all"
+      className="bg-white border border-gray-200 overflow-hidden transition-all"
     >
       <div className="relative h-48">
         <Image

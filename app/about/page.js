@@ -55,17 +55,17 @@ const cardVariant = {
 
 // Dynamically import below-the-fold components
 const CoreValueCard = dynamic(() => import('@/app/components/ui/CoreValueCard'), {
-  loading: () => <div className="bg-white rounded-sm overflow-hidden shadow-md h-32 animate-pulse" />,
+  loading: () => <div className="bg-white border border-gray-200 overflow-hidden h-32 animate-pulse" />,
   ssr: false // Disable SSR for non-critical components
 });
 
 const AdvantageItem = dynamic(() => import('@/app/components/ui/AdvantageItem'), {
-  loading: () => <div className="bg-white rounded-sm overflow-hidden shadow-sm h-24 animate-pulse" />,
+  loading: () => <div className="bg-white border border-gray-200 overflow-hidden h-24 animate-pulse" />,
   ssr: false
 });
 
 const CompactInfoCard = dynamic(() => import('@/app/components/ui/CompactInfoCard'), {
-  loading: () => <div className="bg-white rounded-sm overflow-hidden shadow-md h-48 animate-pulse" />,
+  loading: () => <div className="bg-white border border-gray-200 overflow-hidden h-48 animate-pulse" />,
   ssr: false
 });
 
@@ -155,7 +155,7 @@ export default function AboutPage() {
             
             <motion.div 
               variants={staggerContainer}
-              className="space-y-2 mb-8 bg-white p-6 rounded-sm shadow-sm"
+              className="space-y-2 mb-8 bg-white p-6 border border-gray-200"
             >
               <motion.p 
                 variants={slideUp}
@@ -182,7 +182,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   onMouseEnter={() => setActiveVisionMission('mission')}
                   onMouseLeave={() => setActiveVisionMission(null)}
-                  className={`transition-all duration-300 rounded-sm overflow-hidden shadow-md ${activeVisionMission === 'mission' ? 'bg-nyati-navy' : 'bg-white'}`}
+                  className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'mission' ? 'bg-nyati-navy border-nyati-navy' : 'bg-white border-gray-200'}`}
                 >
                   <div className="p-6">
                     <h2 className={`font-bold text-xl mb-3 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-orange'}`}>
@@ -198,7 +198,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   onMouseEnter={() => setActiveVisionMission('vision')}
                   onMouseLeave={() => setActiveVisionMission(null)}
-                  className={`transition-all duration-300 rounded-sm overflow-hidden shadow-md ${activeVisionMission === 'vision' ? 'bg-nyati-orange' : 'bg-white'}`}
+                  className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'vision' ? 'bg-nyati-orange border-nyati-orange' : 'bg-white border-gray-200'}`}
                 >
                   <div className="p-6">
                     <h2 className={`font-bold text-xl mb-3 ${activeVisionMission === 'vision' ? 'text-white' : 'text-nyati-navy'}`}>
@@ -250,7 +250,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="mb-12"
             >
-              <div className="bg-nyati-navy p-6 rounded-sm shadow-md mb-6">
+              <div className="bg-nyati-navy p-6 border-t-2 border-nyati-orange mb-6">
                 <h2 className="text-xl font-bold text-white mb-1">THE LAKE CEMENT ADVANTAGE</h2>
                 <p className="text-white/80 text-sm">Our commitment to excellence and innovation creates distinct advantages that benefit our customers and partners.</p>
               </div>
