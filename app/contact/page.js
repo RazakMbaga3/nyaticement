@@ -189,105 +189,67 @@ export default function ContactPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/contactus/call.jpg"
-              alt="Contact Us"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/contactus/call.jpg"
+            alt="Contact Us"
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
-            <nav className="mb-6">              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+            <nav className="mb-6">
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('contactPage.hero.breadcrumbs.home') || 'Home'}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('contactPage.hero.breadcrumbs.contact') || 'Contact'}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('contactPage.hero.title') || 'Get in Touch'}
               <br />
               <span className="text-nyati-orange">{pt('contactPage.hero.titleSpan') || 'With Us'}</span>
             </motion.h1>
 
-            <motion.p 
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+            <motion.p
+              className="text-lg md:text-xl text-white/75 max-w-2xl mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('contactPage.hero.description') || 'Have a question or need assistance? Our team is here to help. We aim to respond to all inquiries within 24 hours.'}
             </motion.p>
 
             {/* Key Metrics */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-            >              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('contactPage.hero.stats.support.value') || '24/7'}</div>
                 <div className="text-white text-sm">{pt('contactPage.hero.stats.support.label') || 'Support'}</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('contactPage.hero.stats.responseTime.value') || '<1hr'}</div>
                 <div className="text-white text-sm">{pt('contactPage.hero.stats.responseTime.label') || 'Response Time'}</div>
               </div>
-              <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="hidden md:block bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('contactPage.hero.stats.customerFocus.value') || '100%'}</div>
                 <div className="text-white text-sm">{pt('contactPage.hero.stats.customerFocus.label') || 'Customer Focus'}</div>
               </div>
@@ -323,7 +285,7 @@ export default function ContactPage() {
             <motion.div 
               variants={itemVariants}
               whileHover={{ y: -3 }}
-              className="bg-white rounded-sm shadow-soft overflow-hidden"
+              className="bg-white border border-gray-200 overflow-hidden"
             >
               <div className="bg-nyati-navy py-3 px-4">
                 <h3 className="text-white font-bold text-base">{pt('contactPage.offices.locations.title') || 'Our Locations'}</h3>
@@ -400,7 +362,7 @@ export default function ContactPage() {
             <motion.div 
               variants={itemVariants}
               whileHover={{ y: -3 }}
-              className="bg-white rounded-sm shadow-soft overflow-hidden"
+              className="bg-white border border-gray-200 overflow-hidden"
             >
               <div className="bg-nyati-navy py-3 px-4">
                 <h3 className="text-white font-bold text-base">{pt('contactPage.offices.sales.title') || 'Sales and Marketing'}</h3>
@@ -457,13 +419,11 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-sm shadow-md overflow-hidden"
+                className="bg-white border border-gray-200 overflow-hidden"
               >
                 <div className="bg-gradient-to-r from-nyati-navy to-nyati-dark-blue p-8 relative overflow-hidden">
                   {/* Decorative elements */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-sm transform translate-x-10 -translate-y-10"></div>
-                  <div className="absolute bottom-0 left-0 w-16 h-16 bg-nyati-orange/10 rounded-sm transform -translate-x-6 translate-y-6"></div>
-                    <h3 className="text-white text-2xl mb-2 relative z-10">{pt('contactPage.form.writeToUs.title') || 'Write to Us'}</h3>
+                  <h3 className="text-white text-2xl mb-2 relative z-10">{pt('contactPage.form.writeToUs.title') || 'Write to Us'}</h3>
                   <p className="text-blue-100 text-lg max-w-3xl relative z-10">
                     {pt('contactPage.form.writeToUs.description') || "Get in touch with our team. We're here to help with your questions, requests, and cement needs. Our team will get back to you as soon as possible."}
                   </p>
@@ -474,10 +434,10 @@ export default function ContactPage() {
                     <motion.div 
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className={`mb-6 p-4 rounded-sm ${
+                      className={`mb-6 p-4 border ${
                         submitStatus.success 
-                          ? 'bg-green-50 text-green-800 border border-green-200' 
-                          : 'bg-red-50 text-red-800 border border-red-200'
+                          ? 'bg-green-50 text-green-800 border-green-200' 
+                          : 'bg-red-50 text-red-800 border-red-200'
                       }`}
                     >
                       {submitStatus.message}
@@ -499,7 +459,7 @@ export default function ContactPage() {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -511,7 +471,7 @@ export default function ContactPage() {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -523,7 +483,7 @@ export default function ContactPage() {
                         value={formData.contactNumber}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -535,7 +495,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -546,7 +506,7 @@ export default function ContactPage() {
                         name="firmName" 
                         value={formData.firmName}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -558,7 +518,7 @@ export default function ContactPage() {
                         value={formData.address}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       />
                     </motion.div>
 
@@ -570,7 +530,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows="5"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
+                        className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50 focus:border-nyati-orange transition-all duration-200"
                       ></textarea>
                     </motion.div>
                   </motion.div>
@@ -602,7 +562,7 @@ export default function ContactPage() {
 
             {/* Maps Section */}
             <div className="lg:col-span-5">
-              <div className="bg-white rounded-sm shadow-md overflow-hidden h-full">
+              <div className="bg-white border border-gray-200 overflow-hidden h-full">
                 <div className="bg-nyati-navy p-4">                  <h3 className="text-white font-medium flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -618,13 +578,13 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="mb-4 bg-gray-50 p-4 rounded-sm flex-1"
+                    className="mb-4 bg-gray-50 p-4 border border-gray-200 flex-1"
                   >
                     <div className="flex items-center mb-3">
-                      <div className="w-2 h-2 bg-nyati-orange rounded-sm mr-2"></div>
+                      <div className="w-2 h-2 bg-nyati-orange mr-2"></div>
                       <h4 className="text-sm font-semibold">{pt('contactPage.maps.headOffice') || 'Lake Cement Head Office'}</h4>
                     </div>
-                    <div className="h-60 rounded-sm overflow-hidden border border-gray-200">
+                    <div className="h-60 overflow-hidden border border-gray-200">
                       <iframe 
                         className="w-full h-full"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6423469008564!2d39.28917679999999!3d-6.813283299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b4b0d6422a9%3A0x1683658d6536a34e!2sLake%20Cement%20Limited!5e0!3m2!1sen!2stz!4v1739883254501!5m2!1sen!2stz" 
@@ -640,13 +600,13 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-gray-50 p-4 rounded-sm flex-1"
+                    className="bg-gray-50 p-4 border border-gray-200 flex-1"
                   >
                     <div className="flex items-center mb-3">
-                      <div className="w-2 h-2 bg-nyati-navy rounded-sm mr-2"></div>
+                      <div className="w-2 h-2 bg-nyati-navy mr-2"></div>
                       <h4 className="text-sm font-semibold">{pt('contactPage.maps.factory') || 'Lake Cement Factory'}</h4>
                     </div>
-                    <div className="h-60 rounded-sm overflow-hidden border border-gray-200">
+                    <div className="h-60 overflow-hidden border border-gray-200">
                       <iframe 
                         className="w-full h-full"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1024064256535!2d39.52027497524509!3d-6.997220093003958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185ddb1e88621cb1%3A0x7f3de8c43fa63494!2sNYATI%20CEMENT-Kimbiji!5e0!3m2!1sen!2stz!4v1739883859956!5m2!1sen!2stz" 
@@ -665,7 +625,7 @@ export default function ContactPage() {
        
         {/* Bottom decorative element */}
         <div className="flex justify-center mb-8">
-          <div className="w-24 h-1 bg-gradient-to-r from-nyati-navy via-nyati-orange to-nyati-navy rounded-sm"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-nyati-navy via-nyati-orange to-nyati-navy"></div>
         </div>
       </div>
     </div>
