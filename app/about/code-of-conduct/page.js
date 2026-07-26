@@ -131,132 +131,94 @@ export default function CodeOfConductPage() {
     <div className="bg-gray-50">
       {/* Set page title and meta based on language */}
       <title>{pt('meta.title')}</title>
-      <meta name="description" content={pt('meta.description')} />{/* Hero Section with Modern Design */}
-      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image 
-              src="/images/career7.jpg"
-              alt={pt('meta.title')}
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent"></div>
-          </div>
-
-          {/* Animated Decorative Elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.05, 0.15, 0.05] 
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity, 
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 right-10 w-64 h-64 bg-nyati-orange/10 rounded-full blur-3xl"
+      <meta name="description" content={pt('meta.description')} />
+      {/* Hero Section */}
+      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/career7.jpg"
+            alt={pt('meta.title')}
+            fill
+            priority
+            className="object-cover"
           />
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.03, 0.1, 0.03] 
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1.5
-            }}
-            className="absolute bottom-10 left-10 w-80 h-80 bg-nyati-orange/5 rounded-full blur-3xl"
-          />
-        </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 h-full relative z-10">
-          <div className="flex flex-col justify-center h-full max-w-4xl">
+          <div className="flex flex-col justify-end h-full max-w-4xl pb-14">
             {/* Breadcrumb Navigation */}
             <nav className="mb-6">
-              <motion.ol 
-                className="flex items-center space-x-2 text-sm text-white/80"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
                 <li><Link href="/" className="hover:text-nyati-orange transition-colors">{pt('hero.breadcrumbs.home')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><Link href="/about" className="hover:text-nyati-orange transition-colors">{pt('hero.breadcrumbs.about')}</Link></li>
-                <li><span className="text-white/60">/</span></li>
+                <li><span className="text-white/40">/</span></li>
                 <li><span className="text-white">{pt('hero.breadcrumbs.current')}</span></li>
-              </motion.ol>
+              </ol>
             </nav>
 
             {/* Hero Title & Content */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]"
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               {pt('hero.title')}
               <br />
               <span className="text-nyati-orange">{pt('hero.titleSpan')}</span>
             </motion.h1>
 
-            <motion.p 
-              className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]"
+            <motion.p
+              className="text-lg md:text-xl text-white/75 max-w-2xl mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {pt('hero.description')}
             </motion.p>
 
             {/* Key Metrics */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-            >              
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('hero.stats.compliance.value')}</div>
                 <div className="text-white text-sm">{pt('hero.stats.compliance.label')}</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('hero.stats.corruption.value')}</div>
                 <div className="text-white text-sm">{pt('hero.stats.corruption.label')}</div>
               </div>
-              <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-sm border border-white/10">
+              <div className="hidden md:block bg-nyati-navy p-4">
                 <div className="text-nyati-orange text-2xl font-bold mb-1">{pt('hero.stats.support.value')}</div>
                 <div className="text-white text-sm">{pt('hero.stats.support.label')}</div>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>      <main className="container mx-auto px-4 max-w-5xl py-8">
+      </section>
+      <main className="container mx-auto px-4 max-w-5xl py-8">
         {/* Introduction with Card Layout */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white rounded-sm shadow-md p-6 mb-8"
+          className="bg-white border border-gray-200 p-6 mb-8"
         >
           <div className="flex flex-col md:flex-row items-start gap-6">
             <div className="md:w-1/4">
-              <div className="w-16 h-16 bg-gradient-to-br from-nyati-orange to-nyati-light-orange rounded-sm flex items-center justify-center text-white mb-4">
+              <div className="w-16 h-16 bg-nyati-orange flex items-center justify-center text-white mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h2 className="text-xl font-bold text-nyati-bg-nyati-navy">{pt('introduction.title')}</h2>
+              <h2 className="text-xl font-bold text-nyati-navy">{pt('introduction.title')}</h2>
             </div>
             <div className="md:w-3/4">
               <p className="text-gray-700 leading-relaxed">
@@ -273,7 +235,7 @@ export default function CodeOfConductPage() {
         >
           <div className="flex items-center mb-6">
             <div className="h-px flex-grow bg-gradient-to-r from-transparent to-blue-200"></div>
-            <h2 className="text-xl md:text-2xl font-bold px-4 text-nyati-bg-nyati-navy">{pt('coreValues.title')}</h2>
+            <h2 className="text-xl md:text-2xl font-bold px-4 text-nyati-navy">{pt('coreValues.title')}</h2>
             <div className="h-px flex-grow bg-gradient-to-l from-transparent to-blue-200"></div>
           </div>
 
@@ -284,17 +246,13 @@ export default function CodeOfConductPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 * index }}
-                whileHover={{ 
-                  y: -5,
-                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-                }}
-                className="bg-nyati-light-orange/10 rounded-sm shadow-sm p-4 flex items-start hover:shadow-md transition-all duration-300"
+                className="bg-nyati-light-orange/10 border border-gray-200 p-4 flex items-start transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-sm flex items-center justify-center mr-4 text-nyati-bg-nyati-navy flex-shrink-0">
+                <div className="w-12 h-12 bg-white border border-gray-200 flex items-center justify-center mr-4 text-nyati-navy flex-shrink-0">
                   {icons[value.icon]}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1 text-nyati-bg-nyati-navy">{value.title}</h3>
+                  <h3 className="text-lg font-bold mb-1 text-nyati-navy">{value.title}</h3>
                   <p className="text-sm text-gray-700">{value.description}</p>
                 </div>
               </motion.div>
@@ -309,7 +267,7 @@ export default function CodeOfConductPage() {
         >
           <div className="flex items-center mb-6">
             <div className="h-px flex-grow bg-gradient-to-r from-transparent to-blue-200"></div>
-            <h2 className="text-xl md:text-2xl font-bold px-4 text-nyati-bg-nyati-navy">{pt('guidelines.title')}</h2>
+            <h2 className="text-xl md:text-2xl font-bold px-4 text-nyati-navy">{pt('guidelines.title')}</h2>
             <div className="h-px flex-grow bg-gradient-to-l from-transparent to-blue-200"></div>
           </div>
 
@@ -320,14 +278,14 @@ export default function CodeOfConductPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 * index }}
-                className="bg-white rounded-sm shadow-sm overflow-hidden"
+                className="bg-white border border-gray-200 overflow-hidden"
               >
                 <button
                   className="w-full px-4 py-3 flex justify-between items-center focus:outline-none"
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex items-center">
-                    <span className="w-8 h-8 rounded-sm bg-blue-100 flex items-center justify-center mr-3 text-nyati-bg-nyati-navy">
+                    <span className="w-8 h-8 bg-gray-100 flex items-center justify-center mr-3 text-nyati-navy">
                       {icons[guideline.icon]}
                     </span>
                     <span className="font-medium">{guideline.title}</span>
