@@ -60,11 +60,8 @@ export default function BrochurePage() {
               {/* Brochure Preview */}
               <div className="w-full lg:w-1/2">
                 <motion.div 
-                  className="relative h-[500px] w-full shadow-xl rounded-sm overflow-hidden"
-                  whileHover={{ 
-                    scale: 1.02,
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-                  }}
+                  className="relative h-[500px] w-full border border-gray-200 overflow-hidden"
+                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   <Image 
@@ -124,7 +121,7 @@ export default function BrochurePage() {
                   <motion.a 
                     href="/PDF/Brochure2026.pdf" 
                     download
-                    className="inline-flex items-center justify-center bg-nyati-orange hover:bg-nyati-navy text-white px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 shadow-lg w-full sm:w-auto"
+                    className="inline-flex items-center justify-center bg-nyati-orange hover:bg-nyati-navy text-white px-8 py-4 text-lg font-medium transition-colors duration-300 w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -165,16 +162,16 @@ export default function BrochurePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Product Catalog */}
             <motion.div 
-              className="bg-white rounded-sm shadow-lg overflow-hidden"
+              className="bg-white border border-gray-200 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+              whileHover={{ y: -4 }}
             >
               <Link href="/products" className="block">
                 <div className="p-6">
-                  <div className="w-16 h-16 rounded-sm bg-nyati-orange/10 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-nyati-orange/10 flex items-center justify-center mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -195,16 +192,16 @@ export default function BrochurePage() {
             
             {/* Certifications */}
             <motion.div 
-              className="bg-white rounded-sm shadow-lg overflow-hidden"
+              className="bg-white border border-gray-200 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+              whileHover={{ y: -4 }}
             >
               <Link href="/about/certifications" className="block">
                 <div className="p-6">
-                  <div className="w-16 h-16 rounded-sm bg-nyati-orange/10 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-nyati-orange/10 flex items-center justify-center mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -225,16 +222,16 @@ export default function BrochurePage() {
             
             {/* Contact Sales */}
             <motion.div 
-              className="bg-white rounded-sm shadow-lg overflow-hidden"
+              className="bg-white border border-gray-200 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+              whileHover={{ y: -4 }}
             >
               <Link href="/contact" className="block">
                 <div className="p-6">
-                  <div className="w-16 h-16 rounded-sm bg-nyati-orange/10 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-nyati-orange/10 flex items-center justify-center mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-nyati-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
