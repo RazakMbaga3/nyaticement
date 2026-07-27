@@ -2,7 +2,7 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 
 const stats = [
   {
@@ -52,30 +52,42 @@ const stats = [
   },
 ]
 
-function AnimatedCounter({ value, suffix, active }) {
-  const [count, setCount] = useState(0)
+function AnimatedCounter({ value, suffix, active, delay = 0 }) {
+  // Server and first client render always assume motion is enabled, since
+  // useReducedMotion() can't read the media query on the server — this
+  // avoids a hydration mismatch. The real preference is applied post-mount.
+  const reducedMotionPreference = useReducedMotion()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const prefersReducedMotion = mounted && reducedMotionPreference
+
+  const [display, setDisplay] = useState(0)
+  const motionValue = useMotionValue(0)
+  const spring = useSpring(motionValue, { duration: 1600, bounce: 0 })
 
   useEffect(() => {
     if (!active) return
-    const duration = 2000
-    const steps = 55
-    const increment = value / steps
-    let current = 0
-    const timer = setInterval(() => {
-      current += increment
-      if (current >= value) {
-        setCount(value)
-        clearInterval(timer)
-      } else {
-        setCount(Math.floor(current))
-      }
-    }, duration / steps)
-    return () => clearInterval(timer)
-  }, [active, value])
+    if (prefersReducedMotion) {
+      setDisplay(value)
+      return
+    }
+    const timeout = setTimeout(() => {
+      motionValue.set(value)
+    }, delay * 1000)
+    return () => clearTimeout(timeout)
+  }, [active, value, delay, motionValue, prefersReducedMotion])
+
+  useEffect(() => {
+    if (prefersReducedMotion) return
+    const unsubscribe = spring.on('change', (latest) => {
+      setDisplay(Math.round(latest))
+    })
+    return unsubscribe
+  }, [spring, prefersReducedMotion])
 
   return (
     <span>
-      {count.toLocaleString()}
+      {display.toLocaleString()}
       {suffix}
     </span>
   )
@@ -84,6 +96,10 @@ function AnimatedCounter({ value, suffix, active }) {
 export default function StatsStrip() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.25 })
+  const reducedMotionPreference = useReducedMotion()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const prefersReducedMotion = mounted && reducedMotionPreference
 
   return (
     <section ref={ref} className="bg-nyati-navy border-t border-white/10">
@@ -92,15 +108,15 @@ export default function StatsStrip() {
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 16 }}
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.07 }}
+              transition={{ duration: 0.4, delay: prefersReducedMotion ? 0 : i * 0.07 }}
               className="px-6 py-8 lg:py-10 text-left"
             >
               {/* Number */}
               <div className="flex items-baseline gap-1.5">
                 <span className="text-3xl lg:text-4xl font-bold text-white tabular-nums font-futura">
-                  <AnimatedCounter value={stat.value} suffix="" active={isInView} />
+                  <AnimatedCounter value={stat.value} suffix="" active={isInView} delay={i * 0.07} />
                 </span>
                 {stat.suffix && (
                   <span className="text-nyati-orange text-lg lg:text-xl font-bold">{stat.suffix}</span>

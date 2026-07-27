@@ -1,17 +1,46 @@
 // app/components/sections/hero.tsx
 'use client'
 
-import { motion, AnimatePresence, Variants } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { motion, AnimatePresence, Variants, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from '@/app/hooks/useTranslations'
 
 export default function Hero() {
   const { t } = useTranslations();
+  const reducedMotionPreference = useReducedMotion();
+  // Guard against SSR/client hydration mismatch: useReducedMotion() can't
+  // read the media query on the server, so only trust it after mount —
+  // server and first client render both assume motion is enabled.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const prefersReducedMotion = mounted && reducedMotionPreference
 
   // State for slideshow
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  // Mouse-parallax for the product bags panel
+  const panelRef = useRef<HTMLDivElement>(null)
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const springX = useSpring(mouseX, { stiffness: 150, damping: 20, mass: 0.5 })
+  const springY = useSpring(mouseY, { stiffness: 150, damping: 20, mass: 0.5 })
+  const bagsX = useTransform(springX, [-0.5, 0.5], [-12, 12])
+  const bagsY = useTransform(springY, [-0.5, 0.5], [-8, 8])
+  const bagsRotate = useTransform(springX, [-0.5, 0.5], [-2, 2])
+
+  const handlePanelMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (prefersReducedMotion || !panelRef.current) return
+    const rect = panelRef.current.getBoundingClientRect()
+    mouseX.set((e.clientX - rect.left) / rect.width - 0.5)
+    mouseY.set((e.clientY - rect.top) / rect.height - 0.5)
+  }
+
+  const handlePanelMouseLeave = () => {
+    mouseX.set(0)
+    mouseY.set(0)
+  }
 
   // Slideshow images
   const slideshowImages = [
@@ -25,8 +54,9 @@ export default function Hero() {
     '/images/img/nyati113.jpg'
   ]
 
-  // Effect for slideshow autoplay
+  // Effect for slideshow autoplay (paused when reduced motion is requested)
   useEffect(() => {
+    if (prefersReducedMotion) return
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) =>
         prevSlide === slideshowImages.length - 1 ? 0 : prevSlide + 1
@@ -34,7 +64,7 @@ export default function Hero() {
     }, 5000) // Change slide every 5 seconds
 
     return () => clearInterval(interval)
-  }, [slideshowImages.length])
+  }, [slideshowImages.length, prefersReducedMotion])
 
   // Animation variants
   const fadeInUp = {
@@ -60,15 +90,18 @@ export default function Hero() {
     }
   }
 
-  // Slide animation variants with crossfade effect
+  // Slide animation variants with crossfade + slow-zoom effect (zoom disabled under reduced motion)
   const slideVariants = {
     enter: {
       opacity: 0,
-      transition: { duration: 0.8 }
+      scale: 1
     },
     center: {
       opacity: 1,
-      transition: { duration: 1.2 }
+      scale: prefersReducedMotion ? 1 : 1.06,
+      transition: prefersReducedMotion
+        ? { opacity: { duration: 1.2 } }
+        : { opacity: { duration: 1.2 }, scale: { duration: 5, ease: 'linear' } }
     },
     exit: {
       opacity: 0,
@@ -199,21 +232,35 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Product display: static card, no floating/glow animation */}
+          {/* Product display: bordered panel with subtle mouse-parallax on the bags */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="hidden lg:block relative lg:col-span-5"
           >
-            <div className="relative h-[420px] w-full bg-white/5 border border-white/10">
-              <Image
-                src="/images/ALLNYATIBAGS.webp"
-                alt="Nyati Cement Product"
-                width={400}
-                height={400}
-                className="object-contain relative z-10 mx-auto h-full py-6"
-              />
+            <div
+              ref={panelRef}
+              onMouseMove={handlePanelMouseMove}
+              onMouseLeave={handlePanelMouseLeave}
+              className="relative h-[420px] w-full bg-white/5 border border-white/10 overflow-hidden"
+            >
+              <motion.div
+                style={
+                  prefersReducedMotion
+                    ? undefined
+                    : { x: bagsX, y: bagsY, rotate: bagsRotate }
+                }
+                className="relative z-10 mx-auto h-full py-6 will-change-transform"
+              >
+                <Image
+                  src="/images/ALLNYATIBAGS.webp"
+                  alt="Nyati Cement Product"
+                  width={400}
+                  height={400}
+                  className="object-contain h-full mx-auto"
+                />
+              </motion.div>
             </div>
 
             {/* Product info card */}
@@ -229,17 +276,31 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slideshow indicator dots */}
+      {/* Slideshow indicator dots with real progress fill */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slideshowImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-1.5 transition-all duration-300 ${
-              currentSlide === index ? 'bg-nyati-orange w-8' : 'bg-white/40 w-4 hover:bg-white/60'
+            className={`relative h-1.5 overflow-hidden bg-white/25 transition-all duration-300 ${
+              currentSlide === index ? 'w-10' : 'w-4 hover:bg-white/40'
             }`}
             aria-label={`Go to slide ${index + 1}`}
-          />
+          >
+            {currentSlide === index && !prefersReducedMotion && (
+              <motion.span
+                key={currentSlide}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 5, ease: 'linear' }}
+                style={{ transformOrigin: 'left' }}
+                className="absolute inset-0 bg-nyati-orange"
+              />
+            )}
+            {(currentSlide === index && prefersReducedMotion) && (
+              <span className="absolute inset-0 bg-nyati-orange" />
+            )}
+          </button>
         ))}
       </div>
     </section>
