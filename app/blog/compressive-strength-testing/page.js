@@ -151,7 +151,7 @@ export default function CompressiveStrengthTestingPage() {
           <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Factors Affecting Compressive Strength</h2>
           
           <div className="grid md:grid-cols-2 gap-6 my-8">
-            <div className="bg-white rounded-sm shadow-sm p-6">
+            <div className="bg-white border border-gray-200 p-6">
               <h3 className="text-xl font-bold text-nyati-navy mb-3">Materials</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Cement type and quality</li>
@@ -162,7 +162,7 @@ export default function CompressiveStrengthTestingPage() {
               </ul>
             </div>
             
-            <div className="bg-white rounded-sm shadow-sm p-6">
+            <div className="bg-white border border-gray-200 p-6">
               <h3 className="text-xl font-bold text-nyati-navy mb-3">Process</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Mixing method and duration</li>
@@ -327,7 +327,7 @@ export default function CompressiveStrengthTestingPage() {
           <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Mambo Yanayoathiri Nguvu ya Kubana</h2>
           
           <div className="grid md:grid-cols-2 gap-6 my-8">
-            <div className="bg-white rounded-sm shadow-sm p-6">
+            <div className="bg-white border border-gray-200 p-6">
               <h3 className="text-xl font-bold text-nyati-navy mb-3">Vifaa</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Aina ya saruji na ubora</li>
@@ -338,7 +338,7 @@ export default function CompressiveStrengthTestingPage() {
               </ul>
             </div>
             
-            <div className="bg-white rounded-sm shadow-sm p-6">
+            <div className="bg-white border border-gray-200 p-6">
               <h3 className="text-xl font-bold text-nyati-navy mb-3">Mchakato</h3>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Njia ya kuchanganya na muda</li>

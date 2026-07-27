@@ -118,27 +118,10 @@ export default function ProductNewsPage() {
     <div ref={contentRef} className="min-h-screen bg-gray-50">
       {/* Hero section with parallax effect */}
       <section className="relative h-60 md:h-72 lg:h-80 overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 w-full h-full"
-          style={{ y, opacity }}
-        >
+        <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-nyati-orange opacity-90 z-10"></div>
           <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center z-0"></div>
-          
-          {/* Decorative Elements */}
-          <motion.div 
-            className="absolute top-1/3 right-10 w-64 h-64 bg-nyati-navy/10 rounded-full blur-xl"
-            animate={{ 
-              scale: [1, 1.1, 1],
-              x: [0, 10, 0],
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-          />
-        </motion.div>
+        </div>
         
         {/* Content overlay */}
         <div className="absolute inset-0 flex items-center z-20">
@@ -183,7 +166,7 @@ export default function ProductNewsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white rounded-xl shadow-soft p-4 mb-10 flex flex-col md:flex-row justify-between items-center gap-4"
+            className="bg-white border border-gray-200 p-4 mb-10 flex flex-col md:flex-row justify-between items-center gap-4"
           >
             {/* Search Input */}
             <div className="relative w-full md:w-auto flex-grow max-w-md">
@@ -192,7 +175,7 @@ export default function ProductNewsPage() {
                 placeholder="Search product news..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nyati-orange/50"
+                className="w-full pl-10 pr-4 py-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nyati-orange/50"
               />
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -200,7 +183,7 @@ export default function ProductNewsPage() {
             </div>
             
             {/* Back to all news */}
-            <Link href="/news" className="px-4 py-2 rounded-full text-sm font-medium transition-all bg-nyati-orange text-white hover:bg-nyati-orange/90">
+            <Link href="/news" className="px-4 py-2 text-sm font-medium transition-all bg-nyati-orange text-white hover:bg-nyati-orange/90">
               <span className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -235,7 +218,7 @@ export default function ProductNewsPage() {
                   <motion.div 
                     key={article.id}
                     variants={itemVariants}
-                    className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
+                    className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="relative h-64 overflow-hidden">
@@ -324,7 +307,7 @@ export default function ProductNewsPage() {
                   <motion.div 
                     key={article.id}
                     variants={itemVariants}
-                    className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
+                    className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="relative h-52 overflow-hidden">
@@ -380,7 +363,7 @@ export default function ProductNewsPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center p-10 bg-gray-50 rounded-lg">
+              <div className="text-center p-10 bg-gray-50 border border-gray-200">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -409,7 +392,7 @@ export default function ProductNewsPage() {
               <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-soft overflow-hidden">
+            <div className="bg-white border border-gray-200 overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto">
                   <Image 
@@ -453,7 +436,7 @@ export default function ProductNewsPage() {
                       <span className="text-gray-700">Low Shrinkage</span>
                     </div>
                   </div>
-                  <Link href="/products/nyati-plus" className="inline-flex items-center bg-nyati-orange text-white px-4 py-2 rounded-lg font-medium hover:bg-nyati-orange/90 transition-colors">
+                  <Link href="/products/nyati-plus" className="inline-flex items-center bg-nyati-orange text-white px-4 py-2 font-medium hover:bg-nyati-orange/90 transition-colors">
                     Learn More About Nyati Plus+
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

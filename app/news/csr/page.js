@@ -207,11 +207,11 @@ export default function CSRNewsPage() {  // Get language context and translation
           >
             <div>
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-3 font-futura">
-                {pt('intro.title')}
+                {pt('csrPage.intro.title')}
               </h1>
               <div className="h-1 w-32 bg-nyati-orange mb-4"></div>
               <p className="text-white/90 text-sm md:text-base max-w-xl">
-                {pt('intro.description')}
+                {pt('csrPage.intro.description')}
               </p>
             </div>
           </motion.div>
@@ -225,16 +225,16 @@ export default function CSRNewsPage() {  // Get language context and translation
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white rounded-xl shadow-soft p-4 mb-10 flex flex-col md:flex-row justify-between items-center gap-4"
+            className="bg-white border border-gray-200 p-4 mb-10 flex flex-col md:flex-row justify-between items-center gap-4"
           >
             {/* Search Input */}
             <div className="relative w-full md:w-auto flex-grow max-w-md">
               <input
                 type="text"
-                placeholder={pt('search.placeholder')}
+                placeholder={pt('csrPage.search.placeholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nyati-green/50"
+                className="w-full pl-10 pr-4 py-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nyati-green/50"
               />
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -272,7 +272,7 @@ export default function CSRNewsPage() {  // Get language context and translation
           >
             <div className="flex items-center mb-8">
               <div className="h-px flex-grow bg-gradient-to-r from-transparent to-gray-200"></div>              <h2 className="text-2xl font-bold text-nyati-green px-6 flex items-center font-futura">
-                {activeCategory === 'all' ? pt('initiatives.all') : pt(`csrPage.pillars.${activeCategory === 'health' ? 'healthcare' : activeCategory}.name`)}
+                {activeCategory === 'all' ? (language === 'sw' ? 'Mipango Yote' : 'All Initiatives') : pt(`csrPage.pillars.${activeCategory === 'health' ? 'healthcare' : activeCategory}.name`)}
               </h2>
               <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
             </div>
@@ -283,7 +283,7 @@ export default function CSRNewsPage() {  // Get language context and translation
                   <motion.div 
                     key={article.id}
                     variants={itemVariants}
-                    className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-md transition-all duration-300 group"
+                    className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group"
                     whileHover={{ y: -5 }}
                   >
                     <div className="relative h-52 overflow-hidden">
@@ -315,7 +315,7 @@ export default function CSRNewsPage() {  // Get language context and translation
                           rel="noopener noreferrer" 
                           className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
                         >
-                          {pt('initiatives.readMore')}
+                          {language === 'sw' ? 'Soma Zaidi' : 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
@@ -325,7 +325,7 @@ export default function CSRNewsPage() {  // Get language context and translation
                           href={`/news/${article.id}`}
                           className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
                         >
-                          {pt('initiatives.readMore')}
+                          {language === 'sw' ? 'Soma Zaidi' : 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
@@ -336,12 +336,16 @@ export default function CSRNewsPage() {  // Get language context and translation
                 ))}
               </div>
             ) : (
-              <div className="text-center p-10 bg-gray-50 rounded-lg">
+              <div className="text-center p-10 bg-gray-50 border border-gray-200">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h3 className="text-xl font-bold text-gray-700 mb-2">{pt('initiatives.noResults.title')}</h3>
-                <p className="text-gray-500">{pt('initiatives.noResults.description')}</p>
+                <h3 className="text-xl font-bold text-gray-700 mb-2">
+                  {language === 'sw' ? 'Hakuna mipango iliyopatikana' : 'No initiatives found'}
+                </h3>
+                <p className="text-gray-500">
+                  {language === 'sw' ? 'Jaribu kutafuta au kuchagua kategoria tofauti.' : 'Try adjusting your search or selecting a different category.'}
+                </p>
               </div>
             )}
           </motion.section>
@@ -365,7 +369,7 @@ export default function CSRNewsPage() {  // Get language context and translation
               <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-soft overflow-hidden p-6">
+            <div className="bg-white border border-gray-200 overflow-hidden p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-4">
                   <div className="bg-nyati-green/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
@@ -429,7 +433,7 @@ export default function CSRNewsPage() {  // Get language context and translation
               <div className="h-px flex-grow bg-gradient-to-l from-transparent to-gray-200"></div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-soft overflow-hidden">
+            <div className="bg-white border border-gray-200 overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-8">
                   <h3 className="text-xl font-bold mb-4 text-nyati-green">Partner With Us</h3>
@@ -531,7 +535,7 @@ export default function CSRNewsPage() {  // Get language context and translation
           
           {/* Bottom decorative element */}
           <div className="flex justify-center mb-8">
-            <div className="w-32 h-1 bg-gradient-to-r from-nyati-green to-nyati-orange rounded-full"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-nyati-green to-nyati-orange"></div>
           </div>
         </div>
       </main>

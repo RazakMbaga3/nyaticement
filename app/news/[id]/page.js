@@ -129,7 +129,7 @@ export default function NewsArticlePage({ params }) {
           </svg>
           <h1 className="text-2xl font-bold text-nyati-navy mb-4">{pt('articlePage.notFound.title') || 'Article Not Found'}</h1>
           <p className="text-gray-600 mb-6">{pt('articlePage.notFound.description') || "The article you're looking for doesn't exist or has been removed."}</p>
-          <Link href="/news" className="inline-flex items-center px-4 py-2 bg-nyati-orange text-white rounded-sm hover:bg-nyati-orange/90 transition-colors">
+          <Link href="/news" className="inline-flex items-center px-4 py-2 bg-nyati-orange text-white hover:bg-nyati-orange/90 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
@@ -152,46 +152,21 @@ export default function NewsArticlePage({ params }) {
           />
         </div>
 
-        <motion.div 
+        <motion.div
           className="absolute inset-0 w-full h-full"
           style={{ y, opacity }}
         >
-          <div className="absolute inset-0 z-0">              <Image 
+          <div className="absolute inset-0 z-0">
+            <Image
               src={article.mainImage}
               alt={`${article.title} - ${pt('articlePage.heroImage.alt') || 'Hero image'}`}
               fill
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/95 via-nyati-navy/40 to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy via-nyati-navy/85 to-nyati-navy/25 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-nyati-navy/80 via-transparent to-transparent z-10"></div>
           </div>
-          
-          {/* Decorative blur effects */}
-          <motion.div 
-            className="absolute top-1/3 right-10 w-64 h-64 bg-nyati-orange/10 rounded-sm blur-xl"
-            animate={{ 
-              scale: [1, 1.1, 1],
-              x: [0, 10, 0],
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-          />
-          
-          <motion.div 
-            className="absolute bottom-0 left-1/4 w-40 h-40 bg-nyati-green/10 rounded-sm blur-xl"
-            animate={{ 
-              scale: [1, 1.15, 1],
-              y: [0, -10, 0],
-            }}
-            transition={{ 
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-          />
         </motion.div>
         
         {/* Content overlay */}
@@ -240,7 +215,7 @@ export default function NewsArticlePage({ params }) {
 
       <main className="relative mt-6 z-30">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-white rounded-sm shadow-soft p-8 md:p-12 mb-12">
+          <div className="bg-white border border-gray-200 p-8 md:p-12 mb-12">
             {/* Article Content */}
             <motion.div
               variants={containerVariants}
@@ -271,7 +246,7 @@ export default function NewsArticlePage({ params }) {
                   <h2 className="text-2xl font-bold mb-6 text-nyati-navy font-futura">{pt('articlePage.gallery.title') || 'Image Gallery'}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {article.gallery.map((image, index) => (
-                      <div key={index} className="relative aspect-video rounded-sm overflow-hidden shadow-soft">
+                      <div key={index} className="relative aspect-video border border-gray-200 overflow-hidden">
                         <Image
                           src={image}
                           alt={`${article.title} - ${pt('articlePage.gallery.imageAlt') || 'Image'} ${index + 1}`}
@@ -384,7 +359,7 @@ export default function NewsArticlePage({ params }) {
                     href={`/news/${article.id}`}
                     className="group"
                   >
-                    <div className="bg-white rounded-sm shadow-soft overflow-hidden hover:shadow-md transition-all duration-300">
+                    <div className="bg-white border border-gray-200 overflow-hidden transition-all duration-300">
                       <div className="relative h-48 overflow-hidden">                        <Image 
                           src={article.mainImage}
                           alt={`${article.title} - ${pt('articlePage.relatedArticles.imageAlt') || 'Related article image'}`}
@@ -425,7 +400,7 @@ export default function NewsArticlePage({ params }) {
           <div className="flex justify-center mb-12">
             <Link 
               href="/news" 
-              className="inline-flex items-center px-5 py-3 bg-nyati-navy text-white rounded-sm hover:bg-nyati-navy/90 transition-colors"
+              className="inline-flex items-center px-5 py-3 bg-nyati-navy text-white hover:bg-nyati-navy/90 transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -436,7 +411,7 @@ export default function NewsArticlePage({ params }) {
           
           {/* Bottom decorative element */}
           <div className="flex justify-center mb-8">
-            <div className="w-32 h-1 bg-gradient-to-r from-nyati-navy via-nyati-orange to-nyati-green rounded-sm"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-nyati-navy via-nyati-orange to-nyati-green"></div>
           </div>
         </div>
       </main>
