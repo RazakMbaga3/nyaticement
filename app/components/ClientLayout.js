@@ -9,6 +9,7 @@ import LoadingIndicator from './ui/LoadingIndicator';
 import LanguageSwitcher from './ui/LanguageSwitcher';
 import ScrollToTop from './ui/ScrollToTop';
 import PageProgress from './ui/PageProgress';
+import PageTransition from './ui/PageTransition';
 import { usePathname } from 'next/navigation';
 
 export default function ClientLayout({ children }) {
@@ -34,7 +35,7 @@ export default function ClientLayout({ children }) {
       )}
       
       <main className="flex-grow w-full">
-        {children}
+        <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
       <ScrollToTop />

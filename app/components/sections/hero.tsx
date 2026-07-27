@@ -4,8 +4,8 @@
 import { motion, AnimatePresence, Variants, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import MagneticLink from '@/app/components/ui/MagneticLink'
 
 export default function Hero() {
   const { t } = useTranslations();
@@ -197,37 +197,37 @@ export default function Hero() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link
+                <MagneticLink
                   href="/contact"
                   className="group inline-flex items-center space-x-2 bg-nyati-orange hover:bg-orange-600 text-white px-7 py-3.5 font-bold text-sm tracking-wide uppercase transition-colors duration-200"
                 >
                   <span>{t('hero.cta')}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 inline-block ml-2"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
+                </MagneticLink>
 
-                <Link
+                <MagneticLink
                   href="/about/certifications"
                   className="group inline-flex items-center space-x-2 border border-white/30 hover:border-white text-white px-7 py-3.5 font-bold text-sm tracking-wide uppercase transition-colors duration-200"
                 >
                   <span>{t('hero.certifications')}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 inline-block ml-2"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
+                </MagneticLink>
               </div>
             </motion.div>
           </motion.div>
