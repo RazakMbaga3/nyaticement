@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import ScrollProcess from '@/app/components/sections/ScrollProcess';
 
 
 // Animation variants
@@ -66,6 +67,31 @@ export default function QualityControlPage() {
     }
   ];
   
+  // Define quality process steps with fallback (used by the scroll story below)
+  const translatedProcessSteps = t('quality.process.steps');
+  const processSteps = Array.isArray(translatedProcessSteps) ? translatedProcessSteps : [
+    {
+      title: '01. Raw Material Selection',
+      text: 'We carefully source and select the finest limestone, clay, and other raw materials. Each batch undergoes chemical analysis to ensure optimal composition before entering our production process.'
+    },
+    {
+      title: '02. Manufacturing Controls',
+      text: 'Throughout the production process, our automated systems continuously monitor and adjust parameters to maintain consistent quality. Our skilled operators oversee these systems, applying years of expertise.'
+    },
+    {
+      title: '03. Laboratory Testing',
+      text: 'Our state-of-the-art laboratory conducts rigorous testing at every stage. From raw materials to the final product, we verify that each batch meets our exacting standards before it leaves our facility.'
+    },
+    {
+      title: '04. Certification & Compliance',
+      text: 'All our products are certified by the Tanzania Bureau of Standards and comply with international quality benchmarks. We regularly submit samples for independent verification.'
+    },
+    {
+      title: '05. Continuous Improvement',
+      text: 'We constantly evaluate our processes and products, seeking ways to enhance quality and performance. Customer feedback and market research drive our ongoing innovation efforts.'
+    }
+  ];
+
   // Define feature cards with fallback
   const translatedFeatures = t('quality.features');
   const featureCards = Array.isArray(translatedFeatures) ? translatedFeatures : [
@@ -306,61 +332,11 @@ export default function QualityControlPage() {
           </div>
         </motion.section>
 
-        {/* Quality Process Steps */}
-        <motion.section
-          variants={staggerContainer}
-          className="mb-8"
-        >          <motion.h2 
-            variants={slideUp} 
-            className="text-xl font-bold text-nyati-navy mb-4"
-          >
-            {t('quality.process.title') || "OUR QUALITY ASSURANCE PROCESS"}
-          </motion.h2>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <motion.div
-              variants={cardVariant}
-              whileHover="hover"
-              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
-            >              <div className="text-nyati-orange font-bold text-xl mb-2">
-                {t('quality.process.steps') && t('quality.process.steps')[0] ? 
-                  t('quality.process.steps')[0].title : "01. Raw Material Selection"}
-              </div>
-              <p className="text-sm text-nyati-dark-grey">
-                {t('quality.process.steps') && t('quality.process.steps')[0] ? 
-                  t('quality.process.steps')[0].text : "We carefully source and select the finest limestone, clay, and other raw materials. Each batch undergoes chemical analysis to ensure optimal composition before entering our production process."}
-              </p>
-            </motion.div>
-            
-            <motion.div
-              variants={cardVariant}
-              whileHover="hover"
-              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
-            >              <div className="text-nyati-orange font-bold text-xl mb-2">
-                {t('quality.process.steps') && t('quality.process.steps')[1] ? 
-                  t('quality.process.steps')[1].title : "02. Production Monitoring"}
-              </div>
-              <p className="text-sm text-nyati-dark-grey">
-                {t('quality.process.steps') && t('quality.process.steps')[1] ? 
-                  t('quality.process.steps')[1].text : "Our advanced control systems continuously monitor kiln temperature, clinker quality, and grinding fineness. This real-time monitoring allows us to maintain precise control over every aspect of cement production."}
-              </p>
-            </motion.div>
-            
-            <motion.div
-              variants={cardVariant}
-              whileHover="hover"
-              className="bg-gray-50 p-5 border border-gray-200 border-t-4 border-t-nyati-orange"
-            >              <div className="text-nyati-orange font-bold text-xl mb-2">
-                {t('quality.process.steps') && t('quality.process.steps')[2] ? 
-                  t('quality.process.steps')[2].title : "03. Testing"}
-              </div>
-              <p className="text-sm text-nyati-dark-grey">
-                {t('quality.process.steps') && t('quality.process.steps')[2] ? 
-                  t('quality.process.steps')[2].text : "Every batch of Nyati Cement undergoes comprehensive physical and chemical testing before release. We test for strength development, setting time, and durability to ensure our customers receive only the best."}
-              </p>
-            </motion.div>
-          </div>
-        </motion.section>
+        {/* Quality Process Steps: scroll-scrubbed story on desktop, stacked list on mobile/reduced-motion */}
+        <ScrollProcess
+          heading={t('quality.process.title') || "OUR QUALITY ASSURANCE PROCESS"}
+          steps={processSteps}
+        />
 
         {/* Quality Commitment Banner */}
         <motion.div
