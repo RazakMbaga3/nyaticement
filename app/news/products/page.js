@@ -60,7 +60,7 @@ export default function ProductNewsPage() {
       title: "Introducing Nyati Plus+: Our New Premium Cement Formula",
       excerpt: "Lake Cement proudly announces the launch of Nyati Plus+, our new premium cement formula designed for superior strength and durability. Engineered with advanced technology, Nyati Plus+ offers faster setting times and enhanced performance for demanding construction projects.",
       date: "2024-05-10",
-      image: "/images/news/nyati-plus.jpg",
+      image: "/images/products/premiumOPC.jpg",
       category: "product",
       featured: true,
       tag: "New"
@@ -70,7 +70,7 @@ export default function ProductNewsPage() {
       title: "Nyati Cement Receives Top Quality Certification",
       excerpt: "We're proud to announce that Nyati Cement has been awarded the prestigious TBS Quality Mark, recognizing our commitment to maintaining the highest standards in cement manufacturing. This certification confirms that our products meet and exceed all national quality standards.",
       date: "2024-03-18",
-      image: "/images/news/quality-cert.jpg",
+      image: "/images/news/fallbacks/fallback-company.jpg",
       category: "product",
       featured: true
     },
@@ -79,7 +79,7 @@ export default function ProductNewsPage() {
       title: "Extended Shelf Life: Nyati Cement's New Packaging Technology",
       excerpt: "Lake Cement introduces revolutionary new packaging technology that extends the shelf life of our cement products by up to 30%. The new moisture-resistant packaging ensures that Nyati Cement maintains its quality and strength even when stored for longer periods in challenging environments.",
       date: "2024-02-25",
-      image: "/images/news/new-packaging.jpg",
+      image: "/images/products/Nyati-42.5N.webp",
       category: "product"
     },
     {
@@ -87,7 +87,7 @@ export default function ProductNewsPage() {
       title: "Lake Cement Expands Product Range with Specialty Cement Solutions",
       excerpt: "Expanding our commitment to meeting diverse construction needs, Lake Cement announces the addition of three new specialty cement products to our range. These include rapid-hardening cement, sulfate-resistant cement, and masonry cement, all designed for specific construction applications.",
       date: "2023-11-15",
-      image: "/images/news/specialty-cement.jpg",
+      image: "/images/products/Nyati-32.5N.jpg",
       category: "product"
     }
   ];
@@ -120,7 +120,7 @@ export default function ProductNewsPage() {
       <section className="relative h-60 md:h-72 lg:h-80 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-nyati-orange opacity-90 z-10"></div>
-          <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center z-0"></div>
+          <div className="absolute inset-0 bg-[url('/images/products/productshero.jpg')] bg-cover bg-center z-0"></div>
         </div>
         
         {/* Content overlay */}
@@ -396,7 +396,7 @@ export default function ProductNewsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto">
                   <Image 
-                    src="/images/news/nyati-plus.jpg" 
+                    src="/images/products/premiumOPC.jpg" 
                     alt="Nyati Plus+ Premium Cement" 
                     fill
                     className="object-cover"
