@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ProductCard from '@/app/components/ui/NewProductCard'
 import KeyFeatureCard from '@/app/components/ui/KeyFeatureCard'
 import PackagingOption from '@/app/components/sections/PackagingOption'
+import GradeFinder from '@/app/components/sections/GradeFinder'
 import { useTranslations } from '@/app/hooks/useTranslations'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 
@@ -290,7 +291,12 @@ export default function ProductsPage() {
   
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9])
-  
+
+  const handleViewSpec = (productIndex) => {
+    const el = document.getElementById(`product-${productIndex}`)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <div className="bg-gray-50">
       {/* Hero section */}
@@ -342,6 +348,9 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Find Your Grade Tool */}
+      <GradeFinder products={products} onViewSpec={handleViewSpec} />
+
       {/* Products Section */}
       <section ref={ref} className="py-2 bg-white">
         <div className="container mx-auto px-4">
@@ -376,14 +385,15 @@ export default function ProductsPage() {
                 console.log(`Rendering translated product ${index}:`, combinedProduct);
                 
                 return (
-                  <motion.div 
+                  <motion.div
                     key={combinedProduct.id}
+                    id={`product-${index}`}
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.7, delay: index * 0.1 }}
                   >
-                    <ProductCard 
+                    <ProductCard
                       product={combinedProduct}
                       index={index}
                     />
@@ -395,16 +405,17 @@ export default function ProductsPage() {
               products.map((product, index) => {
                 // Debug log
                 console.log(`Rendering hardcoded product ${index}:`, product);
-                
+
                 return (
-                  <motion.div 
+                  <motion.div
                     key={product.id}
+                    id={`product-${index}`}
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.7, delay: index * 0.1 }}
                   >
-                    <ProductCard 
+                    <ProductCard
                       product={product}
                       index={index}
                     />
