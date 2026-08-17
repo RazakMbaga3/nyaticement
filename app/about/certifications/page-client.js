@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import certificationsEn from '../../translations/certifications-en.json';
+import certificationsSw from '../../translations/certifications-sw.json';
 
 // Animation variants
 const fadeIn = {
@@ -91,40 +93,12 @@ export default function CertificationsClient({ certifications }) {
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-  const [translatedCertifications, setTranslatedCertifications] = useState(certifications);
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../../translations/certifications-${language}.json`);
-        setPageTranslations(response.default);
-        // If we have translated categories, use them instead of the hardcoded ones
-        if (response.default?.certificationsPage?.categories) {
-          setTranslatedCertifications(response.default.certificationsPage.categories);
-        }
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        try {
-          const fallback = await import('../../translations/certifications-en.json');
-          setPageTranslations(fallback.default);
-          if (fallback.default?.certificationsPage?.categories) {
-            setTranslatedCertifications(fallback.default.certificationsPage.categories);
-          }
-        } catch (fallbackError) {
-          console.error('Error loading fallback translations:', fallbackError);
-          // Keep using the prop certifications as a last resort
-          setTranslatedCertifications(certifications);
-        }
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language, certifications]);
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? certificationsSw : certificationsEn;
+  // If we have translated categories, use them instead of the hardcoded ones
+  const translatedCertifications = pageTranslations?.certificationsPage?.categories || certifications;
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -377,7 +351,7 @@ export default function CertificationsClient({ certifications }) {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/certifications/CERTIMG.jpg"

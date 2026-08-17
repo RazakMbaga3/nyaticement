@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ProductCard from '@/app/components/ui/NewProductCard'
@@ -10,6 +10,8 @@ import PackagingOption from '@/app/components/sections/PackagingOption'
 import GradeFinder from '@/app/components/sections/GradeFinder'
 import { useTranslations } from '@/app/hooks/useTranslations'
 import { useLanguage } from '@/app/contexts/LanguageContext'
+import productsEn from '../translations/products-en.json'
+import productsSw from '../translations/products-sw.json'
 
 // Product data
 const products = [
@@ -242,26 +244,10 @@ export default function ProductsPage() {
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../translations/products-${language}.json`);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        const fallback = await import('../translations/products-en.json');
-        setPageTranslations(fallback.default);
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? productsSw : productsEn;
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -300,7 +286,7 @@ export default function ProductsPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/products/prod.jpg"

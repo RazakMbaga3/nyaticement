@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Newsletter from '@/app/components/ui/Newsletter';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import csrEn from '../../translations/csr-en.json';
+import csrSw from '../../translations/csr-sw.json';
 
 // Define CSR pillars const
 const csrPillars = [
@@ -80,33 +82,10 @@ export default function CSRNewsPage() {  // Get language context and translation
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        console.log(`Loading CSR news translations for language: ${language}`);
-        const response = await import(`../../translations/csr-${language}.json`);
-        console.log('Loaded CSR news translations:', response.default);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        try {
-          const fallback = await import('../../translations/csr-en.json');
-          setPageTranslations(fallback.default);
-        } catch (fallbackError) {
-          console.error('Error loading fallback translations:', fallbackError);
-          setPageTranslations({});
-        }
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? csrSw : csrEn;
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {

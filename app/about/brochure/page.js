@@ -1,49 +1,17 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from '../../hooks/useTranslations'
 import { useLanguage } from '../../contexts/LanguageContext'
+import brochureEn from '../../translations/brochure-en.json'
+import brochureSw from '../../translations/brochure-sw.json'
 
 export default function BrochurePage() {
-  // Load bilingual content through our translation hook
-  const { t, isLoading } = useTranslations();
   const { language } = useLanguage();
-  const [brochureTranslations, setBrochureTranslations] = useState(null);
-
-  // Load brochure-specific translations
-  useEffect(() => {
-    const loadBrochureTranslations = async () => {
-      try {
-        const translationModule = await import(`../../translations/brochure-${language}.json`);
-        setBrochureTranslations(translationModule.default);
-      } catch (error) {
-        console.error('Error loading brochure translations', error);
-        // Fallback to English if there's an error
-        try {
-          const translationModule = await import('../../translations/brochure-en.json');
-          setBrochureTranslations(translationModule.default);
-        } catch (fallbackError) {
-          console.error('Error loading fallback translations', fallbackError);
-        }
-      }
-    };
-
-    if (!isLoading) {
-      loadBrochureTranslations();
-    }
-  }, [isLoading, language]);
-
-  // Return loading state until translations are ready
-  if (isLoading || !brochureTranslations) {
-    return (
-      <div className="flex justify-center items-center py-32">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-nyati-orange"></div>
-      </div>
-    );
-  }
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const brochureTranslations = language === 'sw' ? brochureSw : brochureEn;
 
   return (
     <>

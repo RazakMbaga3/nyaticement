@@ -5,7 +5,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '@/app/contexts/LanguageContext'
-import { useState, useEffect } from 'react'
+import blogEn from '../translations/blog-en.json'
+import blogSw from '../translations/blog-sw.json'
 
 const BlogPost = ({ 
   title, 
@@ -19,25 +20,10 @@ const BlogPost = ({
   children,
   relatedPosts = {}
 }) => {
-  // Language and translations
+  // Language and translations - statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
   const { language } = useLanguage();
-  const [translations, setTranslations] = useState({});
-    // Load blog-specific translations
-  useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const response = await import(`../translations/blog-${language}.json`);
-        setTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading blog translations:', error);
-        // Fallback to English
-        const fallback = await import('../translations/blog-en.json');
-        setTranslations(fallback.default);
-      }
-    };
-    
-    loadTranslations();
-  }, [language]);
+  const translations = language === 'sw' ? blogSw : blogEn;
 
   // Helper function to get translations
   const t = (key) => {

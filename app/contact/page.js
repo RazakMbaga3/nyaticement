@@ -1,38 +1,24 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
 import emailjs from '@emailjs/browser';
+import contactEn from '../translations/contact-en.json'
+import contactSw from '../translations/contact-sw.json'
 
 export default function ContactPage() {
   // Get language context and general translations
   const { language } = useLanguage()
   const { t } = useTranslations()
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({})
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../translations/contact-${language}.json`)
-        setPageTranslations(response.default)
-      } catch (error) {
-        console.error('Error loading page translations:', error)
-        // Fallback to English
-        const fallback = await import('../translations/contact-en.json')
-        setPageTranslations(fallback.default)
-      }
-    }
-    
-    loadPageTranslations()
-  }, [language])
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? contactSw : contactEn
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -189,7 +175,7 @@ export default function ContactPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/contactus/call.jpg"

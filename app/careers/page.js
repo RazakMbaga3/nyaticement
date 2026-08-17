@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import careersEn from '../translations/careers-en.json'
+import careersSw from '../translations/careers-sw.json'
 
 // Animation variants
 const containerVariants = {
@@ -44,26 +46,10 @@ export default function CareersPage() {
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../translations/careers-${language}.json`);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        const fallback = await import('../translations/careers-en.json');
-        setPageTranslations(fallback.default);
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? careersSw : careersEn;
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -116,7 +102,7 @@ export default function CareersPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/career5.jpg"

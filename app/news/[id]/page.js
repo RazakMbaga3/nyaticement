@@ -1,11 +1,13 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { getNewsArticle, getRelatedArticles, getLocalizedArticleContent } from '../newsData'
 import { useLanguage } from '../../contexts/LanguageContext'
+import newsArticleEn from '../../translations/news-article-en.json'
+import newsArticleSw from '../../translations/news-article-sw.json'
 
 // Animation variants
 const containerVariants = {
@@ -67,25 +69,10 @@ export default function NewsArticlePage({ params }) {
 
   // Language and translations
   const { language, switchLanguage } = useLanguage()
-  const [pageTranslations, setPageTranslations] = useState({})
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../../translations/news-article-${language}.json`)
-        setPageTranslations(response.default)
-      } catch (error) {
-        console.error('Error loading page translations:', error)
-        // Fallback to English
-        const fallback = await import('../../translations/news-article-en.json')
-        setPageTranslations(fallback.default)
-      }
-    }
-    
-    loadPageTranslations()
-  }, [language])
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? newsArticleSw : newsArticleEn
+
   // Helper function to get page translations
   const pt = (key) => {
     const keys = key.split('.')

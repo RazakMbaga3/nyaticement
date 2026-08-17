@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Newsletter from '@/app/components/ui/Newsletter';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import csrEn from '../../translations/csr-en.json';
+import csrSw from '../../translations/csr-sw.json';
 
 // Animation variants
 const fadeIn = {
@@ -81,31 +83,9 @@ export default function EnhancedCSRPage() {
   const { language } = useLanguage();
   const { t } = useTranslations();
 
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-    // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        console.log(`Loading translations for language: ${language}`);
-        const response = await import(`../../translations/csr-${language}.json`);
-        console.log('Loaded translations:', response.default);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        try {
-          const fallback = await import('../../translations/csr-en.json');
-          setPageTranslations(fallback.default);
-        } catch (fallbackError) {
-          console.error('Error loading fallback translations:', fallbackError);
-          setPageTranslations({});
-        }
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? csrSw : csrEn;
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -245,7 +225,7 @@ export default function EnhancedCSRPage() {
   return (
     <div ref={contentRef} className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/news/csrhero.webp"

@@ -1,11 +1,13 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import plantEn from '../../translations/plant-en.json';
+import plantSw from '../../translations/plant-sw.json';
 
 // Animation variants
 const fadeIn = {
@@ -96,26 +98,10 @@ export default function PlantPage() {
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-  
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../../translations/plant-${language}.json`);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        const fallback = await import('../../translations/plant-en.json');
-        setPageTranslations(fallback.default);
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
-  
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? plantSw : plantEn;
+
   // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -141,7 +127,7 @@ export default function PlantPage() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/slideshow/1.jpeg"

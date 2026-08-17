@@ -1,8 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import csrEn from '@/app/translations/csr-en.json'
+import csrSw from '@/app/translations/csr-sw.json'
 
 interface SubscribeStatus {
   success: boolean;
@@ -15,27 +17,10 @@ export default function Newsletter() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { language } = useLanguage();
   const { t } = useTranslations();
-  const [pageTranslations, setPageTranslations] = useState<Record<string, any>>({});
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations: Record<string, any> = language === 'sw' ? csrSw : csrEn;
 
-  // Load page-specific translations for the newsletter
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`@/app/translations/csr-${language}.json`);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading newsletter translations:', error);
-        try {
-          const fallback = await import('@/app/translations/csr-en.json');
-          setPageTranslations(fallback.default);
-        } catch (fallbackError) {
-          console.error('Error loading fallback translations:', fallbackError);
-        }
-      }
-    };
-
-    loadPageTranslations();
-  }, [language]);
   // Helper function to get translated content from page translations or fallback to global translations
   const getTranslation = (key: string) => {
     // Check if we have the key in page-specific translations

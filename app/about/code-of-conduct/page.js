@@ -8,6 +8,8 @@ import { useState, useEffect } from 'react';
 import { useScroll } from 'framer-motion';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTranslations } from '@/app/hooks/useTranslations';
+import codeOfConductEn from '../../translations/code-of-conduct-en.json';
+import codeOfConductSw from '../../translations/code-of-conduct-sw.json';
 
 // Icons for core values
 const icons = {
@@ -68,25 +70,9 @@ export default function CodeOfConductPage() {
   const { language } = useLanguage();
   const { t } = useTranslations();
 
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-
-  // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        const response = await import(`../../translations/code-of-conduct-${language}.json`);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        const fallback = await import('../../translations/code-of-conduct-en.json');
-        setPageTranslations(fallback.default);
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? codeOfConductSw : codeOfConductEn;
 
   // Helper function to get page translations with fallback
   const pt = (key) => {
@@ -133,7 +119,7 @@ export default function CodeOfConductPage() {
       <title>{pt('meta.title')}</title>
       <meta name="description" content={pt('meta.description')} />
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/career7.jpg"

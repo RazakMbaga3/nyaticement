@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslations } from '@/app/hooks/useTranslations';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import distributionEn from '../translations/distribution-en.json';
+import distributionSw from '../translations/distribution-sw.json';
 
 // Animation variants
 const fadeIn = {
@@ -28,27 +30,9 @@ export default function DistributionForm() {
   const { language } = useLanguage();
   const { t } = useTranslations();
   
-  // State for page-specific translations
-  const [pageTranslations, setPageTranslations] = useState({});
-    // Load page-specific translations
-  useEffect(() => {
-    const loadPageTranslations = async () => {
-      try {
-        console.log('Loading translations for language:', language);
-        const response = await import(`../translations/distribution-${language}.json`);
-        console.log('Translations loaded:', response.default);
-        setPageTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading page translations:', error);
-        // Fallback to English
-        const fallback = await import('../translations/distribution-en.json');
-        console.log('Fallback translations loaded:', fallback.default);
-        setPageTranslations(fallback.default);
-      }
-    };
-    
-    loadPageTranslations();
-  }, [language]);
+  // Page-specific translations, statically bundled (no client round-trip, no
+  // build-time "missing" false alarms from an async load that hasn't resolved yet)
+  const pageTranslations = language === 'sw' ? distributionSw : distributionEn;
     // Helper function to get page translations
   const pt = (key) => {
     if (!key || !pageTranslations) {
@@ -148,7 +132,7 @@ export default function DistributionForm() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/distribution/driver.jpg"

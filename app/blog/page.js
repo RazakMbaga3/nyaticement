@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Newsletter from '@/app/components/ui/Newsletter';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import blogEn from '../translations/blog-en.json';
+import blogSw from '../translations/blog-sw.json';
 
 // Note: Metadata is removed from this file as it can't be exported from a client component
 
@@ -265,31 +267,14 @@ const allPostsData = {
 export default function BlogPage() {
   const { language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [translations, setTranslations] = useState({});
-  const [categories, setCategories] = useState([]);
-  const [allPosts, setAllPosts] = useState([]);
-  
-  // Load blog-specific translations
+  // Statically bundled (no client round-trip, no build-time "missing" false
+  // alarms from an async load that hasn't resolved yet)
+  const translations = language === 'sw' ? blogSw : blogEn;
+  const categories = categoriesData[language] || categoriesData.en;
+  const allPosts = allPostsData[language] || allPostsData.en;
+
+  // Reset selected category when language changes
   useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const response = await import(`../translations/blog-${language}.json`);
-        setTranslations(response.default);
-      } catch (error) {
-        console.error('Error loading blog translations:', error);
-        // Fallback to English
-        const fallback = await import('../translations/blog-en.json');
-        setTranslations(fallback.default);
-      }
-    };
-    
-    loadTranslations();
-    
-    // Set categories and posts based on current language
-    setCategories(categoriesData[language] || categoriesData.en);
-    setAllPosts(allPostsData[language] || allPostsData.en);
-    
-    // Reset selected category when language changes
     setSelectedCategory('All');
   }, [language]);
 
@@ -316,7 +301,7 @@ export default function BlogPage() {
     return (
     <div className="bg-gray-50">      
       {/* Hero Section */}
-      <section className="relative h-[55vh] lg:h-[60vh] overflow-hidden bg-nyati-navy">
+      <section className="relative min-h-[55vh] lg:min-h-[60vh] overflow-hidden bg-nyati-navy">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/blog/hero.jpg"
