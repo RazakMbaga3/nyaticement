@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
@@ -412,7 +412,7 @@ export default function ProductNewsPage() {
                   />
                 </div>
                 <div className="p-8">
-                  <div className="bg-nyati-orange/10 text-nyati-orange text-xs px-3 py-1 rounded-full uppercase font-semibold tracking-wide inline-block mb-4">
+                  <div className="bg-nyati-navy/5 text-nyati-navy text-xs px-3 py-1 rounded-full uppercase font-semibold tracking-wide inline-block mb-4 border border-nyati-navy/10">
                     Featured Product
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-nyati-navy">Nyati Plus+ Premium Cement</h3>

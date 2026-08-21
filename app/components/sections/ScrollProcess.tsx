@@ -71,7 +71,7 @@ export default function ScrollProcess({ heading, steps }: ScrollProcessProps) {
   if (useStaticLayout) {
     return (
       <section className="mb-8">
-        <h2 className="text-xl font-bold text-nyati-navy mb-4">{heading}</h2>
+        <h2 className="text-2xl md:text-3xl font-black text-nyati-navy mb-4">{heading}</h2>
         <div className="space-y-4">
           {steps.map((step, i) => (
             <div
@@ -95,7 +95,7 @@ export default function ScrollProcess({ heading, steps }: ScrollProcessProps) {
     >
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl w-full">
-          <div className="eyebrow text-xs font-bold tracking-[0.18em] uppercase text-nyati-orange mb-3">
+          <div className="eyebrow text-xs font-bold tracking-[0.18em] uppercase text-nyati-navy mb-3">
             {heading}
           </div>
 
@@ -140,7 +140,7 @@ export default function ScrollProcess({ heading, steps }: ScrollProcessProps) {
                   <div className="text-8xl font-bold text-nyati-orange/15 font-futura leading-none mb-2 tabular-nums">
                     {String(i + 1).padStart(2, '0')}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-nyati-navy mb-3 -mt-12 relative z-10">
+                  <h3 className="text-xl md:text-2xl font-bold text-nyati-navy mb-3 -mt-12 relative z-10">
                     {step.title.replace(/^0\d\.\s*/, '')}
                   </h3>
                   <p className="text-base text-nyati-dark-grey max-w-2xl relative z-10">

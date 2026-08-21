@@ -5,6 +5,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { useTranslations } from '@/app/hooks/useTranslations'
+import { springUI } from '@/app/lib/motion-presets'
 
 const mainVideo = {
   titleKey: 'videos.mainVideo.title',
@@ -90,12 +91,12 @@ export default function VideoSection() {
           {/* Tabs */}
           <div className="flex justify-center mt-2 border-b border-gray-200">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05, transition: springUI }}
+              whileTap={{ scale: 0.95, transition: springUI }}
               onClick={() => setActiveTab('videos')}
               className={`px-6 py-3 font-medium text-sm transition-all duration-300 relative ${
                 activeTab === 'videos'
-                  ? 'text-nyati-orange'                  : 'text-gray-500 hover:text-nyati-navy'
+                  ? 'text-nyati-navy font-semibold'                  : 'text-gray-500 hover:text-nyati-navy'
               }`}
             >
               {t('videos.watchVideos')}
@@ -107,12 +108,12 @@ export default function VideoSection() {
               )}
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05, transition: springUI }}
+              whileTap={{ scale: 0.95, transition: springUI }}
               onClick={() => setActiveTab('audio')}
               className={`px-6 py-3 font-medium text-sm transition-all duration-300 relative ${
                 activeTab === 'audio'
-                  ? 'text-nyati-orange'
+                  ? 'text-nyati-navy font-semibold'
                   : 'text-gray-500 hover:text-nyati-navy'              }`}
             >
               {t('videos.listenAudio')}
@@ -144,7 +145,7 @@ export default function VideoSection() {
               >
                 <motion.div
                   className="bg-white rounded-sm shadow-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1"
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -5, transition: springUI }}
                 >
                   <div className="aspect-video relative overflow-hidden">
                     <Image
@@ -159,8 +160,8 @@ export default function VideoSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-20 h-20 rounded-full bg-nyati-orange/90 flex items-center justify-center transform transition-transform duration-500"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        whileHover={{ scale: 1.1, transition: springUI }}
+                        whileTap={{ scale: 0.9, transition: springUI }}
                       >
                         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />
@@ -177,8 +178,8 @@ export default function VideoSection() {
                       href={mainVideo.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center font-semibold text-nyati-orange hover:text-nyati-navy transition-colors duration-300 group/link"
-                      whileHover={{ x: 5 }}
+                      className="inline-flex items-center font-semibold text-nyati-navy hover:text-nyati-orange transition-colors duration-300 group/link"
+                      whileHover={{ x: 5, transition: springUI }}
                     >
                       <span>{t('videos.watchOnYouTube')}</span>
                       <svg
@@ -221,8 +222,8 @@ export default function VideoSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-12 h-12 rounded-full bg-nyati-orange flex items-center justify-center"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                            whileHover={{ scale: 1.1, transition: springUI }}
+                            whileTap={{ scale: 0.9, transition: springUI }}
                           >
                             <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M8 5v14l11-7z" />
@@ -236,8 +237,8 @@ export default function VideoSection() {
                           href={video.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm inline-flex items-center font-medium text-nyati-orange hover:text-nyati-navy transition-colors duration-300"
-                          whileHover={{ x: 3 }}
+                          className="text-sm inline-flex items-center font-semibold text-nyati-navy hover:text-nyati-orange transition-colors duration-300"
+                          whileHover={{ x: 3, transition: springUI }}
                         >                          <span>{t('videos.watchVideo')}</span>
                           <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="square" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -257,8 +258,8 @@ export default function VideoSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-nyati-navy hover:bg-nyati-navy/5 text-white px-6 py-3 rounded-sm transition-colors duration-300 shadow-md"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05, transition: springUI }}
+                    whileTap={{ scale: 0.95, transition: springUI }}
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -336,14 +337,13 @@ export default function VideoSection() {
                       rel="noopener noreferrer"
                       className="bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-sm p-6 transition-all duration-300 group"
                       variants={itemVariants}
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.03, transition: springUI }}
+                      whileTap={{ scale: 0.98, transition: springUI }}
                     >
                       <div className="flex items-center">
                         <motion.div
                           className="mr-4 w-12 h-12 rounded-sm bg-nyati-orange flex items-center justify-center"
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
+                          whileHover={{ scale: 1.1, transition: springUI }}
                         >
                           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 14c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1zm-4 0c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1zm-4 0c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1z"/>

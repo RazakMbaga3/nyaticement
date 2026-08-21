@@ -65,7 +65,7 @@ export default function BrandValues() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="block w-8 h-px bg-nyati-orange" />
-              <span className="text-nyati-orange text-xs font-bold tracking-[0.22em] uppercase">Our Foundation</span>
+              <span className="text-nyati-navy text-xs font-bold tracking-[0.22em] uppercase">Our Foundation</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Core Values that

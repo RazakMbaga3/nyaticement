@@ -1,4 +1,4 @@
-// app/blog/understanding-cement-grades/page.js
+﻿// app/blog/understanding-cement-grades/page.js
 'use client';
 
 import React from 'react'
@@ -90,7 +90,7 @@ export default function CementGradesPage() {
       {/* Optional featured image */}      <div className="my-8 rounded-sm overflow-hidden relative aspect-w-16 aspect-h-9 bg-gray-100">
         {/* Placeholder for actual image */}
         <div className="absolute inset-0 flex items-center justify-center bg-nyati-orange/10">
-          <span className="text-nyati-orange font-bold">{language === 'en' ? '[Featured Image: Various cement grades being used in construction]' : '[Picha ya Mada: Daraja mbalimbali za saruji zikitumika katika ujenzi]'}</span>
+          <span className="text-nyati-navy font-bold">{language === 'en' ? '[Featured Image: Various cement grades being used in construction]' : '[Picha ya Mada: Daraja mbalimbali za saruji zikitumika katika ujenzi]'}</span>
         </div>
       </div>
 
@@ -126,7 +126,7 @@ export default function CementGradesPage() {
           }
         </p>
       </div>      <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">{language === 'en' ? 'Nyati Cement CEM II A-L 42.5R: For Fast-Track Projects' : 'Saruji ya Nyati CEM II A-L 42.5R: Kwa Miradi ya Haraka'}</h2>
-      <div className="bg-blue-50 p-6 rounded-lg mb-6 border-l-4 border-nyati-navy">
+      <div className="bg-navy-50 p-6 rounded-lg mb-6 border-l-4 border-nyati-navy">
         <h3 className="text-xl font-bold text-nyati-navy mb-3">{language === 'en' ? 'Key Features:' : 'Sifa Muhimu:'}</h3>
         <ul className="list-disc pl-6 mb-4">
           {language === 'en' ? (

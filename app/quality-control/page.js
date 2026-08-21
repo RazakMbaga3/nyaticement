@@ -144,7 +144,7 @@ export default function QualityControlPage() {
             </nav>
 
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -203,7 +203,7 @@ export default function QualityControlPage() {
         >
           <motion.h2 
             variants={slideUp} 
-            className="text-xl font-bold text-nyati-navy mb-2"
+            className="text-2xl md:text-3xl font-black text-nyati-navy mb-2"
           >
             {t('quality.policy.title') || "QUALITY POLICY"}
           </motion.h2>
@@ -306,7 +306,7 @@ export default function QualityControlPage() {
               variants={staggerContainer}
               className="md:w-1/2 bg-white p-6 flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-200"
             >              <motion.div variants={slideUp}>
-                <h2 className="text-xl font-bold text-nyati-navy mb-2">{t('quality.commitment.title') || "OUR QUALITY COMMITMENT"}</h2>
+                <h2 className="text-2xl md:text-3xl font-black text-nyati-navy mb-2">{t('quality.commitment.title') || "OUR QUALITY COMMITMENT"}</h2>
               </motion.div>
               
               <motion.p variants={slideUp} className="text-sm text-nyati-dark-grey mb-3">
@@ -319,13 +319,13 @@ export default function QualityControlPage() {
               
               <motion.div variants={slideUp} className="flex flex-wrap gap-2 mt-2">
   <Link href="/about/certifications" className="cursor-pointer">
-    <span className="bg-nyati-orange/10 text-nyati-orange text-xs px-3 py-1 rounded-sm hover:bg-nyati-orange/20 transition-colors">{t('quality.commitment.tags.iso') || "ISO Certified"}</span>
+    <span className="bg-nyati-navy/5 text-nyati-navy text-xs px-3 py-1 rounded-sm border border-nyati-navy/10 transition-colors">{t('quality.commitment.tags.iso') || "ISO Certified"}</span>
   </Link>
   <Link href="/about/certifications" className="cursor-pointer">
-    <span className="bg-nyati-orange/10 text-nyati-orange text-xs px-3 py-1 rounded-sm hover:bg-nyati-orange/20 transition-colors">{t('quality.commitment.tags.tbs') || "TBS Approved"}</span>
+    <span className="bg-nyati-navy/5 text-nyati-navy text-xs px-3 py-1 rounded-sm border border-nyati-navy/10 transition-colors">{t('quality.commitment.tags.tbs') || "TBS Approved"}</span>
   </Link>
   <Link href="/about/certifications" className="cursor-pointer">
-    <span className="bg-nyati-orange/10 text-nyati-orange text-xs px-3 py-1 rounded-sm hover:bg-nyati-orange/20 transition-colors">{t('quality.commitment.tags.quality') || "100% Quality Assured"}</span>
+    <span className="bg-nyati-navy/5 text-nyati-navy text-xs px-3 py-1 rounded-sm border border-nyati-navy/10 transition-colors">{t('quality.commitment.tags.quality') || "100% Quality Assured"}</span>
   </Link>
 </motion.div>
             </motion.div>
@@ -344,7 +344,7 @@ export default function QualityControlPage() {
           className="bg-nyati-navy border-t-2 border-nyati-orange p-6 text-center mb-8"
         >          <motion.h3 
             variants={slideUp}
-            className="text-white text-xl font-bold mb-2"
+            className="text-white text-xl font-black mb-2"
           >
             {t('quality.banner.title') || "Our Commitment to Excellence Never Stops"}
           </motion.h3>

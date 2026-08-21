@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
@@ -154,7 +154,7 @@ export default function NewsPage() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -262,7 +262,7 @@ export default function NewsPage() {
                           href={article.link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
+                          className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange transition-colors"
                         >
                           {pt('newsPage.actions.readMore') || 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -272,7 +272,7 @@ export default function NewsPage() {
                       ) : (
                         <Link 
                           href={`/news/${article.id}`} 
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 transition-colors"
+                          className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange transition-colors"
                         >
                           {pt('newsPage.actions.readMore') || 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -340,7 +340,7 @@ export default function NewsPage() {
                       </h3>
                       <p className="text-gray-700 text-sm mb-4 line-clamp-3">
                         {article.excerpt}
-                      </p>                      <Link href={`/news/${article.id}`} className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors">
+                      </p>                      <Link href={`/news/${article.id}`} className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange text-sm transition-colors">
                         {pt('newsPage.actions.readMore') || 'Read More'}
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

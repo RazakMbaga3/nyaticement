@@ -72,9 +72,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about/about-us"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.aboutUs')}</span>
@@ -83,9 +83,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/products"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.products')}</span>
@@ -94,9 +94,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quality-control"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.qualityControl')}</span>
@@ -105,9 +105,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/sustainability"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.sustainability')}</span>
@@ -118,16 +118,16 @@ export default function Footer() {
 
           {/* Company Section */}
           <div>
-            <h3 className="text-xl text-nyati-orange font-bold mb-4 relative inline-block">
+<h3 className="text-xl text-nyati-orange font-bold mb-4 relative inline-block">
               {t('footer.company')}
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about/plant"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.thePlant')}</span>
@@ -136,9 +136,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about/certifications"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.certifications')}</span>
@@ -147,9 +147,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/careers"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.careers')}</span>
@@ -158,9 +158,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.contactUs')}</span>
@@ -178,9 +178,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about/csr"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.csr')}</span>
@@ -189,9 +189,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about/code-of-conduct"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.codeOfConduct')}</span>
@@ -200,9 +200,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/distribution"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.distributionAndService')}</span>
@@ -211,9 +211,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/news"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.news')}</span>
@@ -222,9 +222,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-gray-300 hover:text-nyati-orange transition duration-300 flex items-center group"
+                  className="flex items-center gap-2 text-gray-300 hover:text-nyati-orange transition duration-300"
                 >
-                  <svg className="w-4 h-4 mr-2 text-nyati-orange transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-nyati-orange transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   <span>{t('footer.blog')}</span>

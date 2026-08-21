@@ -60,7 +60,7 @@ export default function WaterCementRatioPage() {
           <div className="my-8 rounded-r-sm overflow-hidden relative aspect-w-16 aspect-h-9 bg-gray-100">
             {/* Placeholder for actual image */}
             <div className="absolute inset-0 flex items-center justify-center bg-nyati-orange/10">
-              <span className="text-nyati-orange font-bold">[Featured Image: Concrete being mixed with controlled water content]</span>
+              <span className="text-nyati-navy font-bold">[Featured Image: Concrete being mixed with controlled water content]</span>
             </div>
           </div>
 
@@ -324,7 +324,7 @@ export default function WaterCementRatioPage() {
 
           <div className="my-8 rounded-r-sm overflow-hidden relative aspect-w-16 aspect-h-9 bg-gray-100">
             <div className="absolute inset-0 flex items-center justify-center bg-nyati-orange/10">
-              <span className="text-nyati-orange font-bold">[Picha Kuu: Zege likichanganywa na kiasi sahihi cha maji]</span>
+              <span className="text-nyati-navy font-bold">[Picha Kuu: Zege likichanganywa na kiasi sahihi cha maji]</span>
             </div>
           </div>
 

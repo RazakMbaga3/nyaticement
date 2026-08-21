@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -292,7 +292,7 @@ export default function CSRNewsPage() {  // Get language context and translation
                           href={article.link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
+                          className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange text-sm transition-colors"
                         >
                           {language === 'sw' ? 'Soma Zaidi' : 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,7 +302,7 @@ export default function CSRNewsPage() {  // Get language context and translation
                       ) : (
                         <Link 
                           href={`/news/${article.id}`}
-                          className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
+                          className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange text-sm transition-colors"
                         >
                           {language === 'sw' ? 'Soma Zaidi' : 'Read More'}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

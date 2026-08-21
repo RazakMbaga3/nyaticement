@@ -1,4 +1,4 @@
-// app/blog/building-your-dream-home/page.js
+﻿// app/blog/building-your-dream-home/page.js
 'use client';
 
 import React from 'react';
@@ -141,7 +141,7 @@ export default function BuildingYourDreamHomePage() {
             <li>Mix thoroughly until you achieve a consistent texture</li>
           </ul>
 
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+          <div className="bg-navy-50 border-l-4 border-navy-900 p-4 my-6">
             <p className="font-bold">Pro Tip:</p>
             <p>Never compromise on foundation quality. Using high-quality Nyati 42.5R cement for your foundation will ensure the long-term stability of your entire structure with its superior load-bearing capacity and early strength development.</p>
           </div>
@@ -392,7 +392,7 @@ export default function BuildingYourDreamHomePage() {
             <li>Dumisha uwiano wa maji-saruji kama inavyopendekezwa na wataalamu wa ujenzi</li>
             <li>Koroga vizuri hadi upate mchanganyiko wa aina moja</li>
           </ul>
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+          <div className="bg-navy-50 border-l-4 border-navy-900 p-4 my-6">
             <p className="font-bold">Dokezo la Kitaalamu:</p>
             <p>Usikubali ubora wa msingi upungue. Kutumia saruji bora ya Nyati 42.5R kwenye msingi wako kutahakikisha uimara wa muda mrefu wa jengo lako lote kutokana na uwezo wake mkubwa wa kubeba mizigo na kupata nguvu mapema.</p>
           </div>

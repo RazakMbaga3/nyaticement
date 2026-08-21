@@ -189,9 +189,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Fixed Header */}      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 transform
-          ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'}
+      {/* Fixed Header — a translucent material throughout, not a hard-edged
+          opaque bar. Scrolled state thickens the material (more opacity,
+          more blur) and adds a soft edge instead of a hard shadow line. */}      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 transform bg-white/90 backdrop-blur-md
+          ${scrolled ? 'shadow-[0_1px_0_0_rgba(23,49,88,0.08),0_8px_24px_-12px_rgba(23,49,88,0.15)]' : ''}
           ${visible ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className="container mx-auto px-4">
@@ -221,8 +223,8 @@ export default function Navbar() {
                     <div className="flex items-center">
                       <Link
                         href={link.path}
-                        className={`px-3 py-6 flex items-center text-sm font-medium transition-all duration-300 relative
-                          ${isActivePath(link.path) ? 'text-nyati-orange' : 'text-nyati-navy hover:text-nyati-orange'}`}
+                        className={`px-3 py-6 flex items-center text-sm transition-all duration-300 relative
+                          ${isActivePath(link.path) ? 'text-nyati-navy font-semibold' : 'text-nyati-navy hover:text-nyati-orange'}`}
                         onClick={(e) => link.dropdown && toggleMobileDropdown(index, e)}
                       >
                         <span className="relative z-10">{link.name}</span>
@@ -275,7 +277,7 @@ export default function Navbar() {
                                 </span>
                               )}
                               <span className="min-w-0">
-                                <span className={`block text-sm font-bold leading-tight ${pathname === item.path ? 'text-nyati-orange' : 'text-nyati-navy'}`}>
+                                <span className={`block text-sm font-bold leading-tight ${pathname === item.path ? 'text-nyati-navy' : 'text-nyati-navy'}`}>
                                   {item.name}
                                 </span>
                                 {item.blurb && (
@@ -379,7 +381,7 @@ export default function Navbar() {
                   <>
                     <button
                       className={`flex w-full items-center justify-between px-4 py-3 transition-colors
-                        ${activeDropdown === index ? 'text-nyati-orange' : 'text-nyati-navy'}`}
+                        ${activeDropdown === index ? 'text-nyati-orange btn-secondary' : 'text-nyati-navy'}`}
                       onClick={() => toggleMobileDropdown(index)}
                     >
                       <span className="font-normal">{link.name}</span>
@@ -402,7 +404,7 @@ export default function Navbar() {
                             <Link
                               href={item.path}
                               className={`block px-4 py-2.5 text-sm transition-colors
-                                ${pathname === item.path ? 'text-nyati-orange' : 'text-nyati-dark-grey'}`}
+                                ${pathname === item.path ? 'text-nyati-navy font-semibold' : 'text-nyati-navy'}`}
                               onClick={toggleMenu}
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-nyati-orange inline-block mr-2"></span>
@@ -417,7 +419,7 @@ export default function Navbar() {
                   <Link
                     href={link.path}
                     className={`block px-4 py-3 transition-colors
-                      ${isActivePath(link.path) ? 'text-nyati-orange' : 'text-nyati-navy'}`}
+                      ${isActivePath(link.path) ? 'text-nyati-navy font-semibold' : 'text-nyati-navy'}`}
                     onClick={toggleMenu}
                   >
                     <span className="font-medium">{link.name}</span>

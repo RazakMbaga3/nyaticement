@@ -22,7 +22,6 @@ module.exports = {
           'light-grey': '#f8fafc', // Existing light grey
           'dark-grey': '#334155', // Existing dark grey
         },
-
         // Tint/shade scales for the brand colors, anchored on the exact
         // brand manual hex (navy at 900, orange at 500, green at 700 -
         // their natural lightness), interpolated smoothly around it.
@@ -61,6 +60,22 @@ module.exports = {
           700: '#239557', // Brand green
           800: '#1B7142',
           900: '#124D2D',
+        },
+        // Grayscale extensions for consistency
+        white: '#ffffff',
+        black: '#000000',
+        // Nyati gray scale - consistent gray palette
+        'nyati-gray': {
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+          500: '#6B7280',
+          600: '#4B5563',
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827',
         },
       },
       fontFamily: {

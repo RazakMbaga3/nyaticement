@@ -119,7 +119,7 @@ export default function GradeFinder({ products, onViewSpec }: GradeFinderProps) 
     <section className="py-16 bg-nyati-cream border-y border-gray-200">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-10">
-          <div className="eyebrow text-xs font-bold tracking-[0.18em] uppercase text-nyati-orange mb-3">
+          <div className="eyebrow text-xs font-bold tracking-[0.18em] uppercase text-nyati-navy mb-3">
             Find Your Grade
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-nyati-navy mb-3">

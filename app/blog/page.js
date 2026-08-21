@@ -327,7 +327,7 @@ export default function BlogPage() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

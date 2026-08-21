@@ -317,7 +317,7 @@ export default function NewsArticlePage({ params }) {
                       href={article.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-nyati-orange hover:text-nyati-orange/80 transition-colors"
+                      className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange transition-colors"
                     >
                       <span className="mr-2">{pt('articlePage.externalLink.readOriginal') || 'Read Original Article'}</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

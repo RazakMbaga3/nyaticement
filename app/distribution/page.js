@@ -158,7 +158,7 @@ export default function DistributionForm() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -195,7 +195,7 @@ export default function DistributionForm() {
       {/* Hotline Section */}
       <div className="bg-white py-2 border-b border-gray-200">
         <div className="container mx-auto px-4 flex items-center">
-          <div className="flex items-center text-nyati-orange font-medium">
+          <div className="flex items-center text-nyati-navy font-medium">
             <span className="mr-2 font-bold">{pt('distributionPage.hotline.title')}</span>
             <Image 
               src="/images/telephone (2).png" 
@@ -204,7 +204,7 @@ export default function DistributionForm() {
               height={20} 
               className="mr-2"
             />
-            <span className="text-lg">{pt('distributionPage.hotline.number')}</span>
+            <span className="text-lg font-bold">{pt('distributionPage.hotline.number')}</span>
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ export default function DistributionForm() {
             variants={slideUp}
             className="bg-white p-4"
           >
-            <h2 className="text-xl font-bold mb-2 text-nyati-navy">{pt('distributionPage.form.title')}</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-2 text-nyati-navy">{pt('distributionPage.form.title')}</h2>
             <p className="text-sm text-gray-700 mb-3">
               {pt('distributionPage.form.subtitle')}
             </p>
@@ -358,7 +358,7 @@ export default function DistributionForm() {
             variants={slideUp}
             className="bg-white p-4"
           >
-            <h2 className="text-xl font-bold mb-2 text-nyati-navy">{pt('distributionPage.service.title')}</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-2 text-nyati-navy">{pt('distributionPage.service.title')}</h2>
             
             <div className="grid grid-cols-1 gap-4">              <div className="bg-gray-50 p-3 border border-gray-200">
                 <p className="text-sm text-gray-700">

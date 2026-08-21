@@ -12,8 +12,53 @@
   --font-merriweather: 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
+/* ============================================
+   Design Tokens - Design System Variables
+   ============================================ */
 
-/* Base styles */
+/* Color Tokens */
+:root {
+  --color-nyati-navy: #173158;
+  --color-nyati-orange: #F49545;
+  --color-nyati-green: #239557;
+  --color-nyati-cream: #FFF7ED;
+  --color-nyati-dark-grey: #334155;
+  --color-nyati-light-grey: #F8FAFC;
+  --color-nyati-grey: #64748B;
+}
+
+/* Typography Tokens */
+:root {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-merriweather);
+  --font-futura: 'Futura', var(--font-inter), sans-serif;
+  
+  --font-size-xxs: 0.65rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
 @layer base {
   html {
     @apply text-nyati-dark-grey scroll-smooth;
@@ -22,97 +67,160 @@
   body {
     @apply font-sans text-base antialiased text-gray-800 bg-white selection:bg-nyati-orange/20 selection:text-nyati-navy;
   }
-
-  /* Typography - Improved Heading System */
+  
+  /* Typography Scale - Consistent hierarchy. Tracking and leading are
+     size-specific, not one fixed value for every heading (large display
+     text wants tighter tracking/leading; small headings want closer to
+     normal, or they read as artificially cramped). */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-futura font-bold leading-tight tracking-tight text-nyati-navy;
+    @apply font-futura font-black text-nyati-navy;
+  }
+
+  h1, h2 {
+    @apply font-black;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-bold;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl mb-6;
+    @apply text-6xl md:text-7xl lg:text-8xl mb-8 leading-[1.05] tracking-[-0.02em];
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl mb-5;
+    @apply text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.1] tracking-[-0.015em];
   }
 
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl mb-4;
+    @apply text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight tracking-tight;
   }
 
   h4 {
-    @apply text-lg md:text-xl lg:text-2xl mb-3;
+    @apply text-2xl md:text-3xl lg:text-4xl mb-4 leading-tight tracking-tight;
   }
 
   h5 {
-    @apply text-base md:text-lg font-semibold mb-2;
+    @apply text-base md:text-lg font-semibold mb-3 leading-snug tracking-normal;
   }
 
   h6 {
-    @apply text-xs md:text-sm font-semibold; /* Reduced heading sizes */
+    @apply text-sm md:text-base font-semibold leading-snug tracking-normal;
   }
-
-  /* Typography - Body */
+  
+  /* Body and paragraph */
   p {
-    @apply font-sans text-sm leading-normal mb-3; /* Reduced font size and spacing */
+    @apply font-sans text-base leading-relaxed mb-4;
   }
-
-  /* Links */
+  
   a {
-    @apply text-nyati-orange hover:text-nyati-light-orange transition-colors duration-200;
+    @apply text-nyati-orange hover:text-nyati-light-orange transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-nyati-orange focus-visible:ring-offset-white;
   }
 }
 
-/* Component classes */
+/* ============================================
+   Component Classes
+   ============================================ */
 @layer components {
   .container {
     @apply px-4 mx-auto;
   }
-
+  
+  /* Buttons - Unified styling. Press feedback is instant (on :active,
+     not waiting for click to resolve) and separated from the slower
+     color transition so it doesn't feel laggy. */
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200; /* Reduced padding */
+    @apply inline-flex items-center justify-center transition-transform duration-100 ease-out active:scale-[0.97];
   }
 
   .btn-primary {
-    @apply bg-nyati-orange text-white hover:bg-nyati-navy;
+    @apply bg-nyati-orange text-white;
   }
-
+  
+  .btn-primary:hover {
+    @apply bg-nyati-navy;
+  }
+  
   .btn-secondary {
-    @apply bg-nyati-navy text-white hover:bg-navy-700;
+    @apply bg-nyati-navy text-white;
   }
-
+  
+  .btn-secondary:hover {
+    @apply bg-navy-700;
+  }
+  
   .btn-outline {
-    @apply border border-nyati-orange text-nyati-orange hover:bg-nyati-orange hover:text-white;
+    @apply border border-nyati-orange text-nyati-navy hover:bg-nyati-orange hover:text-white;
   }
-
+  
+  /* Button size variants */
+  .btn-lg {
+    @apply px-8 py-4 font-bold text-xs tracking-[0.18em] uppercase;
+  }
+  
+  .btn-md {
+    @apply px-7 py-3.5 font-bold text-sm tracking-wide uppercase;
+  }
+  
+  .btn-sm {
+    @apply px-4 py-2 font-medium text-sm;
+  }
+  
+  /* Section title - consistent */
   .section-title {
-    @apply font-futura text-xl md:text-2xl font-bold text-nyati-navy mb-4; /* Reduced font size and spacing */
+    @apply font-futura text-2xl md:text-3xl lg:text-4xl font-black text-nyati-navy mb-6;
   }
-
+  
+  /* Section padding - standardized */
+  .section-padding {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+  
+  .section-padding-small {
+    @apply py-12 md:py-16;
+  }
+  
   .card {
-    @apply bg-white rounded-lg shadow-soft overflow-hidden;
+    @apply bg-white rounded-2xl shadow-soft overflow-hidden;
   }
-
+  
   .card-title {
-    @apply font-futura text-lg font-bold text-nyati-navy mb-1; /* Reduced font size and spacing */
+    @apply font-futura text-lg font-bold text-nyati-navy mb-3;
+  }
+  
+  .card-text {
+    @apply text-base text-gray-600 leading-relaxed mb-3;
   }
 }
 
-/* Utility classes */
+/* ============================================
+   Utility Classes
+   ============================================ */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-
-  .section-padding {
-    @apply py-6 md:py-8; /* Reduced padding */
-  }
-
+  
   .heading-accent {
-    @apply relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-nyati-orange; /* Reduced spacing */
+    @apply relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-nyati-orange;
   }
-
+  
   .heading-accent-center {
-    @apply relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-nyati-orange; /* Reduced spacing */
+    @apply relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-nyati-orange;
+  }
+  
+  /* Focus ring for accessibility */
+  .focus-visible {
+    @apply outline-none ring-2 ring-nyati-orange ring-offset-white;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    @apply bg-nyati-orange/20 text-nyati-navy;
+  }
+  
+  /* Nyati gray text */
+  .text-nyati-gray {
+    @apply text-nyati-gray-600;
   }
 }

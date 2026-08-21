@@ -65,7 +65,7 @@ export default function FeaturesGrid() {
         >
           <div className="flex items-center gap-2.5 mb-4">
             <span className="block w-7 h-0.5 bg-nyati-orange" />
-            <span className="text-nyati-orange text-xs font-bold tracking-[0.18em] uppercase">
+            <span className="text-nyati-navy text-xs font-bold tracking-[0.18em] uppercase">
               {t('homePage.featuresSubtitle')}
             </span>
           </div>
@@ -86,7 +86,7 @@ export default function FeaturesGrid() {
               variants={itemVariants}
               className="bg-white border-r border-b border-nyati-navy/10 flex flex-col group"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-[300px] overflow-hidden md:h-[400px] lg:h-56">
                 <Image
                   src={feature.image}
                   alt={feature.title}
@@ -107,7 +107,7 @@ export default function FeaturesGrid() {
                 </p>
                 <Link
                   href={feature.link}
-                  className="mt-auto pt-4 border-t border-gray-100 inline-flex items-center gap-1.5 text-nyati-navy hover:text-nyati-orange font-semibold text-sm transition-colors duration-200 group/link"
+                  className="mt-auto pt-4 border-t border-gray-100 inline-flex items-center gap-2.5 btn-outline"
                 >
                   <span>{t('common.readMore')}</span>
                   <svg

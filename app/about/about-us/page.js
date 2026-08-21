@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
@@ -87,7 +87,7 @@ const CompactInfoCard = ({ title, imageSrc, description, linkPath, index }) => {
         <p className="text-sm text-gray-700">{description}</p>
         <motion.a 
           href={linkPath}
-          className="mt-2 text-nyati-orange text-sm font-medium inline-block"
+          className="mt-2 text-nyati-navy text-sm font-semibold inline-block hover:text-nyati-orange"
           whileHover={{ x: 5 }}
         >
           {t('learnMore')} &rarr;
@@ -247,7 +247,7 @@ export default function AboutUsPage() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -278,7 +278,7 @@ export default function AboutUsPage() {
               <motion.div className="flex items-center mb-4">
                 <motion.h1 
                   variants={slideUp}
-                  className="text-nyati-orange text-2xl md:text-3xl font-bold"
+                  className="text-nyati-navy text-2xl md:text-3xl font-bold"
                 >
                   {pt('aboutUsPage.aboutSection.title')}
                 </motion.h1>
@@ -298,7 +298,7 @@ export default function AboutUsPage() {
                       dangerouslySetInnerHTML={{
                         __html: paragraph.replace(
                           pt('aboutUsPage.aboutSection.brandName'),
-                          `<strong class="text-nyati-orange">${pt('aboutUsPage.aboutSection.brandName')}</strong>`
+                          `<strong class="text-nyati-navy">${pt('aboutUsPage.aboutSection.brandName')}</strong>`
                         )
                       }}
                     />
@@ -315,7 +315,7 @@ export default function AboutUsPage() {
                       variants={slideUp}
                       className="text-sm md:text-base"
                     >
-                      We produce consistent high quality cement for which we have leveraged best-in-class technologies and extensive sectoral experience. We started production in 2014 under the <strong className="text-nyati-orange">Nyati Cement</strong> brand. <strong className="text-nyati-orange">Nyati Cement</strong> is now the leading cement brand not only in Tanzania, but also has prominence in Rwanda, Burundi and other neighboring countries.
+                      We produce consistent high quality cement for which we have leveraged best-in-class technologies and extensive sectoral experience. We started production in 2014 under the <strong className="text-nyati-navy">Nyati Cement</strong> brand. <strong className="text-nyati-navy">Nyati Cement</strong> is now the leading cement brand not only in Tanzania, but also has prominence in Rwanda, Burundi and other neighboring countries.
                     </motion.p>
                   </>
                 }
@@ -335,7 +335,7 @@ export default function AboutUsPage() {
                     className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'mission' ? 'bg-nyati-navy border-nyati-navy' : 'bg-white border-gray-200'}`}
                   >
                     <div className="p-6">
-                      <h2 className={`font-bold text-xl mb-1 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-orange'}`}>
+                      <h2 className={`font-bold text-xl mb-1 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-navy'}`}>
                         {pt('aboutUsPage.missionVision.mission.title')}
                       </h2>
                       <p className={`text-sm transition-colors duration-300 ${activeVisionMission === 'mission' ? 'text-white' : 'text-gray-700'}`}> 
@@ -384,22 +384,22 @@ export default function AboutUsPage() {
                     :
                     <>
                       <CoreValueCard 
-                        icon="⚖️"
+                        icon="âš–ï¸"
                         title="Integrity"
                         description="Honest and accurate reporting of performance, both internally and externally, creating an environment conducive to proper business conduct."
                       />
                       <CoreValueCard 
-                        icon="🤝"
+                        icon="ðŸ¤"
                         title="Responsibility"
                         description="Protecting our stakeholders' interests is our responsibility, making it the core of all our policies and management decisions."
                       />
                       <CoreValueCard 
-                        icon="🔒"
+                        icon="ðŸ”’"
                         title="Trust"
                         description="We are the trustees of the trust reposed on us by our stakeholders, guiding our actions and decisions at every level."
                       />
                       <CoreValueCard 
-                        icon="👥"
+                        icon="ðŸ‘¥"
                         title="Cooperative Effort"
                         description="We recognize that our society and surrounding communities are important stakeholders, making us responsible to practice good corporate citizenship."
                       />

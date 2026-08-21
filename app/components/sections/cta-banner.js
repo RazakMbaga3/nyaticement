@@ -55,7 +55,7 @@ export default function CTABanner() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center justify-center gap-2.5 bg-nyati-orange hover:bg-orange-600 text-white px-8 py-4 font-bold text-xs tracking-[0.18em] uppercase transition-colors duration-200"
+              className="group inline-flex items-center justify-center gap-2.5 btn-primary"
             >
               Find a Dealer
               <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export default function CTABanner() {
             </Link>
             <Link
               href="/about/brochure"
-              className="group inline-flex items-center justify-center gap-2.5 bg-transparent hover:bg-white/8 text-white border border-white/30 hover:border-white/60 px-8 py-4 font-bold text-xs tracking-[0.18em] uppercase transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2.5 btn-outline"
             >
               Download Brochure
               <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

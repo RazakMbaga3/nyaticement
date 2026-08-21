@@ -18,7 +18,7 @@ export default function CompactInfoCard({ title, imageSrc, description, linkPath
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="bg-white border border-gray-200 overflow-hidden transition-all"
+      className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all hover:border-nyati-orange"
     >
       <div className="relative h-48">
         <Image
@@ -28,12 +28,12 @@ export default function CompactInfoCard({ title, imageSrc, description, linkPath
           className="object-cover"
         />
       </div>
-      <div className="p-4">
-        <h3 className="text-nyati-navy font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm mb-3">{description}</p>
+      <div className="p-6">
+        <h3 className="text-lg font-bold text-nyati-navy mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm leading-relaxed mb-4">{description}</p>
         <Link
           href={linkPath}
-          className="text-nyati-orange hover:text-nyati-navy text-sm font-medium flex items-center"
+          className="text-nyati-navy hover:text-nyati-orange text-sm font-semibold flex items-center"
         >
           LEARN MORE
           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef } from 'react';
 import Image from 'next/image';
@@ -123,9 +123,9 @@ export default function EnhancedCSRPage() {
         title: "SOCIETY",
         description: "In order to build a strong relationship with the surrounding community, we provide:",
         bullets: [
-          { icon: "🎓", text: "Support to <strong>education</strong>" },
-          { icon: "🤝", text: "<strong>Meaningful programs</strong> through reputed NGO partners" },
-          { icon: "🏥", text: "<strong>Health programs</strong> through camps" }
+          { icon: "ðŸŽ“", text: "Support to <strong>education</strong>" },
+          { icon: "ðŸ¤", text: "<strong>Meaningful programs</strong> through reputed NGO partners" },
+          { icon: "ðŸ¥", text: "<strong>Health programs</strong> through camps" }
         ],
         image: "/images/aboutus/csr_1.png",
         altText: "School education illustration"
@@ -134,9 +134,9 @@ export default function EnhancedCSRPage() {
         title: "ENVIRONMENT",
         description: "In order to minimise our impact on the environment and cut pollution and waste, we have undertaken following initiatives:",
         bullets: [
-          { icon: "♻️", text: "Conducting energy conservation and waste reduction campaigns" },
-          { icon: "💡", text: "Substituting power guzzling bulbs and equipment with energy-efficient alternatives" },
-          { icon: "🏭", text: "Procuring the coal for the power plant from local sources in order to maintain a smaller carbon footprint" }
+          { icon: "â™»ï¸", text: "Conducting energy conservation and waste reduction campaigns" },
+          { icon: "ðŸ’¡", text: "Substituting power guzzling bulbs and equipment with energy-efficient alternatives" },
+          { icon: "ðŸ­", text: "Procuring the coal for the power plant from local sources in order to maintain a smaller carbon footprint" }
         ],
         image: "/images/aboutus/csr_2.png",
         altText: "Environmental sustainability illustration"
@@ -145,8 +145,8 @@ export default function EnhancedCSRPage() {
         title: "EMPLOYEES & SUPPLIERS",
         description: "We continuously engage with our employees and suppliers in order to align their expectations with our ambitions. Here are some ways in which we maintain a mutually enriching relationship with these stakeholders:",
         bullets: [
-          { icon: "🔍", text: "By being open and honest about our products, their benefit and their limitation" },
-          { icon: "📋", text: "Going beyond the minimum legal requirement when dealing with employees and promoting best practice in the workplace" }
+          { icon: "ðŸ”", text: "By being open and honest about our products, their benefit and their limitation" },
+          { icon: "ðŸ“‹", text: "Going beyond the minimum legal requirement when dealing with employees and promoting best practice in the workplace" }
         ],
         image: "/images/aboutus/csr_3.png",
         altText: "Employees and suppliers illustration"
@@ -253,7 +253,7 @@ export default function EnhancedCSRPage() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -383,7 +383,7 @@ export default function EnhancedCSRPage() {
                     </p>
                     <Link 
                       href={`/news/${article.id}`}
-                      className="inline-flex items-center text-nyati-orange font-medium hover:text-nyati-orange/80 text-sm transition-colors"
+                      className="inline-flex items-center text-nyati-navy font-semibold hover:text-nyati-orange text-sm transition-colors"
                     >                      {pt('csrPage.impactStories.readMore')}
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

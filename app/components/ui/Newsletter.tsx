@@ -61,7 +61,7 @@ export default function Newsletter() {
     }
   };
   return (
-    <section className="bg-blue-900 text-white rounded-sm py-8 px-6">
+    <section className="bg-nyati-navy text-white rounded-2xl py-8 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl text-nyati-light-orange font-bold mb-4">
           {getTranslation('newsletter.title')}
@@ -69,7 +69,7 @@ export default function Newsletter() {
         <p className="mb-8">{getTranslation('newsletter.subtitle')}</p>
 
         {subscribeStatus && (
-          <div className={`mb-6 p-4 rounded-sm text-left ${subscribeStatus.success ? 'bg-green-800/50 text-green-100' : 'bg-red-800/50 text-red-100'}`}>
+          <div className={`mb-6 p-4 rounded-2xl text-left ${subscribeStatus.success ? 'bg-nyati-green/10 text-nyati-green' : 'bg-nyati-navy/10 text-white'}`}>
             {subscribeStatus.message}
           </div>
         )}
@@ -80,13 +80,13 @@ export default function Newsletter() {
             placeholder={getTranslation('newsletter.inputPlaceholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 px-4 py-3 rounded-sm bg-blue-800 text-white placeholder-blue-300 border border-blue-700 focus:outline-none focus:ring-2 focus:ring-nyati-orange"
+            className="flex-1 px-4 py-3 rounded-2xl bg-nyati-navy/20 text-white placeholder-nyati-orange border border-nyati-navy/30 focus:outline-none focus:ring-2 focus:ring-nyati-orange"
             required
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 rounded-sm bg-nyati-orange text-white font-medium hover:bg-nyati-navy transition-colors duration-300 disabled:opacity-50"
+            className="px-6 py-3 rounded-2xl bg-nyati-orange text-white font-medium hover:bg-nyati-navy transition-colors duration-300 disabled:opacity-50"
           >
             {isSubmitting ? getTranslation('newsletter.subscribingButton') : getTranslation('newsletter.subscribeButton')}
           </button>

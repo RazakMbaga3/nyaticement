@@ -588,7 +588,7 @@ export default function MonsoonConstructionPage() {
                   <li>Inaruhusu kuondolewa haraka kwa fremu</li>
                   <li>Nzuri kwa vipengele vya miundo</li>
                 </ul>
-                <p className="mt-4 text-sm font-medium text-nyati-orange">
+                <p className="mt-4 text-sm font-medium text-nyati-navy">
                   Inapendekezwa kwa: Vipengele muhimu vya miundo, vipengele vilivyotengenezwa kabla, na ujenzi unaohitaji muda wakati wa kipindi cha mvua.
                 </p>
               </div>
@@ -1176,7 +1176,7 @@ export default function MonsoonConstructionPage() {
                   <li>Inaruhusu kuondolewa haraka kwa fremu</li>
                   <li>Nzuri kwa vipengele vya miundo</li>
                 </ul>
-                <p className="mt-4 text-sm font-medium text-nyati-orange">
+                <p className="mt-4 text-sm font-medium text-nyati-navy">
                   Inapendekezwa kwa: Vipengele muhimu vya miundo, vipengele vilivyotengenezwa kabla, na ujenzi unaohitaji muda wakati wa kipindi cha mvua.
                 </p>
               </div>

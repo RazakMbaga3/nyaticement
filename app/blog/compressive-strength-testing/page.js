@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import BlogPost from '../../components/BlogPost';
@@ -94,7 +94,7 @@ export default function CompressiveStrengthTestingPage() {
           <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Why Compressive Strength Matters</h2>
           
           <div className="grid md:grid-cols-3 gap-6 my-8">
-            <div className="bg-blue-50 p-6 rounded-sm">
+            <div className="bg-navy-50 p-6 rounded-sm">
               <h3 className="text-lg font-bold text-nyati-navy mb-3">Structural Safety</h3>
               <p>
                 Adequate compressive strength ensures structures can safely support intended loads plus additional safety margins to account for unexpected stresses from weather events, earthquakes, or usage changes over time.
@@ -138,7 +138,7 @@ export default function CompressiveStrengthTestingPage() {
               <strong>Specimen Preparation:</strong> Concrete cubes (150mm) or cylinders (150mm diameter x 300mm height) are prepared according to standard specifications.
             </li>
             <li>
-              <strong>Curing:</strong> Specimens are cured in controlled conditions (temperature: 20±2°C, relative humidity: ≥95%) for specified periods, typically 3, 7, and 28 days.
+              <strong>Curing:</strong> Specimens are cured in controlled conditions (temperature: 20Â±2Â°C, relative humidity: â‰¥95%) for specified periods, typically 3, 7, and 28 days.
             </li>
             <li>
               <strong>Testing:</strong> Specimens are placed in a calibrated compression testing machine and loaded at a controlled rate until failure.
@@ -270,7 +270,7 @@ export default function CompressiveStrengthTestingPage() {
           <h2 className="text-2xl font-bold text-nyati-navy mt-8 mb-4">Kwa Nini Nguvu ya Kubana ni Muhimu</h2>
           
           <div className="grid md:grid-cols-3 gap-6 my-8">
-            <div className="bg-blue-50 p-6 rounded-sm">
+            <div className="bg-navy-50 p-6 rounded-sm">
               <h3 className="text-lg font-bold text-nyati-navy mb-3">Usalama wa Muundo</h3>
               <p>
                 Nguvu ya kubana ya kutosha inahakikisha miundo inaweza kubeba mizigo iliyokusudiwa pamoja na mizani za ziada za usalama kukabiliana na msukumo usiotarajiwa kutoka kwa matukio ya hali ya hewa, matetemeko ya ardhi, au mabadiliko ya matumizi kwa muda.
@@ -314,7 +314,7 @@ export default function CompressiveStrengthTestingPage() {
               <strong>Maandalizi ya Sampuli:</strong> Cubes za zege (150mm) au cylinders (kipenyo cha 150mm x urefu wa 300mm) zinaandaliwa kulingana na vipimo vya kawaida.
             </li>
             <li>
-              <strong>Kutibu:</strong> Sampuli zinatibiwa katika mazingira yaliyodhibitiwa (joto: 20±2°C, unyevu wa hewa: ≥95%) kwa vipindi vilivyotajwa, kwa kawaida siku 3, 7, na 28.
+              <strong>Kutibu:</strong> Sampuli zinatibiwa katika mazingira yaliyodhibitiwa (joto: 20Â±2Â°C, unyevu wa hewa: â‰¥95%) kwa vipindi vilivyotajwa, kwa kawaida siku 3, 7, na 28.
             </li>
             <li>
               <strong>Upimaji:</strong> Sampuli zinawekwa kwenye mashine ya kupima iliyorekebishwa na kuwekewa mzigo kwa kasi iliyodhibitiwa hadi kushindwa.

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -130,7 +130,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-nyati-navy/80 via-nyati-navy/40 to-transparent flex items-center">
             <div className="container mx-auto px-4">
-              <h1 className="text-white text-3xl md:text-4xl font-bold max-w-lg">Building Tanzania with Excellence</h1>
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black max-w-lg">Building Tanzania with Excellence</h1>
             </div>
           </div>
         </motion.div>
@@ -144,12 +144,12 @@ export default function AboutPage() {
             className="mb-8"
           >
             <motion.div className="flex items-center mb-4">
-              <motion.h1 
+              <motion.h2 
                 variants={slideUp}
-                className="text-nyati-orange text-2xl md:text-3xl font-bold"
+                className="text-nyati-navy text-2xl md:text-3xl font-black"
               >
                 ABOUT US
-              </motion.h1>
+              </motion.h2>
               <div className="h-px flex-grow bg-gray-200 ml-4"></div>
             </motion.div>
             
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 variants={slideUp}
                 className="text-sm md:text-base"
               >
-                We produce consistent high quality cement for which we have leveraged best-in-class technologies and extensive sectoral experience. We started production in 2014 under the <strong className="text-nyati-orange">Nyati Cement</strong> brand. <strong className="text-nyati-orange">Nyati Cement</strong> is now the leading cement brand not only in Tanzania, but also has prominence in Rwanda, Burundi and other neighboring countries.
+                We produce consistent high quality cement for which we have leveraged best-in-class technologies and extensive sectoral experience. We started production in 2014 under the <strong className="text-nyati-navy">Nyati Cement</strong> brand. <strong className="text-nyati-navy">Nyati Cement</strong> is now the leading cement brand not only in Tanzania, but also has prominence in Rwanda, Burundi and other neighboring countries.
               </motion.p>
             </motion.div>
 
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'mission' ? 'bg-nyati-navy border-nyati-navy' : 'bg-white border-gray-200'}`}
                 >
                   <div className="p-6">
-                    <h2 className={`font-bold text-xl mb-3 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-orange'}`}>
+                    <h2 className={`font-black text-xl mb-3 ${activeVisionMission === 'mission' ? 'text-nyati-orange' : 'text-nyati-navy'}`}>
                       OUR MISSION
                     </h2>
                     <p className={`text-sm transition-colors duration-300 ${activeVisionMission === 'mission' ? 'text-white' : 'text-gray-700'}`}> 
@@ -201,7 +201,7 @@ export default function AboutPage() {
                   className={`transition-all duration-300 border overflow-hidden ${activeVisionMission === 'vision' ? 'bg-nyati-orange border-nyati-orange' : 'bg-white border-gray-200'}`}
                 >
                   <div className="p-6">
-                    <h2 className={`font-bold text-xl mb-3 ${activeVisionMission === 'vision' ? 'text-white' : 'text-nyati-navy'}`}>
+                    <h2 className={`font-black text-xl mb-3 ${activeVisionMission === 'vision' ? 'text-white' : 'text-nyati-navy'}`}>
                       OUR VISION
                     </h2>
                     <p className={`text-sm transition-colors duration-300 ${activeVisionMission === 'vision' ? 'text-white' : 'text-gray-700'}`}>
@@ -218,27 +218,27 @@ export default function AboutPage() {
               className="mb-12"
             >
               <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold text-nyati-navy">Our Core Values</h2>
+                <h2 className="text-2xl md:text-3xl font-black text-nyati-navy">Our Core Values</h2>
               </div>
               
               <div className="grid md:grid-cols-4 gap-4">
                 <CoreValueCard 
-                  icon="⚖️"
+                  icon="âš–ï¸"
                   title="Integrity"
                   description="Honest and accurate reporting of performance, both internally and externally, creating an environment conducive to proper business conduct."
                 />
                 <CoreValueCard 
-                  icon="🤝"
+                  icon="ðŸ¤"
                   title="Responsibility"
                   description="Protecting our stakeholders' interests is our responsibility, making it the core of all our policies and management decisions."
                 />
                 <CoreValueCard 
-                  icon="🔒"
+                  icon="ðŸ”’"
                   title="Trust"
                   description="We are the trustees of the trust reposed on us by our stakeholders, guiding our actions and decisions at every level."
                 />
                 <CoreValueCard 
-                  icon="👥"
+                  icon="ðŸ‘¥"
                   title="Cooperative Effort"
                   description="We recognize that our society and surrounding communities are important stakeholders, making us responsible to practice good corporate citizenship."
                 />
@@ -251,7 +251,7 @@ export default function AboutPage() {
               className="mb-12"
             >
               <div className="bg-nyati-navy p-6 border-t-2 border-nyati-orange mb-6">
-                <h2 className="text-xl font-bold text-white mb-1">THE LAKE CEMENT ADVANTAGE</h2>
+                <h2 className="text-2xl font-black text-white mb-1">THE LAKE CEMENT ADVANTAGE</h2>
                 <p className="text-white/80 text-sm">Our commitment to excellence and innovation creates distinct advantages that benefit our customers and partners.</p>
               </div>
               

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslations } from '../../hooks/useTranslations';
+import { springUI } from '@/app/lib/motion-presets';
 
 interface Product {
   image?: string;
@@ -162,9 +163,9 @@ export default function NewProductCard({ product, index }: NewProductCardProps) 
           {/* Show More/Less Button */}
           {((features.length > 3) || (applications.length > 3)) && (
             <motion.button
-              className="mt-4 text-nyati-orange text-sm font-medium flex items-center hover:text-nyati-navy transition-colors duration-300"
+              className="mt-4 text-nyati-navy text-sm font-semibold flex items-center hover:text-nyati-orange transition-colors duration-300"
               onClick={() => setIsExpanded(!isExpanded)}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ scale: 0.97, transition: springUI }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}

@@ -201,7 +201,7 @@ export default function ContactPage() {
 
             {/* Hero Title & Content */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[0.98]"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.98]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -274,13 +274,13 @@ export default function ContactPage() {
               className="bg-white border border-gray-200 overflow-hidden"
             >
               <div className="bg-nyati-navy py-3 px-4">
-                <h3 className="text-white font-bold text-base">{pt('contactPage.offices.locations.title') || 'Our Locations'}</h3>
+                <h3 className="text-white font-bold text-lg">{pt('contactPage.offices.locations.title') || 'Our Locations'}</h3>
               </div>
               
               <div className="p-5">
                 {/* Corporate Office Section */}
                 <div className="mb-4 pb-6 border-b border-gray-100">
-                  <h4 className="font-semibold text-nyati-orange">Corporate Office</h4>
+                  <h4 className="font-bold text-nyati-orange text-lg">Corporate Office</h4>
                   
                   <div className="space-y-0">
                     <div className="flex items-start">
@@ -305,14 +305,14 @@ export default function ContactPage() {
                       <svg className="w-4 h-4 text-nyati-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
-                      <a href={`mailto:${contactInfo.corporate.email}`} className="text-sm text-nyati-blue hover:text-nyati-orange transition-colors">{contactInfo.corporate.email}</a>
+                      <a href={`mailto:${contactInfo.corporate.email}`} className="text-sm text-nyati-navy hover:text-nyati-orange transition-colors">{contactInfo.corporate.email}</a>
                     </div>
                   </div>
                 </div>
                 
                 {/* Plant Section */}
                 <div>
-                  <h4 className="font-semibold text-nyati-orange">Plant</h4>
+                  <h4 className="font-bold text-nyati-orange text-lg">Plant</h4>
                   
                   <div className="space-y-0">
                     <div className="flex items-start">
@@ -337,7 +337,7 @@ export default function ContactPage() {
                       <svg className="w-4 h-4 text-nyati-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
-                      <a href={`mailto:${contactInfo.plant.email}`} className="text-sm text-nyati-blue hover:text-nyati-orange transition-colors">{contactInfo.plant.email}</a>
+                      <a href={`mailto:${contactInfo.plant.email}`} className="text-sm text-nyati-navy hover:text-nyati-orange transition-colors">{contactInfo.plant.email}</a>
                     </div>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ export default function ContactPage() {
                           <svg className="w-4 h-4 text-nyati-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                           </svg>
-                          <a href={`mailto:${region.email}`} className="text-sm text-nyati-blue hover:text-nyati-orange transition-colors">{region.email}</a>
+                          <a href={`mailto:${region.email}`} className="text-sm text-nyati-navy hover:text-nyati-orange transition-colors">{region.email}</a>
                         </div>
                       </div>
                     </div>
@@ -410,7 +410,7 @@ export default function ContactPage() {
                 <div className="bg-gradient-to-r from-nyati-navy to-nyati-dark-blue p-8 relative overflow-hidden">
                   {/* Decorative elements */}
                   <h3 className="text-white text-2xl mb-2 relative z-10">{pt('contactPage.form.writeToUs.title') || 'Write to Us'}</h3>
-                  <p className="text-blue-100 text-lg max-w-3xl relative z-10">
+                  <p className="text-white/85 text-lg max-w-3xl relative z-10">
                     {pt('contactPage.form.writeToUs.description') || "Get in touch with our team. We're here to help with your questions, requests, and cement needs. Our team will get back to you as soon as possible."}
                   </p>
                 </div>                  <form onSubmit={sendEmail} className="p-8">
@@ -549,7 +549,7 @@ export default function ContactPage() {
             {/* Maps Section */}
             <div className="lg:col-span-5">
               <div className="bg-white border border-gray-200 overflow-hidden h-full">
-                <div className="bg-nyati-navy p-4">                  <h3 className="text-white font-medium flex items-center">
+                <div className="bg-nyati-navy p-4">                  <h3 className="text-white font-bold flex items-center text-lg">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>

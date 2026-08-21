@@ -95,7 +95,7 @@ export default function ProductsSlider() {
           >
             <div className="flex items-center gap-2.5 mb-4">
               <span className="block w-7 h-0.5 bg-nyati-orange" />
-              <span className="text-nyati-orange text-xs font-bold tracking-[0.18em] uppercase">
+              <span className="text-nyati-navy text-xs font-bold tracking-[0.18em] uppercase">
                 {t('products.title')}
               </span>
             </div>
@@ -175,7 +175,7 @@ export default function ProductsSlider() {
 
                 <Link
                   href="/products"
-                  className="mt-auto pt-4 border-t border-gray-100 inline-flex items-center gap-1.5 text-nyati-navy hover:text-nyati-orange font-semibold text-sm transition-colors duration-200"
+                  className="mt-auto pt-4 border-t border-gray-100 btn-outline"
                 >
                   <span>{t('common.readMore')}</span>
                   <svg
