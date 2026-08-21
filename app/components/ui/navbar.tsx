@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { motion, animate, useMotionValue, useReducedMotion, type PanInfo } from 'framer-motion'
 import { useTranslations } from '@/app/hooks/useTranslations'
 
 interface NavDropdownItem {
@@ -76,6 +77,74 @@ export default function Navbar() {
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navItemRefs = useRef<(HTMLLIElement | null)[]>([])
   const lastScrollY = useRef(0)
+
+  // Mobile drawer drag-to-dismiss: x tracks its live on-screen offset (0 =
+  // fully open, panelWidth = fully off-screen to the right). Framer's
+  // drag gesture gives us 1:1 pointer tracking for free; onDragEnd below
+  // adds Apple's momentum projection + velocity handoff on top of it.
+  const panelRef = useRef<HTMLDivElement>(null)
+  const [panelWidth, setPanelWidth] = useState<number | null>(null)
+  const drawerX = useMotionValue(500) // comfortably past max-w-sm (384px) until measured
+  const firstSyncDone = useRef(false)
+  const [mounted, setMounted] = useState(false)
+  const prefersReducedMotion = useReducedMotion()
+  const reduceMotion = mounted && prefersReducedMotion === true
+
+  useEffect(() => setMounted(true), [])
+
+  useEffect(() => {
+    function measure() {
+      if (panelRef.current) setPanelWidth(panelRef.current.offsetWidth)
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
+
+  // Keep the drawer's position in sync whenever isOpen changes via a
+  // button, ESC, or the backdrop — not via drag (drag drives drawerX
+  // directly and settles it itself in handleDrawerDragEnd).
+  useEffect(() => {
+    if (panelWidth == null) return
+    const target = isOpen ? 0 : panelWidth
+
+    if (!firstSyncDone.current) {
+      drawerX.set(target) // no jump on mount: closed state is already off-screen
+      firstSyncDone.current = true
+      return
+    }
+
+    if (reduceMotion) {
+      drawerX.set(target)
+      return
+    }
+
+    const controls = animate(drawerX, target, { type: 'spring', bounce: 0, duration: 0.4 })
+    return () => controls.stop()
+  }, [isOpen, panelWidth, reduceMotion])
+
+  const handleDrawerDragEnd = (_: Event, info: PanInfo) => {
+    if (panelWidth == null) return
+    const velocity = info.velocity.x
+    const current = drawerX.get()
+    // Apple's exponential-decay projection: where would this gesture's
+    // momentum carry the drawer, not just where the finger let go?
+    const decelerationRate = 0.998
+    const projected = current + (velocity / 1000) * decelerationRate / (1 - decelerationRate)
+    const shouldClose = projected > panelWidth / 2
+    const target = shouldClose ? panelWidth : 0
+    if (reduceMotion) {
+      drawerX.set(target)
+    } else {
+      animate(drawerX, target, {
+        type: 'spring',
+        velocity, // hand off the release velocity so there's no seam between drag and settle
+        bounce: 0,
+        duration: 0.4,
+      })
+    }
+    setIsOpen(!shouldClose)
+  }
 
   // Handle scroll effects
   useEffect(() => {
@@ -343,11 +412,21 @@ export default function Navbar() {
         ></div>
       )}
 
-      {/* Mobile Navigation Drawer */}
-      <div
-        className={`fixed inset-y-0 right-0 z-40 w-4/5 max-w-sm bg-white shadow-xl lg:hidden transition-transform duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } overflow-y-auto`}
+      {/* Mobile Navigation Drawer — draggable right to dismiss like a native
+          sheet: 1:1 while held, rubber-banded past its open/closed bounds,
+          and interruptible (grabbing it mid-animation just takes over the
+          live position, which is what animating a shared motion value gives
+          us for free). */}
+      <motion.div
+        ref={panelRef}
+        drag="x"
+        dragDirectionLock
+        dragConstraints={{ left: 0, right: panelWidth ?? 500 }}
+        dragElastic={{ left: 0.2, right: 0.15 }}
+        dragMomentum={false}
+        onDragEnd={handleDrawerDragEnd}
+        style={{ x: drawerX }}
+        className="fixed inset-y-0 right-0 z-40 w-4/5 max-w-sm bg-white shadow-xl lg:hidden overflow-y-auto"
       >        {/* Mobile Menu Header */}
         <div className="p-4 flex items-center justify-between border-b border-gray-100">          {/* Lake Cement Logo for Mobile */}
           <div className="flex-shrink-0">
@@ -430,7 +509,7 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
-      </div>
+      </motion.div>
     </>
   )
 }
