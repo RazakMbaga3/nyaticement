@@ -128,29 +128,36 @@
   
   /* Buttons - Unified styling. Press feedback is instant (on :active,
      not waiting for click to resolve) and separated from the slower
-     color transition so it doesn't feel laggy. */
+     color transition so it doesn't feel laggy.
+
+     The color variants (.btn-primary/.btn-secondary/.btn-outline) carry
+     their own complete layout — padding, gap, centering — so they're a
+     correct, balanced button on their own wherever they're used, not
+     just when paired with .btn. (.btn itself stays as a lighter compose
+     -with-your-own-padding base for the couple of call sites that want
+     that.) */
   .btn {
     @apply inline-flex items-center justify-center transition-transform duration-100 ease-out active:scale-[0.97];
   }
 
   .btn-primary {
-    @apply bg-nyati-orange text-white;
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3 font-semibold text-sm transition-all duration-200 active:scale-[0.97] bg-nyati-orange text-white;
   }
-  
+
   .btn-primary:hover {
     @apply bg-nyati-navy;
   }
-  
+
   .btn-secondary {
-    @apply bg-nyati-navy text-white;
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3 font-semibold text-sm transition-all duration-200 active:scale-[0.97] bg-nyati-navy text-white;
   }
-  
+
   .btn-secondary:hover {
     @apply bg-navy-700;
   }
-  
+
   .btn-outline {
-    @apply border border-nyati-orange text-nyati-navy hover:bg-nyati-orange hover:text-white;
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3 font-semibold text-sm transition-all duration-200 active:scale-[0.97] border border-nyati-orange text-nyati-navy hover:bg-nyati-orange hover:text-white;
   }
   
   /* Button size variants */

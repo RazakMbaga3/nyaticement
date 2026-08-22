@@ -107,7 +107,7 @@ export default function FeaturesGrid() {
                 </p>
                 <Link
                   href={feature.link}
-                  className="mt-auto pt-4 border-t border-gray-100 inline-flex items-center gap-2.5 btn-outline"
+                  className="mt-auto pt-4 border-t border-gray-100 btn-outline"
                 >
                   <span>{t('common.readMore')}</span>
                   <svg
