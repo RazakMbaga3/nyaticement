@@ -28,10 +28,10 @@ const ICONS: Record<string, string> = {
   csr: 'M12 21c-4-4-7-7.5-7-11a7 7 0 0114 0c0 3.5-3 7-7 11z',
   codeOfConduct: 'M9 12h6m-6 4h6M9 8h6M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z',
   brochure: 'M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
-  super42: 'M4 4h16v16H4V4zM4 10h16',
-  duramax42: 'M4 4h16v16H4V4zM4 10h16',
-  opc: 'M4 4h16v16H4V4zM4 10h16',
-  max32: 'M4 4h16v16H4V4zM4 10h16',
+  super42: 'M13 2L3 14h8l-1 8 10-12h-8l1-8z',
+  duramax42: 'M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z',
+  opc: 'M6 9l6-6 6 6-6 12-6-12zM6 9h12',
+  max32: 'M3 6h8v4H3zM13 6h8v4h-8zM3 14h8v4H3zM13 14h8v4h-8z',
 }
 
 const getNavLinks = (t: (key: string) => string): NavLink[] => [
