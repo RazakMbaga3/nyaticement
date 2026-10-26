@@ -13,16 +13,14 @@ export default function Hero() {
   // State for slideshow
   const [currentSlide, setCurrentSlide] = useState(0)
   
-  // Slideshow images
+  // Slideshow images (corrected path to /images/slideshow/slide/1-6.png)
   const slideshowImages = [
-    '/images/slideshow/1.jpeg',
-    '/images/block2.png',
-    '/images/slideshow/fam.webp',
-    '/images/slideshow/3.jpeg',
-    '/images/block1.jpg',
-    '/images/slideshow/bulldozer.webp',
-    '/images/img/nyati92.jpg',
-    '/images/img/nyati113.jpg'
+    '/images/slideshow/slide/1.png',
+    '/images/slideshow/slide/2.png',
+    '/images/slideshow/slide/3.png',
+    '/images/slideshow/slide/4.png',
+    '/images/slideshow/slide/5.png',
+    '/images/slideshow/slide/6.png'
   ]
 
   // Effect for slideshow autoplay
@@ -335,7 +333,7 @@ export default function Hero() {
               initial="rest"
               animate={["rest", "float"]}
               variants={productAnimation}
-              className="relative h-[430px] w-full rounded-sm overflow-hidden"
+              className="relative h-[500px] w-full rounded-sm overflow-hidden"
             >
               {/* Glow effect behind the product */}
               <motion.div
@@ -354,9 +352,10 @@ export default function Hero() {
               <Image
                 src="/images/ALLNYATIBAGS.webp"
                 alt="Nyati Cement Product"
-                width={400}
-                height={400}
+                width={520}
+                height={520}
                 className="object-contain relative z-10 mx-auto"
+                style={{ marginBottom: '-32px' }}
               />
             </motion.div>
             
@@ -365,7 +364,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
-              className="absolute -bottom-4 -right-6 rounded-sm p-4 shadow-xl bg-gradient-to-br from-nyati-orange to-orange-300 border border-white/20"
+              className="absolute -bottom-2 -right-6 rounded-sm p-4 shadow-xl bg-gradient-to-br from-nyati-orange to-orange-300 border border-white/20"
             >              <motion.h3 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
