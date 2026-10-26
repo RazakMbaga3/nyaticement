@@ -24,7 +24,7 @@ export default function ClientLayout({ children }) {
       <Suspense fallback={<div>Loading...</div>}>
         <LoadingIndicator />
       </Suspense>
-      <PageProgress color="#F7941D" height={3} showOnlyBelowFold={true} />
+      <PageProgress color="#F49545" height={3} showOnlyBelowFold={true} />
       <Navbar />
       {/* Fixed Language Switcher - don't show on news article pages */}
       {!isNewsArticlePage && (

@@ -596,7 +596,7 @@ export default function MonsoonConstructionPage() {
             
             <div className="bg-white rounded-sm shadow-sm overflow-hidden border-l-4 border-nyati-navy">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II A-L 42.5N</h3>
+                <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II B-M 42.5N</h3>
                 <p className="text-nyati-dark-grey mb-4">
                   Saruji yetu ya matumizi mbalimbali yenye sifa za kuganda kwa uwiano na urahisi bora wa kufanyia kazi, inafaa kwa matumizi mengi ya ujenzi wa masika.
                 </p>
@@ -1184,7 +1184,7 @@ export default function MonsoonConstructionPage() {
             
             <div className="bg-white rounded-sm shadow-sm overflow-hidden border-l-4 border-nyati-navy">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II A-L 42.5N</h3>
+                <h3 className="text-xl font-bold text-nyati-navy mb-3">Nyati CEM II B-M 42.5N</h3>
                 <p className="text-nyati-dark-grey mb-4">
                   Saruji yetu ya matumizi mbalimbali yenye sifa za kuganda kwa uwiano na urahisi bora wa kufanyia kazi, inafaa kwa matumizi mengi ya ujenzi wa masika.
                 </p>

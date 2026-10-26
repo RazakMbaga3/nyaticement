@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 
 export default function PageProgress({
-  color = '#F7941D',
+  color = '#F49545',
   height = 3,
   position = 'top',
   showOnlyWhenScrolling = false,

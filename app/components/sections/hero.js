@@ -184,14 +184,14 @@ export default function Hero() {
                 <span className="font-light">{t('hero.title')},</span>
                 <br/>                <motion.span 
                   initial={{ color: "#fff" }}
-                  animate={{ color: "#F79752" }}
+                  animate={{ color: "#F49545" }}
                   transition={{ duration: 1.5, delay: 1 }}
                   className="text-nyati-orange font-bold [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)]"
                 >{t('hero.subtitle')}</motion.span>
                 <br/>
                 <span className="font-bold">{t('hero.strongDurable')} <motion.span 
                   initial={{ color: "#fff" }}
-                  animate={{ color: "#F79752" }}
+                  animate={{ color: "#F49545" }}
                   transition={{ duration: 1.5, delay: 1.5 }}
                   className="text-nyati-orange [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)]"
                 ></motion.span> {t('hero.construction')}</span>

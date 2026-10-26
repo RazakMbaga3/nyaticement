@@ -38,7 +38,7 @@ const products = [
     id: 2,
     image: '/images/products/duramax42.jpg',
     fallbackImage: '/images/products/duramax42.jpg',
-    title: 'Nyati Duramax 42 (CEM II A-L 42.5N)',
+    title: 'Nyati Duramax 42 (CEM II B-M 42.5N)',
     subtitle: '42.5N Grade Portland Limestone Cement',
     description: 'A high-performance cement for strong, durable structures. Offers excellent workability and compressive strength, making it ideal for general construction projects.',
     features: [

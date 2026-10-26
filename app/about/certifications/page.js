@@ -37,7 +37,7 @@ const certifications = [
     items: [
       {
         title: "Internal 42.5 N test certificate",
-        downloadLink: "/docs/16-W,NO-42.5N-28DAYS.pdf",
+        downloadLink: "/docs/W.NO-CEM-II B-M-42.5N-28-DAYS.pdf",
         subItems: []
       },
       {

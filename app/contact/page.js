@@ -95,10 +95,10 @@ export default function ContactPage() {
     // Log the parameters to check
     console.log('Sending with params:', templateParams);    try {
       const result = await emailjs.send(
-        'service_fgi4rn3', 
-        'template_22wvb58', 
-        templateParams, 
-        '28FR-UzDU9CujXlxM'
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
       
       console.log('SUCCESS!', result);
@@ -164,7 +164,6 @@ export default function ContactPage() {
       name: "Pavan Gandhi",
       position: pt('contactPage.offices.locations.plant.position') || "Chief Plant Operations Officer",
       address: pt('contactPage.offices.locations.plant.address') || "Kimbiji, Plot No. 265, Municipal Council - Temeke,\nPO Box-40707, Dar-Es-Salaam, Tanzania",
-      phone: pt('contactPage.offices.locations.plant.phone') || "Tel:  +255 777 286 841",
       email: "pavan.gandhi@lakecement.co.tz"
     },
     sales: [
