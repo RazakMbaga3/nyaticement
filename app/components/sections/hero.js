@@ -355,7 +355,7 @@ export default function Hero() {
                 width={520}
                 height={520}
                 className="object-contain relative z-10 mx-auto"
-                style={{ marginBottom: '-32px' }}
+                style={{ marginTop: '96px' }}
               />
             </motion.div>
             
